@@ -67,6 +67,7 @@ export const API_ENDPOINTS = {
     AUTOCOMPLETE: '/foods/autocomplete',
     CATEGORIES: '/foods/categories',
     GET_BY_ID: (id: string) => `/foods/${id}`,
+    CREATE_CUSTOM: '/foods/custom',
   },
   
   // Food Entries

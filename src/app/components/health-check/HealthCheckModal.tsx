@@ -6,19 +6,40 @@ import ProcessingIndicator from './ProcessingIndicator';
 import PredictionResultCard from './PredictionResultCard';
 import { submitHealthCheck, HealthCheckSubmitRequest, HealthCheckSubmitResponse } from '@/lib/healthCheck';
 import { handleApiError } from '@/lib/api';
+import { getDailySummary } from '@/lib/foodApi';
 
 interface HealthCheckModalProps {
   open: boolean;
   onComplete: () => void;
+  profileData?: { age: number | null; height_cm: number | null };
 }
 
 type ModalStep = 'welcome' | 'form' | 'consent' | 'processing' | 'results';
 
-export default function HealthCheckModal({ open, onComplete }: HealthCheckModalProps) {
+export default function HealthCheckModal({ open, onComplete, profileData }: HealthCheckModalProps) {
   const [currentStep, setCurrentStep] = useState<ModalStep>('welcome');
   const [formData, setFormData] = useState<HealthCheckSubmitRequest | null>(null);
   const [predictionResult, setPredictionResult] = useState<HealthCheckSubmitResponse | null>(null);
   const [error, setError] = useState<string>('');
+  const [hasMealsInLast24Hours, setHasMealsInLast24Hours] = useState(false);
+
+  // Check for meals in last 24 hours when modal opens
+  useEffect(() => {
+    if (open) {
+      checkRecentMeals();
+    }
+  }, [open]);
+
+  const checkRecentMeals = async () => {
+    try {
+      const today = new Date().toISOString().split('T')[0];
+      const summary = await getDailySummary(today);
+      setHasMealsInLast24Hours(summary.total_calories > 0);
+    } catch (err) {
+      console.error('Error checking recent meals:', err);
+      setHasMealsInLast24Hours(false);
+    }
+  };
 
   // Reset state when modal opens
   useEffect(() => {
@@ -48,7 +69,7 @@ export default function HealthCheckModal({ open, onComplete }: HealthCheckModalP
       
       // Calculate elapsed time
       const elapsedTime = Date.now() - startTime;
-      const minimumDisplayTime = 2500; // 2.5 seconds minimum
+      const minimumDisplayTime = 3500; // 3.5 seconds minimum to show all steps
       
       // If the request completed too quickly, wait for the remaining time
       if (elapsedTime < minimumDisplayTime) {
@@ -78,7 +99,7 @@ export default function HealthCheckModal({ open, onComplete }: HealthCheckModalP
   return (
     <Dialog open={open} onOpenChange={() => {}}>
       <DialogContent 
-        className="max-w-2xl max-h-[90vh] overflow-y-auto"
+        className="max-w-2xl max-h-[90vh] overflow-y-auto [&>button]:hidden"
         onInteractOutside={(e) => e.preventDefault()}
         onEscapeKeyDown={(e) => e.preventDefault()}
       >
@@ -130,7 +151,7 @@ export default function HealthCheckModal({ open, onComplete }: HealthCheckModalP
                 Please provide your current health metrics for diabetes risk assessment.
               </DialogDescription>
             </DialogHeader>
-            <HealthCheckForm onSubmit={handleFormSubmit} error={error} />
+            <HealthCheckForm onSubmit={handleFormSubmit} error={error} profileData={profileData} />
           </>
         )}
 
@@ -157,7 +178,7 @@ export default function HealthCheckModal({ open, onComplete }: HealthCheckModalP
                 Our ML model is processing your information...
               </DialogDescription>
             </DialogHeader>
-            <ProcessingIndicator />
+            <ProcessingIndicator hasMealsInLast24Hours={hasMealsInLast24Hours} />
           </>
         )}
 

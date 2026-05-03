@@ -26,7 +26,9 @@ export default function SignupPage() {
   const navigate = useNavigate();
   const { signup } = useAuth();
 
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [middleName, setMiddleName] = useState('');
+  const [surname, setSurname] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -65,8 +67,13 @@ export default function SignupPage() {
   const passwordStrength = calculatePasswordStrength(password);
 
   const validateForm = (): boolean => {
-    if (!name.trim()) {
-      setError('Name is required');
+    if (!firstName.trim()) {
+      setError('First name is required');
+      return false;
+    }
+
+    if (!surname.trim()) {
+      setError('Surname is required');
       return false;
     }
 
@@ -132,7 +139,12 @@ export default function SignupPage() {
     setIsLoading(true);
 
     try {
-      await signup(name.trim(), email, password);
+      // Combine name fields into full name
+      const fullName = middleName.trim() 
+        ? `${firstName.trim()} ${middleName.trim()} ${surname.trim()}`
+        : `${firstName.trim()} ${surname.trim()}`;
+      
+      await signup(fullName, email, password);
       // Navigate to home after successful signup
       navigate('/', { replace: true });
     } catch (err) {
@@ -171,15 +183,44 @@ export default function SignupPage() {
             )}
 
             <div className="space-y-2">
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="firstName">First Name</Label>
               <Input
-                id="name"
+                id="firstName"
                 type="text"
-                placeholder="John Doe"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                placeholder="John"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 disabled={isLoading}
-                autoComplete="name"
+                autoComplete="given-name"
+                required
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="middleName">
+                Middle Name <span className="text-gray-500 text-sm font-normal">(Optional)</span>
+              </Label>
+              <Input
+                id="middleName"
+                type="text"
+                placeholder="Michael"
+                value={middleName}
+                onChange={(e) => setMiddleName(e.target.value)}
+                disabled={isLoading}
+                autoComplete="additional-name"
+              />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="surname">Surname</Label>
+              <Input
+                id="surname"
+                type="text"
+                placeholder="Doe"
+                value={surname}
+                onChange={(e) => setSurname(e.target.value)}
+                disabled={isLoading}
+                autoComplete="family-name"
                 required
               />
             </div>

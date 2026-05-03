@@ -182,3 +182,26 @@ export const deleteFoodEntry = async (entryId: string): Promise<void> => {
     throw new Error(handleApiError(error));
   }
 };
+
+/**
+ * Create a custom food with manual nutritional data
+ */
+export const createCustomFood = async (data: {
+  name: string;
+  serving_size: string;
+  calories: number;
+  carbohydrates_g?: number;
+  protein_g?: number;
+  fat_g?: number;
+  fiber_g?: number;
+}): Promise<FoodDetail> => {
+  try {
+    const response = await apiClient.post<FoodDetail>(
+      API_ENDPOINTS.FOODS.CREATE_CUSTOM,
+      data
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error(handleApiError(error));
+  }
+};

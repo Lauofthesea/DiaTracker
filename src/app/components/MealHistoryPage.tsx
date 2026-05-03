@@ -44,8 +44,9 @@ export default function MealHistoryPage() {
   const [error, setError] = useState<string | null>(null);
   const [todaySummary, setTodaySummary] = useState<DailyNutritionalSummary | null>(null);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [entryToDelete, setEntryToDelete] = useState<{ id: string; consumedAt: string } | null>(null);
 
-  // Load food entries
   useEffect(() => {
     loadEntries();
     loadTodaySummary();
@@ -56,7 +57,6 @@ export default function MealHistoryPage() {
     setError(null);
 
     try {
-      // Get entries from the last 30 days
       const endDate = new Date();
       const startDate = new Date();
       startDate.setDate(startDate.getDate() - 30);
@@ -84,41 +84,47 @@ export default function MealHistoryPage() {
       setTodaySummary(summary);
     } catch (err) {
       console.error("Error loading today's summary:", err);
-      // Don't show error for summary, it's not critical
     }
   };
 
-  const handleDelete = async (entryId: string, consumedAt: string) => {
+  const handleDeleteClick = (entryId: string, consumedAt: string) => {
     if (!isWithin7Days(consumedAt)) {
       setError("Cannot delete entries older than 7 days");
       setTimeout(() => setError(null), 3000);
       return;
     }
 
-    if (!confirm("Are you sure you want to delete this entry?")) {
-      return;
-    }
+    setEntryToDelete({ id: entryId, consumedAt });
+    setShowDeleteModal(true);
+  };
 
-    setDeletingId(entryId);
+  const handleDeleteConfirm = async () => {
+    if (!entryToDelete) return;
+
+    setDeletingId(entryToDelete.id);
     setError(null);
+    setShowDeleteModal(false);
 
     try {
-      await deleteFoodEntry(entryId);
-      // Remove from local state
-      setEntries((prev) => prev.filter((e) => e.entry_id !== entryId));
-      // Reload today's summary
+      await deleteFoodEntry(entryToDelete.id);
+      setEntries((prev) => prev.filter((e) => e.entry_id !== entryToDelete.id));
       loadTodaySummary();
     } catch (err) {
       console.error("Error deleting entry:", err);
       setError(err instanceof Error ? err.message : "Failed to delete entry");
     } finally {
       setDeletingId(null);
+      setEntryToDelete(null);
     }
+  };
+
+  const handleDeleteCancel = () => {
+    setShowDeleteModal(false);
+    setEntryToDelete(null);
   };
 
   const filtered = filterType === "All" ? entries : entries.filter((e) => e.meal_type === filterType.toLowerCase());
 
-  // Group by date
   const grouped: Record<string, FoodEntry[]> = {};
   filtered.forEach((entry) => {
     const key = formatDate(entry.consumed_at);
@@ -126,7 +132,6 @@ export default function MealHistoryPage() {
     grouped[key].push(entry);
   });
 
-  // Sort entries within each group by time descending
   Object.values(grouped).forEach((arr) => arr.sort((a, b) => new Date(b.consumed_at).getTime() - new Date(a.consumed_at).getTime()));
 
   const totalToday = todaySummary?.total_calories || 0;
@@ -136,7 +141,7 @@ export default function MealHistoryPage() {
   return (
     <ResponsiveLayout>
       <div className="bg-[#f4f8f8] min-h-screen w-full mx-auto relative">
-        {/* Header */}
+        
         <div className="sticky top-0 z-40 backdrop-blur-[12px] bg-[rgba(244,248,248,0.8)] border-b-[0.8px] border-solid border-[rgba(226,234,235,0.4)] px-4 sm:px-6 py-4">
           <div className="flex items-center gap-4 max-w-7xl mx-auto">
             <button onClick={() => navigate("/")} className="bg-[rgba(226,234,235,0.5)] rounded-full w-10 h-10 flex items-center justify-center cursor-pointer border-none md:hidden">
@@ -148,14 +153,12 @@ export default function MealHistoryPage() {
           </div>
         </div>
 
-        <div className="px-4 sm:px-6 pt-4 pb-6 max-w-7xl mx-auto">{/* Error Message */}
+        <div className="px-4 sm:px-6 pt-4 pb-6 max-w-7xl mx-auto">
         {error && (
           <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-2xl mb-4">
             {error}
           </div>
         )}
-
-        {/* Today's Summary */}
         <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-5 mb-4">
           <p className="text-[12px] text-[#637c84] uppercase tracking-[0.6px] mb-3" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
             Today's Summary
@@ -184,7 +187,6 @@ export default function MealHistoryPage() {
           </div>
         </div>
 
-        {/* Filter */}
         <div className="flex gap-2 mb-4 overflow-x-auto">
           {["All", "Breakfast", "Lunch", "Dinner", "Snack"].map((t) => (
             <button
@@ -202,7 +204,6 @@ export default function MealHistoryPage() {
           ))}
         </div>
 
-        {/* Loading State */}
         {isLoading && (
           <div className="flex flex-col items-center justify-center py-12">
             <Loader2 size={48} className="text-[#1e6177] animate-spin mb-3" />
@@ -212,7 +213,6 @@ export default function MealHistoryPage() {
           </div>
         )}
 
-        {/* Grouped Entries */}
         {!isLoading && Object.entries(grouped).map(([dateLabel, dateEntries]) => (
           <div key={dateLabel} className="mb-5">
             <p className="text-[12px] text-[#637c84] uppercase tracking-[0.6px] mb-2" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
@@ -262,7 +262,7 @@ export default function MealHistoryPage() {
                       </p>
                     </div>
                     <button
-                      onClick={() => handleDelete(entry.entry_id, entry.consumed_at)}
+                      onClick={() => handleDeleteClick(entry.entry_id, entry.consumed_at)}
                       disabled={!canDelete || deletingId === entry.entry_id}
                       title={canDelete ? "Delete entry" : "Cannot delete entries older than 7 days"}
                       className={`w-7 h-7 rounded-full flex items-center justify-center border-none shrink-0 ${
@@ -284,7 +284,6 @@ export default function MealHistoryPage() {
           </div>
         ))}
 
-        {/* Empty State */}
         {!isLoading && filtered.length === 0 && (
           <div className="text-center py-12">
             <UtensilsCrossed size={48} className="text-[rgba(226,234,235,0.6)] mx-auto mb-3" />
@@ -297,6 +296,63 @@ export default function MealHistoryPage() {
           </div>
         )}
       </div>
+
+      {showDeleteModal && (
+        <div
+          className="fixed inset-0 bg-black/30 z-50 flex items-center justify-center px-4"
+          onClick={handleDeleteCancel}
+        >
+          <div
+            className="bg-white rounded-3xl w-full max-w-[340px] p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center mb-6">
+              <div className="w-12 h-12 bg-[rgba(239,68,68,0.1)] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Trash2 size={24} className="text-[#ef4444]" />
+              </div>
+              <p
+                className="text-[18px] text-[#0d2b35] mb-2"
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                Remove this meal history?
+              </p>
+              <p
+                className="text-[14px] text-[#637c84]"
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                }}
+              >
+                This action cannot be undone.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={handleDeleteCancel}
+                className="flex-1 h-[48px] bg-[rgba(226,234,235,0.5)] text-[#0d2b35] rounded-2xl border-none cursor-pointer text-[16px]"
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={handleDeleteConfirm}
+                className="flex-1 h-[48px] bg-[#ef4444] text-white rounded-2xl border-none cursor-pointer text-[16px]"
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
     </ResponsiveLayout>
   );

@@ -5,15 +5,16 @@ import { Label } from '@/app/components/ui/label';
 import { Checkbox } from '@/app/components/ui/checkbox';
 import { Alert, AlertDescription } from '@/app/components/ui/alert';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/app/components/ui/select';
-import { Card, CardContent } from '@/app/components/ui/card';
-import { Loader2, Info } from 'lucide-react';
-import { validateHealthMetrics, calculateBMI, getBMICategory, HealthCheckSubmitRequest } from '@/lib/healthCheck';
+import { Loader2 } from 'lucide-react';
+import { validateHealthMetrics, HealthCheckSubmitRequest } from '@/lib/healthCheck';
 
 interface HealthCheckFormProps {
   onSubmit: (data: HealthCheckSubmitRequest) => void;
   error?: string;
   initialData?: Partial<HealthCheckSubmitRequest>;
   showSubmitButton?: boolean;
+  profileData?: { age: number | null; height_cm: number | null };
+  lastHealthCheck?: { weight_kg: number; blood_sugar_mgdl: number } | null;
 }
 
 const SYMPTOMS = [
@@ -33,30 +34,56 @@ export default function HealthCheckForm({
   onSubmit, 
   error, 
   initialData,
-  showSubmitButton = true 
+  showSubmitButton = true,
+  profileData,
+  lastHealthCheck
 }: HealthCheckFormProps) {
-  const [weight, setWeight] = useState(initialData?.weight?.toString() || '');
+  const [weight, setWeight] = useState(
+    lastHealthCheck?.weight_kg?.toString() || initialData?.weight?.toString() || ''
+  );
   const [weightUnit, setWeightUnit] = useState<'kg' | 'lbs'>(initialData?.weight_unit || 'kg');
-  const [bloodSugar, setBloodSugar] = useState(initialData?.blood_sugar?.toString() || '');
-  const [age, setAge] = useState(initialData?.age?.toString() || '');
-  const [height, setHeight] = useState(initialData?.height?.toString() || '');
+  const [bloodSugar, setBloodSugar] = useState(
+    lastHealthCheck?.blood_sugar_mgdl?.toString() || initialData?.blood_sugar?.toString() || ''
+  );
+  const [age, setAge] = useState(
+    profileData?.age?.toString() || initialData?.age?.toString() || ''
+  );
+  const [height, setHeight] = useState(
+    profileData?.height_cm?.toString() || initialData?.height?.toString() || ''
+  );
   const [heightUnit, setHeightUnit] = useState<'cm' | 'in'>(initialData?.height_unit || 'cm');
   const [symptoms, setSymptoms] = useState<string[]>(initialData?.symptoms || []);
   const [validationErrors, setValidationErrors] = useState<string[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [bmi, setBmi] = useState<number | null>(null);
 
-  // Calculate BMI when weight or height changes
+  const isAgePreFilled = !!profileData?.age;
+  const isHeightPreFilled = !!profileData?.height_cm;
+  const isWeightPreFilled = !!lastHealthCheck?.weight_kg;
+  const isBloodSugarPreFilled = !!lastHealthCheck?.blood_sugar_mgdl;
+
   useEffect(() => {
-    const w = parseFloat(weight);
-    const h = parseFloat(height);
-    if (!isNaN(w) && !isNaN(h) && w > 0 && h > 0) {
-      const calculatedBmi = calculateBMI(w, weightUnit, h, heightUnit);
-      setBmi(calculatedBmi);
-    } else {
-      setBmi(null);
+    if (profileData?.age && !age) {
+      setAge(profileData.age.toString());
     }
-  }, [weight, weightUnit, height, heightUnit]);
+  }, [profileData?.age]);
+
+  useEffect(() => {
+    if (profileData?.height_cm && !height) {
+      setHeight(profileData.height_cm.toString());
+    }
+  }, [profileData?.height_cm]);
+
+  useEffect(() => {
+    if (lastHealthCheck?.weight_kg && !weight) {
+      setWeight(lastHealthCheck.weight_kg.toString());
+    }
+  }, [lastHealthCheck?.weight_kg]);
+
+  useEffect(() => {
+    if (lastHealthCheck?.blood_sugar_mgdl && !bloodSugar) {
+      setBloodSugar(lastHealthCheck.blood_sugar_mgdl.toString());
+    }
+  }, [lastHealthCheck?.blood_sugar_mgdl]);
 
   const handleSymptomToggle = (symptomId: string) => {
     setSymptoms((prev) =>
@@ -80,7 +107,6 @@ export default function HealthCheckForm({
       symptoms,
     };
 
-    // Validate data
     const validation = validateHealthMetrics(data);
     if (!validation.valid) {
       setValidationErrors(validation.errors);
@@ -107,7 +133,14 @@ export default function HealthCheckForm({
 
       {/* Weight Input */}
       <div className="space-y-2">
-        <Label htmlFor="weight">Weight *</Label>
+        <Label htmlFor="weight">
+          Weight *
+          {isWeightPreFilled && (
+            <span className="ml-2 text-xs text-blue-600 font-normal">
+              (based from last check)
+            </span>
+          )}
+        </Label>
         <div className="flex gap-2">
           <Input
             id="weight"
@@ -117,7 +150,7 @@ export default function HealthCheckForm({
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
             required
-            className="flex-1"
+            className={`flex-1 ${isWeightPreFilled ? 'border-blue-300 bg-blue-50/30' : ''}`}
           />
           <Select value={weightUnit} onValueChange={(value: 'kg' | 'lbs') => setWeightUnit(value)}>
             <SelectTrigger className="w-24">
@@ -129,51 +162,22 @@ export default function HealthCheckForm({
             </SelectContent>
           </Select>
         </div>
+        {isWeightPreFilled && (
+          <p className="text-xs text-blue-600">
+            Value from your last health check. You can edit if needed.
+          </p>
+        )}
       </div>
 
-      {/* Height Input */}
       <div className="space-y-2">
-        <Label htmlFor="height">Height *</Label>
-        <div className="flex gap-2">
-          <Input
-            id="height"
-            type="number"
-            step="0.1"
-            placeholder="Enter height"
-            value={height}
-            onChange={(e) => setHeight(e.target.value)}
-            required
-            className="flex-1"
-          />
-          <Select value={heightUnit} onValueChange={(value: 'cm' | 'in') => setHeightUnit(value)}>
-            <SelectTrigger className="w-24">
-              <SelectValue />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="cm">cm</SelectItem>
-              <SelectItem value="in">in</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-      </div>
-
-      {/* BMI Display */}
-      {bmi !== null && (
-        <Card className="bg-blue-50 border-blue-200">
-          <CardContent className="pt-4">
-            <div className="flex items-center gap-2">
-              <Info className="h-4 w-4 text-blue-600" />
-              <span className="text-sm font-medium text-blue-900">
-                Calculated BMI: {bmi.toFixed(1)} ({getBMICategory(bmi)})
-              </span>
-            </div>
-          </CardContent>
-        </Card>
-      )}
-
-      {/* Blood Sugar Input */}
-      <div className="space-y-2">
-        <Label htmlFor="bloodSugar">Blood Sugar (mg/dL) *</Label>
+        <Label htmlFor="bloodSugar">
+          Blood Sugar (mg/dL) *
+          {isBloodSugarPreFilled && (
+            <span className="ml-2 text-xs text-blue-600 font-normal">
+              (based from last check)
+            </span>
+          )}
+        </Label>
         <Input
           id="bloodSugar"
           type="number"
@@ -182,24 +186,104 @@ export default function HealthCheckForm({
           value={bloodSugar}
           onChange={(e) => setBloodSugar(e.target.value)}
           required
+          className={isBloodSugarPreFilled ? 'border-blue-300 bg-blue-50/30' : ''}
         />
-        <p className="text-xs text-gray-500">Normal fasting: 70-100 mg/dL</p>
+        {isBloodSugarPreFilled ? (
+          <p className="text-xs text-blue-600">
+            Value from your last health check. You can edit if needed.
+          </p>
+        ) : (
+          <p className="text-xs text-gray-500">Normal fasting: 70-100 mg/dL</p>
+        )}
       </div>
 
-      {/* Age Input */}
-      <div className="space-y-2">
-        <Label htmlFor="age">Age (years) *</Label>
-        <Input
-          id="age"
-          type="number"
-          placeholder="Enter age"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-          required
-        />
-      </div>
+      {(isAgePreFilled || isHeightPreFilled) && (
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 space-y-3">
+          <p className="text-sm font-medium text-gray-700">
+            Information from your profile:
+          </p>
+          
+          {isAgePreFilled && (
+            <div className="space-y-2">
+              <Label htmlFor="age" className="text-gray-600">Age (years)</Label>
+              <Input
+                id="age"
+                type="number"
+                value={age}
+                readOnly
+                className="bg-gray-100 text-gray-600 cursor-not-allowed"
+              />
+            </div>
+          )}
 
-      {/* Symptoms Checklist */}
+          {isHeightPreFilled && (
+            <div className="space-y-2">
+              <Label htmlFor="height" className="text-gray-600">Height</Label>
+              <div className="flex gap-2">
+                <Input
+                  id="height"
+                  type="number"
+                  step="0.1"
+                  value={height}
+                  readOnly
+                  className="flex-1 bg-gray-100 text-gray-600 cursor-not-allowed"
+                />
+                <Select value={heightUnit} disabled>
+                  <SelectTrigger className="w-24 bg-gray-100 text-gray-600 cursor-not-allowed">
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="cm">cm</SelectItem>
+                    <SelectItem value="in">in</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {!isAgePreFilled && (
+        <div className="space-y-2">
+          <Label htmlFor="age">Age (years) *</Label>
+          <Input
+            id="age"
+            type="number"
+            placeholder="Enter age"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            required
+          />
+        </div>
+      )}
+
+      {!isHeightPreFilled && (
+        <div className="space-y-2">
+          <Label htmlFor="height">Height *</Label>
+          <div className="flex gap-2">
+            <Input
+              id="height"
+              type="number"
+              step="0.1"
+              placeholder="Enter height"
+              value={height}
+              onChange={(e) => setHeight(e.target.value)}
+              required
+              className="flex-1"
+            />
+            <Select value={heightUnit} onValueChange={(value: 'cm' | 'in') => setHeightUnit(value)}>
+              <SelectTrigger className="w-24">
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="cm">cm</SelectItem>
+                <SelectItem value="in">in</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+        </div>
+      )}
+
       <div className="space-y-3">
         <Label>Symptoms (select all that apply)</Label>
         <div className="space-y-2">

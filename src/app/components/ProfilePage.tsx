@@ -202,7 +202,7 @@ export default function ProfilePage() {
   return (
     <ResponsiveLayout>
       <div className="bg-[#f4f8f8] min-h-screen w-full mx-auto relative">
-        {/* Header */}
+        
         <div className="sticky top-0 z-40 backdrop-blur-[12px] bg-[rgba(244,248,248,0.8)] border-b-[0.8px] border-solid border-[rgba(226,234,235,0.4)] px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             <div className="flex items-center gap-4">
@@ -227,7 +227,7 @@ export default function ProfilePage() {
           </div>
         </div>
 
-      {/* Success Message */}
+      
       {successMessage && (
         <div className="mx-6 mt-4 bg-green-50 border-[0.8px] border-green-200 rounded-2xl p-4 flex items-center gap-3">
           <CheckCircle2 size={20} className="text-green-600" />
@@ -237,7 +237,7 @@ export default function ProfilePage() {
         </div>
       )}
 
-      {/* Error Message */}
+      
       {error && (
         <div className="mx-6 mt-4 bg-red-50 border-[0.8px] border-red-200 rounded-2xl p-4 flex items-center gap-3">
           <AlertCircle size={20} className="text-red-600" />
@@ -248,7 +248,7 @@ export default function ProfilePage() {
       )}
 
       <div className="px-6 pt-6 pb-[100px]">
-        {/* User Info Card */}
+        
         <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 flex flex-col items-center mb-4">
           <div className="w-20 h-20 rounded-full bg-[rgba(30,97,119,0.1)] flex items-center justify-center mb-3">
             <User size={40} className="text-[#1e6177]" />
@@ -279,7 +279,7 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Current Health Metrics */}
+        
         {profile.current_health_metrics && (
           <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
             <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
@@ -307,7 +307,7 @@ export default function ProfilePage() {
                   Age
                 </p>
                 <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.current_health_metrics.age} <span className="text-[12px] text-[#637c84]">years</span>
+                  {profile.age || profile.current_health_metrics.age} <span className="text-[12px] text-[#637c84]">years</span>
                 </p>
               </div>
               <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
@@ -315,7 +315,7 @@ export default function ProfilePage() {
                   Height
                 </p>
                 <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.current_health_metrics.height_cm.toFixed(0)} <span className="text-[12px] text-[#637c84]">cm</span>
+                  {profile.height_cm || profile.current_health_metrics.height_cm.toFixed(0)} <span className="text-[12px] text-[#637c84]">cm</span>
                 </p>
               </div>
               <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4 col-span-2">
@@ -333,7 +333,7 @@ export default function ProfilePage() {
           </div>
         )}
 
-        {/* Allergen Preferences */}
+        
         <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
           <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
             Allergen Preferences
@@ -376,7 +376,7 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Dietary Restrictions */}
+        
         <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
           <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
             Dietary Restrictions
@@ -419,7 +419,7 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Health Conditions */}
+        
         <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
           <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
             Health Conditions
@@ -462,7 +462,7 @@ export default function ProfilePage() {
           )}
         </div>
 
-        {/* Health Metrics History */}
+        
         {!isEditMode && metricsHistory.length > 0 && (
           <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-6">
             <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
@@ -543,7 +543,7 @@ export default function ProfilePage() {
           </div>
         )}
 
-        {/* Action Buttons */}
+        
         {isEditMode && (
           <div className="flex gap-3">
             <button

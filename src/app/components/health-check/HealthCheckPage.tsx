@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app/components/ui/card';
-import { Alert, AlertDescription } from '@/app/components/ui/alert';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/app/components/ui/tabs';
-import { Activity, History, Info } from 'lucide-react';
+import { Activity, History } from 'lucide-react';
 import ResponsiveLayout from '../ResponsiveLayout';
 import Breadcrumb from '../Breadcrumb';
 import HealthCheckForm from './HealthCheckForm';
@@ -10,31 +10,59 @@ import ConsentNotice from './ConsentNotice';
 import ProcessingIndicator from './ProcessingIndicator';
 import PredictionResultCard from './PredictionResultCard';
 import { submitHealthCheck, getHealthCheckHistory, HealthCheckSubmitRequest, HealthCheckSubmitResponse } from '@/lib/healthCheck';
+import { getProfile } from '@/lib/profileApi';
+import { getDailySummary } from '@/lib/foodApi';
 import { Prediction } from '@/lib/types';
 import { handleApiError } from '@/lib/api';
+import type { ProfileResponse } from '@/types/profile';
 
 type PageStep = 'form' | 'consent' | 'processing' | 'results';
 
 export default function HealthCheckPage() {
+  const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState<PageStep>('form');
   const [formData, setFormData] = useState<HealthCheckSubmitRequest | null>(null);
   const [predictionResult, setPredictionResult] = useState<HealthCheckSubmitResponse | null>(null);
   const [history, setHistory] = useState<Prediction[]>([]);
+  const [profile, setProfile] = useState<ProfileResponse | null>(null);
   const [error, setError] = useState<string>('');
   const [isLoadingHistory, setIsLoadingHistory] = useState(false);
+  const [hasMealsInLast24Hours, setHasMealsInLast24Hours] = useState(false);
 
   useEffect(() => {
     loadHistory();
+    loadProfile();
+    checkRecentMeals();
   }, []);
+
+  const checkRecentMeals = async () => {
+    try {
+      const today = new Date().toISOString().split('T')[0];
+      const summary = await getDailySummary(today);
+      setHasMealsInLast24Hours(summary.total_calories > 0);
+    } catch (err) {
+      console.error('Error checking recent meals:', err);
+      setHasMealsInLast24Hours(false);
+    }
+  };
+
+  const loadProfile = async () => {
+    try {
+      const profileData = await getProfile();
+      setProfile(profileData);
+    } catch (err) {
+      console.error('Failed to load profile:', err);
+    }
+  };
 
   const loadHistory = async () => {
     setIsLoadingHistory(true);
     try {
       const data = await getHealthCheckHistory();
-      setHistory(data || []); // Ensure we always have an array
+      setHistory(data || []);
     } catch (err) {
       console.error('Failed to load history:', err);
-      setHistory([]); // Set empty array on error
+      setHistory([]);
     } finally {
       setIsLoadingHistory(false);
     }
@@ -52,22 +80,18 @@ export default function HealthCheckPage() {
     setError('');
 
     try {
-      // Start the health check submission
       const startTime = Date.now();
       const result = await submitHealthCheck(formData);
       
-      // Calculate elapsed time
       const elapsedTime = Date.now() - startTime;
-      const minimumDisplayTime = 2500; // 2.5 seconds minimum
+      const minimumDisplayTime = hasMealsInLast24Hours ? 28000 : 24000;
       
-      // If the request completed too quickly, wait for the remaining time
       if (elapsedTime < minimumDisplayTime) {
         await new Promise(resolve => setTimeout(resolve, minimumDisplayTime - elapsedTime));
       }
       
       setPredictionResult(result);
       setCurrentStep('results');
-      // Reload history after new prediction
       await loadHistory();
     } catch (err) {
       setError(handleApiError(err));
@@ -80,9 +104,7 @@ export default function HealthCheckPage() {
   };
 
   const handleResultsComplete = () => {
-    setCurrentStep('form');
-    setFormData(null);
-    setPredictionResult(null);
+    navigate('/');
   };
 
   const formatDate = (dateString: string) => {
@@ -96,13 +118,23 @@ export default function HealthCheckPage() {
     });
   };
 
-  const getClassificationColor = (classification: string) => {
-    if (classification === 'No Diabetes') return 'text-green-600 bg-green-50';
-    if (classification === 'Type 1') return 'text-red-600 bg-red-50';
-    return 'text-orange-600 bg-orange-50';
+  const getRiskLevel = (classification: string, confidence: number, probabilities?: Record<string, number>) => {
+    if (classification === 'Has Diabetes') {
+      return { level: 'High Risk', color: 'text-red-600 bg-red-50' };
+    }
+    
+    // For "No Diabetes" - check confidence and probability
+    const diabetesProbability = probabilities?.['Has Diabetes'] || 0;
+    const isHighProbability = diabetesProbability >= 0.3;
+    const isLowConfidence = confidence < 0.75;
+    
+    if (isHighProbability || isLowConfidence) {
+      return { level: 'Medium Risk', color: 'text-orange-600 bg-orange-50' };
+    }
+    
+    return { level: 'Low Risk', color: 'text-green-600 bg-green-50' };
   };
 
-  // Breadcrumb items based on current step
   const getBreadcrumbItems = () => {
     const items = [{ label: 'Health Check' }];
     if (currentStep === 'consent') {
@@ -148,7 +180,22 @@ export default function HealthCheckPage() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <HealthCheckForm onSubmit={handleFormSubmit} error={error} />
+                    <HealthCheckForm 
+                      onSubmit={handleFormSubmit} 
+                      error={error}
+                      profileData={{
+                        age: profile?.age || null,
+                        height_cm: profile?.height_cm || null
+                      }}
+                      lastHealthCheck={
+                        history.length > 0
+                          ? {
+                              weight_kg: history[0].health_metrics.weight_kg,
+                              blood_sugar_mgdl: history[0].health_metrics.blood_sugar_mgdl,
+                            }
+                          : null
+                      }
+                    />
                   </CardContent>
                 </Card>
               )}
@@ -179,7 +226,7 @@ export default function HealthCheckPage() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ProcessingIndicator />
+                    <ProcessingIndicator hasMealsInLast24Hours={hasMealsInLast24Hours} />
                   </CardContent>
                 </Card>
               )}
@@ -223,62 +270,71 @@ export default function HealthCheckPage() {
                 </Card>
               ) : (
                 <div className="space-y-4 max-w-3xl">
-                  {history.map((prediction) => (
+                  {history.map((prediction) => {
+                    const riskInfo = getRiskLevel(prediction.classification, prediction.confidence, prediction.probabilities);
+                    return (
                     <Card key={prediction.prediction_id}>
                       <CardContent className="pt-6">
-                        <div className="flex items-start justify-between">
+                        <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
-                            <div className="flex items-center gap-3 mb-2 flex-wrap">
+                            <div className="flex items-center gap-3 mb-3 flex-wrap">
                               <span
-                                className={`px-3 py-1 rounded-full text-sm font-semibold ${getClassificationColor(
-                                  prediction.classification
-                                )}`}
+                                className={`px-3 py-1.5 rounded-full text-sm font-semibold ${riskInfo.color}`}
                               >
-                                {prediction.classification}
+                                {riskInfo.level}
                               </span>
-                              <span className="text-sm text-gray-500">
+                              <span className="text-sm font-medium text-gray-700">
                                 Confidence: {Math.round(prediction.confidence * 100)}%
                               </span>
                             </div>
-                            <div className="text-sm text-gray-600 space-y-1">
-                              <p>
+                            <div className="text-sm text-gray-600">
+                              <p className="mb-2">
                                 <strong>Date:</strong> {formatDate(prediction.predicted_at)}
                               </p>
-                              {prediction.metrics && (
-                                <>
-                                  <p>
-                                    <strong>Weight:</strong> {prediction.metrics.weight_kg} kg
-                                  </p>
-                                  <p>
-                                    <strong>Blood Sugar:</strong> {prediction.metrics.blood_sugar_mgdl} mg/dL
-                                  </p>
-                                  <p>
-                                    <strong>Age:</strong> {prediction.metrics.age} years
-                                  </p>
-                                  {prediction.metrics.bmi && (
-                                    <p>
-                                      <strong>BMI:</strong> {prediction.metrics.bmi.toFixed(1)}
-                                    </p>
-                                  )}
-                                </>
-                              )}
                             </div>
                           </div>
                         </div>
+                        
+                        {prediction.health_metrics && (
+                          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 bg-gray-50 rounded-lg">
+                            <div>
+                              <p className="text-xs text-gray-500 mb-1">Weight</p>
+                              <p className="text-sm font-semibold text-gray-900">{prediction.health_metrics.weight_kg} kg</p>
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500 mb-1">Blood Sugar</p>
+                              <p className="text-sm font-semibold text-gray-900">{prediction.health_metrics.blood_sugar_mgdl} mg/dL</p>
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500 mb-1">Age</p>
+                              <p className="text-sm font-semibold text-gray-900">{prediction.health_metrics.age} years</p>
+                            </div>
+                            <div>
+                              <p className="text-xs text-gray-500 mb-1">Height</p>
+                              <p className="text-sm font-semibold text-gray-900">{prediction.health_metrics.height_cm} cm</p>
+                            </div>
+                            {prediction.health_metrics.bmi && (
+                              <div>
+                                <p className="text-xs text-gray-500 mb-1">BMI</p>
+                                <p className="text-sm font-semibold text-gray-900">{prediction.health_metrics.bmi.toFixed(1)}</p>
+                              </div>
+                            )}
+                            {prediction.health_metrics.symptoms && prediction.health_metrics.symptoms.length > 0 && (
+                              <div className="col-span-2 sm:col-span-3">
+                                <p className="text-xs text-gray-500 mb-1">Symptoms</p>
+                                <p className="text-sm text-gray-700">{prediction.health_metrics.symptoms.join(', ')}</p>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </CardContent>
                     </Card>
-                  ))}
+                  );
+                  })}
                 </div>
               )}
             </TabsContent>
           </Tabs>
-
-          <Alert className="mt-6 max-w-3xl">
-            <Info className="h-4 w-4" />
-            <AlertDescription className="text-sm">
-              <strong>Remember:</strong> These predictions are for informational purposes only. Always consult with a healthcare professional for medical advice and diagnosis.
-            </AlertDescription>
-          </Alert>
         </div>
       </div>
     </ResponsiveLayout>

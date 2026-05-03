@@ -27,11 +27,20 @@ export interface HealthMetrics {
 // Prediction types
 export interface Prediction {
   prediction_id: string;
+  user_id: string;
   classification: 'Type 1' | 'Type 2' | 'No Diabetes';
   confidence: number;
   probabilities: Record<string, number>;
   predicted_at: string;
-  metrics?: HealthMetrics;
+  model_version: string;
+  health_metrics: {
+    weight_kg: number;
+    blood_sugar_mgdl: number;
+    age: number;
+    height_cm: number;
+    bmi?: number;
+    symptoms: string[];
+  };
 }
 
 // Food types

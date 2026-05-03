@@ -1,7 +1,3 @@
-/**
- * TypeScript types for profile-related data structures
- */
-
 export interface CurrentHealthMetrics {
   weight_kg: number;
   blood_sugar_mgdl: number;
@@ -15,6 +11,10 @@ export interface ProfileResponse {
   user_id: string;
   name: string;
   email: string;
+  age: number | null;
+  height_cm: number | null;
+  gender: string | null;
+  is_pregnant: boolean | null;
   allergen_preferences: string[] | null;
   dietary_restrictions: string[] | null;
   health_conditions: string[] | null;
@@ -25,6 +25,10 @@ export interface ProfileResponse {
 
 export interface ProfileUpdate {
   name?: string;
+  age?: number;
+  height_cm?: number;
+  gender?: string;
+  is_pregnant?: boolean;
   allergen_preferences?: string[];
   dietary_restrictions?: string[];
   health_conditions?: string[];

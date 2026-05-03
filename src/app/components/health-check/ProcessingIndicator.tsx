@@ -3,22 +3,32 @@ import { Card, CardContent } from '@/app/components/ui/card';
 import { Progress } from '@/app/components/ui/progress';
 import { Loader2, CheckCircle2 } from 'lucide-react';
 
-const PROCESSING_STEPS = [
-  { id: 1, label: 'Validating health metrics', duration: 800 },
-  { id: 2, label: 'Preprocessing data', duration: 1000 },
-  { id: 3, label: 'Loading ML model', duration: 1200 },
-  { id: 4, label: 'Analyzing patterns', duration: 1500 },
-  { id: 5, label: 'Calculating confidence scores', duration: 1000 },
-  { id: 6, label: 'Generating prediction', duration: 800 },
+interface ProcessingIndicatorProps {
+  hasMealsInLast24Hours?: boolean;
+}
+
+const BASE_PROCESSING_STEPS = [
+  { id: 1, label: 'Validating health metrics', duration: 4000 },
+  { id: 2, label: 'Preprocessing data', duration: 4000 },
+  { id: 3, label: 'Loading ML model', duration: 4000 },
+  { id: 4, label: 'Analyzing patterns', duration: 4000 },
+  { id: 5, label: 'Calculating confidence scores', duration: 4000 },
+  { id: 6, label: 'Generating prediction', duration: 4000 },
 ];
 
-export default function ProcessingIndicator() {
+const MEAL_CHECK_STEP = { id: 7, label: 'Checking logged meals', duration: 4000 };
+
+export default function ProcessingIndicator({ hasMealsInLast24Hours = false }: ProcessingIndicatorProps) {
   const [currentStep, setCurrentStep] = useState(0);
   const [progress, setProgress] = useState(0);
 
+  // Add meal checking step if user has meals in last 24 hours
+  const PROCESSING_STEPS = hasMealsInLast24Hours 
+    ? [...BASE_PROCESSING_STEPS.slice(0, 3), MEAL_CHECK_STEP, ...BASE_PROCESSING_STEPS.slice(3)]
+    : BASE_PROCESSING_STEPS;
+
   useEffect(() => {
     let stepTimer: ReturnType<typeof setTimeout>;
-    let progressTimer: ReturnType<typeof setInterval>;
 
     const startNextStep = (stepIndex: number) => {
       if (stepIndex >= PROCESSING_STEPS.length) {
@@ -28,25 +38,33 @@ export default function ProcessingIndicator() {
 
       setCurrentStep(stepIndex);
       const step = PROCESSING_STEPS[stepIndex];
-      const progressIncrement = 100 / PROCESSING_STEPS.length;
-      const startProgress = stepIndex * progressIncrement;
-      const endProgress = (stepIndex + 1) * progressIncrement;
-
-      // Animate progress for this step
-      let currentProgress = startProgress;
-      const progressStep = (endProgress - startProgress) / (step.duration / 50);
-
-      progressTimer = setInterval(() => {
-        currentProgress += progressStep;
-        if (currentProgress >= endProgress) {
-          currentProgress = endProgress;
-          clearInterval(progressTimer);
+      
+      // Calculate progress for this step
+      const progressPerStep = 100 / PROCESSING_STEPS.length;
+      const targetProgress = (stepIndex + 1) * progressPerStep;
+      
+      // Smoothly animate to target progress
+      const startProgress = stepIndex * progressPerStep;
+      const duration = step.duration;
+      const startTime = Date.now();
+      
+      const animateProgress = () => {
+        const elapsed = Date.now() - startTime;
+        const progressRatio = Math.min(elapsed / duration, 1);
+        const currentProgress = startProgress + (targetProgress - startProgress) * progressRatio;
+        
+        setProgress(currentProgress);
+        
+        if (progressRatio < 1) {
+          requestAnimationFrame(animateProgress);
         }
-        setProgress(Math.min(currentProgress, 100));
-      }, 50);
+      };
+      
+      animateProgress();
 
       // Move to next step after duration
       stepTimer = setTimeout(() => {
+        setProgress(targetProgress); // Ensure exact progress
         startNextStep(stepIndex + 1);
       }, step.duration);
     };
@@ -55,9 +73,8 @@ export default function ProcessingIndicator() {
 
     return () => {
       clearTimeout(stepTimer);
-      clearInterval(progressTimer);
     };
-  }, []);
+  }, [hasMealsInLast24Hours]);
 
   return (
     <div className="space-y-6 py-8">

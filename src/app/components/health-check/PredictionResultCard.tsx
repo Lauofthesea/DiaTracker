@@ -14,55 +14,62 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
   const { classification, confidence } = prediction;
   const confidencePercentage = Math.round(confidence * 100);
 
-  // Determine result styling and messaging
   const getResultConfig = () => {
-    if (classification === 'No Diabetes') {
-      return {
-        icon: CheckCircle2,
-        iconColor: 'text-green-600',
-        bgColor: 'bg-green-50',
-        borderColor: 'border-green-200',
-        title: 'Low Risk',
-        message: 'Based on your health metrics, you show a low risk for diabetes.',
-        recommendations: [
-          'Maintain a healthy diet with balanced nutrition',
-          'Stay physically active with regular exercise',
-          'Monitor your blood sugar levels periodically',
-          'Schedule regular check-ups with your healthcare provider',
-        ],
-      };
-    } else if (classification === 'Type 1') {
+    if (classification === 'Has Diabetes') {
       return {
         icon: AlertTriangle,
         iconColor: 'text-red-600',
         bgColor: 'bg-red-50',
         borderColor: 'border-red-200',
-        title: 'Type 1 Diabetes Risk Detected',
-        message: 'Your health metrics suggest a potential risk for Type 1 diabetes.',
+        title: 'High Risk - Diabetes Detected',
+        message: 'Your health metrics suggest a high risk for diabetes.',
         recommendations: [
-          'Consult with a healthcare provider immediately for proper diagnosis',
-          'Monitor blood sugar levels closely',
-          'Learn about insulin management and treatment options',
-          'Consider working with an endocrinologist',
+          'Schedule an appointment with your healthcare provider immediately',
+          'Monitor blood sugar levels closely and regularly',
+          'Focus on dietary changes to manage blood sugar',
+          'Increase physical activity and exercise regularly',
+          'Track your carbohydrate intake using our meal logging feature',
         ],
       };
-    } else {
+    }
+    
+    const diabetesProbability = prediction.probabilities?.['Has Diabetes'] || 0;
+    const isHighProbability = diabetesProbability >= 0.3;
+    const isLowConfidence = confidence < 0.75;
+    
+    if (isHighProbability || isLowConfidence) {
       return {
         icon: AlertTriangle,
         iconColor: 'text-orange-600',
         bgColor: 'bg-orange-50',
         borderColor: 'border-orange-200',
-        title: 'Type 2 Diabetes Risk Detected',
-        message: 'Your health metrics suggest a potential risk for Type 2 diabetes.',
+        title: 'Medium Risk - Monitor Closely',
+        message: 'Your health metrics show some concerning factors. Regular monitoring is recommended.',
         recommendations: [
-          'Schedule an appointment with your healthcare provider',
-          'Focus on dietary changes to manage blood sugar',
-          'Increase physical activity and exercise regularly',
-          'Monitor your weight and work towards a healthy BMI',
-          'Track your carbohydrate intake using our meal logging feature',
+          'Schedule a check-up with your healthcare provider',
+          'Monitor your blood sugar levels regularly',
+          'Focus on maintaining a healthy diet with balanced nutrition',
+          'Increase physical activity - aim for 30 minutes daily',
+          'Track your meals and carbohydrate intake',
+          'Work towards achieving a healthy BMI if overweight',
         ],
       };
     }
+    
+    return {
+      icon: CheckCircle2,
+      iconColor: 'text-green-600',
+      bgColor: 'bg-green-50',
+      borderColor: 'border-green-200',
+      title: 'Low Risk',
+      message: 'Based on your health metrics, you show a low risk for diabetes.',
+      recommendations: [
+        'Maintain a healthy diet with balanced nutrition',
+        'Stay physically active with regular exercise',
+        'Monitor your blood sugar levels periodically',
+        'Schedule regular check-ups with your healthcare provider',
+      ],
+    };
   };
 
   const config = getResultConfig();
@@ -71,7 +78,6 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
 
   return (
     <div className="space-y-4 py-4">
-      {/* Main Result Card */}
       <Card className={`${config.bgColor} ${config.borderColor} border-2`}>
         <CardContent className="pt-6">
           <div className="flex items-start gap-4">
@@ -86,7 +92,6 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
         </CardContent>
       </Card>
 
-      {/* Confidence Score */}
       <Card>
         <CardContent className="pt-4">
           <div className="space-y-3">
@@ -102,7 +107,6 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
         </CardContent>
       </Card>
 
-      {/* Low Confidence Warning */}
       {isLowConfidence && (
         <Alert variant="default" className="bg-amber-50 border-amber-200">
           <Info className="h-4 w-4 text-amber-600" />
@@ -112,7 +116,6 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
         </Alert>
       )}
 
-      {/* Recommendations */}
       <Card>
         <CardContent className="pt-4">
           <div className="space-y-3">
@@ -132,7 +135,6 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
         </CardContent>
       </Card>
 
-      {/* Medical Disclaimer */}
       <Alert variant="default" className="bg-blue-50 border-blue-200">
         <Info className="h-4 w-4 text-blue-600" />
         <AlertDescription className="text-blue-900 text-sm">
@@ -140,9 +142,8 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
         </AlertDescription>
       </Alert>
 
-      {/* Action Button */}
       <Button onClick={onComplete} className="w-full" size="lg">
-        Continue to Dashboard
+        Return to Dashboard
       </Button>
     </div>
   );

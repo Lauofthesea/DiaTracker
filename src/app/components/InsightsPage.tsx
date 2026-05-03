@@ -10,7 +10,7 @@ export default function InsightsPage() {
   return (
     <ResponsiveLayout>
       <div className="bg-[#f4f8f8] min-h-screen w-full mx-auto relative">
-        {/* Header */}
+        
         <div className="sticky top-0 z-40 backdrop-blur-[12px] bg-[rgba(244,248,248,0.8)] border-b-[0.8px] border-solid border-[rgba(226,234,235,0.4)] px-4 sm:px-6 py-4">
           <div className="flex items-center gap-4 max-w-7xl mx-auto">
             <button onClick={() => navigate("/")} className="bg-[rgba(226,234,235,0.5)] rounded-full w-10 h-10 flex items-center justify-center cursor-pointer border-none md:hidden">
@@ -21,17 +21,17 @@ export default function InsightsPage() {
         </div>
 
         <div className="px-4 sm:px-6 pt-6 pb-6 max-w-7xl mx-auto">
-          {/* Nutritional Summary Card */}
+          
           <div className="mb-4">
             <NutritionalSummaryCard />
           </div>
 
-          {/* Calorie Trend Chart */}
+          
           <div className="mb-4">
             <TrendChart chartType="calories" />
           </div>
 
-          {/* Macronutrient Trend Chart */}
+          
           <div className="mb-4">
             <TrendChart chartType="macronutrients" />
           </div>
