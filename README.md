@@ -33,22 +33,33 @@ A comprehensive web application that combines machine learning-based diabetes ri
 - Node.js 18+
 - Python 3.11+
 - PostgreSQL 14+
-- Docker & Docker Compose (optional)
 
-### COPY / CLONE MUNA REPO TO RUN
+## Getting Started
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd ml-diabetes-tracker
+git clone https://github.com/Lauofthesea/DiaTracker
+cd DiaTracker
 ```
 
-2. **Start with Docker (Recommended)**
-```bash
-docker-compose up
-```
+2. **Set up PostgreSQL Database**
+   
+   Install PostgreSQL 14+ and create a database:
+   ```bash
+   # Create database
+   createdb ml_diabetes_tracker
+   
+   # Or using psql
+   psql -U postgres
+   CREATE DATABASE ml_diabetes_tracker;
+   ```
+   
+   Update the database connection in `backend/.env`:
+   ```
+   DATABASE_URL=postgresql://postgres:your_password@localhost:5432/ml_diabetes_tracker
+   ```
 
-3. **Or run manually:**
+3. **Run the application:**
 
    **Backend:**
    ```bash
@@ -126,9 +137,6 @@ npm install
 # Run development server
 npm run dev
 
-# Run tests
-npm test
-
 # Build for production
 npm run build
 ```
@@ -140,8 +148,9 @@ npm run build
 - **Data Protection**: AES-256 encryption for sensitive fields
 - **Input Validation**: Comprehensive request validation
 
-// CREATED BY: BSIT3B - GROUP 1 //
+
 ## CONTRIBUTORS ## 
+**// CREATED BY: BSIT3B - GROUP 1 //**
 
 **Calvi, Fairudz L.**
 **Fernandez, Rhimand Niño M.**

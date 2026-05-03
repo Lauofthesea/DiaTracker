@@ -1,0 +1,4007 @@
+FOOD LOOKUP DATABASE - COMPREHENSIVE SAMPLES
+343,877 Foods Available for Recommendations
+
+======================================================================
+DIABETES RISK DISTRIBUTION
+======================================================================
+
+Medium_Risk: 202,676 foods (58.9%)
+High_Risk: 138,331 foods (40.2%)
+Low_Risk: 2,870 foods (0.8%)
+
+
+======================================================================
+LOW RISK FOODS
+======================================================================
+
+WILD OATS MARKETPLACE, ORGANIC SOUP, LENTIL
+  Carbs: 13.9g | Calories: 86 kcal | Fiber: 6.1g | Protein: 4.9g | Sugar: 1.2g
+
+PECAN PIECES
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+SIMPLE TRUTH, WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+WHITE SESAME SEEDS
+  Carbs: 14.3g | Calories: 571 kcal | Fiber: 14.3g | Protein: 14.3g | Sugar: 0.0g
+
+CHOPPED PECANS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+JR MAMMOTH HALVES PECANS
+  Carbs: 13.3g | Calories: 690 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+RAW PECAN HALVES TRAIL MIX, RAW PECANS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+CINNAMON STICKS
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 50.0g | Protein: 0.0g | Sugar: 0.0g
+
+STRIANESE, BROWN BEANS
+  Carbs: 12.8g | Calories: 72 kcal | Fiber: 6.4g | Protein: 4.8g | Sugar: 0.8g
+
+ORGANIC DARK RED KIDNEY BEANS
+  Carbs: 14.6g | Calories: 77 kcal | Fiber: 6.2g | Protein: 5.4g | Sugar: 0.8g
+
+TRADITIONAL REFRIED BEANS
+  Carbs: 12.3g | Calories: 85 kcal | Fiber: 5.4g | Protein: 4.6g | Sugar: 0.8g
+
+FANCY PECAN HALVES
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 6.7g | Protein: 10.0g | Sugar: 3.3g
+
+LUPINI BEANS
+  Carbs: 7.5g | Calories: 38 kcal | Fiber: 7.5g | Protein: 7.5g | Sugar: 0.0g
+
+MAMA MARY'S, SLICED RIPE OLIVES
+  Carbs: 6.2g | Calories: 188 kcal | Fiber: 6.2g | Protein: 0.0g | Sugar: 0.0g
+
+BRINED AND ROASTED HEIRLOOM PUMPKIN SEEDS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 32.1g | Sugar: 3.6g
+
+UNSALTED CHOPPED WALNUTS, UNSALTED
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 17.9g | Sugar: 3.6g
+
+SABRA, GUACAMOLE, SPICY
+  Carbs: 9.7g | Calories: 145 kcal | Fiber: 6.5g | Protein: 3.2g | Sugar: 0.0g
+
+RAW WALNUTS HALVES & PIECES
+  Carbs: 14.7g | Calories: 647 kcal | Fiber: 5.9g | Protein: 11.8g | Sugar: 2.9g
+
+DRY ROASTED & SALTED, MACADAMIA NUTS
+  Carbs: 13.3g | Calories: 800 kcal | Fiber: 10.0g | Protein: 6.7g | Sugar: 3.3g
+
+ORGANIC GUACAMOLE
+  Carbs: 10.0g | Calories: 167 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 3.3g
+
+SHELLED WALNUTS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 0.0g
+
+PINTO BEANS
+  Carbs: 13.8g | Calories: 77 kcal | Fiber: 6.2g | Protein: 4.6g | Sugar: 0.8g
+
+ALL-NATURAL PITTED KALAMATA OLIVES
+  Carbs: 6.7g | Calories: 300 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+MACADAMIA NUTS RAW
+  Carbs: 14.3g | Calories: 718 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+BLACK LENTIL SPREAD DIP
+  Carbs: 13.3g | Calories: 100 kcal | Fiber: 6.7g | Protein: 3.3g | Sugar: 0.0g
+
+ROASTED PECANS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 7.1g | Sugar: 3.6g
+
+UNSALTED PECANS HALVES-ROASTED, UNSALTED
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+PREMIUM DARK KIDNEY BEANS
+  Carbs: 14.4g | Calories: 72 kcal | Fiber: 5.6g | Protein: 5.6g | Sugar: 1.6g
+
+ORGANIC LOW SODIUM KIDNEY BEANS
+  Carbs: 12.3g | Calories: 100 kcal | Fiber: 6.2g | Protein: 7.7g | Sugar: 0.8g
+
+RAW WALNUT CHIPS
+  Carbs: 10.7g | Calories: 707 kcal | Fiber: 10.7g | Protein: 17.9g | Sugar: 0.0g
+
+ROUNDY'S, BAY LEAVES
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 50.0g | Protein: 0.0g | Sugar: 0.0g
+
+MINIS GUACAMOLE CUPS
+  Carbs: 8.8g | Calories: 175 kcal | Fiber: 5.3g | Protein: 1.8g | Sugar: 0.0g
+
+PECAN HALVES ROASTED & SALTED
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+PREMIUM PINK BEANS
+  Carbs: 12.9g | Calories: 65 kcal | Fiber: 5.6g | Protein: 4.0g | Sugar: 0.8g
+
+PECANS HALVES
+  Carbs: 13.3g | Calories: 733 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+WEIS QUALITY, ROASTED & SALTED SHELLED PUMPKIN SEEDS
+  Carbs: 10.7g | Calories: 571 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 0.0g
+
+BARBEQUED WALNUTS & ALMONDS ORGANIC SAVORY NUT MIX, BARBEQUED WALNUTS & ALMONDS
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 17.9g | Sugar: 3.6g
+
+PETITE GREEN PEAS
+  Carbs: 14.1g | Calories: 82 kcal | Fiber: 5.9g | Protein: 4.7g | Sugar: 4.7g
+
+PROTEIN SUPERFOOD
+  Carbs: 12.9g | Calories: 355 kcal | Fiber: 9.7g | Protein: 64.5g | Sugar: 3.2g
+
+SPICY PICKLED GREEN BEANS
+  Carbs: 6.7g | Calories: 33 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+RALEY'S, PUMPKIN SEEDS
+  Carbs: 6.7g | Calories: 600 kcal | Fiber: 6.7g | Protein: 36.7g | Sugar: 3.3g
+
+BRAZIL NUTS
+  Carbs: 10.7g | Calories: 714 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+CHOPPED WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+REFRIED BLACK BEANS, REAL LIME JUICE
+  Carbs: 13.1g | Calories: 85 kcal | Fiber: 5.4g | Protein: 5.4g | Sugar: 1.5g
+
+ROASTED PEPITAS
+  Carbs: 14.3g | Calories: 571 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 0.0g
+
+BLACK BEANS
+  Carbs: 14.6g | Calories: 85 kcal | Fiber: 5.4g | Protein: 5.4g | Sugar: 0.8g
+
+RIPE SLICED OLIVES
+  Carbs: 6.2g | Calories: 125 kcal | Fiber: 6.2g | Protein: 0.0g | Sugar: 0.0g
+
+FRESH 'N NOVA, VEGAN HUMMOS, SMOKEHOUSE
+  Carbs: 14.3g | Calories: 154 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 2.5g
+
+NATURE'S EATS, BRAZIL NUTS
+  Carbs: 10.7g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+PROTEIN SUPERFOOD, ALL IN ONE NUTRITION SHAKE
+  Carbs: 12.9g | Calories: 355 kcal | Fiber: 9.7g | Protein: 64.5g | Sugar: 3.2g
+
+ITALIAN STYLE DELI SLICES
+  Carbs: 13.5g | Calories: 212 kcal | Fiber: 7.7g | Protein: 21.1g | Sugar: 3.9g
+
+PECANS CHIPS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+CHOPPED WALNUTS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 0.0g
+
+CLOVER VALLEY, PEANUTS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 28.6g | Sugar: 3.6g
+
+FINELY DICED WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+ARTICHOKE HEARTS
+  Carbs: 11.2g | Calories: 58 kcal | Fiber: 5.8g | Protein: 2.9g | Sugar: 0.8g
+
+NAVITAS NATURALS, SHELLED HEMP SEEDS
+  Carbs: 6.7g | Calories: 600 kcal | Fiber: 6.7g | Protein: 33.3g | Sugar: 0.0g
+
+BELLA TERRA, ORGANIC FIRE ROASTED DICED TOMATOES, SAN MARZANO
+  Carbs: 2.0g | Calories: 75 kcal | Fiber: 8.0g | Protein: 8.0g | Sugar: 0.0g
+
+MELLOCOS (ULLUCOS)
+  Carbs: 11.0g | Calories: 50 kcal | Fiber: 5.5g | Protein: 4.4g | Sugar: 0.0g
+
+ALESSI, EGGPLANT APPETIZER
+  Carbs: 5.5g | Calories: 136 kcal | Fiber: 6.4g | Protein: 1.8g | Sugar: 4.5g
+
+KIDNEY BEANS
+  Carbs: 13.8g | Calories: 77 kcal | Fiber: 7.7g | Protein: 6.2g | Sugar: 0.8g
+
+JEWEL OSCO, SALTED PUMPKIN KERNELS
+  Carbs: 10.0g | Calories: 567 kcal | Fiber: 6.7g | Protein: 30.0g | Sugar: 3.3g
+
+MEDIUM RIPE PITTED OLIVES, MEDIUM
+  Carbs: 6.7g | Calories: 133 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+Nuts, pecans, oil roasted, without salt added
+  Carbs: 13.0g | Calories: 715 kcal | Fiber: 9.5g | Protein: 9.2g | Sugar: 4.0g
+
+RAW BRAZIL NUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 13.3g | Sugar: 3.3g
+
+WALNUT HALVES
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 0.0g
+
+WALNUT PIECES
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+Nuts, pecans, dry roasted, without salt added
+  Carbs: 13.6g | Calories: 710 kcal | Fiber: 9.4g | Protein: 9.5g | Sugar: 4.1g
+
+ARTICHOKE PATE
+  Carbs: 2.0g | Calories: 240 kcal | Fiber: 6.0g | Protein: 2.0g | Sugar: 2.0g
+
+CLASSIC GUACAMOLE
+  Carbs: 10.0g | Calories: 200 kcal | Fiber: 6.7g | Protein: 3.3g | Sugar: 0.0g
+
+HARRIS TEETER, WALNUT PIECES
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+ORGANIC RAW WALNUTS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+DRY ROASTED MACADAMIAS WITH SEA SALT, DRY ROASTED WITH SEA SALT
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+ELIA, HOJIBLANCA CRUSHED OLIVES
+  Carbs: 6.7g | Calories: 167 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+WHOLE FOODS MARKET, ORGANIC BRAZIL NUTS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 0.0g
+
+SWEDISH MEATBALLS
+  Carbs: 9.4g | Calories: 145 kcal | Fiber: 5.5g | Protein: 12.9g | Sugar: 0.8g
+
+BAJELA LARGE BROAD BEANS
+  Carbs: 12.3g | Calories: 77 kcal | Fiber: 6.2g | Protein: 5.4g | Sugar: 0.8g
+
+PITTED KALAMATA OLIVES
+  Carbs: 6.7g | Calories: 133 kcal | Fiber: 6.7g | Protein: 6.7g | Sugar: 0.0g
+
+RAW HULLED HEMP SEED HEARTS
+  Carbs: 10.7g | Calories: 571 kcal | Fiber: 10.7g | Protein: 35.7g | Sugar: 3.6g
+
+RAW PECAN PIECES
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+RAW HALVES PECANS
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+BELL-VIEW, HOT STUFFED MANZANILLA OLIVES, HOT
+  Carbs: 7.1g | Calories: 107 kcal | Fiber: 7.1g | Protein: 0.0g | Sugar: 0.0g
+
+SHELLED WALNUTS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 0.0g
+
+DRY ROASTED MACADAMIA NUTS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+BLACK BEANS
+  Carbs: 14.6g | Calories: 85 kcal | Fiber: 5.4g | Protein: 5.4g | Sugar: 0.0g
+
+MELISSA'S, SPICY EDAMAME
+  Carbs: 12.3g | Calories: 208 kcal | Fiber: 6.6g | Protein: 12.3g | Sugar: 2.8g
+
+CHEFZITO, SESAME SEED
+  Carbs: 13.3g | Calories: 633 kcal | Fiber: 10.0g | Protein: 20.0g | Sugar: 0.0g
+
+CHIPPED PECANS
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+ROUNDY'S, RAW ALMONDS
+  Carbs: 13.9g | Calories: 583 kcal | Fiber: 11.1g | Protein: 22.2g | Sugar: 2.8g
+
+PETITE PEAS
+  Carbs: 14.1g | Calories: 82 kcal | Fiber: 5.9g | Protein: 4.7g | Sugar: 4.7g
+
+ORGANIC RASPBERRIES
+  Carbs: 12.1g | Calories: 53 kcal | Fiber: 6.8g | Protein: 1.5g | Sugar: 4.5g
+
+ORGANIC PRODUCE WHOLE LEAF GREEN KALE
+  Carbs: 10.7g | Calories: 50 kcal | Fiber: 7.1g | Protein: 3.6g | Sugar: 0.0g
+
+SUNSHINE COUNTRY, HALVES PECANS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+SPICY GUACAMOLE MINI CUPS
+  Carbs: 10.5g | Calories: 158 kcal | Fiber: 7.0g | Protein: 1.8g | Sugar: 1.8g
+
+PLANT-BASED BACON
+  Carbs: 0.0g | Calories: 200 kcal | Fiber: 10.0g | Protein: 30.0g | Sugar: 0.0g
+
+BRAZIL NUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 13.3g | Sugar: 3.3g
+
+CASTELVETRANO OLIVES
+  Carbs: 6.7g | Calories: 233 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+AVOCADO
+  Carbs: 0.0g | Calories: 192 kcal | Fiber: 7.7g | Protein: 0.0g | Sugar: 0.0g
+
+MARCONA ALMONDS FRIED IN OLIVE OIL & SALTED
+  Carbs: 14.0g | Calories: 660 kcal | Fiber: 10.5g | Protein: 24.6g | Sugar: 3.5g
+
+MARGARITA FLAVORED GUACAMOLE
+  Carbs: 9.4g | Calories: 219 kcal | Fiber: 6.2g | Protein: 3.1g | Sugar: 0.0g
+
+ORGANIC PECAN HALVES
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+ROYAL HAWAIIAN ORCHARDS, NATURAL MACADAMIAS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+PINK BEANS
+  Carbs: 12.3g | Calories: 62 kcal | Fiber: 5.4g | Protein: 3.9g | Sugar: 0.8g
+
+PECAN PIECES
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+CHOPPED GARLIC IN WATER
+  Carbs: 14.3g | Calories: 71 kcal | Fiber: 14.3g | Protein: 0.0g | Sugar: 0.0g
+
+ELAN, PECANS PACANES
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+SALTED PARTY PEANUTS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 28.6g | Sugar: 3.6g
+
+BLACK BEAN SPAGHETTI WITH MILD THAI RED CURRY SAUCE
+  Carbs: 11.8g | Calories: 173 kcal | Fiber: 5.5g | Protein: 8.6g | Sugar: 3.9g
+
+GUACAMOLE SNACK PACKS
+  Carbs: 8.8g | Calories: 175 kcal | Fiber: 7.0g | Protein: 1.8g | Sugar: 1.8g
+
+PARTY PEANUTS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 25.0g | Sugar: 3.6g
+
+SUPERIOR NUT & CANDY, WALNUT HALVES & PIECES
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+PREMIUM QUALITY CHOPPED PECANS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+BLACK OLIVES
+  Carbs: 0.0g | Calories: 87 kcal | Fiber: 13.3g | Protein: 0.0g | Sugar: 0.0g
+
+UNSWEETENED & ROASTED CREAMY ALMOND BUTTER, UNSWEETENED & ROASTED CREAMY
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 10.0g | Protein: 26.7g | Sugar: 3.3g
+
+CHOPPED PECANS
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+BUSH'S Pinto Beans  53 oz
+  Carbs: 13.8g | Calories: 77 kcal | Fiber: 5.4g | Protein: 4.6g | Sugar: 0.0g
+
+PEPPER JACK
+  Carbs: 6.0g | Calories: 370 kcal | Fiber: 11.0g | Protein: 26.0g | Sugar: 0.0g
+
+EDAMAME (BOILED SOY BEAN)
+  Carbs: 14.7g | Calories: 160 kcal | Fiber: 10.7g | Protein: 12.0g | Sugar: 2.7g
+
+ORGANIC RASPBERRIES
+  Carbs: 12.1g | Calories: 50 kcal | Fiber: 6.4g | Protein: 1.4g | Sugar: 4.3g
+
+POINDEXTER NUT COMPANY, CALIFORNIA GROWN CHOPPED WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+MARKETS OF MEIJER, RAW PECAN PIECES
+  Carbs: 13.3g | Calories: 700 kcal | Fiber: 10.0g | Protein: 10.0g | Sugar: 3.3g
+
+SALTED DRY ROASTED PEANUTS
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 3.6g
+
+RED RASPBERRIES
+  Carbs: 12.1g | Calories: 43 kcal | Fiber: 6.4g | Protein: 1.4g | Sugar: 4.3g
+
+CARIBBEAN STYLE BLACK BEAN SOUP, CARIBBEAN STYLE
+  Carbs: 14.1g | Calories: 84 kcal | Fiber: 6.4g | Protein: 4.4g | Sugar: 1.1g
+
+MEATLESS MEXICAN CRUMBLES
+  Carbs: 10.9g | Calories: 109 kcal | Fiber: 5.5g | Protein: 18.2g | Sugar: 1.8g
+
+PROTEIN CHIPS
+  Carbs: 12.5g | Calories: 406 kcal | Fiber: 6.2g | Protein: 68.8g | Sugar: 3.1g
+
+CHOPPED WALNUTS
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+PREMIUM PINTO BEANS
+  Carbs: 14.3g | Calories: 63 kcal | Fiber: 6.3g | Protein: 4.8g | Sugar: 0.8g
+
+WESTBRAE NATURAL, BEANS, FAVA
+  Carbs: 13.1g | Calories: 77 kcal | Fiber: 5.4g | Protein: 6.2g | Sugar: 1.5g
+
+365 EVERYDAY VALUE, ORGANIC CANNELLINI BEANS
+  Carbs: 14.6g | Calories: 77 kcal | Fiber: 6.2g | Protein: 4.6g | Sugar: 0.0g
+
+AUTHENTIC GUACAMOLE SINGLES
+  Carbs: 8.8g | Calories: 175 kcal | Fiber: 7.0g | Protein: 1.8g | Sugar: 1.8g
+
+BLACK LENTILS
+  Carbs: 13.8g | Calories: 62 kcal | Fiber: 6.9g | Protein: 6.2g | Sugar: 0.8g
+
+HUMMUS WITH GREEN SALSA
+  Carbs: 14.3g | Calories: 250 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 0.0g
+
+PARTY PEANUTS
+  Carbs: 14.3g | Calories: 595 kcal | Fiber: 9.5g | Protein: 28.6g | Sugar: 4.8g
+
+MEAT-FREE CHICKEN STRIPS
+  Carbs: 2.9g | Calories: 93 kcal | Fiber: 5.7g | Protein: 14.3g | Sugar: 1.4g
+
+DARK RED KIDNEY BEANS
+  Carbs: 14.6g | Calories: 77 kcal | Fiber: 6.2g | Protein: 5.4g | Sugar: 0.8g
+
+HALVES & PIECES WALNUTS
+  Carbs: 10.0g | Calories: 700 kcal | Fiber: 10.0g | Protein: 16.7g | Sugar: 0.0g
+
+SALTED MAMMOTH PECANS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+FERRIS, ROASTED NO SALT PUMPKIN SEEDS
+  Carbs: 14.3g | Calories: 571 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 0.0g
+
+DRY ROASTED SALTED PEANUTS
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 3.6g
+
+GOURMET THYME HUMMUS
+  Carbs: 14.3g | Calories: 154 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 2.5g
+
+NO SALT ADDED DARK RED KIDNEY BEANS
+  Carbs: 14.6g | Calories: 77 kcal | Fiber: 6.2g | Protein: 5.4g | Sugar: 0.0g
+
+ROASTED, SALTED SUNFLOWER SEEDS THE AMERICAN TRAIL MIX, ROASTED, SALTED
+  Carbs: 14.3g | Calories: 536 kcal | Fiber: 10.7g | Protein: 17.9g | Sugar: 3.6g
+
+GARDEN OF LIFE, ORGANIC PLANT PROTEIN
+  Carbs: 13.0g | Calories: 391 kcal | Fiber: 8.7g | Protein: 65.2g | Sugar: 0.0g
+
+ORGANIC GUACAMOLE
+  Carbs: 10.0g | Calories: 167 kcal | Fiber: 6.7g | Protein: 3.3g | Sugar: 0.0g
+
+ORGANIC NAKED PUMPKIN SEEDS
+  Carbs: 10.7g | Calories: 582 kcal | Fiber: 7.1g | Protein: 32.1g | Sugar: 0.0g
+
+ORGANIC BLACK BEANS
+  Carbs: 0.0g | Calories: 108 kcal | Fiber: 6.9g | Protein: 7.7g | Sugar: 0.8g
+
+HONEY DIJON FAT FREE / SUGAR FREE DRESSING, HONEY DIJON
+  Carbs: 10.0g | Calories: 33 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+JUANITA'S PEPITAS, PUMPKIN SEEDS
+  Carbs: 12.5g | Calories: 562 kcal | Fiber: 6.2g | Protein: 28.1g | Sugar: 0.0g
+
+ORGANIC RAW PECAN HALVES
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+ENGLISH WALNUT PIECES
+  Carbs: 14.0g | Calories: 649 kcal | Fiber: 7.0g | Protein: 15.8g | Sugar: 1.8g
+
+COCKTAIL PEANUTS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 28.6g | Sugar: 3.6g
+
+FISHER, DRY ROASTED MACADAMIAS HALVES & PIECES
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+WALNUT CHIPS
+  Carbs: 14.3g | Calories: 661 kcal | Fiber: 7.1g | Protein: 16.1g | Sugar: 1.8g
+
+PECAN HALVES
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 3.6g
+
+CHEFZITO, GROUND CUMIN
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 31.2g | Protein: 0.0g | Sugar: 0.0g
+
+CALIFORNIA WALNUT HALVES & PIECES
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+SPICY GUACAMOLE
+  Carbs: 10.0g | Calories: 200 kcal | Fiber: 6.7g | Protein: 3.3g | Sugar: 0.0g
+
+ORGANIC BORLOTTI BEANS
+  Carbs: 13.8g | Calories: 77 kcal | Fiber: 5.4g | Protein: 5.4g | Sugar: 0.0g
+
+LECCINO PITTED OLIVES
+  Carbs: 6.7g | Calories: 233 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 0.0g
+
+HANNAFORD, CHOPPED WALNUT
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+MARINATED WITH GARLIC & ROSEMARY ITALIAN SNACKING LUPINI BEANS, GARLIC & ROSEMARY
+  Carbs: 10.8g | Calories: 123 kcal | Fiber: 10.8g | Protein: 13.8g | Sugar: 0.0g
+
+VEGEFARM, VEGE BEEF CHUNK
+  Carbs: 10.0g | Calories: 201 kcal | Fiber: 7.0g | Protein: 11.0g | Sugar: 1.0g
+
+NUTS & SEEDS ORGANIC FANCY WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+CHOPPED WALNUTS
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+STAR SNACKS, ROASTED PEANUTS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 28.6g | Sugar: 3.6g
+
+SUPER SEEDZ, SUPER SEEDZ GOURMET PUMPKIN SEEDS, SEA SALT
+  Carbs: 10.7g | Calories: 536 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 0.0g
+
+MACADAMIA NUTS
+  Carbs: 12.3g | Calories: 657 kcal | Fiber: 7.7g | Protein: 14.3g | Sugar: 2.3g
+
+LA PREFERIDA, REFRIED BEANS
+  Carbs: 13.8g | Calories: 123 kcal | Fiber: 8.5g | Protein: 6.9g | Sugar: 0.8g
+
+CLASSIC HUMMUS
+  Carbs: 14.3g | Calories: 286 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 0.0g
+
+MACADAMIA NUTS
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+ORGANIC RAW WALNUT HALVES & PIECES
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+MIXED NUTS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 10.7g | Protein: 25.0g | Sugar: 3.6g
+
+ROASTED NO SALT SUNFLOWER SEEDS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 7.1g | Protein: 25.0g | Sugar: 3.6g
+
+CHOPPED ENGLISH WALNUTS
+  Carbs: 14.3g | Calories: 679 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 0.0g
+
+INDIAN CURRY PASTE, TIKKA PASTE
+  Carbs: 13.3g | Calories: 200 kcal | Fiber: 6.7g | Protein: 6.7g | Sugar: 0.0g
+
+SMOKED GOUDA REAL CHEESE BITES, SMOKED GOUDA
+  Carbs: 13.3g | Calories: 467 kcal | Fiber: 6.7g | Protein: 33.3g | Sugar: 0.0g
+
+CLASSIC GUACAMOLE
+  Carbs: 10.0g | Calories: 200 kcal | Fiber: 6.7g | Protein: 3.3g | Sugar: 0.0g
+
+CASTELVETRANO SICILIAN PITTED GREEN OLIVES
+  Carbs: 13.3g | Calories: 200 kcal | Fiber: 13.3g | Protein: 0.0g | Sugar: 0.0g
+
+CALAVO, SINGLE SERVE GUACAMOLE, MILD
+  Carbs: 8.8g | Calories: 158 kcal | Fiber: 7.0g | Protein: 1.8g | Sugar: 1.8g
+
+SUNSHINE COUNTRY, BRAZIL NUTS
+  Carbs: 10.7g | Calories: 643 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+RAW CHOPPED WALNUTS
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+AUTHENTIC THAI ICE TEA
+  Carbs: 0.0g | Calories: 375 kcal | Fiber: 50.0g | Protein: 25.0g | Sugar: 0.0g
+
+GOURMET PUMPKIN SEEDS, SEA SALT, SEA SALT
+  Carbs: 10.7g | Calories: 536 kcal | Fiber: 7.1g | Protein: 28.6g | Sugar: 0.0g
+
+LIGHTLY SALTED DRY ROASTED MACADAMIAS, LIGHTLY SALTED DRY ROASTED
+  Carbs: 14.3g | Calories: 714 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+Nuts, macadamia nuts, dry roasted, without salt added
+  Carbs: 13.4g | Calories: 718 kcal | Fiber: 8.0g | Protein: 7.8g | Sugar: 4.1g
+
+SOUP, GREEN SPLIT PEA
+  Carbs: 14.0g | Calories: 70 kcal | Fiber: 5.6g | Protein: 5.6g | Sugar: 1.1g
+
+365 EVERYDAY VALUE, PINTO BEANS
+  Carbs: 14.5g | Calories: 81 kcal | Fiber: 6.5g | Protein: 4.8g | Sugar: 0.8g
+
+SHELLED WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+PREMIUM QUALITY WALNUTS HALVES & PIECES
+  Carbs: 14.3g | Calories: 643 kcal | Fiber: 7.1g | Protein: 14.3g | Sugar: 3.6g
+
+PECANS PIECES
+  Carbs: 14.0g | Calories: 684 kcal | Fiber: 8.8g | Protein: 8.8g | Sugar: 3.5g
+
+FIRST STREET, ROASTED SALTED SUNFLOWER KERNELS
+  Carbs: 14.3g | Calories: 607 kcal | Fiber: 7.1g | Protein: 21.4g | Sugar: 0.0g
+
+CHOPPED WALNUTS
+  Carbs: 13.3g | Calories: 667 kcal | Fiber: 6.7g | Protein: 16.7g | Sugar: 3.3g
+
+INTERNATIONAL FOODSOURCE, WALNUT LIGHT HALVES & PIECES
+  Carbs: 10.0g | Calories: 700 kcal | Fiber: 10.0g | Protein: 16.7g | Sugar: 0.0g
+
+GARLIC HERB HUMMUS, GARLIC HERB
+  Carbs: 12.5g | Calories: 312 kcal | Fiber: 6.2g | Protein: 9.4g | Sugar: 0.0g
+
+HOLLEY SWEETS, ROASTED & SALTED PECAN
+  Carbs: 14.3g | Calories: 750 kcal | Fiber: 7.1g | Protein: 10.7g | Sugar: 3.6g
+
+FRESH JICAMA STICKS WITH SRIRACHA SEASONING, SRIRACHA
+  Carbs: 9.7g | Calories: 40 kcal | Fiber: 5.3g | Protein: 0.9g | Sugar: 1.8g
+
+DRY ROASTED MACADAMIA NUTS
+  Carbs: 14.3g | Calories: 821 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+NATURAL PISTACHIOS MADE WITH SEA SALT
+  Carbs: 14.3g | Calories: 304 kcal | Fiber: 5.4g | Protein: 10.7g | Sugar: 3.6g
+
+CUB FRESH, CALIFORNIA RAW ALMONDS
+  Carbs: 13.9g | Calories: 583 kcal | Fiber: 11.1g | Protein: 22.2g | Sugar: 2.8g
+
+======================================================================
+MEDIUM RISK FOODS
+======================================================================
+
+UNSWEETENED APPLESAUCE, UNSWEETENED
+  Carbs: 9.8g | Calories: 41 kcal | Fiber: 0.8g | Protein: 0.0g | Sugar: 9.0g
+
+ALMOND NUT CLUSTERS SNACK BITES, ALMOND NUT CLUSTERS
+  Carbs: 35.1g | Calories: 579 kcal | Fiber: 8.8g | Protein: 15.8g | Sugar: 17.5g
+
+PORK SAUSAGE PATTY
+  Carbs: 0.0g | Calories: 294 kcal | Fiber: 0.0g | Protein: 17.6g | Sugar: 0.0g
+
+LARGE ENRICHED BREAD
+  Carbs: 51.6g | Calories: 258 kcal | Fiber: 3.2g | Protein: 6.5g | Sugar: 3.2g
+
+Hardwood Smoked PREM Sugar Cured Center Cut Bacon-Layered-Gas Flushed 18/20 15# MBG#539
+  Carbs: 0.0g | Calories: 250 kcal | Fiber: 0.0g | Protein: 42.9g | Sugar: 0.0g
+
+CANOLA OIL
+  Carbs: 0.0g | Calories: 857 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+HUMMUS
+  Carbs: 25.0g | Calories: 214 kcal | Fiber: 7.1g | Protein: 10.7g | Sugar: 0.0g
+
+CUT GREEN BEANS
+  Carbs: 7.4g | Calories: 37 kcal | Fiber: 2.5g | Protein: 1.2g | Sugar: 1.2g
+
+CREAMY PEANUT BUTTER
+  Carbs: 21.9g | Calories: 625 kcal | Fiber: 9.4g | Protein: 25.0g | Sugar: 3.1g
+
+SPARKLING ANTIOXIDANT INFUSION
+  Carbs: 2.6g | Calories: 1 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.3g
+
+CANTINA SALSA
+  Carbs: 6.7g | Calories: 33 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 3.3g
+
+KOSHER STYLE PICKLE
+  Carbs: 3.6g | Calories: 18 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 3.6g
+
+TOMATO SAUCE, TOMATO
+  Carbs: 4.9g | Calories: 25 kcal | Fiber: 1.6g | Protein: 1.6g | Sugar: 3.3g
+
+ORGANIC TEA
+  Carbs: 0.0g | Calories: 149 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+ORGANIC GROUND BEEF PATTIES
+  Carbs: 0.0g | Calories: 192 kcal | Fiber: 0.0g | Protein: 20.5g | Sugar: 0.0g
+
+WHOLE MILK
+  Carbs: 5.4g | Calories: 67 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 5.0g
+
+TOMATO PASTE, TOMATO
+  Carbs: 18.2g | Calories: 91 kcal | Fiber: 6.1g | Protein: 3.0g | Sugar: 12.1g
+
+POWER GREENS FRESH COLLARD GREENS
+  Carbs: 5.9g | Calories: 41 kcal | Fiber: 3.5g | Protein: 3.5g | Sugar: 0.0g
+
+MOMPOPS, MINIS ICE POPS, BANANA, RASPBERRY CREAM
+  Carbs: 13.3g | Calories: 63 kcal | Fiber: 3.3g | Protein: 0.0g | Sugar: 10.0g
+
+WATERMELON LEMON LIME PROBIOTIC FRUIT JUICE, WATERMELON LEMON LIME
+  Carbs: 8.4g | Calories: 34 kcal | Fiber: 0.0g | Protein: 0.4g | Sugar: 5.5g
+
+MEIJER, TRUE GOODNESS, EARL GREY BLACK TEA
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+NATURE'S PROMISE, ORGANIC, HASS AVOCADOS
+  Carbs: 10.0g | Calories: 167 kcal | Fiber: 3.3g | Protein: 3.3g | Sugar: 0.0g
+
+CONDENSED CREAM OF MUSHROOM SOUP
+  Carbs: 8.1g | Calories: 49 kcal | Fiber: 0.0g | Protein: 0.8g | Sugar: 1.6g
+
+FINELY SHREDDED QUESO QUESADILLA CHEESE, QUESO QUESADILLA
+  Carbs: 3.6g | Calories: 393 kcal | Fiber: 0.0g | Protein: 25.0g | Sugar: 0.0g
+
+ORIGINAL BEETROOT KETCHUP, ORIGINAL
+  Carbs: 13.3g | Calories: 100 kcal | Fiber: 6.7g | Protein: 0.0g | Sugar: 13.3g
+
+GARDEN HIGHWAY, CINNAMON APPLES
+  Carbs: 21.4g | Calories: 79 kcal | Fiber: 2.1g | Protein: 0.0g | Sugar: 15.0g
+
+COLLAGEN, WHOLE BODY REPLENISHMENT, MIXED BERRY
+  Carbs: 0.0g | Calories: 354 kcal | Fiber: 0.0g | Protein: 78.7g | Sugar: 0.0g
+
+UNSALTED WHIPPED BUTTER, UNSALTED
+  Carbs: 0.0g | Calories: 778 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+NONFAT YOGURT
+  Carbs: 10.0g | Calories: 53 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 6.7g
+
+CUT GREEN BEANS
+  Carbs: 5.9g | Calories: 29 kcal | Fiber: 3.5g | Protein: 1.2g | Sugar: 1.2g
+
+LOBSTER TAIL
+  Carbs: 0.0g | Calories: 79 kcal | Fiber: 0.0g | Protein: 15.8g | Sugar: 0.0g
+
+PEAS & CARROTS
+  Carbs: 10.0g | Calories: 46 kcal | Fiber: 2.9g | Protein: 2.1g | Sugar: 4.2g
+
+FRESH MOZZARELLA PERLINI
+  Carbs: 0.0g | Calories: 250 kcal | Fiber: 0.0g | Protein: 21.4g | Sugar: 0.0g
+
+CHIA SEEDS STRAWBERRY POMEGRANATE BLUEBERRY BEET PROBIOTIC SMOOTHIE LOWFAT YOGURT DRINK, CHIA SEEDS STRAWBERRY POMEGRANATE BLUEBERRY BEET
+  Carbs: 9.2g | Calories: 63 kcal | Fiber: 1.4g | Protein: 3.4g | Sugar: 6.8g
+
+COCO JOY, NATURAL COCONUT WATER
+  Carbs: 5.6g | Calories: 23 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 5.6g
+
+MEXICAN STYLE CHEESE
+  Carbs: 3.6g | Calories: 393 kcal | Fiber: 0.0g | Protein: 21.4g | Sugar: 0.0g
+
+CRYSTAL FARMS, WISCONSIN GORGONZOLA CRUMBLED CHEESE
+  Carbs: 0.0g | Calories: 357 kcal | Fiber: 0.0g | Protein: 25.0g | Sugar: 0.0g
+
+BACON POTATO CORN CHOWDER
+  Carbs: 7.0g | Calories: 66 kcal | Fiber: 1.3g | Protein: 1.8g | Sugar: 2.2g
+
+WHOLE FOODS MARKET, ROASTED & SALTED PISTACHIOS
+  Carbs: 32.1g | Calories: 571 kcal | Fiber: 10.7g | Protein: 21.4g | Sugar: 7.1g
+
+YOGURT
+  Carbs: 16.9g | Calories: 111 kcal | Fiber: 0.5g | Protein: 2.9g | Sugar: 15.5g
+
+ALMONDMILK
+  Carbs: 0.4g | Calories: 12 kcal | Fiber: 0.4g | Protein: 0.4g | Sugar: 0.0g
+
+YOGURT WITH STRAWBERRIES
+  Carbs: 14.2g | Calories: 96 kcal | Fiber: 1.5g | Protein: 3.0g | Sugar: 13.2g
+
+HOMESTYLE BEEF POT PIE
+  Carbs: 19.0g | Calories: 168 kcal | Fiber: 1.3g | Protein: 5.3g | Sugar: 1.3g
+
+GLACEAU, VITAMIN WATER, NUTRIENT ENHANCED WATER BEVERAGE, POWER-C DRAGONFRUIT
+  Carbs: 5.4g | Calories: 20 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 5.4g
+
+UMEYA, ORIENTAL SNACKS, WASABI PEAS WITH CRACKER, HOT
+  Carbs: 46.7g | Calories: 300 kcal | Fiber: 3.3g | Protein: 3.3g | Sugar: 6.7g
+
+WILD ALASKAN PINK SALMON
+  Carbs: 0.0g | Calories: 106 kcal | Fiber: 0.0g | Protein: 16.5g | Sugar: 0.0g
+
+CHICKEN COOKING STOCK, CHICKEN
+  Carbs: 0.4g | Calories: 8 kcal | Fiber: 0.0g | Protein: 1.6g | Sugar: 0.4g
+
+CLEAR AMERICAN, SPARKLING WATER BEVERAGE, CACTUS LIME
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+ORGANIC CHILI BEANS
+  Carbs: 16.9g | Calories: 92 kcal | Fiber: 5.4g | Protein: 6.2g | Sugar: 0.8g
+
+GROVE STYLE HIGH PULP 100% ORANGE JUICE, ORANGE
+  Carbs: 10.8g | Calories: 46 kcal | Fiber: 0.0g | Protein: 0.8g | Sugar: 8.8g
+
+SMOKED BEEF SAUSAGE
+  Carbs: 1.8g | Calories: 268 kcal | Fiber: 0.0g | Protein: 16.1g | Sugar: 0.0g
+
+ICE CREAM
+  Carbs: 24.5g | Calories: 213 kcal | Fiber: 0.0g | Protein: 3.2g | Sugar: 19.1g
+
+DRY ROASTED PEANUTS
+  Carbs: 21.4g | Calories: 643 kcal | Fiber: 7.1g | Protein: 25.0g | Sugar: 3.6g
+
+PECAN CEREAL YOGURT SMOOTHIE WITH PROBIOTICS, PECAN CEREAL
+  Carbs: 10.6g | Calories: 58 kcal | Fiber: 1.0g | Protein: 2.4g | Sugar: 7.7g
+
+CHUNKY CHICKEN & SAUSAGE GUMBO, CHUNKY CHICKEN & SAUSAGE
+  Carbs: 6.5g | Calories: 49 kcal | Fiber: 0.4g | Protein: 2.5g | Sugar: 1.2g
+
+MEIJER, UNSWEETENED ALMONDMILK, VANILLA
+  Carbs: 0.4g | Calories: 12 kcal | Fiber: 0.4g | Protein: 0.4g | Sugar: 0.0g
+
+ORGANIC POPCORN, JALAPENO & HONEY
+  Carbs: 57.1g | Calories: 393 kcal | Fiber: 14.3g | Protein: 7.1g | Sugar: 3.6g
+
+RUBY RED KRAUT
+  Carbs: 7.1g | Calories: 36 kcal | Fiber: 3.6g | Protein: 0.0g | Sugar: 3.6g
+
+HARD-BOILED EGGS
+  Carbs: 0.0g | Calories: 136 kcal | Fiber: 0.0g | Protein: 13.6g | Sugar: 0.0g
+
+WHOLE WATER CHESTNUTS
+  Carbs: 9.2g | Calories: 38 kcal | Fiber: 3.1g | Protein: 0.8g | Sugar: 0.8g
+
+P'MOS, SUPREME PIZZA, SUPREME, SUPREME
+  Carbs: 16.3g | Calories: 245 kcal | Fiber: 0.7g | Protein: 11.6g | Sugar: 2.0g
+
+COUNTRY-STYLE RIBS, BONELESS PORK
+  Carbs: 1.9g | Calories: 162 kcal | Fiber: 0.0g | Protein: 19.1g | Sugar: 0.0g
+
+RED & GREEN PAK CHOI
+  Carbs: 2.4g | Calories: 12 kcal | Fiber: 1.2g | Protein: 1.2g | Sugar: 1.2g
+
+HERB & LEMONGRASS VEGGIE SEASONING
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+FULLY COOKED PORK BABY BACK RIBS WITH HONEY BOURBON BBQ SAUCE
+  Carbs: 18.6g | Calories: 243 kcal | Fiber: 0.0g | Protein: 11.4g | Sugar: 16.4g
+
+8CT WHEAT HAMBURGER BUNS
+  Carbs: 53.2g | Calories: 306 kcal | Fiber: 4.8g | Protein: 11.3g | Sugar: 3.2g
+
+CAESAR SALAD WITH CHICKEN
+  Carbs: 7.3g | Calories: 165 kcal | Fiber: 1.5g | Protein: 6.8g | Sugar: 1.2g
+
+CHILI WITH BEANS
+  Carbs: 12.2g | Calories: 101 kcal | Fiber: 2.8g | Protein: 5.3g | Sugar: 1.2g
+
+STUFFED GRAPE LEAVES
+  Carbs: 53.6g | Calories: 321 kcal | Fiber: 14.3g | Protein: 17.9g | Sugar: 10.7g
+
+COUNTRY SAUSAGE SKINLESS LINKS
+  Carbs: 0.0g | Calories: 393 kcal | Fiber: 0.0g | Protein: 14.3g | Sugar: 0.0g
+
+PARTYZONE, MINI PIZZA BAGELS, PEPPERONI
+  Carbs: 31.8g | Calories: 216 kcal | Fiber: 3.4g | Protein: 11.4g | Sugar: 3.4g
+
+CREAM OF MUSHROOM CONDENSED SOUP
+  Carbs: 7.3g | Calories: 73 kcal | Fiber: 0.0g | Protein: 1.6g | Sugar: 0.8g
+
+GT'S, ORGANIC RAW KOMBUCHA, CITRUS
+  Carbs: 2.9g | Calories: 12 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.8g
+
+PARFAIT
+  Carbs: 11.0g | Calories: 101 kcal | Fiber: 1.8g | Protein: 9.2g | Sugar: 7.0g
+
+APPLE CIDER JUICE COCKTAIL FROM CONCENTRATE, APPLE CIDER
+  Carbs: 7.9g | Calories: 33 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 7.9g
+
+ITALIAN BLEND STEWED TOMATOES
+  Carbs: 6.5g | Calories: 28 kcal | Fiber: 0.8g | Protein: 0.8g | Sugar: 4.9g
+
+DIET TONIC WATER
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+RUSTIC RYE HEARTH BAKED ARTISAN BREAD
+  Carbs: 49.1g | Calories: 246 kcal | Fiber: 3.5g | Protein: 5.3g | Sugar: 0.0g
+
+KERALA CURRY, CURRIED LEMON CHUTNEY
+  Carbs: 16.7g | Calories: 83 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+GUAVA NECTAR
+  Carbs: 18.4g | Calories: 80 kcal | Fiber: 0.8g | Protein: 0.0g | Sugar: 12.8g
+
+HAVARTI CHEESE
+  Carbs: 0.0g | Calories: 393 kcal | Fiber: 0.0g | Protein: 21.4g | Sugar: 0.0g
+
+SPARKLING SELTZER WATER
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+FAT FREE MILK
+  Carbs: 10.0g | Calories: 54 kcal | Fiber: 0.4g | Protein: 3.3g | Sugar: 9.2g
+
+OVEN ROASTED CHICKEN BREAST
+  Carbs: 1.8g | Calories: 89 kcal | Fiber: 0.0g | Protein: 19.6g | Sugar: 1.8g
+
+VAN DE KAMP'S, COD FILLETS, LEMON PEPPER, LEMON PEPPER
+  Carbs: 26.9g | Calories: 184 kcal | Fiber: 0.7g | Protein: 12.1g | Sugar: 0.7g
+
+Bologna, chicken, pork, beef
+  Carbs: 5.6g | Calories: 272 kcal | Fiber: 0.0g | Protein: 11.3g | Sugar: 0.0g
+
+CHICKEN FLAVOR BOUILLON
+  Carbs: 28.6g | Calories: 143 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+LEMONADE
+  Carbs: 9.6g | Calories: 38 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 9.4g
+
+SHREDDED HASH BROWNS ORIGINAL POTATO SHREDS, SHREDDED HASH BROWNS
+  Carbs: 17.6g | Calories: 82 kcal | Fiber: 1.2g | Protein: 1.2g | Sugar: 0.0g
+
+STEEL CUT OATMEAL
+  Carbs: 15.0g | Calories: 75 kcal | Fiber: 1.3g | Protein: 1.8g | Sugar: 5.7g
+
+GOLD'S, HONEY MUSTARD SAUCE, HONEY
+  Carbs: 20.0g | Calories: 100 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 20.0g
+
+TACOMA BOYS, ZESTY TOMATO ITALIAN
+  Carbs: 13.3g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 6.7g
+
+PREMIUM JUICE
+  Carbs: 10.8g | Calories: 46 kcal | Fiber: 0.0g | Protein: 0.8g | Sugar: 9.2g
+
+ORGANIC PASTA SAUCE
+  Carbs: 9.6g | Calories: 56 kcal | Fiber: 1.6g | Protein: 1.6g | Sugar: 5.6g
+
+ORGANIC COCONUT WATER
+  Carbs: 4.5g | Calories: 18 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 4.5g
+
+Turkey, whole, light meat, meat and skin, raw
+  Carbs: 0.1g | Calories: 161 kcal | Fiber: 0.0g | Protein: 22.0g | Sugar: 0.1g
+
+EXTRA VIRGIN OLIVE OIL
+  Carbs: 0.0g | Calories: 800 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+GOURMET BACON BLUE CHEESE WHIPPED MUSTARD SPREAD & DIP
+  Carbs: 7.7g | Calories: 154 kcal | Fiber: 0.0g | Protein: 3.9g | Sugar: 0.0g
+
+DICED BEETS
+  Carbs: 4.2g | Calories: 33 kcal | Fiber: 0.8g | Protein: 0.8g | Sugar: 3.3g
+
+NO SALT ADDED PETITE DICED TOMATOES
+  Carbs: 4.2g | Calories: 21 kcal | Fiber: 0.8g | Protein: 0.0g | Sugar: 2.5g
+
+DELI BREWED ICED TEA
+  Carbs: 8.8g | Calories: 33 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 8.8g
+
+LIVE KOMBUCHA
+  Carbs: 5.0g | Calories: 20 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 5.0g
+
+CHOCOLATE MARSHMALLOW FLAVORED MILK, CHOCOLATE MARSHMALLOW
+  Carbs: 15.0g | Calories: 96 kcal | Fiber: 0.0g | Protein: 2.9g | Sugar: 15.0g
+
+CLASSIC MINESTRONE TRADITIONAL SOUP, CLASSIC MINESTRONE
+  Carbs: 6.9g | Calories: 41 kcal | Fiber: 1.2g | Protein: 1.6g | Sugar: 1.6g
+
+INTERNATIONAL HARVEST'S, ORGANIC RAW SUNFLOWER SEEDS
+  Carbs: 21.4g | Calories: 586 kcal | Fiber: 7.1g | Protein: 21.4g | Sugar: 3.6g
+
+PROSCIUTTO & MOZZARELLA ROLL
+  Carbs: 2.4g | Calories: 259 kcal | Fiber: 0.0g | Protein: 23.5g | Sugar: 1.2g
+
+COOKIES N' CREAM LIGHT ICE CREAM
+  Carbs: 24.3g | Calories: 118 kcal | Fiber: 6.6g | Protein: 7.9g | Sugar: 8.6g
+
+HARD BOILED EGGS
+  Carbs: 1.1g | Calories: 156 kcal | Fiber: 0.0g | Protein: 12.2g | Sugar: 1.1g
+
+ORIGINAL HEALTH NUT BREAD, HEALTH NUT
+  Carbs: 47.4g | Calories: 263 kcal | Fiber: 5.3g | Protein: 10.5g | Sugar: 5.3g
+
+WILD COHO SMOKED SALMON
+  Carbs: 0.0g | Calories: 179 kcal | Fiber: 0.0g | Protein: 33.9g | Sugar: 0.0g
+
+CASHEWS PIECES
+  Carbs: 32.1g | Calories: 571 kcal | Fiber: 3.6g | Protein: 17.9g | Sugar: 3.6g
+
+SPINACH & GOAT CHEESE TRADITIONAL CRUST, PIZZA
+  Carbs: 23.0g | Calories: 255 kcal | Fiber: 1.8g | Protein: 12.7g | Sugar: 2.4g
+
+RICE CRUSTED FISH STICKS
+  Carbs: 19.2g | Calories: 192 kcal | Fiber: 2.6g | Protein: 10.3g | Sugar: 0.0g
+
+GRASS-FED WHEY PROTEIN BAR
+  Carbs: 44.0g | Calories: 400 kcal | Fiber: 14.0g | Protein: 28.0g | Sugar: 10.0g
+
+RANCH MIXED VEGGIES
+  Carbs: 60.0g | Calories: 467 kcal | Fiber: 6.7g | Protein: 3.3g | Sugar: 13.3g
+
+PINEAPPLE SLICES IN PINEAPPLE JUICE
+  Carbs: 13.9g | Calories: 57 kcal | Fiber: 0.8g | Protein: 0.0g | Sugar: 11.5g
+
+MIXED BERRIES
+  Carbs: 12.0g | Calories: 49 kcal | Fiber: 3.5g | Protein: 0.7g | Sugar: 7.8g
+
+UNCURED PASTRAMI
+  Carbs: 3.6g | Calories: 143 kcal | Fiber: 0.0g | Protein: 21.4g | Sugar: 1.8g
+
+ALOE VERA JUICE
+  Carbs: 2.0g | Calories: 8 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 1.9g
+
+ZICO, PREMIUM COCONUT WATER
+  Carbs: 4.4g | Calories: 20 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 3.6g
+
+CHUNKY BAKED POTATO SOUP
+  Carbs: 9.8g | Calories: 90 kcal | Fiber: 1.2g | Protein: 2.9g | Sugar: 0.0g
+
+SKINLESS FILLETS
+  Carbs: 0.0g | Calories: 80 kcal | Fiber: 0.0g | Protein: 15.0g | Sugar: 0.0g
+
+1% LOWFAT MILK
+  Carbs: 5.5g | Calories: 47 kcal | Fiber: 0.0g | Protein: 3.4g | Sugar: 5.1g
+
+HOPE HUMMUS, SWEET POTATO HUMMUS
+  Carbs: 14.3g | Calories: 179 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 3.6g
+
+McDONALD'S, Fruit 'n Yogurt Parfait (without granola)
+  Carbs: 17.7g | Calories: 90 kcal | Fiber: 0.9g | Protein: 2.5g | Sugar: 11.9g
+
+UPSTART KOMBUCHA, KOMBUCHA, LEMON GINGER
+  Carbs: 4.2g | Calories: 17 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.8g
+
+LIGHTLY SALTED ROASTED ALMONDS, LIGHTLY SALTED
+  Carbs: 17.9g | Calories: 607 kcal | Fiber: 10.7g | Protein: 21.4g | Sugar: 3.6g
+
+ORTEGA, THICK & SMOOTH TACO SAUCE, ORIGINAL
+  Carbs: 12.5g | Calories: 62 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 6.2g
+
+FRESH TOMATO & BASIL
+  Carbs: 5.0g | Calories: 38 kcal | Fiber: 1.7g | Protein: 0.8g | Sugar: 3.3g
+
+CANE SUGAR CREAM SODA
+  Carbs: 13.0g | Calories: 51 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 13.0g
+
+BABY ROMAINE
+  Carbs: 3.5g | Calories: 24 kcal | Fiber: 2.4g | Protein: 1.2g | Sugar: 1.2g
+
+KROGER, ENGLISH MUFFIN BREAKFAST SANDWICH, TURKEY SAUSAGE, EGG & CHEESE
+  Carbs: 20.0g | Calories: 172 kcal | Fiber: 0.7g | Protein: 10.3g | Sugar: 1.4g
+
+HOT PORK SAUSAGE, HOT
+  Carbs: 3.6g | Calories: 214 kcal | Fiber: 0.0g | Protein: 17.9g | Sugar: 3.6g
+
+THE REPUBLIC OF TEA, RASPBERRY QUINCE BLACK TEA
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+ORGANIC PROVOLONE CHEESE
+  Carbs: 4.8g | Calories: 381 kcal | Fiber: 0.0g | Protein: 23.8g | Sugar: 0.0g
+
+NATURAL SPRING WATER
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+GARLIC SHRIMP COMBO TRAY
+  Carbs: 10.0g | Calories: 235 kcal | Fiber: 0.3g | Protein: 8.2g | Sugar: 0.9g
+
+2% REDUCED FAT MILK
+  Carbs: 4.6g | Calories: 50 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 4.6g
+
+TORTELLINI, CHEESE
+  Carbs: 33.9g | Calories: 165 kcal | Fiber: 3.1g | Protein: 6.3g | Sugar: 0.0g
+
+ZERO CALORIE LIQUID WATER ENHANCER
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+MEIJER, COLBY CHEESE
+  Carbs: 0.0g | Calories: 393 kcal | Fiber: 0.0g | Protein: 25.0g | Sugar: 0.0g
+
+GROUND BEEF
+  Carbs: 0.0g | Calories: 259 kcal | Fiber: 0.0g | Protein: 17.0g | Sugar: 0.0g
+
+CRAN-LEMONADE SPARKLING CRANBERRY LEMONADE WITH ANOTHER JUICE FROM CONCENTRATE, CRAN-LEMONADE
+  Carbs: 9.7g | Calories: 36 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 9.7g
+
+JALAPENO CHEDDAR CORNBREAD
+  Carbs: 45.8g | Calories: 305 kcal | Fiber: 3.4g | Protein: 6.8g | Sugar: 18.6g
+
+HONEY WHEAT BREAD, HONEY WHEAT
+  Carbs: 48.1g | Calories: 250 kcal | Fiber: 3.8g | Protein: 9.6g | Sugar: 3.9g
+
+WHITE WINE VINEGAR
+  Carbs: 6.7g | Calories: 20 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+SUPER SWEET WHOLE KERNEL CORN
+  Carbs: 3.7g | Calories: 25 kcal | Fiber: 0.4g | Protein: 0.4g | Sugar: 0.8g
+
+CLASSIC ALFREDO PASTA SAUCE
+  Carbs: 6.5g | Calories: 113 kcal | Fiber: 0.0g | Protein: 1.6g | Sugar: 3.2g
+
+FIRE-ROASTED POBLANO RANCH DRESSING
+  Carbs: 6.7g | Calories: 200 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 3.3g
+
+ORGANIC PUMPKIN
+  Carbs: 9.2g | Calories: 42 kcal | Fiber: 2.5g | Protein: 1.7g | Sugar: 3.3g
+
+ORGANIC APPLE SAUCE
+  Carbs: 14.4g | Calories: 56 kcal | Fiber: 1.1g | Protein: 0.0g | Sugar: 12.2g
+
+PIER COFFEE, COLD BREWED COFFEE
+  Carbs: 0.0g | Calories: 1 kcal | Fiber: 0.0g | Protein: 0.1g | Sugar: 0.0g
+
+DICED TOMATOES
+  Carbs: 4.2g | Calories: 21 kcal | Fiber: 0.8g | Protein: 0.0g | Sugar: 2.5g
+
+MINTS
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+KROGER, GOLDEN HOMINY
+  Carbs: 14.4g | Calories: 72 kcal | Fiber: 2.4g | Protein: 1.6g | Sugar: 0.8g
+
+LARGE CAGE-FREE EGGS
+  Carbs: 0.0g | Calories: 140 kcal | Fiber: 0.0g | Protein: 12.0g | Sugar: 0.0g
+
+FAJITA MIX
+  Carbs: 5.9g | Calories: 29 kcal | Fiber: 2.4g | Protein: 1.2g | Sugar: 3.5g
+
+ARTISAN POPCORN
+  Carbs: 57.1g | Calories: 464 kcal | Fiber: 10.7g | Protein: 10.7g | Sugar: 0.0g
+
+SALMON FILLETS
+  Carbs: 6.3g | Calories: 283 kcal | Fiber: 0.0g | Protein: 17.6g | Sugar: 2.5g
+
+PEPPER JACK CHEESE, PEPPER JACK
+  Carbs: 3.6g | Calories: 393 kcal | Fiber: 0.0g | Protein: 21.4g | Sugar: 0.0g
+
+SUPERFOOD SEEDBAR
+  Carbs: 29.4g | Calories: 412 kcal | Fiber: 7.8g | Protein: 11.8g | Sugar: 13.7g
+
+MILD TEXAS STYLE WITH RED BEAN & BOCK BEER  CHILI STARTER, MILD TEXAS STYLE
+  Carbs: 8.0g | Calories: 40 kcal | Fiber: 2.4g | Protein: 1.6g | Sugar: 2.4g
+
+ALMOND BUTTER WITH MAPLE, ALMOND BUTTER
+  Carbs: 28.1g | Calories: 594 kcal | Fiber: 9.4g | Protein: 18.8g | Sugar: 15.6g
+
+FLORIDA ROLL WR
+  Carbs: 25.9g | Calories: 162 kcal | Fiber: 2.0g | Protein: 3.7g | Sugar: 5.7g
+
+HONEY HAM
+  Carbs: 7.1g | Calories: 125 kcal | Fiber: 0.0g | Protein: 17.9g | Sugar: 7.1g
+
+LEMON TART FINEST YOGHURT & CRUNCHIES, LEMON TART
+  Carbs: 20.7g | Calories: 171 kcal | Fiber: 0.6g | Protein: 4.9g | Sugar: 17.7g
+
+ITALIAN STYLE MEATBALLS
+  Carbs: 7.1g | Calories: 247 kcal | Fiber: 1.2g | Protein: 15.3g | Sugar: 1.2g
+
+COLD-PRESSED CELERY JUICE
+  Carbs: 1.3g | Calories: 8 kcal | Fiber: 0.0g | Protein: 0.4g | Sugar: 1.3g
+
+MONK FRUIT ZERO-CALORIE LIQUID SWEETENER, MONK FRUIT
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+LASAGNA WITH MEAT SAUCE
+  Carbs: 13.6g | Calories: 115 kcal | Fiber: 0.5g | Protein: 4.7g | Sugar: 3.1g
+
+CREAMY RIGATONI WITH BROCCOLI & CHICKEN
+  Carbs: 15.9g | Calories: 119 kcal | Fiber: 1.3g | Protein: 5.7g | Sugar: 0.9g
+
+YELLOW CLING SLICED PEACHES IN HEAVY SYRUP
+  Carbs: 19.5g | Calories: 78 kcal | Fiber: 0.8g | Protein: 0.8g | Sugar: 14.1g
+
+SPARKLING SELTZER WATER
+  Carbs: 0.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+ORGANIC BABY ARUGULA
+  Carbs: 3.5g | Calories: 24 kcal | Fiber: 1.2g | Protein: 2.4g | Sugar: 2.4g
+
+MEXICAN STYLE MONTEREY JACK, CHEDDAR, ASADERO & QUESO QUESADILLA SHREDDED CHEESES
+  Carbs: 3.6g | Calories: 393 kcal | Fiber: 0.0g | Protein: 21.4g | Sugar: 0.0g
+
+HICKORY SMOKED SAUSAGE
+  Carbs: 2.0g | Calories: 286 kcal | Fiber: 0.0g | Protein: 14.3g | Sugar: 0.0g
+
+LOWFAT MILK
+  Carbs: 5.0g | Calories: 46 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 5.0g
+
+BEEF SAUSAGE, ORIGINAL
+  Carbs: 1.8g | Calories: 289 kcal | Fiber: 0.0g | Protein: 12.3g | Sugar: 0.0g
+
+THE SEAWOOD CHIP
+  Carbs: 46.4g | Calories: 304 kcal | Fiber: 7.1g | Protein: 17.9g | Sugar: 3.6g
+
+COTTON CANDY BAR
+  Carbs: 20.9g | Calories: 90 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 14.9g
+
+DAVE'S KILLER BREAD, ORGANIC ROCKIN' RYE BREAD
+  Carbs: 53.3g | Calories: 267 kcal | Fiber: 8.9g | Protein: 11.1g | Sugar: 8.9g
+
+MEIJER, AMERICAN SINGLES
+  Carbs: 10.5g | Calories: 316 kcal | Fiber: 0.0g | Protein: 15.8g | Sugar: 5.3g
+
+USINGER'S, UNCURED APPLEWOOD SMOKED TURKEY BREAST
+  Carbs: 1.8g | Calories: 143 kcal | Fiber: 0.0g | Protein: 19.6g | Sugar: 1.8g
+
+WEIS, MARKET STREET, OVEN BROWNED TURKEY BREAST
+  Carbs: 1.8g | Calories: 89 kcal | Fiber: 0.0g | Protein: 17.9g | Sugar: 1.8g
+
+HANDMADE STYLE TORTILLAS
+  Carbs: 36.6g | Calories: 220 kcal | Fiber: 4.9g | Protein: 9.8g | Sugar: 0.0g
+
+100% PREMIUM APPLE JUICE, APPLE
+  Carbs: 10.4g | Calories: 42 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 8.8g
+
+NEWMAN'S OWN, GREEK VINAIGRETTE DRESSING
+  Carbs: 6.7g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 3.3g
+
+PEAS & CARROTS
+  Carbs: 11.5g | Calories: 57 kcal | Fiber: 3.4g | Protein: 3.5g | Sugar: 4.6g
+
+NUTCRACKER, DRY ROASTED SALTED PEANUTS
+  Carbs: 21.4g | Calories: 571 kcal | Fiber: 7.1g | Protein: 25.0g | Sugar: 3.6g
+
+CHICK PEAS
+  Carbs: 15.4g | Calories: 85 kcal | Fiber: 5.4g | Protein: 5.4g | Sugar: 0.0g
+
+CEDAR'S, ALL NATURAL HOMMUS, CHIPOTLE
+  Carbs: 3.6g | Calories: 161 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 3.6g
+
+TAYLOR FARMS, PEPPERS & RANCH DIP
+  Carbs: 6.4g | Calories: 147 kcal | Fiber: 1.3g | Protein: 1.9g | Sugar: 4.5g
+
+MANZANILLA OLIVES SPANISH STUFFED WITH MINCED PIMIENTOS
+  Carbs: 6.7g | Calories: 167 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+WONTON SOUP
+  Carbs: 45.6g | Calories: 517 kcal | Fiber: 3.0g | Protein: 9.1g | Sugar: 3.0g
+
+CUCUMBER DIP
+  Carbs: 6.7g | Calories: 83 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 6.7g
+
+ADDICTIVE SESAME STIX
+  Carbs: 46.4g | Calories: 571 kcal | Fiber: 3.6g | Protein: 10.7g | Sugar: 3.6g
+
+LOBSTER BISQUE WITH SHERRY
+  Carbs: 5.7g | Calories: 102 kcal | Fiber: 0.4g | Protein: 1.2g | Sugar: 2.0g
+
+WHITE CHEESE FETA
+  Carbs: 0.0g | Calories: 233 kcal | Fiber: 0.0g | Protein: 16.7g | Sugar: 0.0g
+
+HARRIS TEETER, THREE CHEESE PASTA SAUCE
+  Carbs: 10.4g | Calories: 64 kcal | Fiber: 1.6g | Protein: 2.4g | Sugar: 8.0g
+
+POPCORN
+  Carbs: 57.1g | Calories: 500 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 17.9g
+
+======================================================================
+HIGH RISK FOODS
+======================================================================
+
+CASA LUKER CACAO, 37% CACAO MILK CHOCOLATE
+  Carbs: 60.0g | Calories: 550 kcal | Fiber: 2.5g | Protein: 5.0g | Sugar: 52.5g
+
+NUTZ OVER CHOCOLATE
+  Carbs: 54.2g | Calories: 396 kcal | Fiber: 8.3g | Protein: 18.8g | Sugar: 20.8g
+
+SWEETENED RICE CEREAL WITH REAL COCOA & MARSHMALLOWS
+  Carbs: 89.7g | Calories: 379 kcal | Fiber: 0.0g | Protein: 3.5g | Sugar: 48.3g
+
+COCONUT ALMONDS DARK CHOCOLATE, COCONUT ALMONDS
+  Carbs: 52.5g | Calories: 550 kcal | Fiber: 5.0g | Protein: 7.5g | Sugar: 45.0g
+
+SWEDISH THINS
+  Carbs: 70.4g | Calories: 481 kcal | Fiber: 0.0g | Protein: 3.7g | Sugar: 33.3g
+
+GAROFALO PASTA
+  Carbs: 78.6g | Calories: 375 kcal | Fiber: 3.6g | Protein: 12.5g | Sugar: 3.6g
+
+BARBECUE SAUCE
+  Carbs: 38.9g | Calories: 167 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 33.3g
+
+ENRICHED LONG GRAIN RICE
+  Carbs: 80.0g | Calories: 356 kcal | Fiber: 2.2g | Protein: 6.7g | Sugar: 0.0g
+
+FLAPJACK & WAFFLE MIX
+  Carbs: 64.2g | Calories: 358 kcal | Fiber: 9.4g | Protein: 18.9g | Sugar: 15.1g
+
+100% WHOLE GRAIN PASTA
+  Carbs: 69.6g | Calories: 321 kcal | Fiber: 8.9g | Protein: 16.1g | Sugar: 3.6g
+
+NICE!, TRAIL MIX, BERRY CHOCOLATE
+  Carbs: 60.7g | Calories: 393 kcal | Fiber: 7.1g | Protein: 10.7g | Sugar: 42.9g
+
+VIDALIA, SWEET ONION PETALS, SOUR CREAM AND ONION
+  Carbs: 60.7g | Calories: 500 kcal | Fiber: 3.6g | Protein: 7.1g | Sugar: 3.6g
+
+WHITE ROSE, MACARONI AND CHEESE DINNER
+  Carbs: 72.9g | Calories: 343 kcal | Fiber: 2.9g | Protein: 11.4g | Sugar: 10.0g
+
+MEMMI NOODLE SOUP BASE, MEMMI
+  Carbs: 23.3g | Calories: 133 kcal | Fiber: 0.0g | Protein: 6.7g | Sugar: 23.3g
+
+TRICOLOR FIVE CHEESE TORTELLINI, FIVE CHEESE
+  Carbs: 48.7g | Calories: 278 kcal | Fiber: 2.6g | Protein: 13.0g | Sugar: 2.6g
+
+ORGANIC DARKEST CACAO TRUFFLES, CACAO
+  Carbs: 60.0g | Calories: 400 kcal | Fiber: 13.3g | Protein: 6.7g | Sugar: 33.3g
+
+DRINK MIX, STRAWBERRY
+  Carbs: 95.5g | Calories: 409 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 95.5g
+
+HICKORY & BROWN SUGAR BARBECUE SAUCE, HICKORY & BROWN SUGAR
+  Carbs: 40.5g | Calories: 162 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 35.1g
+
+BIRTHDAY CAKE WHITE CHOCOLATE MINI BARK, BIRTHDAY CAKE
+  Carbs: 55.9g | Calories: 559 kcal | Fiber: 0.0g | Protein: 5.9g | Sugar: 55.9g
+
+BAKERY 6 CT DESSERT SHELLS
+  Carbs: 53.6g | Calories: 286 kcal | Fiber: 0.0g | Protein: 3.6g | Sugar: 32.1g
+
+BREAD
+  Carbs: 57.1g | Calories: 286 kcal | Fiber: 2.4g | Protein: 7.1g | Sugar: 14.3g
+
+VANILLA PREMIUM ICE CREAM SWIRLED WITH SALTED CARAMEL, CHOCOLATY COATED PEANUTS AND CARAMEL FILLED FOOTBALLS, VANILLA
+  Carbs: 31.0g | Calories: 241 kcal | Fiber: 0.0g | Protein: 3.5g | Sugar: 21.8g
+
+FREIA, MILK CHOCOLATE
+  Carbs: 56.8g | Calories: 568 kcal | Fiber: 2.7g | Protein: 8.1g | Sugar: 51.4g
+
+THE NATHAN BARS
+  Carbs: 48.5g | Calories: 358 kcal | Fiber: 7.2g | Protein: 9.3g | Sugar: 23.5g
+
+ORGANIC PITTED PRUNES
+  Carbs: 65.0g | Calories: 250 kcal | Fiber: 7.5g | Protein: 2.5g | Sugar: 37.5g
+
+SNAK CLUB, GUMMY BEARS
+  Carbs: 85.0g | Calories: 375 kcal | Fiber: 0.0g | Protein: 7.5g | Sugar: 50.0g
+
+NESTLE, TOLL HOUSE, ULTIMATES COOKIE DOUGH, CHOCOLATE PEANUT BUTTER DELUXE
+  Carbs: 57.9g | Calories: 474 kcal | Fiber: 2.6g | Protein: 5.3g | Sugar: 31.6g
+
+GINGERBREAD SNAKAROONS
+  Carbs: 46.1g | Calories: 538 kcal | Fiber: 7.7g | Protein: 3.9g | Sugar: 34.6g
+
+BEEF RAVIOLI
+  Carbs: 32.4g | Calories: 206 kcal | Fiber: 1.5g | Protein: 8.8g | Sugar: 0.0g
+
+NEWMAN'S OWN, ORGANIC BLACK LICORICE TWISTS
+  Carbs: 74.3g | Calories: 314 kcal | Fiber: 2.9g | Protein: 2.9g | Sugar: 40.0g
+
+BUTTERMILK FLAVORED JUMBO BISCUITS, BUTTERMILK
+  Carbs: 43.9g | Calories: 298 kcal | Fiber: 1.8g | Protein: 5.3g | Sugar: 7.0g
+
+SOURDOUGH BREAD, SOURDOUGH
+  Carbs: 44.6g | Calories: 231 kcal | Fiber: 1.5g | Protein: 7.7g | Sugar: 0.0g
+
+STEAK SPECIAL RECIPE ROLLS
+  Carbs: 46.5g | Calories: 254 kcal | Fiber: 1.4g | Protein: 8.4g | Sugar: 5.6g
+
+BERRY CRUNCHY CLUSTERS WITH WHOLE GRAIN ROLLED OATS AND SUNFLOWER SEEDS, DRIED CURRANTS, FLAX SEEDS, DRIED CRANBERRIES, DRIED BLUEBERRIES, ALMONDS, CASHEWS AND WALNUTS GRANOLA, BERRY CRUNCH
+  Carbs: 63.6g | Calories: 436 kcal | Fiber: 0.0g | Protein: 7.3g | Sugar: 40.0g
+
+POWDERED SUGAR DONUTS, POWDERED SUGAR
+  Carbs: 50.9g | Calories: 439 kcal | Fiber: 0.0g | Protein: 3.5g | Sugar: 28.1g
+
+COFFEE CREAMER
+  Carbs: 33.3g | Calories: 233 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 33.3g
+
+SQUARES PEPPERMINT BARK
+  Carbs: 57.1g | Calories: 571 kcal | Fiber: 0.0g | Protein: 5.7g | Sugar: 54.3g
+
+SURF SWEETS, ORGANIC FRUITY HEARTS
+  Carbs: 85.7g | Calories: 321 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 57.1g
+
+TRAVEL CUP, CERAMIC MUG & HOT COCOA GIFT SET
+  Carbs: 70.0g | Calories: 400 kcal | Fiber: 5.0g | Protein: 5.0g | Sugar: 60.0g
+
+CHOCOLATE TREATS, COCONUT, ALMONDS & PINK HIMALAYAN SALT
+  Carbs: 45.0g | Calories: 525 kcal | Fiber: 10.0g | Protein: 7.5g | Sugar: 32.5g
+
+HONEY BARBECUE BEEF JERKY, HONEY BARBECUE
+  Carbs: 25.0g | Calories: 321 kcal | Fiber: 0.0g | Protein: 39.3g | Sugar: 25.0g
+
+WILD STRAWBERRY DRINK MIX WITH CAFFEINE, WILD STRAWBERRY
+  Carbs: 93.8g | Calories: 312 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+RAVIOLI
+  Carbs: 44.4g | Calories: 270 kcal | Fiber: 1.7g | Protein: 11.3g | Sugar: 0.9g
+
+GUAVA CANDY ROLL
+  Carbs: 86.2g | Calories: 349 kcal | Fiber: 10.0g | Protein: 0.7g | Sugar: 70.5g
+
+MUG SET
+  Carbs: 80.0g | Calories: 400 kcal | Fiber: 5.0g | Protein: 5.0g | Sugar: 60.0g
+
+CANDY CONTAINERS
+  Carbs: 93.3g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 86.7g
+
+COBBLER
+  Carbs: 34.5g | Calories: 212 kcal | Fiber: 0.9g | Protein: 1.8g | Sugar: 19.5g
+
+PEPPERMINT CRUNCH
+  Carbs: 100.0g | Calories: 400 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 100.0g
+
+SYRUP
+  Carbs: 88.3g | Calories: 350 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 88.3g
+
+PINTO BEANS
+  Carbs: 62.9g | Calories: 343 kcal | Fiber: 14.3g | Protein: 20.0g | Sugar: 2.9g
+
+ALMOND MOCHA OVERNIGHT OATS CHILLED CEREAL, ALMOND MOCHA
+  Carbs: 66.2g | Calories: 382 kcal | Fiber: 10.3g | Protein: 11.8g | Sugar: 11.8g
+
+ASSORTED FRUIT FLAVORED SNACKS, ASSORTED FRUIT
+  Carbs: 91.3g | Calories: 391 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 52.2g
+
+SOUR JACKS WATERMELON GUMMY CANDY
+  Carbs: 77.5g | Calories: 350 kcal | Fiber: 0.0g | Protein: 5.0g | Sugar: 60.0g
+
+LOW FAT HONEY GRAHAM CRACKERS
+  Carbs: 82.9g | Calories: 400 kcal | Fiber: 5.7g | Protein: 5.7g | Sugar: 22.9g
+
+LITTLE TEMPTATIONS, MARSHMALLOW STRAWBERRIES
+  Carbs: 76.5g | Calories: 324 kcal | Fiber: 0.0g | Protein: 5.9g | Sugar: 64.7g
+
+ROLLED WAFER WITH HAZELNUT CREAM
+  Carbs: 63.3g | Calories: 533 kcal | Fiber: 3.3g | Protein: 6.7g | Sugar: 40.0g
+
+MACARONI PRODUCT
+  Carbs: 75.0g | Calories: 357 kcal | Fiber: 3.6g | Protein: 12.5g | Sugar: 5.4g
+
+PREMIUM ICE CREAM
+  Carbs: 26.9g | Calories: 239 kcal | Fiber: 0.0g | Protein: 3.0g | Sugar: 25.4g
+
+CLASSIC ITALIAN PASTA SALAD, CLASSIC ITALIAN
+  Carbs: 71.7g | Calories: 358 kcal | Fiber: 1.9g | Protein: 11.3g | Sugar: 5.7g
+
+CHOCOLATE COATED ALMONDS, CHOCOLATE
+  Carbs: 53.5g | Calories: 535 kcal | Fiber: 7.0g | Protein: 9.3g | Sugar: 46.5g
+
+ASSORTED MILK & DARK CHOCOLATES, ASSORTED
+  Carbs: 63.6g | Calories: 455 kcal | Fiber: 3.0g | Protein: 6.1g | Sugar: 51.5g
+
+TERIYAKI SMOKED TURKEY BREAST, TERIYAKI
+  Carbs: 21.4g | Calories: 286 kcal | Fiber: 0.0g | Protein: 35.7g | Sugar: 21.4g
+
+BLUEBERRY WAFFLES
+  Carbs: 34.3g | Calories: 200 kcal | Fiber: 0.0g | Protein: 4.3g | Sugar: 7.1g
+
+SNACK BAR DOUGH, CHOCOLATE CHIP WITH TOASTED OATS
+  Carbs: 58.1g | Calories: 429 kcal | Fiber: 5.1g | Protein: 7.6g | Sugar: 22.7g
+
+STRAWBERRY WAFFLES, STRAWBERRY
+  Carbs: 31.4g | Calories: 200 kcal | Fiber: 0.0g | Protein: 4.3g | Sugar: 4.3g
+
+CHOCOLATE SLICES STYLE CAKES, CHOCOLATE
+  Carbs: 62.2g | Calories: 366 kcal | Fiber: 2.4g | Protein: 4.9g | Sugar: 40.2g
+
+FRUIT CHEWS, STRAWBERRY LEMONADE CHILL, CITRUS SLUSH, CHERRY SPLASH & BLUE RASPBERRY RUSH
+  Carbs: 85.0g | Calories: 400 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 55.0g
+
+BURNT SUGAR PECANS
+  Carbs: 50.0g | Calories: 571 kcal | Fiber: 3.6g | Protein: 7.1g | Sugar: 42.9g
+
+TOASTED COCONUT COOKIE THINS, TOASTED COCONUT
+  Carbs: 53.6g | Calories: 536 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 32.1g
+
+CHOCOLATE CRUNCH WITH BLUEBERRY PREMIUM SNACKING CHOCOLATE, CHOCOLATE CRUNCH WITH BLUEBERRY
+  Carbs: 62.5g | Calories: 475 kcal | Fiber: 7.5g | Protein: 5.0g | Sugar: 30.0g
+
+CROUTONS
+  Carbs: 57.1g | Calories: 429 kcal | Fiber: 0.0g | Protein: 14.3g | Sugar: 0.0g
+
+TACO SEASONING MIX
+  Carbs: 66.7g | Calories: 333 kcal | Fiber: 16.7g | Protein: 0.0g | Sugar: 0.0g
+
+WHEY PROTEIN BAKED BAR
+  Carbs: 30.4g | Calories: 413 kcal | Fiber: 2.2g | Protein: 34.8g | Sugar: 6.5g
+
+ORGANIC BACK AT HOME
+  Carbs: 46.0g | Calories: 220 kcal | Fiber: 2.0g | Protein: 6.0g | Sugar: 0.0g
+
+PINEAPPLE PIE
+  Carbs: 34.4g | Calories: 242 kcal | Fiber: 0.8g | Protein: 2.3g | Sugar: 7.0g
+
+FLAVORED POTATO CHIPS
+  Carbs: 64.3g | Calories: 500 kcal | Fiber: 7.1g | Protein: 7.1g | Sugar: 3.6g
+
+PURE HONEY
+  Carbs: 81.0g | Calories: 286 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 76.2g
+
+VANILLA & CHOCOLATE CUPCAKES, VANILLA & CHOCOLATE
+  Carbs: 56.3g | Calories: 423 kcal | Fiber: 0.0g | Protein: 2.8g | Sugar: 42.2g
+
+MCCORMICK, ITALIAN HERB BAKED CHICKEN & PASTA SEASONING MIX
+  Carbs: 66.7g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+YOGURT PRETZELS
+  Carbs: 66.7g | Calories: 500 kcal | Fiber: 0.0g | Protein: 3.3g | Sugar: 40.0g
+
+CHOCOLATE FLAVORED LOWFAT YOGURT & PRETZELS, CHOCOLATE
+  Carbs: 31.2g | Calories: 172 kcal | Fiber: 1.6g | Protein: 6.2g | Sugar: 9.4g
+
+ICE CREAM
+  Carbs: 29.2g | Calories: 215 kcal | Fiber: 0.0g | Protein: 3.1g | Sugar: 23.1g
+
+REDUCED FAT ICE CREAM
+  Carbs: 28.6g | Calories: 175 kcal | Fiber: 0.0g | Protein: 4.8g | Sugar: 22.2g
+
+INTENSE ORANGE DARK CHOCOLATE WITH ORANGE AND ALMOND SLIVERS, INTENSE ORANGE
+  Carbs: 56.7g | Calories: 533 kcal | Fiber: 6.7g | Protein: 6.7g | Sugar: 43.3g
+
+100% PURE RAW & UNFILTERED LOUISIANA HONEY
+  Carbs: 85.7g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 71.4g
+
+SOUTHERN BLEND POULTRY SEASONING, SOUTHERN BLEND
+  Carbs: 100.0g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+CREAM DESSERT POPS
+  Carbs: 34.6g | Calories: 231 kcal | Fiber: 0.0g | Protein: 1.9g | Sugar: 30.8g
+
+GARLIC CIABATTA ROLLS, GARLIC
+  Carbs: 40.5g | Calories: 351 kcal | Fiber: 2.7g | Protein: 8.1g | Sugar: 0.0g
+
+CHOCOLATE CHIP MUFFINS, CHOCOLATE CHIP
+  Carbs: 57.5g | Calories: 404 kcal | Fiber: 2.1g | Protein: 4.3g | Sugar: 36.2g
+
+MINI MUFFINS
+  Carbs: 54.0g | Calories: 420 kcal | Fiber: 2.0g | Protein: 4.0g | Sugar: 34.0g
+
+THE ESSENTIAL BAKING COMPANY, SLICED RYE
+  Carbs: 42.0g | Calories: 200 kcal | Fiber: 2.0g | Protein: 6.0g | Sugar: 0.0g
+
+CARAMEL FUDGE COW TRACKS FUDGE FILLED COWS AND CARAMEL SWIRLS IN CHOCOLATE ICE CREAM, CARAMEL FUDGE COW TRACKS
+  Carbs: 31.8g | Calories: 242 kcal | Fiber: 0.0g | Protein: 3.0g | Sugar: 25.8g
+
+TROPHY BRANDS, MATTHEW STAFFORD QUARTERBACK GUMMIES
+  Carbs: 90.0g | Calories: 400 kcal | Fiber: 0.0g | Protein: 7.5g | Sugar: 52.5g
+
+HONEY
+  Carbs: 81.0g | Calories: 286 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 76.2g
+
+AHOLD, HEAT & EAT PECANS PUMPKIN SPICED
+  Carbs: 65.0g | Calories: 475 kcal | Fiber: 5.0g | Protein: 2.5g | Sugar: 60.0g
+
+LUIGI VITELLI, SHELLS, ENRICHED MACARONI PRODUCT
+  Carbs: 72.7g | Calories: 356 kcal | Fiber: 2.9g | Protein: 11.8g | Sugar: 3.1g
+
+DRIED MIRASOL PEPPER
+  Carbs: 66.7g | Calories: 367 kcal | Fiber: 23.3g | Protein: 10.0g | Sugar: 20.0g
+
+PIZZA CRUST MIX WITH ANCIENT GRAINS
+  Carbs: 73.2g | Calories: 366 kcal | Fiber: 7.3g | Protein: 12.2g | Sugar: 4.9g
+
+ROOT BEER CANDY
+  Carbs: 100.0g | Calories: 390 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 100.0g
+
+CEREAL
+  Carbs: 80.0g | Calories: 400 kcal | Fiber: 16.7g | Protein: 13.3g | Sugar: 13.3g
+
+MASTER OF MIXES, MINT SYRUP FROM PREMIUM SPEARMINT
+  Carbs: 83.3g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 80.0g
+
+HEARTY SOUP MIX
+  Carbs: 70.6g | Calories: 353 kcal | Fiber: 5.9g | Protein: 5.9g | Sugar: 11.8g
+
+SUGAR BOWL BAKERY, PUMPKIN'S BITES
+  Carbs: 60.0g | Calories: 450 kcal | Fiber: 0.0g | Protein: 5.0g | Sugar: 35.0g
+
+KELLOGG'S, ASSORTED FRUIT FLAVORED SNACKS
+  Carbs: 77.3g | Calories: 318 kcal | Fiber: 0.0g | Protein: 4.5g | Sugar: 50.0g
+
+MILK CHOCOLATE ALMOND
+  Carbs: 52.4g | Calories: 595 kcal | Fiber: 2.4g | Protein: 4.8g | Sugar: 50.0g
+
+SUPREME BAKED MASHED POTATOES
+  Carbs: 70.4g | Calories: 370 kcal | Fiber: 3.7g | Protein: 11.1g | Sugar: 3.7g
+
+LUNDS & BYERLYS, STRAWBERRY SHORTCAKE
+  Carbs: 33.8g | Calories: 338 kcal | Fiber: 0.0g | Protein: 3.8g | Sugar: 26.2g
+
+TURKISH ORGANIC SUN DRIED FIGS
+  Carbs: 66.0g | Calories: 1258 kcal | Fiber: 6.1g | Protein: 1.9g | Sugar: 51.8g
+
+PEANUT BUTTER EGG MILK CHOCOLATE
+  Carbs: 52.9g | Calories: 529 kcal | Fiber: 5.9g | Protein: 11.8g | Sugar: 47.1g
+
+MOMENTUM BRANDS, FLAVORED BEARS, CHOCOLATE
+  Carbs: 60.4g | Calories: 562 kcal | Fiber: 4.2g | Protein: 4.2g | Sugar: 54.2g
+
+PINEAPPLE, ORANGE AND RASPBERRY FLAVORED SHADOW SHERBETS, PINEAPPLE, ORANGE AND RASPBERRY
+  Carbs: 30.8g | Calories: 145 kcal | Fiber: 0.0g | Protein: 1.7g | Sugar: 23.9g
+
+BREAD, SCONE & ROLL MIX
+  Carbs: 69.7g | Calories: 364 kcal | Fiber: 3.0g | Protein: 12.1g | Sugar: 6.1g
+
+CHEESEBURGER MACARONI
+  Carbs: 64.4g | Calories: 400 kcal | Fiber: 2.2g | Protein: 13.3g | Sugar: 6.7g
+
+FROSTED FLAKES CEREAL
+  Carbs: 90.9g | Calories: 394 kcal | Fiber: 0.0g | Protein: 3.0g | Sugar: 36.4g
+
+GESHER, SNAK PAK, HICKORY
+  Carbs: 58.9g | Calories: 496 kcal | Fiber: 0.0g | Protein: 9.3g | Sugar: 3.6g
+
+DARK CHOCOLATE
+  Carbs: 57.1g | Calories: 500 kcal | Fiber: 4.8g | Protein: 4.8g | Sugar: 50.0g
+
+CINN-AMAZING CRUNCH SWEETENED WHEAT & RICE CEREAL
+  Carbs: 78.0g | Calories: 415 kcal | Fiber: 7.3g | Protein: 7.3g | Sugar: 29.3g
+
+BREAKFAST TRIO
+  Carbs: 55.3g | Calories: 404 kcal | Fiber: 4.3g | Protein: 6.4g | Sugar: 25.5g
+
+ICE CREAM
+  Carbs: 26.8g | Calories: 232 kcal | Fiber: 0.0g | Protein: 3.7g | Sugar: 23.2g
+
+EUROPEAN STYLE WAFER ROLLS DOUBLE CHOCOLATE
+  Carbs: 67.9g | Calories: 464 kcal | Fiber: 3.6g | Protein: 7.1g | Sugar: 42.9g
+
+SUN-DRIED RAISINS
+  Carbs: 77.5g | Calories: 325 kcal | Fiber: 5.0g | Protein: 2.5g | Sugar: 72.5g
+
+APPLE PIE WITH CRUMB TOPPING
+  Carbs: 38.2g | Calories: 252 kcal | Fiber: 0.8g | Protein: 1.6g | Sugar: 21.1g
+
+LEMON WAFER COOKIES
+  Carbs: 74.2g | Calories: 516 kcal | Fiber: 1.6g | Protein: 3.2g | Sugar: 35.5g
+
+STARLIGHT MINTS CANDY
+  Carbs: 100.0g | Calories: 400 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 73.3g
+
+LIGHTLY GLAZED APPLE PIE
+  Carbs: 52.7g | Calories: 357 kcal | Fiber: 0.9g | Protein: 2.7g | Sugar: 26.8g
+
+ORIGINAL MACARONI & CHEESE, ORIGINAL
+  Carbs: 70.4g | Calories: 338 kcal | Fiber: 1.4g | Protein: 11.3g | Sugar: 9.9g
+
+ORGANIC BALSAMIC VINEGAR OF MODENA
+  Carbs: 40.0g | Calories: 167 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 40.0g
+
+GREAT VALUE, FROSTED TOASTER PASTRIES, S'MORES
+  Carbs: 73.1g | Calories: 404 kcal | Fiber: 1.9g | Protein: 5.8g | Sugar: 34.6g
+
+FIVE CHEESE TEXAS TOAST
+  Carbs: 37.0g | Calories: 326 kcal | Fiber: 2.2g | Protein: 10.9g | Sugar: 2.2g
+
+HARD CRACK, TOFFEE COOKIES, CHOCOLATE CHIP
+  Carbs: 57.1g | Calories: 464 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 28.6g
+
+RED BARON, SINGLES DEEP DISH PIZZAS, CHEESE
+  Carbs: 30.2g | Calories: 252 kcal | Fiber: 1.3g | Protein: 9.4g | Sugar: 10.1g
+
+SWEET N' STICKY BARBEQUE SAUCE
+  Carbs: 36.1g | Calories: 139 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 30.6g
+
+WHEAT SALTINE CRACKERS, WHEAT
+  Carbs: 73.3g | Calories: 400 kcal | Fiber: 6.7g | Protein: 6.7g | Sugar: 0.0g
+
+PASTA SIDES BUTTER & HERB
+  Carbs: 73.0g | Calories: 365 kcal | Fiber: 3.2g | Protein: 11.1g | Sugar: 4.8g
+
+TRI COLOR TORTELLONI
+  Carbs: 38.0g | Calories: 300 kcal | Fiber: 2.0g | Protein: 14.0g | Sugar: 1.0g
+
+BUTTER PASTA & SAUCE
+  Carbs: 71.4g | Calories: 381 kcal | Fiber: 1.6g | Protein: 12.7g | Sugar: 1.6g
+
+WISH-BONE, RUSSIAN DRESSING
+  Carbs: 46.7g | Calories: 367 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 20.0g
+
+SUGAR FREE GELATIN DESSERT
+  Carbs: 33.3g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+BIG & BUTTERY READY TO BAKE CRESCENT ROLLS, BIG & BUTTERY
+  Carbs: 41.5g | Calories: 358 kcal | Fiber: 1.9g | Protein: 5.7g | Sugar: 7.5g
+
+MINI CRUMB DONUTS
+  Carbs: 51.9g | Calories: 352 kcal | Fiber: 1.9g | Protein: 5.6g | Sugar: 25.9g
+
+SWIRL BREAD
+  Carbs: 50.0g | Calories: 346 kcal | Fiber: 0.0g | Protein: 3.9g | Sugar: 11.5g
+
+BIG & FLAKY CRESCENT ROLLS
+  Carbs: 41.5g | Calories: 358 kcal | Fiber: 1.9g | Protein: 5.7g | Sugar: 7.5g
+
+NAFTA FOODS & PACKAGING, VANILLA PUMPKIN COOKIES
+  Carbs: 77.9g | Calories: 442 kcal | Fiber: 1.1g | Protein: 5.3g | Sugar: 44.2g
+
+COLOSSAL CHOC CHIP COOKIE
+  Carbs: 78.2g | Calories: 538 kcal | Fiber: 0.0g | Protein: 2.6g | Sugar: 56.4g
+
+BUNNYETTES, CHOCOLATY N SMOOTH... CRISP 'N CRUNCHY CANDY
+  Carbs: 67.4g | Calories: 512 kcal | Fiber: 2.3g | Protein: 2.3g | Sugar: 55.8g
+
+LA MOLIENDA, PECAN CANDY
+  Carbs: 48.3g | Calories: 567 kcal | Fiber: 6.7g | Protein: 8.3g | Sugar: 36.7g
+
+HOT COCOA MIX MALTED MILK CHOCOLATE
+  Carbs: 89.3g | Calories: 357 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 82.1g
+
+FROZEN YOGURT
+  Carbs: 32.4g | Calories: 162 kcal | Fiber: 1.5g | Protein: 4.4g | Sugar: 22.1g
+
+SOFT CARAMELS
+  Carbs: 58.3g | Calories: 361 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 41.7g
+
+MRS DASH, POT ROAST SEASONING MIX
+  Carbs: 88.9g | Calories: 222 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 22.2g
+
+BAKE, FRY, OR GRILL SEAFOOD, CHICKEN, CHOPS, BISCUITS, AND PARTY SNACKS
+  Carbs: 66.7g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+ORIGINAL PECAN CARAMEL NUT CLUSTER, ORIGINAL PECAN
+  Carbs: 57.6g | Calories: 515 kcal | Fiber: 3.0g | Protein: 6.1g | Sugar: 51.5g
+
+HY-VEE, PEANUT BUTTER PRETZEL NUGGETS
+  Carbs: 64.3g | Calories: 464 kcal | Fiber: 3.6g | Protein: 14.3g | Sugar: 3.6g
+
+SNACKS SIZE MARSHMALLOW CHICKS
+  Carbs: 80.0g | Calories: 300 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 80.0g
+
+FUDGE BROWNIE MIX
+  Carbs: 88.5g | Calories: 385 kcal | Fiber: 3.8g | Protein: 3.9g | Sugar: 57.7g
+
+PREMIUM MUFFIN
+  Carbs: 48.7g | Calories: 389 kcal | Fiber: 0.9g | Protein: 4.4g | Sugar: 25.7g
+
+LOFTHOUSE COOKIES, CAKE BITES PUMPKIN
+  Carbs: 60.7g | Calories: 429 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 35.7g
+
+DECORATED LOLLIPOP RINGS
+  Carbs: 91.7g | Calories: 375 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 75.0g
+
+KEY LIME COOKIE STRAWS
+  Carbs: 67.9g | Calories: 500 kcal | Fiber: 0.0g | Protein: 3.6g | Sugar: 25.0g
+
+PECAN SHORTBREAD COOKIES
+  Carbs: 59.4g | Calories: 531 kcal | Fiber: 0.0g | Protein: 6.2g | Sugar: 18.8g
+
+SALT FREE RICE CAKES
+  Carbs: 80.0g | Calories: 400 kcal | Fiber: 0.0g | Protein: 10.0g | Sugar: 0.0g
+
+CINNAMON GRAHAMS, CINNAMON
+  Carbs: 77.4g | Calories: 419 kcal | Fiber: 3.2g | Protein: 6.5g | Sugar: 25.8g
+
+BUBBLE GUM
+  Carbs: 80.0g | Calories: 300 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 60.0g
+
+HONEY, ONION, HOPS ALE HOUSE BEER CAN CHICKEN, HONEY, ONION, HOPS
+  Carbs: 111.1g | Calories: 0 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+FROZEN YOGURT
+  Carbs: 27.4g | Calories: 137 kcal | Fiber: 1.4g | Protein: 4.1g | Sugar: 21.9g
+
+KOREAN STYLE BBQ
+  Carbs: 38.9g | Calories: 167 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 33.3g
+
+PEANUT BUTTER FUDGE COOKIES
+  Carbs: 63.3g | Calories: 533 kcal | Fiber: 3.3g | Protein: 6.7g | Sugar: 30.0g
+
+AFFY TAPPLE, PRETZEL BITES WHITE CHOCOLATE COVERED
+  Carbs: 41.0g | Calories: 436 kcal | Fiber: 0.0g | Protein: 5.1g | Sugar: 41.0g
+
+SWEETENED MULTIGRAIN CEREAL
+  Carbs: 81.8g | Calories: 386 kcal | Fiber: 6.8g | Protein: 9.1g | Sugar: 18.2g
+
+ORIGINAL HOT & SMOKY BARBECUE SAUCE, ORIGINAL
+  Carbs: 44.4g | Calories: 194 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 44.4g
+
+KNORR, GRAVY MIX, ROASTED TURKEY FLAVORED WITH OTHER NATURAL FLAVOR
+  Carbs: 71.4g | Calories: 357 kcal | Fiber: 0.0g | Protein: 14.3g | Sugar: 14.3g
+
+MOZZARELLA STUFFED SOFT PRETZEL STICKS, MOZZARELLA
+  Carbs: 34.6g | Calories: 250 kcal | Fiber: 1.9g | Protein: 13.5g | Sugar: 0.0g
+
+BLACKEYE PEAS
+  Carbs: 62.2g | Calories: 243 kcal | Fiber: 27.0g | Protein: 24.3g | Sugar: 2.7g
+
+CRUMB CAKES
+  Carbs: 58.6g | Calories: 431 kcal | Fiber: 1.7g | Protein: 3.5g | Sugar: 31.0g
+
+HONEY
+  Carbs: 81.0g | Calories: 333 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 81.0g
+
+WHOLE WHEAT MACARONI PRODUCT, SPAGHETTI, WHOLE WHEAT
+  Carbs: 73.2g | Calories: 375 kcal | Fiber: 8.9g | Protein: 12.5g | Sugar: 3.6g
+
+HU, CRUNCHY BANANA CHOCOLATE BAR
+  Carbs: 46.7g | Calories: 567 kcal | Fiber: 10.0g | Protein: 6.7g | Sugar: 30.0g
+
+GLUTEN FREE HOMESTYLE WAFFLES
+  Carbs: 48.6g | Calories: 286 kcal | Fiber: 1.4g | Protein: 1.4g | Sugar: 5.7g
+
+ICED PUMPKIN FLAVORED CAKE WITH CREAMY FILLING, ICED PUMPKIN
+  Carbs: 64.4g | Calories: 378 kcal | Fiber: 0.0g | Protein: 2.2g | Sugar: 51.1g
+
+GOLD KIWIFRUIT HONEY, GOLD KIWIFRUIT
+  Carbs: 71.0g | Calories: 290 kcal | Fiber: 0.0g | Protein: 1.0g | Sugar: 62.0g
+
+GALERIE, PEANUTS, PEANUTS CANDY CANES, CHERRY
+  Carbs: 92.3g | Calories: 385 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 76.9g
+
+CRESCENTS
+  Carbs: 46.4g | Calories: 321 kcal | Fiber: 0.0g | Protein: 7.1g | Sugar: 10.7g
+
+UNSALTED ANTIOXIDANT TRAIL MIX
+  Carbs: 52.3g | Calories: 477 kcal | Fiber: 6.8g | Protein: 11.4g | Sugar: 36.4g
+
+JELLY BIRD EGGS
+  Carbs: 90.0g | Calories: 350 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 82.5g
+
+ICE CREAM BAR
+  Carbs: 37.5g | Calories: 333 kcal | Fiber: 4.2g | Protein: 4.2g | Sugar: 25.0g
+
+COOKIES
+  Carbs: 62.5g | Calories: 400 kcal | Fiber: 0.0g | Protein: 5.0g | Sugar: 32.5g
+
+PLANT-BASED ORGANIC CACAO POWDER
+  Carbs: 66.7g | Calories: 417 kcal | Fiber: 33.3g | Protein: 33.3g | Sugar: 0.0g
+
+PASTA SOUP
+  Carbs: 66.7g | Calories: 333 kcal | Fiber: 6.7g | Protein: 15.6g | Sugar: 8.9g
+
+PEPPERMINT BARK PREMIUM POPCORN, PEPPERMINT BARK
+  Carbs: 77.5g | Calories: 475 kcal | Fiber: 5.0g | Protein: 5.0g | Sugar: 47.5g
+
+FOOD LION, CLASSIC ICE CREAM CONE
+  Carbs: 88.9g | Calories: 444 kcal | Fiber: 0.0g | Protein: 0.0g | Sugar: 0.0g
+
+HOT CHOCOLATE
+  Carbs: 61.5g | Calories: 308 kcal | Fiber: 3.8g | Protein: 15.4g | Sugar: 30.8g
+
+MARINELA, GANSITO, COOKIE
+  Carbs: 66.7g | Calories: 500 kcal | Fiber: 2.4g | Protein: 4.8g | Sugar: 35.7g
+
+MOUNTAIN MIX SWEET AND SALTY TRAIL MIX BAR, MOUNTAIN MIX
+  Carbs: 46.7g | Calories: 422 kcal | Fiber: 4.4g | Protein: 17.8g | Sugar: 26.7g
+
+SALTINE CRACKERS
+  Carbs: 78.6g | Calories: 429 kcal | Fiber: 0.0g | Protein: 7.1g | Sugar: 0.0g
+
+HOT COCOA MIX
+  Carbs: 89.3g | Calories: 393 kcal | Fiber: 3.6g | Protein: 3.6g | Sugar: 78.6g
+
+MINDFUL FUNCTIONAL FOOD, TART CHERRY LEMON BALM DREAM BAR
+  Carbs: 47.4g | Calories: 421 kcal | Fiber: 5.3g | Protein: 7.9g | Sugar: 23.7g
+
+NATIVE MIX POPCORN
+  Carbs: 72.2g | Calories: 361 kcal | Fiber: 13.9g | Protein: 11.1g | Sugar: 0.0g
+
+ORIGINAL GINGER SNAPS COOKIES, ORIGINAL
+  Carbs: 76.7g | Calories: 467 kcal | Fiber: 3.3g | Protein: 6.7g | Sugar: 33.3g
+
+SICILIAN PISTACHIO
+  Carbs: 23.9g | Calories: 164 kcal | Fiber: 1.5g | Protein: 4.5g | Sugar: 20.9g
+
+LIGHTLY SWEETENED WHOLEGRAIN CEREAL
+  Carbs: 83.3g | Calories: 350 kcal | Fiber: 10.0g | Protein: 8.3g | Sugar: 20.0g
+
+
+======================================================================
+COMMON FOOD SEARCHES
+======================================================================
+
+
+Search: 'chicken' - Found 9,861 foods
+----------------------------------------------------------------------
+SWANSON BROTH CHICKEN
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+SWANSON BROTH CHICKEN
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+SWANSON BROTH CHICKEN
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+CAMPBELL'S SOUP CHICKEN & DUMPLING
+  Risk: Medium_Risk | Carbs: 5.8g | Cal: 71
+Chicken, FC SmartShapes NAE G'N'S Brd Brst Cutlet; avg 37/4.
+  Risk: Medium_Risk | Carbs: 9.0g | Cal: 205
+Chicken, FC Country Krisp 8pc Cut, 1 bird/bag, 80 pc min
+  Risk: Medium_Risk | Carbs: 5.9g | Cal: 176
+Chicken, FC Original Honey Touched 4pc, 9/18 oz avg
+  Risk: Medium_Risk | Carbs: 4.7g | Cal: 188
+Chicken, FC Country Krisp Wingettes, 1st & 2nd Wing Portion
+  Risk: Medium_Risk | Carbs: 5.5g | Cal: 178
+Chicken, CN, FC Country Good Seasoned Breast Pattie; avg 61/
+  Risk: Medium_Risk | Carbs: 5.4g | Cal: 216
+Chicken, FC Gold'N'Spice Breaded Popcorn Chicken, Breast Fri
+  Risk: Medium_Risk | Carbs: 13.0g | Cal: 220
+Chicken, FC Original Honey Touched Paddles, 2nd Wing Only
+  Risk: Medium_Risk | Carbs: 5.5g | Cal: 260
+Chicken, FC Brd Breast & Thigh Nuggets, Country Goodness avg
+  Risk: Medium_Risk | Carbs: 14.0g | Cal: 254
+Chicken, FC Wing-Ditties, 1st and 2nd Wing Portion
+  Risk: Medium_Risk | Carbs: 5.6g | Cal: 213
+Chicken, FC Country Krisp Jumbo 8 pc Cut, 1 bird/bag, 72 pc 
+  Risk: Medium_Risk | Carbs: 5.9g | Cal: 176
+Chicken, FC SmartShapes G'N'S Brd Brst Strips; avg 145/1.1 o
+  Risk: Medium_Risk | Carbs: 8.8g | Cal: 208
+Chicken, FC  Zesty Brd Chik'N O's avg 228/.7 oz
+  Risk: Medium_Risk | Carbs: 13.1g | Cal: 222
+Chicken, FC All Breast Breaded Nuggets; avg 256/.75 oz
+  Risk: Medium_Risk | Carbs: 14.8g | Cal: 234
+Chicken, Fillet Fritter, Chicken Fried Chicken, Uncooked
+  Risk: Medium_Risk | Carbs: 17.3g | Cal: 200
+Chicken, FC Country Krisp 9 pc Cut, Bulk Pack, Approx. 75 pc
+  Risk: Medium_Risk | Carbs: 5.9g | Cal: 176
+Chicken, Crispy-Lishus Breaded Breast Tender Fritters, Uncoo
+  Risk: Medium_Risk | Carbs: 22.0g | Cal: 200
+
+Search: 'rice' - Found 6,493 foods
+----------------------------------------------------------------------
+100% WHOLE GRAIN INSTANT BROWN RICE, WHOLE GRAIN
+  Risk: High_Risk | Carbs: 77.8g | Cal: 378
+7 ANCIENT GRAINS RICE CRACKERS WITH SEA SALT, SEA SALT
+  Risk: High_Risk | Carbs: 80.0g | Cal: 433
+INSTANT WHITE RICE
+  Risk: High_Risk | Carbs: 82.2g | Cal: 378
+ORANGE CHICKEN FRIED RICE
+  Risk: Medium_Risk | Carbs: 28.6g | Cal: 165
+BROCCOLI BEEF FRIED RICE
+  Risk: Medium_Risk | Carbs: 23.5g | Cal: 168
+ORIGINAL RECIPE RICE PUDDING, ORIGINAL RECIPE
+  Risk: Medium_Risk | Carbs: 18.6g | Cal: 106
+CHERRY LICORICE
+  Risk: High_Risk | Carbs: 75.0g | Cal: 325
+INSTANT WHITE RICE
+  Risk: High_Risk | Carbs: 82.2g | Cal: 378
+EDEN, ORGANIC SPANISH RICE & BEANS
+  Risk: Medium_Risk | Carbs: 16.9g | Cal: 92
+SUPREME BASMATI RICE
+  Risk: High_Risk | Carbs: 80.0g | Cal: 356
+5-GRAIN BLEND KAMUT KHORASAN WHEAT, OATS, WHOLE GRAIN LONG R
+  Risk: High_Risk | Carbs: 68.7g | Cal: 337
+ORGANIC TRICOLOR BLEND RICE
+  Risk: High_Risk | Carbs: 77.8g | Cal: 356
+GLUTEN FREE 100% ORGANIC BROWN RICE PASTA, LASAGNA
+  Risk: High_Risk | Carbs: 77.2g | Cal: 368
+100% ORGANIC BROWN RICE GLUTEN FREE PASTA, EGG TAGLIATELLE
+  Risk: High_Risk | Carbs: 75.4g | Cal: 386
+BROWN RICE THINS SNACK CRACKERS, BROWN RICE
+  Risk: High_Risk | Carbs: 76.7g | Cal: 400
+COUNTRY RANCH ALMOND & RICE CRACKER SNACKS, COUNTRY RANCH
+  Risk: High_Risk | Carbs: 73.3g | Cal: 433
+FORBIDDEN ORGANIC RICE RAMEN NOODLE CAKES, FORBIDDEN
+  Risk: High_Risk | Carbs: 74.3g | Cal: 343
+JADE PEARL ORGANIC RICE RAMEN NOODLE CAKES, JADE PEARL
+  Risk: High_Risk | Carbs: 74.3g | Cal: 343
+BAR, BLUEBERRY LICORICE, BLUEBERRY LICORICE
+  Risk: High_Risk | Carbs: 75.0g | Cal: 312
+DINE IN LONG GRAIN RICE
+  Risk: Medium_Risk | Carbs: 28.7g | Cal: 133
+
+Search: 'apple' - Found 8,877 foods
+----------------------------------------------------------------------
+11.5 FL OZ JUICE DRINK - APPLE CRANBERRY
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 62
+10 FL OZ JUICE DRINK - ORANGE PINEAPPLE
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 47
+5.5 FL OZ 100% JUICE - APPLE
+  Risk: Medium_Risk | Carbs: 11.1g | Cal: 43
+10 FL OZ 100% JUICE - APPLE
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 44
+11.5 FL OZ 100% JUICE - APPLE
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 44
+Pork Loin Filet with Applewood Smoked Bacon
+  Risk: Medium_Risk | Carbs: 2.7g | Cal: 71
+Pork Loin Bone In Chine Removed Chop with Smokey Apple Seaso
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 71
+Pork Loin Filet with Applewood Smoked Bacon
+  Risk: Medium_Risk | Carbs: 2.7g | Cal: 71
+V8 SPLASH BEVERAGE ORANGE PINEAPPLE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 29
+V8 HYDRATE BEVERAGE PINEAPPLE MANGO
+  Risk: Medium_Risk | Carbs: 4.6g | Cal: 19
+MIXED FRUIT MEDLEY FRESHLY FROZEN STRAWBERRIES, PEACHES, PIN
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 64
+APPLE, CARROT & SQUASH ORGANIC FRUIT & VEGETABLE PUREE, APPL
+  Risk: Medium_Risk | Carbs: 12.0g | Cal: 56
+PINEAPPLE CHUNKS IN HEAVY SYRUP
+  Risk: High_Risk | Carbs: 20.9g | Cal: 85
+BURRITOS, EGG, APPLEWOOD SMOKED BACON & CHEESE
+  Risk: Medium_Risk | Carbs: 28.1g | Cal: 234
+ORGANIC MORNING SUPERGRAIN SMOOTHIE, PEAR PINEAPPLE
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 83
+CINNA-APPLE WALNUT INSTANT HOT CEREAL, CINNA-APPLE WALNUT
+  Risk: High_Risk | Carbs: 78.5g | Cal: 400
+GUMMY APPLE RINGS
+  Risk: High_Risk | Carbs: 70.0g | Cal: 300
+ICED GREEN TEA, MANGO PINEAPPLE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 263
+1 APPLE + 1 BANANA FRUIT BAR, APPLE + BANANA
+  Risk: High_Risk | Carbs: 80.0g | Cal: 286
+APPLES & CINNAMON INSTANT IRISH OATMEAL, APPLES & CINNAMON
+  Risk: High_Risk | Carbs: 80.0g | Cal: 371
+
+Search: 'bread' - Found 8,325 foods
+----------------------------------------------------------------------
+PEPPERIDGE FARM BREAD TUSCAN
+  Risk: High_Risk | Carbs: 50.9g | Cal: 263
+PEPPERIDGE FARM BREAD GARLIC
+  Risk: High_Risk | Carbs: 38.0g | Cal: 360
+PEPPERIDGE FARM BREAD TUSCAN
+  Risk: High_Risk | Carbs: 47.4g | Cal: 246
+PEPPERIDGE FARM BREAD FOCACCIA
+  Risk: High_Risk | Carbs: 50.5g | Cal: 253
+PEPPERIDGE FARM BREAD MULTIGRAIN
+  Risk: Medium_Risk | Carbs: 52.6g | Cal: 263
+PEPPERIDGE FARM BREAD OLIVE BATARD
+  Risk: Medium_Risk | Carbs: 45.6g | Cal: 263
+PEPPERIDGE FARM BREAD CHEESE
+  Risk: High_Risk | Carbs: 33.3g | Cal: 333
+PEPPERIDGE FARM BREAD CIABATTA
+  Risk: High_Risk | Carbs: 50.5g | Cal: 263
+PEPPERIDGE FARM BREAD GARLIC
+  Risk: High_Risk | Carbs: 49.1g | Cal: 246
+PEPPERIDGE FARM BREAD
+  Risk: High_Risk | Carbs: 50.9g | Cal: 246
+PEPPERIDGE FARM BREAD SESAME
+  Risk: High_Risk | Carbs: 49.1g | Cal: 246
+PEPPERIDGE FARM BREAD CIABATTA
+  Risk: High_Risk | Carbs: 50.9g | Cal: 263
+PEPPERIDGE FARM BREAD WHITE BATARD
+  Risk: High_Risk | Carbs: 49.1g | Cal: 246
+PEPPERIDGE FARM BREAD EUROPEAN BAGUETTE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 246
+Chicken, FC Gold'N'Spice Breaded Popcorn Chicken, Breast Fri
+  Risk: Medium_Risk | Carbs: 13.0g | Cal: 220
+Chicken, FC All Breast Breaded Nuggets; avg 256/.75 oz
+  Risk: Medium_Risk | Carbs: 14.8g | Cal: 234
+Chicken, Crispy-Lishus Breaded Breast Tender Fritters, Uncoo
+  Risk: Medium_Risk | Carbs: 22.0g | Cal: 200
+Chicken, FC CN Whole Grain Breaded Chik'N Giggles; avg 83/1.
+  Risk: Medium_Risk | Carbs: 12.8g | Cal: 229
+Chicken, FC Ovenable Unbreaded Chicken Wingettes No Gluten a
+  Risk: Medium_Risk | Carbs: 2.0g | Cal: 200
+Chicken, FC Breaded Southern Select Breast Fillet 4oz.
+  Risk: Medium_Risk | Carbs: 14.0g | Cal: 190
+
+Search: 'milk' - Found 11,882 foods
+----------------------------------------------------------------------
+VANILLA WHOLE MILK YOGURT, VANILLA
+  Risk: Medium_Risk | Carbs: 8.8g | Cal: 88
+PEANUT BUTTER MILK CHOCOLATE FILLED WITH PEANUT BUTTER ORGAN
+  Risk: High_Risk | Carbs: 47.6g | Cal: 571
+CARAMEL & PEANUT MILK CHOCOLATE FILLED WITH NOUGAT, CARAMEL 
+  Risk: High_Risk | Carbs: 69.0g | Cal: 500
+NANCY'S, ORGANIC PROBIOTIC GREEK WHOLE MILK YOGURT, HONEY, H
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 106
+PLAIN WHOLE MILK YOGURT, PLAIN
+  Risk: Medium_Risk | Carbs: 7.3g | Cal: 87
+RASPBERRY CREAM TOP WHOLE MILK YOGURT, RASPBERRY
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 107
+PEACH ON THE BOTTOM WHOLE MILK YOGURT, PEACH
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 107
+CHOCOLATE ON THE BOTTOM WHOLE MILK YOGURT, CHOCOLATE
+  Risk: Medium_Risk | Carbs: 18.7g | Cal: 120
+MILK CHOCOLATE COVERED ALMONDS, MILK CHOCOLATE
+  Risk: High_Risk | Carbs: 47.6g | Cal: 548
+SIGNATURE MACARONI & CHEESE WITH REAL MILK, CHEDDAR CHEESE, 
+  Risk: Medium_Risk | Carbs: 13.0g | Cal: 125
+APRICOT MANGO ON THE BOTTOM WHOLE MILK YOGURT, APRICOT MANGO
+  Risk: Medium_Risk | Carbs: 15.3g | Cal: 100
+BUTTERMILK COMPLETE PANCAKE MIX, BUTTERMILK
+  Risk: High_Risk | Carbs: 70.5g | Cal: 361
+BUTTERMILK PANCAKES, BUTTERMILK
+  Risk: High_Risk | Carbs: 39.3g | Cal: 222
+GODIVA, MILK CHOCOLATE BAR, SALTED CARAMEL, SALTED CARAMEL
+  Risk: High_Risk | Carbs: 57.5g | Cal: 525
+2% MILKFAT LARGE CURD COTTAGE CHEESE
+  Risk: Medium_Risk | Carbs: 2.6g | Cal: 80
+CHIVE ALMOND MILK CREAM CHEESE STYLE SPREAD, CHIVE
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 182
+ANTIU XIXONA, MILK CREAMY CHOCOLATE
+  Risk: High_Risk | Carbs: 55.6g | Cal: 544
+ANTIU XIXONA, MILK CHOCOLATE
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 464
+COFFEE LOW-FAT GREEK YOGURT WITH BISCOTTI COOKIES, MILK CHOC
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 120
+ENRICHED HOMESTYLE COUNTRY BUTTERMILK BREAD, HOMESTYLE
+  Risk: High_Risk | Carbs: 52.9g | Cal: 265
+
+Search: 'egg' - Found 4,566 foods
+----------------------------------------------------------------------
+CALIFORNIA VEGGIE POCKETS, ALL NATURAL, ALL NATURAL
+  Risk: Medium_Risk | Carbs: 28.2g | Cal: 192
+BURRITOS, EGG, APPLEWOOD SMOKED BACON & CHEESE
+  Risk: Medium_Risk | Carbs: 28.1g | Cal: 234
+VEGGIE PEPPERONI MEATLESS SLICES, VEGGIE PEPPERONI
+  Risk: Medium_Risk | Carbs: 10.0g | Cal: 167
+VEGGIE MEATLESS BEEF, VEGGIE
+  Risk: Low_Risk | Carbs: 12.5g | Cal: 107
+VEGETABLE EGG ROLL
+  Risk: Medium_Risk | Carbs: 26.6g | Cal: 177
+EGGS, EGG SHAPED BUBBLE GUM FILLED WITH EXTRA SOUR FLAVOR CR
+  Risk: High_Risk | Carbs: 83.3g | Cal: 333
+TINY JELLY BIRD EGGS CANDY
+  Risk: High_Risk | Carbs: 90.5g | Cal: 333
+100% ORGANIC BROWN RICE GLUTEN FREE PASTA, EGG TAGLIATELLE
+  Risk: High_Risk | Carbs: 75.4g | Cal: 386
+DEVILED EGG POTATO SALAD, DEVILED EGG POTATO
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 164
+SEA SALT VEGGIE STICKS, SEA SALT
+  Risk: High_Risk | Carbs: 64.3g | Cal: 500
+CAPONATA EGGPLANT APPETIZER, CAPONATA
+  Risk: Medium_Risk | Carbs: 9.0g | Cal: 71
+TOFURKY, QUICHE VEGAN SAUSAGE & VEGGIE
+  Risk: Medium_Risk | Carbs: 20.2g | Cal: 244
+ROMAN EGG BISCUITS COFFEE TREATS COOKIES, ROMAN EGG
+  Risk: High_Risk | Carbs: 64.5g | Cal: 387
+EGGPLANT PARMIGIANA, EGGPLANT
+  Risk: Medium_Risk | Carbs: 7.8g | Cal: 85
+VEGETABLE EGG ROLLS FILLED WITH FRESH VEGETABLES, VEGETABLE
+  Risk: Medium_Risk | Carbs: 23.5g | Cal: 118
+EGG PRODUCT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+DR. PRAEGER'S, ITALIAN VEGGIE BURGERS
+  Risk: Medium_Risk | Carbs: 19.2g | Cal: 167
+FARM STYLE EGG SALAD, FARM STYLE
+  Risk: Medium_Risk | Carbs: 1.2g | Cal: 212
+MACARONI SALAD ELBOW MACARONI, CELERY, EGG, CARROTS & ONIONS
+  Risk: High_Risk | Carbs: 44.4g | Cal: 330
+TRADITIONAL GERMAN EGG BROAD NOODLES, TRADITIONAL GERMAN
+  Risk: High_Risk | Carbs: 69.1g | Cal: 364
+
+Search: 'fish' - Found 1,221 foods
+----------------------------------------------------------------------
+FISH FRY
+  Risk: High_Risk | Carbs: 66.7g | Cal: 333
+CRUNCHY BREADED FISH FILLETS, CRUNCHY BREADED
+  Risk: Medium_Risk | Carbs: 23.7g | Cal: 202
+FRUIT COBBLER MIX FISH FRY PRODUCTS, FRUIT
+  Risk: High_Risk | Carbs: 88.4g | Cal: 395
+100% CRUNCHY BREADED WHOLE FISH FILLETS, CRUNCHY BREADED
+  Risk: Medium_Risk | Carbs: 24.1g | Cal: 222
+VEGAN FISH FILLET
+  Risk: Medium_Risk | Carbs: 30.8g | Cal: 277
+ROASTED GARLIC & BUTTER SALMON FISH FILLETS, ROASTED GARLIC 
+  Risk: Medium_Risk | Carbs: 6.3g | Cal: 111
+CRISPY BATTERED FISH FILLETS, CRISPY BATTERED
+  Risk: Medium_Risk | Carbs: 22.3g | Cal: 214
+FISH SAUCE MADE WITH SEA SALT, FISH WITH SEA SALT
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 53
+VODKA LUMPFISH CAVIAR
+  Risk: Medium_Risk | Carbs: 14.3g | Cal: 179
+CLASSIC CRUNCHY BREADCRUMBS HADDOCK FISH STICKS, CLASSIC CRU
+  Risk: Medium_Risk | Carbs: 25.0g | Cal: 232
+TILAPIA BREADED FISH FILLETS
+  Risk: Medium_Risk | Carbs: 22.5g | Cal: 243
+ORIGINAL HICKORY GRILLED DRY-RUB SEASONING FOR ALL MEAT AND 
+  Risk: High_Risk | Carbs: 33.3g | Cal: 333
+SEASONED CRISPY FISH FRY SEAFOOD BREADING MIX, SEASONED CRIS
+  Risk: High_Risk | Carbs: 72.2g | Cal: 333
+SEASONED CAJUN FISH FRY, SEASONED
+  Risk: High_Risk | Carbs: 100.0g | Cal: 0
+LEMON & CRACKED PEPPERCORN WILD CAUGHT POLLOCK BREADED FISH 
+  Risk: Medium_Risk | Carbs: 19.8g | Cal: 217
+ROASTED GARLIC & ITALIAN HERB WILD CAUGHT POLLOCK BREADED FI
+  Risk: Medium_Risk | Carbs: 20.8g | Cal: 226
+SIGNATURE SEASONING TILAPIA FISH FILLETS, SIGNATURE SEASONIN
+  Risk: Medium_Risk | Carbs: 4.0g | Cal: 95
+SMART & CRUNCHY BREADED FISH STICKS, SMART & CRUNCHY
+  Risk: Medium_Risk | Carbs: 25.4g | Cal: 182
+NEW ORLEANS STYLE FISH FRY SEAFOOD BREADING MIX, NEW ORLEANS
+  Risk: High_Risk | Carbs: 72.2g | Cal: 333
+FISH STICKS
+  Risk: Medium_Risk | Carbs: 24.5g | Cal: 217
+
+Search: 'beef' - Found 6,524 foods
+----------------------------------------------------------------------
+SWANSON BROTH BEEF
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+SWANSON BROTH BEEF
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+SWANSON BROTH BEEF
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+SWANSON BROTH BEEF
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+SWANSON BROTH BEEF-LOW SODIUM
+  Risk: Medium_Risk | Carbs: 0.4g | Cal: 4
+CAMPBELL'S CHUNKY SOUP BEEF VEGETABLE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 46
+BROCCOLI BEEF FRIED RICE
+  Risk: Medium_Risk | Carbs: 23.5g | Cal: 168
+MENUDO BEEF TRIPE AND HOMINY STEW, MENUDO
+  Risk: Medium_Risk | Carbs: 6.0g | Cal: 80
+VEGGIE MEATLESS BEEF, VEGGIE
+  Risk: Low_Risk | Carbs: 12.5g | Cal: 107
+TRADITIONALS GRAVY & 6 SALISBURY STEAKS MADE WITH CHICKEN, P
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 144
+BEEF CHEDDAR FRANKS
+  Risk: Medium_Risk | Carbs: 2.2g | Cal: 244
+VIDALIA ONION BEEF PATTIES, VIDALIA ONION
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 254
+CLASSIC BEEF PATTIES, CLASSIC
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 298
+BEEF STROGANOFF SEASONING MIX
+  Risk: High_Risk | Carbs: 50.0g | Cal: 250
+BEEF INSTANT BOUILLON POWDER, BEEF
+  Risk: Medium_Risk | Carbs: 28.6g | Cal: 143
+ANGUS PHILLY BEEF STEAKS, ANGUS
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 186
+BEEF BURGERS
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 294
+ASS KICKIN', BEEF JERKY, BLACK PEPPER, BLACK PEPPER
+  Risk: Medium_Risk | Carbs: 21.4g | Cal: 286
+MINI BEEF RAVIOLI IN TOMATO AND MEAT SAUCE, MINI BEEF RAVIOL
+  Risk: Medium_Risk | Carbs: 13.8g | Cal: 96
+BEEF SAUSAGE SNACK BITES, BEEF
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 467
+
+Search: 'cheese' - Found 21,980 foods
+----------------------------------------------------------------------
+CAMPBELL'S SLOW KETTLE SOUP CHEESE BROCCOLI
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 82
+PEPPERIDGE FARM BREAD CHEESE
+  Risk: High_Risk | Carbs: 33.3g | Cal: 333
+ORIGINAL CREAM CHEESE, ORIGINAL
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 357
+THE GOOD HEALTH CHEESE ALTERNATIVE
+  Risk: Medium_Risk | Carbs: 10.7g | Cal: 179
+HAVARTI CHEESE, HAVARTI
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 357
+SHELLS & CHEDDAR DELUXE MACARONI & CHEESE, SHELLS & CHEDDAR
+  Risk: High_Risk | Carbs: 45.1g | Cal: 319
+MACARONI & CHEESE DINNER, ORIGINAL
+  Risk: High_Risk | Carbs: 72.9g | Cal: 357
+FRESCO CHEESE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 250
+QUESO FRESCO CHEESE
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 286
+BURRITOS, EGG, APPLEWOOD SMOKED BACON & CHEESE
+  Risk: Medium_Risk | Carbs: 28.1g | Cal: 234
+CHUNKY BLUE CHEESE DRESSING, CHUNKY BLUE CHEESE
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 500
+COLBY-JACK NATURAL CHEESE CUBES SNACKS, COLBY-JACK
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 400
+LARGE CURD COTTAGE CHEESE
+  Risk: Medium_Risk | Carbs: 4.4g | Cal: 106
+WHITE AMERICAN PASTEURIZED PROCESS CHEESE PRODUCT, WHITE AME
+  Risk: Medium_Risk | Carbs: 9.5g | Cal: 286
+GRATED PARMESAN CHEESE, PARMESAN
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 400
+AMERICAN SINGLES PASTEURIZED PREPARED CHEESE PRODUCT, AMERIC
+  Risk: Medium_Risk | Carbs: 10.5g | Cal: 316
+COLBY & MONTEREY JACK SLICED CHEESE, COLBY & MONTEREY JACK
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 412
+CHUCKANUT BAY CHEESECAKE
+  Risk: Medium_Risk | Carbs: 29.2g | Cal: 336
+SENSATIONAL SIDES, MACARONI & CHEESE, MACARONI & CHEESE
+  Risk: Medium_Risk | Carbs: 13.6g | Cal: 129
+MONTEREY JACK SLICED CHEESE, MONTEREY JACK
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 357
+
+Search: 'yogurt' - Found 6,781 foods
+----------------------------------------------------------------------
+Sun-Maid Vanilla Yogurt Covered Raisins 6-Pack/1 oz Cartons
+  Risk: High_Risk | Carbs: 67.9g | Cal: 429
+Sun-Maid Vanilla Yogurt Flavored Raisins 8 oz Bag
+  Risk: High_Risk | Carbs: 70.0g | Cal: 433
+Sun-Maid Dark Chocolate Yogurt Flavored Raisins 7 oz Bag
+  Risk: High_Risk | Carbs: 66.7g | Cal: 433
+NONFAT YOGURT, STRAWBERRY
+  Risk: Medium_Risk | Carbs: 8.8g | Cal: 53
+VANILLA WHOLE MILK YOGURT, VANILLA
+  Risk: Medium_Risk | Carbs: 8.8g | Cal: 88
+RASPBERRY LOWFAT YOGURT WITH GRANOLA, RASPBERRY
+  Risk: Medium_Risk | Carbs: 20.6g | Cal: 100
+VANILLA SMOOTH & CREAMY FROZEN YOGURT, VANILLA
+  Risk: High_Risk | Carbs: 30.8g | Cal: 185
+PASSION FRUIT PROBIOTIC FORMULA BLENDED LOWFAT YOGURT, PASSI
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 106
+ORIGINAL BLUEBERRY BLENDED LOWFAT YOGURT, ORIGINAL BLUEBERRY
+  Risk: Medium_Risk | Carbs: 17.6g | Cal: 94
+DANNON, ACTIVIA, PROBIOTIC NONFAT GREEK LIGHT YOGURT, VANILL
+  Risk: Medium_Risk | Carbs: 4.7g | Cal: 53
+TIMELESS TOASTED COCONUT NOT-SO-TRADITIONAL BLENDED GREEK YO
+  Risk: Medium_Risk | Carbs: 12.7g | Cal: 107
+NANCY'S, ORGANIC PROBIOTIC GREEK WHOLE MILK YOGURT, HONEY, H
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 106
+PLAIN WHOLE MILK YOGURT, PLAIN
+  Risk: Medium_Risk | Carbs: 7.3g | Cal: 87
+RASPBERRY CREAM TOP WHOLE MILK YOGURT, RASPBERRY
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 107
+PEACH ON THE BOTTOM WHOLE MILK YOGURT, PEACH
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 107
+CHOCOLATE ON THE BOTTOM WHOLE MILK YOGURT, CHOCOLATE
+  Risk: Medium_Risk | Carbs: 18.7g | Cal: 120
+SPINACH DIP MADE WITH GREEK YOGURT
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 133
+STRAWBERRY FRECKLED YOGURT BAR, STRAWBERRY
+  Risk: High_Risk | Carbs: 30.2g | Cal: 143
+APRICOT MANGO ON THE BOTTOM WHOLE MILK YOGURT, APRICOT MANGO
+  Risk: Medium_Risk | Carbs: 15.3g | Cal: 100
+STRAWBERRY ORIGINAL PROBIOTIC BLENDED LOWFAT YOGURT, STRAWBE
+  Risk: Medium_Risk | Carbs: 17.6g | Cal: 94
+
+Search: 'banana' - Found 1,887 foods
+----------------------------------------------------------------------
+1 APPLE + 1 BANANA FRUIT BAR, APPLE + BANANA
+  Risk: High_Risk | Carbs: 80.0g | Cal: 286
+PURE FRUIT BITES, BANANA, BANANA
+  Risk: High_Risk | Carbs: 83.9g | Cal: 339
+BANANA ICED CAKE, BANANA
+  Risk: High_Risk | Carbs: 56.5g | Cal: 412
+SOUTHERN BANANA PUDDING ICE CREAM, SOUTHERN BANANA PUDDING
+  Risk: High_Risk | Carbs: 24.8g | Cal: 241
+ICE CREAM, BANANA SPLIT, BANANA SPLIT
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 193
+BANANA PREMIUM CHIPS, BANANA
+  Risk: High_Risk | Carbs: 63.3g | Cal: 533
+BANANA DIPPERS WITH ALMONDS
+  Risk: Medium_Risk | Carbs: 29.2g | Cal: 250
+GRANOLA TROPICAL NUTTY BANANA, TROPICAL NUTTY BANANA
+  Risk: Medium_Risk | Carbs: 60.0g | Cal: 467
+BANANA CREAM FLAVORED INSTANT PUDDING & PIE FILLING, BANANA 
+  Risk: High_Risk | Carbs: 95.8g | Cal: 375
+STRAWBERRY BANANA SLICED STRAWBERRIES, SLICED BANANAS MIX, S
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 64
+BLENDED FRUIT WITH GREEK YOGURT, PEACH & BANANA
+  Risk: Medium_Risk | Carbs: 16.0g | Cal: 84
+MANGO, BANANA, APPLE, PINEAPPLE AND SPINACH FRUIT 'N GREENS,
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 71
+LIGHT NONFAT YOGURT, STRAWBERRY BANANA
+  Risk: Medium_Risk | Carbs: 7.7g | Cal: 47
+BANANAS & CREAM INSTANT HOT CEREAL, BANANAS & CREAM
+  Risk: High_Risk | Carbs: 80.0g | Cal: 371
+DELICATESSEN STYLE MILD BANANA PEPPER RINGS, DELICATESSEN ST
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+ICE CREAM, BANANA SPLIT
+  Risk: High_Risk | Carbs: 29.2g | Cal: 200
+GOLDEN SPONGE CAKE WITH BANANA CREAMY FILLING, BANANA
+  Risk: High_Risk | Carbs: 61.0g | Cal: 364
+APPLEBANANA FRUIT ON THE GO APPLESAUCE, APPLEBANANA
+  Risk: Medium_Risk | Carbs: 17.8g | Cal: 78
+PEANUT BUTTER BANANA WITH DARK CHOCOLATE ENERGY BARS, PEANUT
+  Risk: High_Risk | Carbs: 60.3g | Cal: 382
+CHEWY ASSORTED FRUIT FLAVORED CANDIES, CARIBBEAN PUNCH, STRA
+  Risk: High_Risk | Carbs: 90.0g | Cal: 367
+
+Search: 'orange' - Found 4,250 foods
+----------------------------------------------------------------------
+10 FL OZ 100% JUICE - ORANGE
+  Risk: Medium_Risk | Carbs: 12.2g | Cal: 51
+5.5 FL OZ 100% JUICE - ORANGE
+  Risk: Medium_Risk | Carbs: 12.3g | Cal: 49
+10 FL OZ JUICE DRINK - ORANGE PINEAPPLE
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 47
+11.5 FL OZ 100% JUICE - ORANGE
+  Risk: Medium_Risk | Carbs: 12.1g | Cal: 50
+V8 SPLASH BEVERAGE ORANGE PINEAPPLE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 29
+ORANGE CHICKEN FRIED RICE
+  Risk: Medium_Risk | Carbs: 28.6g | Cal: 165
+72% COCOA CREME FILLED DARK CHOCOLATE, RASPBERRY ORANGE
+  Risk: High_Risk | Carbs: 55.8g | Cal: 581
+MANDARIN ORANGES IN WATER
+  Risk: Medium_Risk | Carbs: 10.6g | Cal: 49
+OLDE CAPE COD, BBQ & GRILLING SAUCE, HONEY, ORANGE, HONEY, O
+  Risk: High_Risk | Carbs: 55.6g | Cal: 222
+GLUTEN-FREE CRANBERRY ORANGE FLAX MUFFINS, CRANBERRY ORANGE
+  Risk: High_Risk | Carbs: 46.0g | Cal: 320
+SAUCED YAM CUTS SWEET POTATOES, ORANGE PINEAPPLE, ORANGE PIN
+  Risk: Medium_Risk | Carbs: 27.7g | Cal: 117
+CHOCOLATE COVERED RING JELLS, ORANGE, ORANGE
+  Risk: High_Risk | Carbs: 54.8g | Cal: 452
+GOURMET ORANGE CRANBERRY MUFFINS, ORANGE CRANBERRY
+  Risk: High_Risk | Carbs: 47.5g | Cal: 394
+JUMBO MANDARIN ORANGE SECTIONS IN LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 64
+PINEAPPLE & ORANGE HABANERO HOT SAUCE, PINEAPPLE & ORANGE HA
+  Risk: Medium_Risk | Carbs: 13.3g | Cal: 67
+MANDARIN ORANGES IN 100% FRUIT JUICE
+  Risk: Medium_Risk | Carbs: 14.2g | Cal: 62
+ORANGE MARMALADE, ORANGE
+  Risk: High_Risk | Carbs: 55.0g | Cal: 225
+LEMON ORANGE GREEN APPLE WATERMELON BLACK CHERRY BLUE RASPBE
+  Risk: High_Risk | Carbs: 93.3g | Cal: 367
+HAWAIIAN PUNCH ORANGE OCEAN, FRUIT JUICY RED & GREEN BERRY R
+  Risk: Medium_Risk | Carbs: 21.0g | Cal: 87
+INTENSE ORANGE DARK CHOCOLATE WITH ORANGE AND ALMOND SLIVERS
+  Risk: High_Risk | Carbs: 56.7g | Cal: 533
+
+Search: 'tomato' - Found 6,219 foods
+----------------------------------------------------------------------
+PREGO SAUCES TOMATO BASIL
+  Risk: Medium_Risk | Carbs: 5.8g | Cal: 58
+CAMPBELL'S SOUP TOMATO
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 75
+PETITE DICED TOMATOES
+  Risk: Medium_Risk | Carbs: 4.3g | Cal: 22
+TOMATO PUREE, TOMATO
+  Risk: Medium_Risk | Carbs: 6.3g | Cal: 32
+BASIL, GARLIC & OREGANO CHUNKY CRUSHED TOMATOES, BASIL, GARL
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 34
+BASIL, GARLIC & OREGANO ITALIAN STYLE DICED TOMATOES, BASIL,
+  Risk: Medium_Risk | Carbs: 5.8g | Cal: 29
+TRI-COLOR PASTA 100% SEMOLINA PLAIN, SUNDRIED TOMATO & SPINA
+  Risk: High_Risk | Carbs: 75.0g | Cal: 375
+SAVORY HEARTY TOMATO SNACK CRACKER, HEARTY TOMATO, HEARTY TO
+  Risk: High_Risk | Carbs: 60.0g | Cal: 467
+TOMATO PASTE, TOMATO
+  Risk: Medium_Risk | Carbs: 18.2g | Cal: 91
+TOMATO SAUCE, TOMATO
+  Risk: Medium_Risk | Carbs: 4.9g | Cal: 25
+PETITE DICED TOMATOES
+  Risk: Medium_Risk | Carbs: 4.1g | Cal: 21
+SARDINES IN HOT TOMATO SAUCE, SARDINES
+  Risk: Medium_Risk | Carbs: 2.6g | Cal: 90
+LOW SODIUM CHILI BEANS PINTO WITH CHILI PEPPER, ONION & GARL
+  Risk: Medium_Risk | Carbs: 16.1g | Cal: 100
+NO SALT ADDED DICED TOMATOES
+  Risk: Medium_Risk | Carbs: 4.1g | Cal: 21
+ITALIAN STYLE STEWED TOMATOES, ITALIAN STYLE
+  Risk: Medium_Risk | Carbs: 5.7g | Cal: 24
+HAMBURGER RELISH, SWEET TOMATO, SWEET TOMATO
+  Risk: High_Risk | Carbs: 26.7g | Cal: 100
+DICED TOMATOES
+  Risk: Medium_Risk | Carbs: 4.3g | Cal: 22
+BASIL, GARLIC & OREGANO ITALIAN STYLE DICED TOMATOES, BASIL,
+  Risk: Medium_Risk | Carbs: 5.8g | Cal: 29
+PETITE DICED TOMATOES
+  Risk: Medium_Risk | Carbs: 4.3g | Cal: 22
+SPICY GREEN CHILIES & LIME SALSA STYLE PETITE DICED TOMATOES
+  Risk: Medium_Risk | Carbs: 4.3g | Cal: 22
+
+Search: 'potato' - Found 7,802 foods
+----------------------------------------------------------------------
+SOUR CREAM & ONION POTATO CHIPS, SOUR CREAM & ONION
+  Risk: Medium_Risk | Carbs: 60.0g | Cal: 529
+SPLENDID PEAS POTATO ALOO MUTTER
+  Risk: Medium_Risk | Carbs: 19.0g | Cal: 138
+MESQUITE BBQ FLAVORED POTATO CHIPS, MESQUITE BBQ
+  Risk: Medium_Risk | Carbs: 53.6g | Cal: 536
+INSTANT MASHED POTATOES
+  Risk: High_Risk | Carbs: 79.0g | Cal: 368
+JALAPENO HEAT POTATO CHIPS, JALAPENO HEAT
+  Risk: Medium_Risk | Carbs: 60.0g | Cal: 529
+SWEET POTATO FRIES FRENCH FRIED POTATOES, SWEET POTATO FRIES
+  Risk: Medium_Risk | Carbs: 27.1g | Cal: 165
+SHOESTRING FRIES FRENCH FRIED POTATOES
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 141
+LIGHTLY SALTED POTATO CHIPS, LIGHTLY SALTED
+  Risk: Medium_Risk | Carbs: 50.0g | Cal: 536
+SLICED POTATOES
+  Risk: Medium_Risk | Carbs: 8.5g | Cal: 36
+ORIGINAL RECIPE HAMBURGER POTATO ROLLS, ORIGINAL RECIPE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 281
+ORIGINAL RECIPE HOT DOG POTATO ROLLS, ORIGINAL RECIPE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 281
+ORIGINAL RIDGED POTATO CHIPS, ORIGINAL
+  Risk: Medium_Risk | Carbs: 50.0g | Cal: 536
+UNSALTED POTATO CHIPS, UNSALTED
+  Risk: Medium_Risk | Carbs: 50.0g | Cal: 536
+UTZ, POTATO CHIPS, BAR-B-Q, BAR-B-Q
+  Risk: Medium_Risk | Carbs: 50.0g | Cal: 536
+MUSTARD POTATO SALAD, MUSTARD POTATO
+  Risk: Medium_Risk | Carbs: 17.8g | Cal: 126
+LOADED POTATO SALAD, LOADED POTATO
+  Risk: Medium_Risk | Carbs: 13.6g | Cal: 200
+DEVILED EGG POTATO SALAD, DEVILED EGG POTATO
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 164
+SPLENDID PEAS POTATO, MILD, MILD
+  Risk: Medium_Risk | Carbs: 19.0g | Cal: 138
+SAUCED YAM CUTS SWEET POTATOES, ORANGE PINEAPPLE, ORANGE PIN
+  Risk: Medium_Risk | Carbs: 27.7g | Cal: 117
+SWEET POTATO REAL VEGETABLE CHIPS, SWEET POTATO
+  Risk: Medium_Risk | Carbs: 53.6g | Cal: 571
+
+Search: 'pasta' - Found 4,397 foods
+----------------------------------------------------------------------
+CAMPBELL'S PASTA SPAGHETTIOS W FRANKS
+  Risk: Medium_Risk | Carbs: 11.5g | Cal: 87
+TRI-COLOR PASTA 100% SEMOLINA PLAIN, SUNDRIED TOMATO & SPINA
+  Risk: High_Risk | Carbs: 75.0g | Cal: 375
+ITALIAN GARDEN PASTA SAUCE, ITALIAN GARDEN
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 56
+MARINARA PASTA SAUCE, MARINARA
+  Risk: Medium_Risk | Carbs: 5.6g | Cal: 56
+GLUTEN FREE 100% ORGANIC BROWN RICE PASTA, LASAGNA
+  Risk: High_Risk | Carbs: 77.2g | Cal: 368
+100% ORGANIC BROWN RICE GLUTEN FREE PASTA, EGG TAGLIATELLE
+  Risk: High_Risk | Carbs: 75.4g | Cal: 386
+SPINACI E RICOTTA RAVIOLI PASTA
+  Risk: High_Risk | Carbs: 34.9g | Cal: 266
+MACARONI & CHEESE PASTA, MACARONI & CHEESE
+  Risk: High_Risk | Carbs: 69.4g | Cal: 389
+TOMATO BASIL PASTA SAUCE, TOMATO BASIL
+  Risk: Medium_Risk | Carbs: 4.0g | Cal: 56
+TRUFFLE PARMESAN MAC & CHEESE TUBETTI PASTA AND CREAMY TRUFF
+  Risk: Medium_Risk | Carbs: 19.4g | Cal: 194
+A BLEND OF MILD AND CREAMY CHEESES WRAPPED IN THIN PASTA, TO
+  Risk: High_Risk | Carbs: 40.2g | Cal: 293
+DRIED YELLOW PEPPER PASTA PASTE, DRIED YELLOW PEPPER
+  Risk: Medium_Risk | Carbs: 40.0g | Cal: 180
+ORGANIC PIZZA PASTA SAUCE, PIZZA PASTA
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 42
+ELBOW RIDGED PASTA ITALIAN MACARONI PRODUCT, BRONZE CUT CHIF
+  Risk: High_Risk | Carbs: 69.6g | Cal: 357
+PASTA SAUCE, MARINARA, MARINARA
+  Risk: Medium_Risk | Carbs: 12.0g | Cal: 72
+ROASTED GAAAHLIC PASTA SAUCE, ROASTED GAAAHLIC
+  Risk: Medium_Risk | Carbs: 9.7g | Cal: 65
+SOUTHWEST STYLE POWER BLEND OF BLACK BEANS, CORN, LENTILS, W
+  Risk: Medium_Risk | Carbs: 19.2g | Cal: 106
+SPICY MARINARA PASTA SAUCE, SPICY MARINARA
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 64
+MARINARA PASTA SAUCE, MARINARA
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 64
+SAUCED CHEESY PASTA & BROCCOLI WITH ONIONS & BACON, SAUCED W
+  Risk: Medium_Risk | Carbs: 15.9g | Cal: 110
+
+Search: 'salmon' - Found 1,187 foods
+----------------------------------------------------------------------
+ROASTED GARLIC & BUTTER SALMON FISH FILLETS, ROASTED GARLIC 
+  Risk: Medium_Risk | Carbs: 6.3g | Cal: 111
+GORTON'S, GRILLED SALMON, LEMON BUTTER, LEMON BUTTER
+  Risk: Medium_Risk | Carbs: 1.1g | Cal: 112
+WILD-CAUGHT ALASKA RED SOCKEYE SALMON
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 141
+WILD-CAUGHT ALASKA PINK SALMON, ALASKA PINK
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 118
+ALASKA PINK SALMON
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 118
+WILD CAUGHT NOVA SALMON
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 105
+GRILLED SALMON
+  Risk: Medium_Risk | Carbs: 3.4g | Cal: 101
+NEW ORLEANS STYLE SALMON CAKE MIX, NEW ORLEANS STYLE SALMON
+  Risk: High_Risk | Carbs: 73.9g | Cal: 348
+HONEY CHIPOTLE SALMON, HONEY CHIPOTLE
+  Risk: Medium_Risk | Carbs: 18.4g | Cal: 224
+CITRUS HERB RUBBED SALMON, CITRUS HERB RUBBED
+  Risk: Medium_Risk | Carbs: 4.5g | Cal: 205
+ASIAN GRILL RUBBED SALMON, ASIAN GRILL RUBBED
+  Risk: Medium_Risk | Carbs: 4.5g | Cal: 205
+PAN SEAR TERIYAKI SESAME SALMON FILLETS, PAN SEAR TERIYAKI S
+  Risk: Medium_Risk | Carbs: 7.9g | Cal: 190
+STOUT SPIKED BBQ SALMON, STOUT SPIKED BBQ
+  Risk: Medium_Risk | Carbs: 5.7g | Cal: 143
+TRADITIONAL HOT-SMOKED-SOCKEYE SALMON, TRADITIONAL HOT-SMOKE
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 193
+PREMIUM ATLANTIC SALMON FILLETS
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 186
+SALMON, SMOKY APPLEWOOD
+  Risk: Medium_Risk | Carbs: 3.0g | Cal: 144
+FRESH DELICATESSEN IMITATION SALMON SPREAD, SMOKED
+  Risk: Medium_Risk | Carbs: 12.0g | Cal: 200
+ATLANTIC SALMON WITH SEAFOOD STUFFING AND TILAPIA WITH SPINA
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 212
+FRESH ATLANTIC SALMON
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 159
+BARBEQUE FRESH ATLANTIC SALMON
+  Risk: Medium_Risk | Carbs: 7.4g | Cal: 154
+
+Search: 'tuna' - Found 1,127 foods
+----------------------------------------------------------------------
+SOLID WHITE ALBACORE PREMIUM TUNA IN WATER, SOLID WHITE ALBA
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 107
+CHUNK LIGHT TUNA IN WATER, CHUNK LIGHT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 80
+TUNA SALAD ON WHEAT BREAD, TUNA SALAD
+  Risk: High_Risk | Carbs: 34.7g | Cal: 249
+CHUNK LIGHT TUNA IN WATER, CHUNK LIGHT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 94
+SOLID YELLOWFIN TUNA IN EXTRA VIRGIN OLIVE OIL, SOLID YELLOW
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 204
+PREMIUM CHUNK LIGHT TUNA IN VEGETABLE OIL, CHUNK LIGHT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 125
+WILD CAUGHT CHUNK LIGHT TUNA IN WATER
+  Risk: Medium_Risk | Carbs: 1.4g | Cal: 70
+CHUNK WHITE ALBACORE PREMIUM TUNA IN WATER, CHUNK WHITE ALBA
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 107
+CHUNK LIGHT TUNA IN WATER, CHUNK LIGHT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 95
+PREMIUM CHUNK LIGHT TUNA IN WATER, CHUNK LIGHT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 89
+CHUNK WHITE ALBACORE PREMIUM TUNA IN WATER, CHUNK WHITE ALBA
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 107
+CHUNK WHITE ALBACORE TUNA IN EXTRA VIRGIN OLIVE OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 185
+TUNA VENTRESCA IN OLIVE OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 235
+WILD CAUGHT CHUNK LIGHT SKIP JACK TUNA IN WATER
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 82
+LIGHT & ALBACORE TUNA WITH CELERY, ONION AND PICKLE RELISH I
+  Risk: Medium_Risk | Carbs: 14.4g | Cal: 167
+SANDWICH, TUNA SALAD
+  Risk: Medium_Risk | Carbs: 20.4g | Cal: 204
+PINK SALMON TUNA STYLE IN WATER, PINK SALMON
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 109
+ALBACORE CHUNK WHITE TUNA IN WATER, ALBACORE CHUNK WHITE
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 114
+CHUNK LIGHT TUNA IN WATER
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 82
+ELITE PURE WILD TUNA
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 129
+
+Search: 'turkey' - Found 3,302 foods
+----------------------------------------------------------------------
+93% LEAN | 7% FAT TURKEY BURGER PATTIES, TURKEY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 134
+GLUTEN FREE TURKEY FLAVORED GRAVY MIX, TURKEY
+  Risk: High_Risk | Carbs: 71.4g | Cal: 357
+TURKEY BURGERS, TURKEY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 170
+HONEY SMOKED DELI THIN-SLICED TURKEY BREAST WITH WHITE TURKE
+  Risk: Medium_Risk | Carbs: 5.6g | Cal: 111
+TURKEY PASTRAMI, TURKEY
+  Risk: Medium_Risk | Carbs: 5.4g | Cal: 125
+SMOKED TURKEY, SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 158
+OVEN ROASTED TURKEY BREAST AND WHITE TURKEY, OVEN ROASTED
+  Risk: Medium_Risk | Carbs: 4.0g | Cal: 160
+HONEY TURKEY BREAST AND WHITE TURKEY, HONEY
+  Risk: Medium_Risk | Carbs: 6.0g | Cal: 180
+TACO SEASONED GROUND TURKEY, TACO SEASONED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 143
+HICKORY SMOKED UNCURED TURKEY BACON, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 200
+TURKEY SAUSAGE
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 179
+SLICED UNCURED TURKEY HAM
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 125
+SMOKED FRESH TURKEY KIELBASA
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 196
+TURKEY FULLY COOKED SAUSAGE LINKS, TURKEY
+  Risk: Medium_Risk | Carbs: 2.2g | Cal: 133
+TURKEY SKINLESS SMOKED SAUSAGE, TURKEY
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 196
+TURKEY FLAVORED STUFFING MIX, TURKEY
+  Risk: High_Risk | Carbs: 75.0g | Cal: 393
+SMOKED, CHOPPED, PRESSED TURKEY
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 161
+TURKEY BOLOGNA
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 214
+85% LEAN 15% FAT GROUND TURKEY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 161
+OVEN ROASTED TURKEY BREAST, OVEN ROASTED
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 107
+
+Search: 'pork' - Found 3,116 foods
+----------------------------------------------------------------------
+PFN Pork Boneless Shoulder Butt 1/8"" 2x4 VP MBG#406A
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 152
+Pork Loin Boneless Strap Off
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+Pork Loin Strap Off
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 71
+Pork Tenderloin with Teriyaki Seasoning
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 18
+Pork Picnic Brisket Boneless
+  Risk: Medium_Risk | Carbs: 0.9g | Cal: 98
+Pork Loin Bone In Chops Frenched
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 80
+Pork Loin Filet with Applewood Smoked Bacon
+  Risk: Medium_Risk | Carbs: 2.7g | Cal: 71
+Pork Loin Backrib & Seasoning Cook In Bag
+  Risk: Medium_Risk | Carbs: 2.7g | Cal: 143
+Pork Loin Chop Boneless
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+Pork Ham Boneless
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+Pork Ham Steamship
+  Risk: Medium_Risk | Carbs: 0.9g | Cal: 143
+Pork Loin Boneless
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+Pork Loin Bone In Chine Removed Chop with Smokey Apple Seaso
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 71
+Pork Tenderloin with Peri Peri Seasonings Cook in Bag
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 22
+Pork Loin Center Rib Roast
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 71
+Pork Loin Backrib & Seasoning Cook In Bag
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 205
+Pork Loin Tenderloin
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 18
+Pork Loin Chop Bone In
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+Pork Loin Boneless Strap Off
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 54
+Pork Tenderloin with Teriyaki Seasonings Cook in Bag
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+
+Search: 'lettuce' - Found 334 foods
+----------------------------------------------------------------------
+CHICKEN LETTUCE WRAPS SEASONING MIX, CHICKEN LETTUCE WRAPS
+  Risk: High_Risk | Carbs: 66.7g | Cal: 333
+CHICKEN CAESAR SALAD ORGANIC ROMAINE LETTUCE, ORGANIC CHICKE
+  Risk: Medium_Risk | Carbs: 5.1g | Cal: 205
+TURKEY & BACON COBB SALAD ICEBERG AND ROMAINE LETTUCES, SMOK
+  Risk: Medium_Risk | Carbs: 4.0g | Cal: 110
+BBQ SEASONED RANCH CHICKEN SALAD ROMAINE AND ICEBERG LETTUCE
+  Risk: Medium_Risk | Carbs: 12.6g | Cal: 121
+CAPRESE BABY ARUGULA, BABY SPINACH, BABY LETTUCES, GRAPE TOM
+  Risk: Medium_Risk | Carbs: 8.4g | Cal: 155
+APPLE BLEU PECAN SALAD BABY ARUGULA, BABY SPINACH, BABY LETT
+  Risk: Medium_Risk | Carbs: 14.8g | Cal: 188
+SANTA FE STYLE ROMAINE LETTUCE, WHITE MEAT CHICKEN, ROASTED 
+  Risk: Medium_Risk | Carbs: 7.9g | Cal: 153
+ORGANIC SWEET & SAVORY GREENS CELERY, APPLE, CUCUMBER, SPINA
+  Risk: Medium_Risk | Carbs: 4.6g | Cal: 21
+ASIAN STYLE CHICKEN SALAD CHOPPED NAPA CABBAGE, ROMAINE LETT
+  Risk: Medium_Risk | Carbs: 10.9g | Cal: 152
+GARDEN SALAD ICEBERG LETTUCE, CARROTS & RED CABBAGE, GARDEN 
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 18
+CHICKEN CAESAR SALAD CRISP ROMAINE LETTUCE, WHITE MEAT CHICK
+  Risk: Medium_Risk | Carbs: 4.0g | Cal: 136
+ORGANIC SOUTHWESTERN STYLE SALAD ORGANIC ROMAINE LETTUCE, OR
+  Risk: Medium_Risk | Carbs: 9.8g | Cal: 152
+CHEF SALAD ICEBERG LETTUCE, SMOKED TURKEY AND HAM, SWISS CHE
+  Risk: Medium_Risk | Carbs: 5.0g | Cal: 120
+CRANBERRY WALNUT SALAD BABY LETTUCES & BABY GREENS BLEND, FE
+  Risk: Medium_Risk | Carbs: 18.0g | Cal: 156
+CAESAR SALAD ROMAINE LETTUCE, GRAPE TOMATOES, PARMESAN CHEES
+  Risk: Medium_Risk | Carbs: 6.0g | Cal: 140
+ORGANIC GREEN DEVOTION CELERY, CUCUMBER, SPINACH, ROMAINE LE
+  Risk: Medium_Risk | Carbs: 2.1g | Cal: 11
+HEARTS OF ROMAINE LETTUCE
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 18
+ROMAINE SALAD MIX ROMAINE LETTUCE, CARROTS & RED CABBAGE, RO
+  Risk: Medium_Risk | Carbs: 4.7g | Cal: 24
+AMERICAN SALAD MIX ICEBERG LETTUCE, ROMAINE LETTUCE, CARROTS
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 18
+BUTTER SALAD MIX GREEN BUTTER LETTUCE & RED LEAF LETTUCE, BU
+  Risk: Medium_Risk | Carbs: 2.4g | Cal: 12
+
+Search: 'carrot' - Found 1,994 foods
+----------------------------------------------------------------------
+APPLE, CARROT & SQUASH ORGANIC FRUIT & VEGETABLE PUREE, APPL
+  Risk: Medium_Risk | Carbs: 12.0g | Cal: 56
+SUGAR SNAP STIR-FRY WITH SUGAR SNAP PEAS, CARROTS, ONIONS, &
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 42
+MORNING MULTILINGUAL CRUNCH BITES, PURPLE BERRY & CARROT
+  Risk: High_Risk | Carbs: 85.7g | Cal: 381
+SLICED CARROTS
+  Risk: Medium_Risk | Carbs: 8.7g | Cal: 35
+GARDEN SOUP, CARROT GINGER, CARROT GINGER
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 38
+CRUSTLESS CHICKEN POT PIE WHITE MEAT CHICKEN, BROCCOLI, CAUL
+  Risk: Medium_Risk | Carbs: 3.1g | Cal: 118
+CARROT RAISIN FLAX MUFFINS, CARROT RAISIN
+  Risk: High_Risk | Carbs: 44.0g | Cal: 300
+SWEETS & CARROTS REAL VEGETABLE CHIPS, SWEETS & CARROTS
+  Risk: Medium_Risk | Carbs: 57.1g | Cal: 536
+SLICED CARROTS PICKLED
+  Risk: Medium_Risk | Carbs: 9.4g | Cal: 47
+MACARONI SALAD ELBOW MACARONI, CELERY, EGG, CARROTS & ONIONS
+  Risk: High_Risk | Carbs: 44.4g | Cal: 330
+PICKLED CARROTS SLICED
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 33
+COLORFULLY VERSATILE CAULIFLOWER, BROCCOLI, CARROTS AND RED 
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 29
+BEEF TERIYAKI STIR-FRY TENDER BEEF WITH BROCCOLI, GREEN BEAN
+  Risk: Medium_Risk | Carbs: 4.4g | Cal: 115
+GRILLED WHITE MEAT CHICKEN, CARROTS, PEAS AND WHITE RICE-ALL
+  Risk: Medium_Risk | Carbs: 12.0g | Cal: 106
+MANGO CARROT FRUIT & VEGGIE BLENDS, MANGO CARROT
+  Risk: Medium_Risk | Carbs: 16.8g | Cal: 71
+BEEF POT ROAST TENDER BEEF WITH POTATOES AND CARROTS IN A SA
+  Risk: Medium_Risk | Carbs: 8.6g | Cal: 78
+AMISH POTATO SALAD WITH EGG, CELERY, CARROTS, ONION AND MUST
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 169
+SHRIMP SOY FLAVORED FRIED RICE BLENDED WITH COOKED SALAD SHR
+  Risk: Medium_Risk | Carbs: 16.9g | Cal: 106
+SEASONED CHICKEN FLAVORED RICE WITH BROCCOLI, CARROTS & ONIO
+  Risk: High_Risk | Carbs: 30.7g | Cal: 163
+WHOLE GRAIN RICE WITH BROCCOLI & CARROTS, BROCCOLI & CARROTS
+  Risk: Medium_Risk | Carbs: 18.3g | Cal: 88
+
+Search: 'broccoli' - Found 1,410 foods
+----------------------------------------------------------------------
+CAMPBELL'S SLOW KETTLE SOUP CHEESE BROCCOLI
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 82
+BROCCOLI BEEF FRIED RICE
+  Risk: Medium_Risk | Carbs: 23.5g | Cal: 168
+CRUSTLESS CHICKEN POT PIE WHITE MEAT CHICKEN, BROCCOLI, CAUL
+  Risk: Medium_Risk | Carbs: 3.1g | Cal: 118
+COLORFULLY VERSATILE CAULIFLOWER, BROCCOLI, CARROTS AND RED 
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 29
+BROCCOLI BEEF SAUCE
+  Risk: High_Risk | Carbs: 25.7g | Cal: 100
+BEEF TERIYAKI STIR-FRY TENDER BEEF WITH BROCCOLI, GREEN BEAN
+  Risk: Medium_Risk | Carbs: 4.4g | Cal: 115
+LEMON GRASS KITCHEN, BEEF & BROCCOLI NOODLES
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 133
+CREAM OF BROCCOLI CONDENSED SOUP, CREAM OF BROCCOLI
+  Risk: Medium_Risk | Carbs: 9.6g | Cal: 88
+SAUCED CHEESY BROCCOLI, SAUCED
+  Risk: Medium_Risk | Carbs: 4.4g | Cal: 53
+SAUCED CHEESY PASTA & BROCCOLI WITH ONIONS & BACON, SAUCED W
+  Risk: Medium_Risk | Carbs: 15.9g | Cal: 110
+SEASONED CHICKEN FLAVORED RICE WITH BROCCOLI, CARROTS & ONIO
+  Risk: High_Risk | Carbs: 30.7g | Cal: 163
+WHOLE GRAIN RICE WITH BROCCOLI & CARROTS, BROCCOLI & CARROTS
+  Risk: Medium_Risk | Carbs: 18.3g | Cal: 88
+BABY BROCCOLI FLORETS
+  Risk: Medium_Risk | Carbs: 4.7g | Cal: 35
+BEEF & BROCCOLI SEASONING MIX, BEEF & BROCCOLI
+  Risk: High_Risk | Carbs: 83.3g | Cal: 333
+BROCCOLI & CHEESE RAW STUFFED CHICKEN BREASTS WITH RIB MEAT,
+  Risk: Medium_Risk | Carbs: 11.4g | Cal: 179
+CHEDDAR BROCCOLI SOUP MIX, CHEDDAR BROCCOLI
+  Risk: High_Risk | Carbs: 62.5g | Cal: 425
+ITALIANO WITH TURKEY & SALAMI SALAD CHOPPED ESCAROLE, ENDIVE
+  Risk: Medium_Risk | Carbs: 4.7g | Cal: 141
+BROCCOLI-BEEF SEASONING MIX, BROCCOLI-BEEF
+  Risk: High_Risk | Carbs: 57.1g | Cal: 286
+SEASONED TERIYAKI BROCCOLI, SEASONED
+  Risk: Medium_Risk | Carbs: 8.2g | Cal: 59
+LONG GRAIN YELLOW RICE WITH BROCCOLI AND SPICES, YELLOW RICE
+  Risk: High_Risk | Carbs: 76.9g | Cal: 354
+
+Search: 'spinach' - Found 1,662 foods
+----------------------------------------------------------------------
+SPINACH SALAD DRESSING, SPINACH SALAD
+  Risk: High_Risk | Carbs: 30.6g | Cal: 167
+TRI-COLOR PASTA 100% SEMOLINA PLAIN, SUNDRIED TOMATO & SPINA
+  Risk: High_Risk | Carbs: 75.0g | Cal: 375
+CRUSTLESS CHICKEN POT PIE WHITE MEAT CHICKEN, BROCCOLI, CAUL
+  Risk: Medium_Risk | Carbs: 3.1g | Cal: 118
+SPINACH DIP MADE WITH GREEK YOGURT
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 133
+SPINACH DIP, SPINACH
+  Risk: Medium_Risk | Carbs: 9.4g | Cal: 156
+CHOPPED SPINACH
+  Risk: Medium_Risk | Carbs: 2.5g | Cal: 17
+NO SALT ADDED LEAF SPINACH
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 26
+SPINACH ARTICHOKE & PARMESAN DIP, SPINACH ARTICHOKE & PARMES
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 300
+CREAMY SPINACH DIP, CREAMY
+  Risk: Medium_Risk | Carbs: 6.5g | Cal: 258
+BABY SPINACH
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 24
+CLASSIC SPINACH EPINARDS
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 24
+SPINACH PLUS BABY KALE
+  Risk: Medium_Risk | Carbs: 5.9g | Cal: 35
+MANGO, BANANA, APPLE, PINEAPPLE AND SPINACH FRUIT 'N GREENS,
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 71
+SPINACH
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 24
+SPINACH ARTICHOKE FETA DIP, SPINACH ARTICHOKE FETA
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 200
+SPINACH ARTICHOKE & PARMESAN PREMIUM DIP, SPINACH ARTICHOKE 
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 300
+CHOPPED SPINACH
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 26
+LEAF SPINACH
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 26
+LAMB SAAG WITH BASMATI RICE TENDER LAMB LIGHTLY SEASONED WIT
+  Risk: Medium_Risk | Carbs: 13.4g | Cal: 120
+CHICKEN ENCHILADAS POBLANO WITH BLACK BEANS & RICE ROASTED D
+  Risk: Medium_Risk | Carbs: 19.8g | Cal: 148
+
+Search: 'beans' - Found 6,785 foods
+----------------------------------------------------------------------
+BUSH'S Bourbon and Brown Sugar Grillin' Beans 22 oz
+  Risk: Medium_Risk | Carbs: 25.9g | Cal: 125
+BUSH'S Organic Garbanzo Beans 110 oz
+  Risk: Medium_Risk | Carbs: 17.6g | Cal: 105
+BUSH'S Smokehouse Tradition Grillin' Beans 22 oz
+  Risk: Medium_Risk | Carbs: 26.1g | Cal: 129
+BUSH'S Organic Pinto Beans 110 oz
+  Risk: Medium_Risk | Carbs: 17.2g | Cal: 95
+REFRIED BLACK BEANS WITH ROASTED RED JALAPENO, ROASTED RED J
+  Risk: Low_Risk | Carbs: 13.8g | Cal: 77
+MAPLE BAKED BEANS, MAPLE
+  Risk: Medium_Risk | Carbs: 21.5g | Cal: 108
+AUTHENTIC REFRIED BEANS
+  Risk: Low_Risk | Carbs: 14.6g | Cal: 85
+RED NICARAGUAN BEANS
+  Risk: High_Risk | Carbs: 63.9g | Cal: 0
+WHOLE BLACK BEANS
+  Risk: Medium_Risk | Carbs: 18.5g | Cal: 85
+REFRIED PINTO BEANS
+  Risk: Medium_Risk | Carbs: 10.0g | Cal: 100
+WHOLE PINTO BEANS
+  Risk: Medium_Risk | Carbs: 15.8g | Cal: 75
+CHILI NO BEANS
+  Risk: Medium_Risk | Carbs: 7.5g | Cal: 103
+EDEN, ORGANIC SPANISH RICE & BEANS
+  Risk: Medium_Risk | Carbs: 16.9g | Cal: 92
+CUT GREEN BEANS
+  Risk: Medium_Risk | Carbs: 1.3g | Cal: 7
+MEATLOAF WITH PORTOBELLO MUSHROOM GRAVY MEATLOAF TOPPED WITH
+  Risk: Medium_Risk | Carbs: 4.3g | Cal: 129
+WHOLE PINTO BEANS
+  Risk: Medium_Risk | Carbs: 12.5g | Cal: 75
+ORGANIC PINTO BEANS
+  Risk: Medium_Risk | Carbs: 16.1g | Cal: 92
+LOW SODIUM CHILI BEANS PINTO WITH CHILI PEPPER, ONION & GARL
+  Risk: Medium_Risk | Carbs: 16.1g | Cal: 100
+WHITE CHILI BEANS WITH ONION, GARLIC, CHILI SPICES & MILD JA
+  Risk: Medium_Risk | Carbs: 16.1g | Cal: 92
+VEGETARIAN BAKED BEANS WITH MOLASSES & SPICES, VEGETARIAN
+  Risk: Medium_Risk | Carbs: 23.7g | Cal: 122
+
+Search: 'nuts' - Found 5,546 foods
+----------------------------------------------------------------------
+OATMEAL RAISIN WITH WALNUTS SOFTBAKED COOKIES, OATMEAL RAISI
+  Risk: High_Risk | Carbs: 64.3g | Cal: 464
+ROASTED CRUNCHY COATED PEANUTS, ROASTED
+  Risk: Medium_Risk | Carbs: 46.0g | Cal: 486
+MACADAMIA NUTS, SEA SALT
+  Risk: Low_Risk | Carbs: 12.5g | Cal: 719
+CARAMEL & PEANUT MILK CHOCOLATE FILLED WITH NOUGAT, CARAMEL 
+  Risk: High_Risk | Carbs: 69.0g | Cal: 500
+WHOLE WATER CHESTNUTS
+  Risk: Medium_Risk | Carbs: 7.9g | Cal: 31
+CRUNCH MINI DONUTS, CRUNCH
+  Risk: High_Risk | Carbs: 61.1g | Cal: 426
+NUTS & SEEDS ALMONDS, PEANUTS, PUMPKIN SEEDS ENERGY BAR, NUT
+  Risk: High_Risk | Carbs: 55.9g | Cal: 397
+DOUBLE CHOCOLATE FLAVORED MINI DONUTS, DARK CHOCOLATE
+  Risk: High_Risk | Carbs: 54.4g | Cal: 491
+PREMIUM WHITE MEAT CHICKEN SALAD, CRANBERRIES & WALNUTS
+  Risk: Medium_Risk | Carbs: 10.4g | Cal: 400
+NATURAL PEANUTS, ROASTED & SALTED
+  Risk: Medium_Risk | Carbs: 28.6g | Cal: 607
+CINNAMON DONUTS, CINNAMON
+  Risk: High_Risk | Carbs: 52.6g | Cal: 439
+ANTIOXIDANT WHOLE GRAINS, GOJI BERRIES, CACAO NIBS, WALNUTS,
+  Risk: High_Risk | Carbs: 68.3g | Cal: 390
+VEGETABLE PAD THAI WITH RICE NOODLES HANDCRAFTED FIRM TOFU W
+  Risk: Medium_Risk | Carbs: 22.6g | Cal: 148
+DOUBLE CHOCOLATE FLAVORED MINI DONUTS, DOUBLE CHOCOLATE
+  Risk: High_Risk | Carbs: 54.1g | Cal: 518
+FROSTED MINI DONUTS, FROSTED
+  Risk: High_Risk | Carbs: 54.1g | Cal: 506
+POWDERED MINI DONUTS, POWDERED
+  Risk: High_Risk | Carbs: 57.6g | Cal: 447
+GLAZED MINI DONUTS, GLAZED
+  Risk: High_Risk | Carbs: 59.0g | Cal: 429
+KAMEDA CRISPS, SAVORY RICE SNACK WITH ROASTED PEANUTS, BLACK
+  Risk: Medium_Risk | Carbs: 60.0g | Cal: 467
+CHOPPED WALNUTS
+  Risk: Low_Risk | Carbs: 13.3g | Cal: 667
+ORGANIC CRANBERRY NUT SALAD SPRING MIX, CRUMBLED ORGANIC FET
+  Risk: Medium_Risk | Carbs: 22.7g | Cal: 195
+
+Search: 'oats' - Found 1,133 foods
+----------------------------------------------------------------------
+QUICK OATS
+  Risk: High_Risk | Carbs: 67.5g | Cal: 375
+5-GRAIN BLEND KAMUT KHORASAN WHEAT, OATS, WHOLE GRAIN LONG R
+  Risk: High_Risk | Carbs: 68.7g | Cal: 337
+HONEY CRUNCH 'N OATS ORGANIC CEREAL A BLEND OF CORN FLAKES, 
+  Risk: High_Risk | Carbs: 82.5g | Cal: 375
+100% WHOLE GRAIN STEEL CUT OATS
+  Risk: High_Risk | Carbs: 65.0g | Cal: 375
+QUICK COOKING ROLLED OATS IRISH OATMEAL
+  Risk: High_Risk | Carbs: 75.0g | Cal: 375
+SWEETENED WHOLE GRAIN OAT CEREAL WITH MARSHMALLOW PIECES, MA
+  Risk: High_Risk | Carbs: 85.0g | Cal: 375
+HONEY & OATS CORN FLAKES, WHEAT FLAKES AND GRANOLA MEDLEY CE
+  Risk: High_Risk | Carbs: 82.5g | Cal: 375
+ATHLETE FUEL OATS, ALMONDS, CASHEWS, RAISINS, PUMPKIN & FLAX
+  Risk: High_Risk | Carbs: 61.0g | Cal: 390
+SUPER MUESLI OATS, QUINOA, ALMONDS, CHIA SEEDS, CRANBERRIES,
+  Risk: High_Risk | Carbs: 61.0g | Cal: 390
+100% WHOLE GRAIN QUICK OATS
+  Risk: High_Risk | Carbs: 67.5g | Cal: 350
+QUICK OATS
+  Risk: High_Risk | Carbs: 67.5g | Cal: 375
+STEEL CUT OATS
+  Risk: High_Risk | Carbs: 67.5g | Cal: 375
+HONEY NUT TOASTED OATS CEREAL, HONEY NUT
+  Risk: High_Risk | Carbs: 80.0g | Cal: 375
+SIGNATURE KITCHENS, TOASTED OATS, HONEY & ALMOND, HONEY & AL
+  Risk: High_Risk | Carbs: 80.0g | Cal: 400
+CASCADIAN FARM, ORGANIC CORN FLAKES, WHOLE GRAIN OATS, HONEY
+  Risk: High_Risk | Carbs: 76.4g | Cal: 400
+OATS & FLAX OATMEAL
+  Risk: High_Risk | Carbs: 72.5g | Cal: 375
+NONFAT GREEK YOGURT WITH FRUIT ON BOTTOM, TROPICAL FRUITS+ O
+  Risk: Medium_Risk | Carbs: 9.7g | Cal: 79
+PEACH YOGURT, TOASTED ALMOND BITS, ROLLED OATS & CHIA SEEDS,
+  Risk: Medium_Risk | Carbs: 7.6g | Cal: 64
+ORGANIC HONEY OATS & FLAX BREAD, HONEY OATS & FLAX
+  Risk: Medium_Risk | Carbs: 54.8g | Cal: 262
+HONEY OATS & FLAKES CEREAL, HONEY OATS & FLAKES
+  Risk: High_Risk | Carbs: 80.0g | Cal: 375
+
+Search: 'quinoa' - Found 1,058 foods
+----------------------------------------------------------------------
+UNSWEETENED WITH ANCIENT GRAINS QUINOA & AMARANTH INSTANT OA
+  Risk: High_Risk | Carbs: 64.0g | Cal: 400
+ORIGINAL MULTI-SEED CRACKERS WITH SESAME, QUINOA, FLAX AND A
+  Risk: High_Risk | Carbs: 66.7g | Cal: 467
+BLUEBERRY SCONE INSTANT OATMEAL WITH ANCIENT GRAINS QUINOA &
+  Risk: High_Risk | Carbs: 72.0g | Cal: 400
+ROSEMARY & OLIVE OIL MULTI-SEED CRACKERS WITH SESAME, QUINOA
+  Risk: High_Risk | Carbs: 70.0g | Cal: 467
+MAPLE MULTIGRAIN MUFFIN INSTANT OATMEAL WITH ANCIENT GRAINS 
+  Risk: High_Risk | Carbs: 70.0g | Cal: 400
+CHICKEN QUINOA & KALE ORGANIC SOUP, CHICKEN QUINOA & KALE
+  Risk: Medium_Risk | Carbs: 5.7g | Cal: 49
+STRAWBERRY SHORTCAKE WITH ANCIENT GRAINS QUINOA & AMARANTH I
+  Risk: High_Risk | Carbs: 70.0g | Cal: 400
+APPLE PIE INSTANT OATMEAL WITH ANCIENT GRAINS QUINOA & AMARA
+  Risk: High_Risk | Carbs: 72.0g | Cal: 400
+SUPER MUESLI OATS, QUINOA, ALMONDS, CHIA SEEDS, CRANBERRIES,
+  Risk: High_Risk | Carbs: 61.0g | Cal: 390
+TEXMATI, LIGHT BROWN RICE, RED QUINOA AND FIRE ROASTED FREEK
+  Risk: High_Risk | Carbs: 77.1g | Cal: 375
+MEDITERRANEAN QUINOA, MEDITERRANEAN
+  Risk: High_Risk | Carbs: 62.2g | Cal: 356
+100% WHOLE GRAIN QUINOA, WHOLE GRAIN
+  Risk: High_Risk | Carbs: 68.9g | Cal: 356
+SUPER GRAINS A BLEND OF WHITE AND RED QUINOA, MILLET AND BUC
+  Risk: High_Risk | Carbs: 67.3g | Cal: 367
+WHITE QUINOA
+  Risk: High_Risk | Carbs: 65.1g | Cal: 372
+MAPLE QUINOA CLUSTERS WITH CHIA SEEDS GRANOLA, MAPLE QUINOA 
+  Risk: High_Risk | Carbs: 69.0g | Cal: 379
+ROASTED GARLIC MULTI-SEED CRACKERS WITH SESAME, QUINOA, FLAX
+  Risk: High_Risk | Carbs: 66.7g | Cal: 467
+QUINOA STICKS
+  Risk: High_Risk | Carbs: 60.7g | Cal: 500
+DARK CHOCOLATE PEANUT BUTTER CUPS WITH CRISPY QUINOA, DARK C
+  Risk: High_Risk | Carbs: 50.0g | Cal: 500
+QUINOA STICKS, SWEET ONION, SWEET ONION
+  Risk: Medium_Risk | Carbs: 60.0g | Cal: 500
+ORGANIC QUINOA
+  Risk: High_Risk | Carbs: 63.3g | Cal: 367
+
+Search: 'avocado' - Found 445 foods
+----------------------------------------------------------------------
+AVOCADO OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 867
+DELICATE AVOCADO OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 867
+MED SPICY AVOCADO RANCH VEGGIE DIP, MED SPICY AVOCADO RANCH
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 367
+AVOCADO RANCH DRESSING, AVOCADO RANCH
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 433
+AVOCADO OIL SPRAY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+AVOCADO RANCH WITH BACON DRESSING & DIP, AVOCADO RANCH WITH 
+  Risk: Medium_Risk | Carbs: 13.3g | Cal: 267
+TURKEY AVOCADO CLUB WITH TURKEY, AVOCADO, CHEDDAR CHEESE & B
+  Risk: Medium_Risk | Carbs: 22.9g | Cal: 248
+AVOCADO RANCH ORGANIC DRESSING, AVOCADO RANCH
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 571
+CILANTRO AVOCADO DRESSING, CILANTRO AVOCADO
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 367
+SPICY MANGO AVOCADO HOT SAUCE, SPICY MANGO
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 67
+ORIGINAL AVOCADO HOT SAUCE, ORIGINAL AVOCADO
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 100
+HOT AVOCADO HOT SAUCE, HOT AVOCADO
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 67
+AVOCADO OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 867
+GARDEN HERB VINAIGRETTE DRESSING WITH AN AVOCADO OIL BLEND, 
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 133
+PRESSED AVOCADO OIL BLENDED SPREAD WHIPPED, AVOCADO OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 900
+AVOCADO OIL NON-STICK COOKING SPRAY, AVOCADO OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+AVOCADO TOAST GREEN CABBAGE, GREEN LEAF LETTUCE, REAL HASS A
+  Risk: Medium_Risk | Carbs: 11.0g | Cal: 140
+AVOCADO RANCH GREEN CABBAGE, ROMAINE LETTUCE, CARROT, TACO C
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 140
+HATCH GREEN CHILE AWESOME SAUCE MADE WITH AVOCADO OIL, HATCH
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 71
+REFINED EXPELLER PRESSED AVOCADO OIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 867
+
+Search: 'strawberry' - Found 4,634 foods
+----------------------------------------------------------------------
+PEPPERIDGE FARM COOKIES STRAWBERRY
+  Risk: High_Risk | Carbs: 63.3g | Cal: 467
+10 FL OZ JUICE DRINK - STRAWBERRY KIWI
+  Risk: Medium_Risk | Carbs: 9.8g | Cal: 41
+NONFAT YOGURT, STRAWBERRY
+  Risk: Medium_Risk | Carbs: 8.8g | Cal: 53
+CHOCOLATE, STRAWBERRY FLAVORED VANILLA LOWFAT ICE CREAM WINT
+  Risk: Medium_Risk | Carbs: 24.5g | Cal: 163
+STRAWBERRY FRUIT SNACKS, STRAWBERRY
+  Risk: High_Risk | Carbs: 77.5g | Cal: 325
+STRAWBERRY ICE CREAM, STRAWBERRY
+  Risk: High_Risk | Carbs: 25.8g | Cal: 215
+WRAPPED CAKES, STRAWBERRY
+  Risk: High_Risk | Carbs: 57.7g | Cal: 385
+STRAWBERRY ORGANIC TWISTED FRUIT SNACK, STRAWBERRY
+  Risk: High_Risk | Carbs: 80.0g | Cal: 350
+ORGANIC FRUIT GUMMY SNACKS, STRAWBERRY, PEACH, TANGERINE, LE
+  Risk: High_Risk | Carbs: 78.3g | Cal: 304
+STRAWBERRY FLAVORED SOFT AUSTRALIAN LIQUORICE, STRAWBERRY
+  Risk: High_Risk | Carbs: 76.7g | Cal: 333
+STRAWBERRY PIE FILLING & TOPPING, STRAWBERRY
+  Risk: High_Risk | Carbs: 27.0g | Cal: 101
+FROSTED STRAWBERRY TOASTER PASTRIES, FROSTED STRAWBERRY
+  Risk: High_Risk | Carbs: 71.2g | Cal: 375
+STRAWBERRY FRECKLED YOGURT BAR, STRAWBERRY
+  Risk: High_Risk | Carbs: 30.2g | Cal: 143
+ORGANIC STRAWBERRY LOVE 100% PLANT BASED DAIRY-FREE FROZEN D
+  Risk: Medium_Risk | Carbs: 19.1g | Cal: 206
+STRAWBERRY PREMIUM ICE CREAM, STRAWBERRY
+  Risk: Medium_Risk | Carbs: 26.9g | Cal: 209
+ALMOND DREAM, NON-DAIRY DESSERT, STRAWBERRY, STRAWBERRY
+  Risk: Medium_Risk | Carbs: 25.0g | Cal: 175
+FLAVORING STRAWS, STRAWBERRY, STRAWBERRY
+  Risk: High_Risk | Carbs: 88.9g | Cal: 378
+OLD FASHIONED STRAWBERRY RHUBARB PIE, STRAWBERRY RHUBARB PIE
+  Risk: Medium_Risk | Carbs: 33.3g | Cal: 246
+STRAWBERRY FRUIT SNACKS, STRAWBERRY
+  Risk: High_Risk | Carbs: 78.4g | Cal: 314
+STRAWBERRY ORIGINAL PROBIOTIC BLENDED LOWFAT YOGURT, STRAWBE
+  Risk: Medium_Risk | Carbs: 17.6g | Cal: 94
+
+Search: 'blueberry' - Found 2,028 foods
+----------------------------------------------------------------------
+BLUEBERRY FLAVORED OVEN ROASTED ALMONDS, BLUEBERRY
+  Risk: High_Risk | Carbs: 34.9g | Cal: 535
+NO SUGAR ADDED BLUEBERRY PIE
+  Risk: High_Risk | Carbs: 42.5g | Cal: 292
+BLUEBERRY PANCAKE & WAFFLE MIX, BLUEBERRY
+  Risk: High_Risk | Carbs: 68.2g | Cal: 364
+MINI MUFFINS, BLUEBERRY, BLUEBERRY
+  Risk: High_Risk | Carbs: 44.0g | Cal: 400
+WILD BLUEBERRY GLUTEN-FREE FLAX MUFFINS, WILD BLUEBERRY
+  Risk: High_Risk | Carbs: 40.0g | Cal: 300
+ORIGINAL BLUEBERRY BLENDED LOWFAT YOGURT, ORIGINAL BLUEBERRY
+  Risk: Medium_Risk | Carbs: 17.6g | Cal: 94
+BAR, BLUEBERRY LICORICE, BLUEBERRY LICORICE
+  Risk: High_Risk | Carbs: 75.0g | Cal: 312
+BLENDED SUPERFRUIT, BLUEBERRY & BLACKCURRANT
+  Risk: Medium_Risk | Carbs: 17.6g | Cal: 76
+BLUEBERRY SCONE INSTANT OATMEAL WITH ANCIENT GRAINS QUINOA &
+  Risk: High_Risk | Carbs: 72.0g | Cal: 400
+BISCOTTI, BLUEBERRY LEMON, BLUEBERRY LEMON
+  Risk: High_Risk | Carbs: 71.0g | Cal: 452
+FROSTED BLUEBERRY TOASTER PASTRIES, FROSTED BLUEBERRY
+  Risk: High_Risk | Carbs: 69.2g | Cal: 375
+BLUEBERRY PIE, BLUEBERRY
+  Risk: Medium_Risk | Carbs: 36.0g | Cal: 246
+MORNING DELIGHT, FROSTED TOASTER TARTS PASTRIES, BLUEBERRY, 
+  Risk: High_Risk | Carbs: 71.2g | Cal: 385
+BLUEBERRY PROBIOTIC NONFAT GREEK YOGURT, BLUEBERRY
+  Risk: Medium_Risk | Carbs: 11.3g | Cal: 80
+BLUEBERRY FRUIT SPREAD, BLUEBERRY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+BLUEBERRY MUFFIN BARS, BLUEBERRY MUFFIN
+  Risk: High_Risk | Carbs: 60.0g | Cal: 422
+STRAWBERRY BLUEBERRY DICED STRAWBERRIES, CULTIVATED BLUEBERR
+  Risk: Medium_Risk | Carbs: 10.0g | Cal: 43
+BLUEBERRY SLICED LOAF CAKE, BLUEBERRY
+  Risk: High_Risk | Carbs: 43.3g | Cal: 356
+BLUEBERRY PIE FILLING & TOPPING, BLUEBERRY
+  Risk: High_Risk | Carbs: 25.8g | Cal: 101
+BLUEBERRY ICELANDIC SKYR STRAINED NON-FAT YOGURT, BLUEBERRY
+  Risk: Medium_Risk | Carbs: 8.7g | Cal: 73
+
+Search: 'grape' - Found 2,425 foods
+----------------------------------------------------------------------
+10 FL OZ JUICE COCKTAIL - GRAPE
+  Risk: Medium_Risk | Carbs: 10.2g | Cal: 41
+CONCORD GRAPE JELLY, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 250
+CONCORD GRAPE JAM, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 250
+CONCORD GRAPE JELLY, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 250
+CONCORD GRAPE FRUIT SNACKS, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 76.7g | Cal: 300
+CONCORD GRAPE FRUIT SPREAD, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 45.0g | Cal: 200
+CONCORD GRAPE JAM, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 250
+GRAPE JELLY, GRAPE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 250
+NO SUGAR ADDED RED GRAPEFRUIT IN WATER
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 33
+RED GRAPEFRUIT IN EXTRA LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 11.9g | Cal: 48
+CITRUS SALAD GRAPEFRUIT & ORANGES IN EXTRA LIGHT SYRUP, CITR
+  Risk: Medium_Risk | Carbs: 12.6g | Cal: 51
+CONCORD GRAPE JELLY, CONCORD GRAPE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 250
+CAPRESE BABY ARUGULA, BABY SPINACH, BABY LETTUCES, GRAPE TOM
+  Risk: Medium_Risk | Carbs: 8.4g | Cal: 155
+CHEWY ASSORTED FRUIT FLAVORED CANDIES, CARIBBEAN PUNCH, STRA
+  Risk: High_Risk | Carbs: 90.0g | Cal: 367
+RED GRAPEFRUIT SUNRISE IN A BLEND OF 100% FRUIT JUICE, RED G
+  Risk: Medium_Risk | Carbs: 16.8g | Cal: 71
+RED GRAPEFRUIT IN SWEETENED WATER
+  Risk: Medium_Risk | Carbs: 8.2g | Cal: 33
+RED GRAPEFRUIT IN EXTRA LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 11.6g | Cal: 51
+GRAPE CRANBERRY JUICE DRINK FROM CONCENTRATE, GRAPE CRANBERR
+  Risk: Medium_Risk | Carbs: 12.5g | Cal: 47
+CRANBERRY FLAVORED ENERGY JUICE DRINK BLENDED WITH GRAPE JUI
+  Risk: Medium_Risk | Carbs: 3.2g | Cal: 14
+RUBY CRANBERRY RUBY RED GRAPEFRUIT CRANBERRY JUICE DRINK BLE
+  Risk: Medium_Risk | Carbs: 10.8g | Cal: 42
+
+Search: 'watermelon' - Found 774 foods
+----------------------------------------------------------------------
+GUMMY WATERMELON RINGS
+  Risk: High_Risk | Carbs: 79.1g | Cal: 326
+LEMON ORANGE GREEN APPLE WATERMELON BLACK CHERRY BLUE RASPBE
+  Risk: High_Risk | Carbs: 93.3g | Cal: 367
+ORANGE, WATERMELON, BLUE RASPBERRY, GREEN APPLE, STRAWBERRY,
+  Risk: High_Risk | Carbs: 90.0g | Cal: 367
+CHEWY ASSORTED FRUIT FLAVORED CANDIES, CARIBBEAN PUNCH, STRA
+  Risk: High_Risk | Carbs: 90.0g | Cal: 367
+WATERMELON & LIME WITH CANDY SEEDS FROZEN CONFECTION POPS, W
+  Risk: Medium_Risk | Carbs: 21.4g | Cal: 86
+HALLOWEEN RING POPS, STRAWBERRY, WATERMELON & BLUE RASPBERRY
+  Risk: High_Risk | Carbs: 100.0g | Cal: 450
+100% STRAWBERRY WATERMELON FLAVORED APPLE JUICE BLEND FROM C
+  Risk: Medium_Risk | Carbs: 12.5g | Cal: 50
+WATERMELON COLD PRESSURED JUICED WATERMELON WATER BLEND, WAT
+  Risk: Medium_Risk | Carbs: 5.1g | Cal: 20
+CLOVERLAND, WATERMELON TEA
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 46
+TEA, WATERMELON
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 46
+WATERMELON LIMEADE DRINK MIX, WATERMELON
+  Risk: High_Risk | Carbs: 100.0g | Cal: 333
+WATERMELON AND TAMARIND FROZEN CONFECTION SALSAGHETI, WATERM
+  Risk: Medium_Risk | Carbs: 22.0g | Cal: 88
+ASSORTED MIX IT UP POPS, RED & WHITE CHERRY, GREEN APPLE & W
+  Risk: High_Risk | Carbs: 22.5g | Cal: 82
+WATERMELON SPEARS
+  Risk: Medium_Risk | Carbs: 7.8g | Cal: 32
+FRUIT SNACKS RED BELT, WATERMELON, STRAWBERRY, RED APPLE, CH
+  Risk: High_Risk | Carbs: 70.0g | Cal: 275
+WATERMELON SPEARS
+  Risk: Medium_Risk | Carbs: 9.6g | Cal: 29
+SALTED WATERMELON ENERGY CHEWS, SALTED WATERMELON
+  Risk: High_Risk | Carbs: 80.0g | Cal: 300
+WATERMELON COLD PRESSURED JUICED WATERMELON WATER BLEND, WAT
+  Risk: Medium_Risk | Carbs: 5.1g | Cal: 20
+FRUIT JUICE BEVERAGE, WATERMELON SUPREME, WATERMELON SUPREME
+  Risk: Medium_Risk | Carbs: 10.8g | Cal: 42
+WATER INFUSED WITH WATERMELON ESSENCE, WATERMELON
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+
+Search: 'pineapple' - Found 2,154 foods
+----------------------------------------------------------------------
+10 FL OZ JUICE DRINK - ORANGE PINEAPPLE
+  Risk: Medium_Risk | Carbs: 11.2g | Cal: 47
+V8 SPLASH BEVERAGE ORANGE PINEAPPLE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 29
+V8 HYDRATE BEVERAGE PINEAPPLE MANGO
+  Risk: Medium_Risk | Carbs: 4.6g | Cal: 19
+MIXED FRUIT MEDLEY FRESHLY FROZEN STRAWBERRIES, PEACHES, PIN
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 64
+PINEAPPLE CHUNKS IN HEAVY SYRUP
+  Risk: High_Risk | Carbs: 20.9g | Cal: 85
+ORGANIC MORNING SUPERGRAIN SMOOTHIE, PEAR PINEAPPLE
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 83
+ICED GREEN TEA, MANGO PINEAPPLE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 263
+PINEAPPLE CHUNKS IN ITS OWN 100% JUICE
+  Risk: Medium_Risk | Carbs: 13.9g | Cal: 57
+FINE DESSERT FILLING, PINEAPPLE, PINEAPPLE
+  Risk: High_Risk | Carbs: 48.6g | Cal: 189
+SAUCED YAM CUTS SWEET POTATOES, ORANGE PINEAPPLE, ORANGE PIN
+  Risk: Medium_Risk | Carbs: 27.7g | Cal: 117
+PINEAPPLES & SHAVED COCONUT WITH FRESH CREAM BARS, PINEAPPLE
+  Risk: High_Risk | Carbs: 21.8g | Cal: 179
+PINEAPPLE & ORANGE HABANERO HOT SAUCE, PINEAPPLE & ORANGE HA
+  Risk: Medium_Risk | Carbs: 13.3g | Cal: 67
+PINEAPPLE SLICES IN HEAVY SYRUP
+  Risk: High_Risk | Carbs: 20.9g | Cal: 85
+PINEAPPLE SLICES IN ITS OWN 100% JUICE
+  Risk: Medium_Risk | Carbs: 14.0g | Cal: 53
+PINEAPPLE SLICES IN 100% PINEAPPLE JUICE
+  Risk: Medium_Risk | Carbs: 13.2g | Cal: 53
+PINEAPPLE TIDBITS IN 100% PINEAPPLE JUICE
+  Risk: Medium_Risk | Carbs: 15.9g | Cal: 62
+PINEAPPLE SLICES IN 100% PINEAPPLE JUICE
+  Risk: Medium_Risk | Carbs: 14.3g | Cal: 57
+TROPICAL FRUIT SALAD PINEAPPLE & RED & YELLOW PAPAYA CHUNKS 
+  Risk: Medium_Risk | Carbs: 13.1g | Cal: 49
+LOWFAT COTTAGE CHEESE, PINEAPPLE & CHERRIES, PINEAPPLE & CHE
+  Risk: Medium_Risk | Carbs: 13.3g | Cal: 97
+ORANGE, STRAWBERRY, LEMON, PINEAPPLE, RASPBERRY GUMMI CANDY,
+  Risk: High_Risk | Carbs: 76.7g | Cal: 333
+
+Search: 'mango' - Found 2,117 foods
+----------------------------------------------------------------------
+V8 HYDRATE BEVERAGE PINEAPPLE MANGO
+  Risk: Medium_Risk | Carbs: 4.6g | Cal: 19
+MIXED FRUIT MEDLEY FRESHLY FROZEN STRAWBERRIES, PEACHES, PIN
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 64
+ICED GREEN TEA, MANGO PINEAPPLE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 263
+DRIED PRESERVES, MANGOES
+  Risk: High_Risk | Carbs: 92.9g | Cal: 381
+MANGO FLAVORED SOFT AUSTRALIAN LIQUORICE, MANGO
+  Risk: High_Risk | Carbs: 76.7g | Cal: 333
+HOT & SPICY MANGO MUSTARD, MEDIUM, MEDIUM
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 100
+APRICOT MANGO ON THE BOTTOM WHOLE MILK YOGURT, APRICOT MANGO
+  Risk: Medium_Risk | Carbs: 15.3g | Cal: 100
+MANGO CHIA POD, MANGO
+  Risk: Medium_Risk | Carbs: 8.2g | Cal: 94
+MANGO CARROT FRUIT & VEGGIE BLENDS, MANGO CARROT
+  Risk: Medium_Risk | Carbs: 16.8g | Cal: 71
+TROPICAL DREAMS MANGO
+  Risk: High_Risk | Carbs: 82.1g | Cal: 321
+MANGOS WITH FRESH CREAM BARS, MANGOS
+  Risk: Medium_Risk | Carbs: 20.5g | Cal: 179
+MANGO BERRY WITH WILD BLUES, WILD BLUES
+  Risk: Medium_Risk | Carbs: 12.9g | Cal: 50
+MANGO, BANANA, APPLE, PINEAPPLE AND SPINACH FRUIT 'N GREENS,
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 71
+MANGO CHUNKS IN EXTRA LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 12.6g | Cal: 51
+LIPTON, LUSCIOUS HERBAL TEA, PEACH MANGO FLAVOR WITH OTHER N
+  Risk: High_Risk | Carbs: 52.6g | Cal: 263
+MANGO IN EXTRA LIGHT SYRUP, MANGO
+  Risk: Medium_Risk | Carbs: 13.7g | Cal: 56
+TROPICAL TRIO PINEAPPLE, PAPAYA, MANGO TROPICAL DREAMS, TROP
+  Risk: High_Risk | Carbs: 85.0g | Cal: 350
+GREEK NON-FAT YOGURT, MANGO
+  Risk: Medium_Risk | Carbs: 9.7g | Cal: 75
+ORGANIC MANGOS
+  Risk: High_Risk | Carbs: 88.4g | Cal: 395
+NO SUGAR ADDED MANGO SLICES
+  Risk: High_Risk | Carbs: 95.0g | Cal: 400
+
+Search: 'peach' - Found 2,565 foods
+----------------------------------------------------------------------
+PEPPERIDGE FARM PASTRY PEACH
+  Risk: High_Risk | Carbs: 34.8g | Cal: 281
+MIXED FRUIT MEDLEY FRESHLY FROZEN STRAWBERRIES, PEACHES, PIN
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 64
+FRUIT & OATMEAL, PEACHES &VANILLA WALNUT
+  Risk: Medium_Risk | Carbs: 38.0g | Cal: 207
+YELLOW CLING SLICED PEACHES IN LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 14.3g | Cal: 56
+YELLOW CLING PEACH HALVES IN LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 14.3g | Cal: 56
+OATMEAL WITH FLAX, PEACHES & CREAM
+  Risk: High_Risk | Carbs: 77.1g | Cal: 371
+PEACH ON THE BOTTOM WHOLE MILK YOGURT, PEACH
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 107
+ORGANIC FRUIT GUMMY SNACKS, STRAWBERRY, PEACH, TANGERINE, LE
+  Risk: High_Risk | Carbs: 78.3g | Cal: 304
+YELLOW CLING PEACHES CHUNKS IN EXTRA LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 12.9g | Cal: 48
+DELUXE GOLDEN PEACH SPREAD, GOLDEN PEACH
+  Risk: High_Risk | Carbs: 55.0g | Cal: 200
+OLD FASHIONED PEACH PIE, PEACH
+  Risk: Medium_Risk | Carbs: 33.3g | Cal: 246
+YELLOW CLING PEACH SLICES IN LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 64
+APPLE LEAF, PIE FILLING, PEACH, PEACH
+  Risk: High_Risk | Carbs: 25.9g | Cal: 106
+ORIGINAL PEACH PROBIOTIC FORMULA BLENDED LOWFAT YOGURT, ORIG
+  Risk: Medium_Risk | Carbs: 17.1g | Cal: 88
+SLICED PEACHES YELLOW CLING PEACHES IN HEAVY SYRUP
+  Risk: Medium_Risk | Carbs: 19.5g | Cal: 78
+ORGANIC DICED YELLOW CLING PEACHES IN ORGANIC PEAR JUICE FRO
+  Risk: Medium_Risk | Carbs: 10.6g | Cal: 44
+DICED PEACHES IN 100% FRUIT JUICE
+  Risk: Medium_Risk | Carbs: 12.4g | Cal: 53
+SLICED CLING PEACHES IN EXTRA LIGHT SYRUP
+  Risk: Medium_Risk | Carbs: 13.7g | Cal: 56
+PEACH ORIGINAL GREEK NONFAT YOGURT, PEACH
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 53
+BLENDED FRUIT WITH GREEK YOGURT, PEACH & BANANA
+  Risk: Medium_Risk | Carbs: 16.0g | Cal: 84
+
+Search: 'chocolate' - Found 21,476 foods
+----------------------------------------------------------------------
+PEPPERIDGE FARM COOKIES GRAHAM CHOCOLATE
+  Risk: High_Risk | Carbs: 70.0g | Cal: 467
+Sun-Maid Dark Chocolate Yogurt Flavored Raisins 7 oz Bag
+  Risk: High_Risk | Carbs: 66.7g | Cal: 433
+PEPPERIDGE FARM COOKIES DARK CHOCOLATE
+  Risk: High_Risk | Carbs: 59.3g | Cal: 444
+CHOCOLATE CHIP COOKIES
+  Risk: High_Risk | Carbs: 60.9g | Cal: 435
+ALMOND DREAM, NON-DAIRY FROZEN DESSERT, CHOCOLATE, CHOCOLATE
+  Risk: Medium_Risk | Carbs: 26.7g | Cal: 200
+ORIGINAL CHOCOLATE CHIP COOKIES, ORIGINAL CHOCOLATE CHIP
+  Risk: High_Risk | Carbs: 66.7g | Cal: 515
+72% COCOA CREME FILLED DARK CHOCOLATE, RASPBERRY ORANGE
+  Risk: High_Risk | Carbs: 55.8g | Cal: 581
+DARK CHOCOLATE CREME FILLED WAFERS, DARK CHOCOLATE
+  Risk: High_Risk | Carbs: 70.4g | Cal: 481
+PEANUT BUTTER BLENDED WITH DARK CHOCOLATE
+  Risk: High_Risk | Carbs: 37.5g | Cal: 531
+COOKIE DOUGH INSTANT PUDDING WITH CHOCOLATE CHIP PACKET, COO
+  Risk: High_Risk | Carbs: 89.3g | Cal: 393
+INSTANT PUDDING, MARSHMALLOW CHOCOLATE CHIP
+  Risk: High_Risk | Carbs: 89.3g | Cal: 393
+CHOCOLATE DRINK MIX, CHOCOLATE
+  Risk: High_Risk | Carbs: 88.0g | Cal: 400
+CHOCOLATE DRINK MIX, CHOCOLATE
+  Risk: High_Risk | Carbs: 88.0g | Cal: 400
+CHOCOLATE CHIP COOKIE DOUGH CHUNKS OF REAL CHOCOLATE CHIP CO
+  Risk: High_Risk | Carbs: 31.8g | Cal: 242
+CHOCOLATE CHIP PANCAKES, CHOCOLATE CHIP
+  Risk: High_Risk | Carbs: 41.9g | Cal: 239
+CHOCOLATE, STRAWBERRY FLAVORED VANILLA LOWFAT ICE CREAM WINT
+  Risk: Medium_Risk | Carbs: 24.5g | Cal: 163
+WHITE CHOCOLATE, WHITE
+  Risk: High_Risk | Carbs: 55.2g | Cal: 552
+INSTANT CHOCOLATE DRINK, CHOCOLATE, CHOCOLATE
+  Risk: High_Risk | Carbs: 90.0g | Cal: 400
+CHOCOLATE SUPREME HOT COCOA MIX, CHOCOLATE SUPREME
+  Risk: High_Risk | Carbs: 74.3g | Cal: 400
+CHOCOLATE CHIP SOFT COOKIE BARS WITH CHOCOLATE CHIPS, CHOCOL
+  Risk: High_Risk | Carbs: 70.0g | Cal: 460
+
+Search: 'cookie' - Found 9,738 foods
+----------------------------------------------------------------------
+PEPPERIDGE FARM COOKIES GINGER
+  Risk: High_Risk | Carbs: 78.6g | Cal: 464
+PEPPERIDGE FARM COOKIES GRAHAM CHOCOLATE
+  Risk: High_Risk | Carbs: 70.0g | Cal: 467
+PEPPERIDGE FARM COOKIES
+  Risk: High_Risk | Carbs: 70.4g | Cal: 481
+PEPPERIDGE FARM COOKIES
+  Risk: High_Risk | Carbs: 67.7g | Cal: 419
+PEPPERIDGE FARM COOKIES
+  Risk: High_Risk | Carbs: 68.8g | Cal: 406
+PEPPERIDGE FARM COOKIES SMORES
+  Risk: High_Risk | Carbs: 63.3g | Cal: 500
+PEPPERIDGE FARM COOKIES STRAWBERRY
+  Risk: High_Risk | Carbs: 63.3g | Cal: 467
+PEPPERIDGE FARM COOKIES PEPPERMINT
+  Risk: High_Risk | Carbs: 65.5g | Cal: 517
+PEPPERIDGE FARM COOKIES
+  Risk: High_Risk | Carbs: 70.0g | Cal: 500
+PEPPERIDGE FARM COOKIES MILANO
+  Risk: High_Risk | Carbs: 66.7g | Cal: 524
+PEPPERIDGE FARM COOKIES BUTTER PECAN
+  Risk: High_Risk | Carbs: 67.9g | Cal: 571
+PEPPERIDGE FARM COOKIES DARK CHOCOLATE
+  Risk: High_Risk | Carbs: 59.3g | Cal: 444
+CHOCOLATE CHIP COOKIES
+  Risk: High_Risk | Carbs: 60.9g | Cal: 435
+OATMEAL RAISIN WITH WALNUTS SOFTBAKED COOKIES, OATMEAL RAISI
+  Risk: High_Risk | Carbs: 64.3g | Cal: 464
+FUDGE PEANUT BUTTER FILLED COOKIES, FUDGE PEANUT BUTTER
+  Risk: High_Risk | Carbs: 57.7g | Cal: 538
+ORIGINAL CHOCOLATE CHIP COOKIES, ORIGINAL CHOCOLATE CHIP
+  Risk: High_Risk | Carbs: 66.7g | Cal: 515
+COOKIE DOUGH INSTANT PUDDING WITH CHOCOLATE CHIP PACKET, COO
+  Risk: High_Risk | Carbs: 89.3g | Cal: 393
+CHOCOLATE CHIP COOKIE DOUGH CHUNKS OF REAL CHOCOLATE CHIP CO
+  Risk: High_Risk | Carbs: 31.8g | Cal: 242
+OATMEAL RAISIN SOFT OATMEAL COOKIE BARS WITH RAISINS, OATMEA
+  Risk: High_Risk | Carbs: 70.0g | Cal: 420
+CHOCOLATE CHIP SOFT COOKIE BARS WITH CHOCOLATE CHIPS, CHOCOL
+  Risk: High_Risk | Carbs: 70.0g | Cal: 460
+
+Search: 'cake' - Found 7,445 foods
+----------------------------------------------------------------------
+BIRTHDAY CAKE INSTANT PUDDING WITH SPRINKLES PACKET, BIRTHDA
+  Risk: High_Risk | Carbs: 89.3g | Cal: 393
+CHUCKANUT BAY CHEESECAKE
+  Risk: Medium_Risk | Carbs: 29.2g | Cal: 336
+FANCY NUT CAKE & PASTRY FILLING
+  Risk: High_Risk | Carbs: 52.8g | Cal: 361
+CHOCOLATE CHIP PANCAKES, CHOCOLATE CHIP
+  Risk: High_Risk | Carbs: 41.9g | Cal: 239
+BLUEBERRY PANCAKE & WAFFLE MIX, BLUEBERRY
+  Risk: High_Risk | Carbs: 68.2g | Cal: 364
+BANANA ICED CAKE, BANANA
+  Risk: High_Risk | Carbs: 56.5g | Cal: 412
+CREME FILLED CHOCOLATE CUPCAKES CHOCOLATE ICING WITH CREME F
+  Risk: High_Risk | Carbs: 62.7g | Cal: 403
+CREME FILLED ICED SPONGE CAKES WITH CREME FILLING, CREME FIL
+  Risk: High_Risk | Carbs: 65.7g | Cal: 418
+WRAPPED CAKES, STRAWBERRY
+  Risk: High_Risk | Carbs: 57.7g | Cal: 385
+CHOCOLATE BELLS CUPCAKES WITH CREME ICING, CHOCOLATE
+  Risk: High_Risk | Carbs: 60.0g | Cal: 420
+COCOA-CAKES
+  Risk: High_Risk | Carbs: 61.8g | Cal: 471
+FORBIDDEN ORGANIC RICE RAMEN NOODLE CAKES, FORBIDDEN
+  Risk: High_Risk | Carbs: 74.3g | Cal: 343
+JADE PEARL ORGANIC RICE RAMEN NOODLE CAKES, JADE PEARL
+  Risk: High_Risk | Carbs: 74.3g | Cal: 343
+CHOCOLATE CREME-FILLED CUPCAKES, CHOCOLATE
+  Risk: High_Risk | Carbs: 65.0g | Cal: 412
+SHOPRITE, POPPED CORN CAKES, WHITE CHEDDAR, WHITE CHEDDAR
+  Risk: High_Risk | Carbs: 81.8g | Cal: 409
+BROOKLYN BLACKOUT CAKE ICE CREAM, BROOKLYN BLACKOUT CAKE
+  Risk: High_Risk | Carbs: 27.7g | Cal: 255
+BUTTERMILK COMPLETE PANCAKE MIX, BUTTERMILK
+  Risk: High_Risk | Carbs: 70.5g | Cal: 361
+TRIPLE CHOCOLATE FUDGE CAKE, TRIPLE CHOCOLATE FUDGE
+  Risk: High_Risk | Carbs: 56.1g | Cal: 368
+BUTTERMILK PANCAKES, BUTTERMILK
+  Risk: High_Risk | Carbs: 39.3g | Cal: 222
+PARTY CAKE PREMIUM ICE CREAM, PARTY CAKE
+  Risk: High_Risk | Carbs: 31.0g | Cal: 241
+
+Search: 'ice cream' - Found 7,987 foods
+----------------------------------------------------------------------
+CHOCO MINT CHIP PREMIUM ICE CREAM, CHOCO MINT CHIP
+  Risk: Medium_Risk | Carbs: 26.4g | Cal: 230
+CHOCOLATE CHIP COOKIE DOUGH CHUNKS OF REAL CHOCOLATE CHIP CO
+  Risk: High_Risk | Carbs: 31.8g | Cal: 242
+STRAWBERRIES & CREAM OLD FASHIONED ICE CREAM, STRAWBERRIES &
+  Risk: Medium_Risk | Carbs: 25.8g | Cal: 182
+CHOCOLATE, STRAWBERRY FLAVORED VANILLA LOWFAT ICE CREAM WINT
+  Risk: Medium_Risk | Carbs: 24.5g | Cal: 163
+MINT LOWFAT ICE CREAM FROSTY TREES WITH CANDY SPRINKLES, MIN
+  Risk: Medium_Risk | Carbs: 26.5g | Cal: 163
+STRAWBERRY ICE CREAM, STRAWBERRY
+  Risk: High_Risk | Carbs: 25.8g | Cal: 215
+SOUTHERN BANANA PUDDING ICE CREAM, SOUTHERN BANANA PUDDING
+  Risk: High_Risk | Carbs: 24.8g | Cal: 241
+MINT CHIP ICE CREAM, MINT CHIP
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 193
+ICE CREAM, BANANA SPLIT, BANANA SPLIT
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 193
+CHOCOLATE CHIP COOKIE DOUGH ICE CREAM, CHOCOLATE CHIP COOKIE
+  Risk: Medium_Risk | Carbs: 26.5g | Cal: 241
+DARK CHOCOLATE CHIPS ICE CREAM, DARK CHOCOLATE CHIPS
+  Risk: High_Risk | Carbs: 26.6g | Cal: 245
+CHOCOLATE PEANUT BUTTER ICE CREAM, CHOCOLATE PEANUT BUTTER
+  Risk: High_Risk | Carbs: 24.3g | Cal: 271
+HOMEMADE VANILLA ICE CREAM, HOMEMADE VANILLA
+  Risk: High_Risk | Carbs: 23.4g | Cal: 223
+SMALL BATCH BOURBON VANILLA ICE CREAM, SMALL BATCH BOURBON V
+  Risk: Medium_Risk | Carbs: 19.9g | Cal: 234
+BROOKLYN BLACKOUT CAKE ICE CREAM, BROOKLYN BLACKOUT CAKE
+  Risk: High_Risk | Carbs: 27.7g | Cal: 255
+MINT CHIP ICE CREAM, MINT CHIP
+  Risk: High_Risk | Carbs: 25.6g | Cal: 256
+SALTY CARAMEL ICE CREAM, SALTY CARAMEL
+  Risk: High_Risk | Carbs: 26.2g | Cal: 248
+SALTED CARAMEL ICE CREAM, SALTED CARAMEL
+  Risk: High_Risk | Carbs: 25.8g | Cal: 225
+CHOCO MINT CHIP ICE CREAM, CHOCO MINT CHIP
+  Risk: Medium_Risk | Carbs: 25.8g | Cal: 227
+PARTY CAKE PREMIUM ICE CREAM, PARTY CAKE
+  Risk: High_Risk | Carbs: 31.0g | Cal: 241
+
+Search: 'pizza' - Found 4,039 foods
+----------------------------------------------------------------------
+PIZZA SAUCE, PEPPERONI FLAVORED, PEPPERONI FLAVORED
+  Risk: Medium_Risk | Carbs: 9.4g | Cal: 62
+THE ORIGINAL PIZZA SAUCE, ORIGINAL
+  Risk: Medium_Risk | Carbs: 6.7g | Cal: 42
+THIN & CRISPY GLUTEN FREE PIZZA CRUSTS, THIN & CRISPY
+  Risk: High_Risk | Carbs: 59.6g | Cal: 351
+GINO'S EAST, GOLDEN CRISPY THIN CRUST PEPPERONI PIZZA
+  Risk: Medium_Risk | Carbs: 21.5g | Cal: 264
+ORGANIC PIZZA PASTA SAUCE, PIZZA PASTA
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 42
+PIZZA SAUCE, PIZZA
+  Risk: Medium_Risk | Carbs: 9.5g | Cal: 48
+OVEN BAKED THIN PIZZA CRUSTS
+  Risk: High_Risk | Carbs: 51.8g | Cal: 329
+CLASSIC OVEN BAKED PIZZA CRUSTS, CLASSIC
+  Risk: High_Risk | Carbs: 52.6g | Cal: 333
+FOUR CHEESE MOZZARELLA, FONTINA, PARMESAN AND ASIAGO CHEESES
+  Risk: High_Risk | Carbs: 30.8g | Cal: 263
+SUPREME SAUSAGE, PEPPERONI, GREEN, RED AND YELLOW PEPPERS, R
+  Risk: Medium_Risk | Carbs: 25.0g | Cal: 235
+SUPREME THIN CRUST PIZZA, SUPREME
+  Risk: Medium_Risk | Carbs: 23.9g | Cal: 223
+PEPPERONI DEEP DISH SINGLES PIZZA, PEPPERONI
+  Risk: Medium_Risk | Carbs: 28.9g | Cal: 270
+HOMEMADE STYLE PIZZA SAUCE, HOMEMADE STYLE
+  Risk: Medium_Risk | Carbs: 7.9g | Cal: 48
+NO CHEESE ROASTED VEGETABLE MADE WITH ORGANIC SHIITAKE MUSHR
+  Risk: High_Risk | Carbs: 37.2g | Cal: 257
+PIZZA SAUCE
+  Risk: Medium_Risk | Carbs: 9.7g | Cal: 81
+GOURMET TRADITIONAL PIZZA SAUCE
+  Risk: Medium_Risk | Carbs: 8.2g | Cal: 66
+CHEEZE LOVER'S WITH MOZZARELLA & CHEDDAR STYLE SHREDS THIN C
+  Risk: High_Risk | Carbs: 40.5g | Cal: 270
+AUTHENTIC SAUSAGE + PEPPERONI CHICAGO DEEP DISH PIZZA, AUTHE
+  Risk: Medium_Risk | Carbs: 17.9g | Cal: 232
+SPINACH & ROASTED MUSHROOM MOZZARELLA CHEESE, SPINACH, ROAST
+  Risk: Medium_Risk | Carbs: 26.6g | Cal: 211
+PEPPERONI FRENCH BREAD TOPPED WITH PIZZA SAUCE, MOZZARELLA C
+  Risk: Medium_Risk | Carbs: 29.4g | Cal: 242
+
+Search: 'burger' - Found 1,790 foods
+----------------------------------------------------------------------
+93% LEAN | 7% FAT TURKEY BURGER PATTIES, TURKEY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 134
+TURKEY BURGERS, TURKEY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 170
+ORIGINAL RECIPE HAMBURGER POTATO ROLLS, ORIGINAL RECIPE
+  Risk: High_Risk | Carbs: 52.6g | Cal: 281
+HAMBURGER DILL CHIPS, HAMBURGER DILL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+HAMBURGER RELISH, SWEET TOMATO, SWEET TOMATO
+  Risk: High_Risk | Carbs: 26.7g | Cal: 100
+BEEF BURGERS
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 294
+HAMBURGER BUNS
+  Risk: High_Risk | Carbs: 49.1g | Cal: 263
+DR. PRAEGER'S, ITALIAN VEGGIE BURGERS
+  Risk: Medium_Risk | Carbs: 19.2g | Cal: 167
+ORIGINAL GLUTEN FREE BURGERS, ORIGINAL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 278
+TURKEY BURGERS, TURKEY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 170
+SEASONED TURKEY BURGERS, SEASONED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 154
+LIMBURGER CHEESE
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 321
+SANTA FE VEGGIE BURGER
+  Risk: Medium_Risk | Carbs: 23.5g | Cal: 176
+HAMBURGER DILL CHIPS, HAMBURGER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 0
+HAMBURGER DILL CHIPS, HAMBURGER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 0
+HAMBURGER DILL CHIPS MINI STUFFERS, HAMBURGER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+HAWAIIAN STYLE TERI-BURGER SEASONING MIX, HAWAIIAN STYLE
+  Risk: High_Risk | Carbs: 81.8g | Cal: 318
+HAMBURGER DILL CHIPS SIMPLY PICKLES, HAMBURGER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+HAMBURGER DILL CHIPS MINI STUFFERS, HAMBURGER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+CHEDDAR TURKEY BURGERS PATTIES, CHEDDAR
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 169
+
+Search: 'sandwich' - Found 3,569 foods
+----------------------------------------------------------------------
+KOSHER DILL SANDWICH STUFFERS, KOSHER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+SAUSAGE & CHEESE FLATBREAD POCKET SNACK SANDWICHES, SAUSAGE 
+  Risk: Medium_Risk | Carbs: 25.0g | Cal: 375
+ORGANIC MINI BITE SIZE SANDWICH CRACKERS, CHEDDAR CHEESE, CH
+  Risk: Medium_Risk | Carbs: 53.1g | Cal: 469
+VANILLA MINI SQUARES ICE CREAM SANDWICH, VANILLA
+  Risk: High_Risk | Carbs: 37.5g | Cal: 250
+SLICED SANDWICH ROLLS
+  Risk: High_Risk | Carbs: 47.9g | Cal: 239
+CHEDDAR CHEESE BITE SIZE SANDWICH CRACKER, CHEDDAR CHEESE
+  Risk: High_Risk | Carbs: 64.3g | Cal: 464
+SANDWICH SPREAD BOLOGNA WITH SWEET PICKLE RELISH, CELERY, ON
+  Risk: Medium_Risk | Carbs: 9.9g | Cal: 351
+CHICKEN SMOKED, CHOPPED, PRESSED SANDWICHES, CHICKEN
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 161
+CHICKEN APPLE SANDWICH, SAUSAGE, EGG WHITE & CHEDDAR
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 175
+SANDWICH SPREAD
+  Risk: Medium_Risk | Carbs: 18.8g | Cal: 250
+KOSHER DILL SANDWICH STUFFERS, KOSHER DILL
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+BREAD & BUTTER OLD-FASHIONED SWEET SANDWICH STUFFERS, BREAD 
+  Risk: Medium_Risk | Carbs: 17.9g | Cal: 71
+TURKEY & HAVARTI WITH MAYONNAISE SANDWICH, TURKEY & HAVARTI
+  Risk: Medium_Risk | Carbs: 20.8g | Cal: 253
+BREAD & BUTTER NO SUGAR ADDED SANDWICH STUFFERS, BREAD & BUT
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+BREAD & BUTTER OLD-FASHIONED SWEET SANDWICH STUFFERS, BREAD 
+  Risk: Medium_Risk | Carbs: 17.9g | Cal: 71
+RELISH SANDWICH SPREAD
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 233
+VANILLA OLD SCHOOL ICE CREAM SANDWICH, VANILLA
+  Risk: High_Risk | Carbs: 39.4g | Cal: 258
+CREME FILLED CHOCOLATE & VANILLA FLAVORED DUPLEX SANDWICH CO
+  Risk: High_Risk | Carbs: 74.1g | Cal: 481
+KOSHER DILL SANDWICH STUFFERS SIMPLY PICKLES, KOSHER DILL SA
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 18
+BREAD & BUTTER SANDWICH STUFFERS
+  Risk: Medium_Risk | Carbs: 17.9g | Cal: 71
+
+Search: 'salad' - Found 3,364 foods
+----------------------------------------------------------------------
+SPINACH SALAD DRESSING, SPINACH SALAD
+  Risk: High_Risk | Carbs: 30.6g | Cal: 167
+MUSTARD POTATO SALAD, MUSTARD POTATO
+  Risk: Medium_Risk | Carbs: 17.8g | Cal: 126
+LOADED POTATO SALAD, LOADED POTATO
+  Risk: Medium_Risk | Carbs: 13.6g | Cal: 200
+DEVILED EGG POTATO SALAD, DEVILED EGG POTATO
+  Risk: Medium_Risk | Carbs: 15.7g | Cal: 164
+SLICED HEARTS OF PALM SALAD CUT
+  Risk: Medium_Risk | Carbs: 6.0g | Cal: 30
+SEASONING & SALAD MIX, RANCH
+  Risk: High_Risk | Carbs: 55.6g | Cal: 278
+SANDWICH SPREAD BOLOGNA WITH SWEET PICKLE RELISH, CELERY, ON
+  Risk: Medium_Risk | Carbs: 9.9g | Cal: 351
+REDSKIN POTATO SALAD WITH CELERY, SWEET PICKLE RELISH, GREEN
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 163
+MUSTARD POTATO SALAD WITH ONION, CELERY, SWEET PICKLE RELISH
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 177
+REDSKIN POTATO SALAD WITH CELERY, SWEET PICKLE RELISH, GREEN
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 163
+FARM STYLE EGG SALAD, FARM STYLE
+  Risk: Medium_Risk | Carbs: 1.2g | Cal: 212
+MACARONI SALAD ELBOW MACARONI, CELERY, EGG, CARROTS & ONIONS
+  Risk: High_Risk | Carbs: 44.4g | Cal: 330
+MUSTARD POTATO SALAD WITH ONION, CELERY, SWEET PICKLE RELISH
+  Risk: Medium_Risk | Carbs: 15.4g | Cal: 177
+AMERICAN POTATO SALAD WITH CELERY, SWEET PICKLE RELISH, ONIO
+  Risk: Medium_Risk | Carbs: 15.6g | Cal: 170
+AMERICAN POTATO SALAD WITH CELERY, SWEET PICKLE RELISH, ONIO
+  Risk: Medium_Risk | Carbs: 15.6g | Cal: 170
+WHITE CHICKEN MEAT, ONION AND CELERY IN A CREAMY DRESSING SA
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 182
+TROPICAL FRUIT SALAD PINEAPPLE & RED & YELLOW PAPAYA CHUNKS 
+  Risk: Medium_Risk | Carbs: 13.1g | Cal: 49
+COLORFULLY VERSATILE CAULIFLOWER, BROCCOLI, CARROTS AND RED 
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 29
+CLASSIC 4 BEAN SALAD, CLASSIC 4 BEAN
+  Risk: Medium_Risk | Carbs: 15.3g | Cal: 71
+TUNA SALAD ON WHEAT BREAD, TUNA SALAD
+  Risk: High_Risk | Carbs: 34.7g | Cal: 249
+
+Search: 'soup' - Found 4,637 foods
+----------------------------------------------------------------------
+CAMPBELL'S SLOW KETTLE SOUP CLAM CHOWDER
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 82
+CAMPBELL'S SLOW KETTLE SOUP CHEESE BROCCOLI
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 82
+CAMPBELL'S SOUP BEAN AND HAM
+  Risk: Medium_Risk | Carbs: 10.6g | Cal: 61
+CAMPBELL'S SOUP TOMATO
+  Risk: Medium_Risk | Carbs: 15.0g | Cal: 75
+CAMPBELL'S SOUP CHICKEN & DUMPLING
+  Risk: Medium_Risk | Carbs: 5.8g | Cal: 71
+CAMPBELL'S CHUNKY SOUP BEEF VEGETABLE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 46
+MINESTRONE SOUP, MINESTRONE
+  Risk: Medium_Risk | Carbs: 6.9g | Cal: 41
+SOUP MIX, SOUP MIX
+  Risk: High_Risk | Carbs: 69.2g | Cal: 346
+CREAM OF MUSHROOM CONDENSED SOUP, CREAM OF MUSHROOM
+  Risk: Medium_Risk | Carbs: 7.2g | Cal: 56
+GARDEN SOUP, CARROT GINGER, CARROT GINGER
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 38
+LENTIL SOUP, LENTIL
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 29
+ASIAN MEALS, MALAYSIAN GARLIC SESAME NOODLE, RICE NOODLE SOU
+  Risk: High_Risk | Carbs: 42.9g | Cal: 219
+HOT & SPICY WITH CHILI PIQUIN & SHRIMP RAMEN NOODLE SOUP, HO
+  Risk: High_Risk | Carbs: 60.9g | Cal: 453
+SHRIMP WONTON SOUP, SHRIMP WONTON
+  Risk: Medium_Risk | Carbs: 11.7g | Cal: 90
+ENRICHED MACARONI PRODUCT, SOUP SHELLS
+  Risk: High_Risk | Carbs: 78.6g | Cal: 375
+CHICKEN NOODLE SOUP, CHUNKY
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 45
+CHUNKY CHICKEN NOODLE SOUP
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 37
+CHUNKY GRILLED SAUSAGE GUMBO SOUP
+  Risk: Medium_Risk | Carbs: 7.3g | Cal: 41
+MINESTRONE ORGANIC SOUP, MINESTRONE
+  Risk: Medium_Risk | Carbs: 6.5g | Cal: 33
+RED LENTIL DAHL ORGANIC SOUP, RED LENTIL DAHL
+  Risk: Medium_Risk | Carbs: 11.8g | Cal: 82
+
+Search: 'steak' - Found 1,773 foods
+----------------------------------------------------------------------
+Pork Loin Steak
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 223
+TRADITIONALS GRAVY & 6 SALISBURY STEAKS MADE WITH CHICKEN, P
+  Risk: Medium_Risk | Carbs: 6.1g | Cal: 144
+ANGUS PHILLY BEEF STEAKS, ANGUS
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 186
+STEAK SEASONING, SPICY, SPICY
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+STEAK SEASONING
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 100
+STEAK SEASONING
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 100
+MONTREAL STEAK SMOKED SAUSAGE, MONTREAL STEAK
+  Risk: Medium_Risk | Carbs: 7.6g | Cal: 273
+PREMIUM SMOKY MONTREAL STEAK SAUCE, SMOKY MONTREAL STEAK
+  Risk: High_Risk | Carbs: 27.8g | Cal: 139
+ORGANIC STEAK SAUCE
+  Risk: Medium_Risk | Carbs: 13.3g | Cal: 67
+REDUCED SODIUM BLEND STEAK SEASONING, STEAK
+  Risk: Medium_Risk | Carbs: 11.8g | Cal: 237
+STEAK SAUCE
+  Risk: Medium_Risk | Carbs: 13.3g | Cal: 67
+ORIGINAL STEAK SAUCE, ORIGINAL
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 83
+ROASTED GARLIC & SAUTEED ONION FLAVORED SAUCE MIX-INS STEAKH
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 100
+MONTREAL STEAK 30 MINUTE MARINADE, MONTREAL STEAK
+  Risk: Medium_Risk | Carbs: 12.5g | Cal: 62
+SMOKY APPLEWOOD STEAKHOUSE BURGERS SEASONING MIX, SMOKY APPL
+  Risk: High_Risk | Carbs: 66.7g | Cal: 333
+MONTREAL STEAK SAUCE MIX-INS STEAKHOUSE BURGERS, MONTREAL ST
+  Risk: Medium_Risk | Carbs: 20.0g | Cal: 100
+STEAK RUB, STEAK
+  Risk: High_Risk | Carbs: 60.0g | Cal: 300
+BROWN SUGAR BOURBON SAUCE MIX-INS STEAKHOUSE BURGERS, BROWN 
+  Risk: Medium_Risk | Carbs: 25.0g | Cal: 125
+SALISBURY STEAK IN A SAVORY BEEF GRAVY WITH ROTELLE PASTA IN
+  Risk: Medium_Risk | Carbs: 9.2g | Cal: 129
+STEAK SEASONING
+  Risk: Medium_Risk | Carbs: 5.6g | Cal: 84
+
+Search: 'shrimp' - Found 1,704 foods
+----------------------------------------------------------------------
+SEASONED CRISPY SHRIMP FRY SEAFOOD BATTER MIX, SEASONED CRIS
+  Risk: High_Risk | Carbs: 73.3g | Cal: 333
+SHRIMP PAD THAI
+  Risk: Medium_Risk | Carbs: 19.4g | Cal: 138
+HOT & SPICY WITH CHILI PIQUIN & SHRIMP RAMEN NOODLE SOUP, HO
+  Risk: High_Risk | Carbs: 60.9g | Cal: 453
+SHRIMP WONTON SOUP, SHRIMP WONTON
+  Risk: Medium_Risk | Carbs: 11.7g | Cal: 90
+OVEN CRUNCHY BEER BATTERED SHRIMP, OVEN CRUNCHY
+  Risk: Medium_Risk | Carbs: 22.4g | Cal: 235
+BUTTERFLY SHRIMP, BUTTERFLY
+  Risk: Medium_Risk | Carbs: 22.6g | Cal: 262
+BAYOU RECIPE COOKIN' SHRIMP & SAUSAGE GUMBO SPICY MIX OF CRE
+  Risk: Medium_Risk | Carbs: 28.2g | Cal: 167
+SHRIMP SOY FLAVORED FRIED RICE BLENDED WITH COOKED SALAD SHR
+  Risk: Medium_Risk | Carbs: 16.9g | Cal: 106
+GROUND SHRIMP
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 314
+HOT & SPICY FLAVOR WITH SHRIMP RAMEN NOODLE SOUP, HOT & SPIC
+  Risk: Medium_Risk | Carbs: 59.4g | Cal: 453
+BUTTERFLY BREADED TAIL ON SHRIMP, BUTTERFLY
+  Risk: Medium_Risk | Carbs: 24.7g | Cal: 212
+POPCORN SHRIMP
+  Risk: Medium_Risk | Carbs: 23.5g | Cal: 259
+CRAWFISH, SHRIMP & CRAB BOIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+NEW ORLEANS STYLE SHRIMP FRI SEASONED SEAFOOD BREADING MIX, 
+  Risk: High_Risk | Carbs: 77.3g | Cal: 364
+NEW ORLEANS STYLE SHRIMP SCAMPI WITH PASTA SHRIMP AND PASTA 
+  Risk: Medium_Risk | Carbs: 15.8g | Cal: 118
+SHRIMP ALFREDO NEW ORLEANS STYLE SAVORY SHRIMP AND LINGUINE 
+  Risk: Medium_Risk | Carbs: 20.9g | Cal: 165
+SHRIMP CLASSIC SCAMPI, SHRIMP
+  Risk: Medium_Risk | Carbs: 4.4g | Cal: 159
+CRUNCHY PANKO BREADCRUMBS BUTTERFLY SHRIMP, CRUNCHY PANKO BR
+  Risk: Medium_Risk | Carbs: 25.2g | Cal: 253
+SHRIMP SCAMPI, GARLIC BUTTER
+  Risk: Medium_Risk | Carbs: 8.0g | Cal: 106
+GARLIC & HERB CHEESE STUFFED SHRIMP
+  Risk: Medium_Risk | Carbs: 26.6g | Cal: 230
+
+Search: 'crab' - Found 583 foods
+----------------------------------------------------------------------
+CRAWFISH, SHRIMP & CRAB BOIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+MARYLAND STYLE CRAB CAKES, MARYLAND STYLE
+  Risk: Medium_Risk | Carbs: 11.8g | Cal: 200
+FLAKE STYLE IMITATION CRAB MEAT, FLAKE STYLE
+  Risk: Medium_Risk | Carbs: 12.9g | Cal: 94
+WILD CAUGHT KING CRAB LEGS & CLAWS SUCCULENT & TENDER WHITE 
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 94
+SNOW CRAB LEGS
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 82
+STUFFED TILAPIA WITH CRABMEAT AND SHRIMP, CRABMEAT AND SHRIM
+  Risk: Medium_Risk | Carbs: 5.9g | Cal: 135
+SPICY CRAB RANGOON, SPICY
+  Risk: Medium_Risk | Carbs: 29.4g | Cal: 259
+HAND ROLLED EGG ROLL, CRAB
+  Risk: Medium_Risk | Carbs: 24.9g | Cal: 169
+CRAB CORN CHOWDER
+  Risk: Medium_Risk | Carbs: 9.4g | Cal: 110
+KETTLE CLASSICS CRAB POTATO CHIPS
+  Risk: Medium_Risk | Carbs: 53.6g | Cal: 536
+CREAM OF CRAB SOUP
+  Risk: Medium_Risk | Carbs: 9.6g | Cal: 83
+PREMIUM SHE CRAB CONDENSED SOUP
+  Risk: Medium_Risk | Carbs: 5.8g | Cal: 58
+VEGETABLE RED CRAB SOUP
+  Risk: Medium_Risk | Carbs: 5.0g | Cal: 38
+CRAB AND CHEDDAR CONDENSED SOUP, CHESAPEAKE BAY
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 75
+MARYLAND-STYLE CRAB CAKES, MARYLAND-STYLE
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 259
+HAND MADE CRAB CAKES, CRAB
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 200
+CRAWFISH SHRIMP & CRAB BOIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 0
+FANCY PINK CRAB MEAT, FANCY PINK
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 67
+BLEND OF LINGUINE PASTA, BROCCOLI, RED BELL PEPPERS, MUSHROO
+  Risk: Medium_Risk | Carbs: 16.0g | Cal: 115
+CRAB CAKE MEAL COMPLETE MEAL KIT, CRAB CAKE MEAL
+  Risk: Medium_Risk | Carbs: 23.0g | Cal: 203
+
+Search: 'lobster' - Found 171 foods
+----------------------------------------------------------------------
+CONDENSED LOBSTER BISQUE
+  Risk: Medium_Risk | Carbs: 8.3g | Cal: 75
+CHUNKS OF SHRIMP & MAINE LOBSTER AND A BLEND OF CHEESES WRAP
+  Risk: Medium_Risk | Carbs: 33.0g | Cal: 272
+MAINE LOBSTER & CHEESE RAVIOLI, MAINE LOBSTER & CHEESE
+  Risk: Medium_Risk | Carbs: 35.0g | Cal: 260
+LOBSTER RAVIOLI NORTH ATLANTIC LOBSTER MEAT BLENDED WITH A M
+  Risk: Medium_Risk | Carbs: 30.0g | Cal: 220
+COOKED LOBSTER MEAT
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 92
+FULLY COOKED LOBSTER MEAT
+  Risk: Medium_Risk | Carbs: 1.0g | Cal: 89
+LOBSTER BISQUE
+  Risk: Medium_Risk | Carbs: 6.9g | Cal: 110
+COLD WATER LOBSTER TAILS WITH BUTTER, BUTTER
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 141
+MAINE LOBSTER MEAT WITH LUKE'S SECRET SEASONING, LUKE'S SECR
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 98
+MAINE LOBSTER BISQUE WITH KNUCKLE & CLAW MEAT, KNUCKLE & CLA
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 137
+MAINE LOBSTER MAC & CHEESE WITH GARLIC HERB BREADCRUMBS, GAR
+  Risk: Medium_Risk | Carbs: 4.4g | Cal: 167
+MAINE LOBSTER TAILS WITH LEMON GARLIC MARINADE, LEMON GARLIC
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 177
+LOBSTER TAIL
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 79
+Crustaceans, spiny lobster, mixed species, cooked, moist hea
+  Risk: Medium_Risk | Carbs: 3.1g | Cal: 143
+Crustaceans, lobster, northern, raw
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 77
+Crustaceans, lobster, northern, cooked, moist heat
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 89
+Crustaceans, spiny lobster, mixed species, raw
+  Risk: Medium_Risk | Carbs: 2.4g | Cal: 112
+LOBSTER BISQUE
+  Risk: Medium_Risk | Carbs: 5.3g | Cal: 69
+THE ORIGINAL SOUP MAN, LOBSTER BISQUE
+  Risk: Medium_Risk | Carbs: 8.6g | Cal: 102
+BAR HARBOR, LOBSTER CORN CHOWDER, NEW ENGLAND STYLE
+  Risk: Medium_Risk | Carbs: 7.7g | Cal: 62
+
+Search: 'bacon' - Found 2,955 foods
+----------------------------------------------------------------------
+Pork Loin Filet with Applewood Smoked Bacon
+  Risk: Medium_Risk | Carbs: 2.7g | Cal: 71
+Pork Loin Filet with Applewood Smoked Bacon
+  Risk: Medium_Risk | Carbs: 2.7g | Cal: 71
+Hardwood Smoked Honey Cured Center Cut Bacon-Layered-Gas Flu
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 294
+Naturally Hickory Smoked The Original 24/1 LB. Sliced Bacon
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 571
+Naturally Hickory Smoked The Original 8X3/1 LB. Sliced Bacon
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 571
+BURRITOS, EGG, APPLEWOOD SMOKED BACON & CHEESE
+  Risk: Medium_Risk | Carbs: 28.1g | Cal: 234
+SWEET APPLE-WOOD SMOKED REGULAR SLICED ORIGINAL BACON, SWEET
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 500
+HICKORY SMOKED UNCURED TURKEY BACON, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 200
+SWEET APPLE-WOOD SMOKED THICK SLICED BACON, SWEET APPLE-WOOD
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 450
+CROUTONS, CHEDDAR BACON, CHEDDAR BACON
+  Risk: High_Risk | Carbs: 57.1g | Cal: 500
+BACON SEITAN IN STRIPS, BACON
+  Risk: Medium_Risk | Carbs: 8.8g | Cal: 140
+BACON CHEDDAR FLAVORED POPCORN SEASONING, BACON CHEDDAR
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 250
+HARDWOOD SMOKED BACON, HARDWOOD SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 571
+PAWLEYS ISLAND, PALMETTO CHEESE, BACON, BACON
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 467
+HICKORY SMOKED THICK SLICED BACON, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 500
+NATURALLY HICKORY SMOKED BACON, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 524
+NATURALLY HICKORY SMOKED LOWER SODIUM BACON, LOWER SODIUM BA
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 500
+NATURALLY HICKORY SMOKED BACON, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 500
+HICKORY SMOKED BACON, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 500
+SAUCED CHEESY PASTA & BROCCOLI WITH ONIONS & BACON, SAUCED W
+  Risk: Medium_Risk | Carbs: 15.9g | Cal: 110
+
+Search: 'sausage' - Found 4,291 foods
+----------------------------------------------------------------------
+SMOKED SKINLESS SAUSAGE, SMOKED
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 321
+ITALIAN SAUSAGE
+  Risk: Medium_Risk | Carbs: 30.0g | Cal: 270
+VIENNA SAUSAGE
+  Risk: Medium_Risk | Carbs: 1.7g | Cal: 200
+CLASSIC PRE-SLICED PORK ROLL SAUSAGE, CLASSIC
+  Risk: Medium_Risk | Carbs: 4.9g | Cal: 293
+HOT ITALIAN SAUSAGE
+  Risk: Medium_Risk | Carbs: 2.5g | Cal: 247
+SWEET ITALIAN SAUSAGE
+  Risk: Medium_Risk | Carbs: 2.5g | Cal: 247
+SWEET CHICKEN & APPLE SAUSAGE, SWEET CHICKEN & APPLE
+  Risk: Medium_Risk | Carbs: 3.5g | Cal: 176
+HOT LOUISIANA SMOKED SAUSAGE, HOT LOUISIANA
+  Risk: Medium_Risk | Carbs: 3.1g | Cal: 296
+TURKEY SAUSAGE
+  Risk: Medium_Risk | Carbs: 0.0g | Cal: 179
+SAUSAGE & CHEESE FLATBREAD POCKET SNACK SANDWICHES, SAUSAGE 
+  Risk: Medium_Risk | Carbs: 25.0g | Cal: 375
+TOFURKY, QUICHE VEGAN SAUSAGE & VEGGIE
+  Risk: Medium_Risk | Carbs: 20.2g | Cal: 244
+TURKEY FULLY COOKED SAUSAGE LINKS, TURKEY
+  Risk: Medium_Risk | Carbs: 2.2g | Cal: 133
+TURKEY SKINLESS SMOKED SAUSAGE, TURKEY
+  Risk: Medium_Risk | Carbs: 7.1g | Cal: 196
+HICKORY SMOKED SUMMER SAUSAGE, HICKORY SMOKED
+  Risk: Medium_Risk | Carbs: 3.6g | Cal: 339
+CHUNKY GRILLED SAUSAGE GUMBO SOUP
+  Risk: Medium_Risk | Carbs: 7.3g | Cal: 41
+PEPPERONI FLAVORED SAUSAGE SNACK BITES, PEPPERONI
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 400
+HONEY BROWN SUGAR TURKEY SAUSAGE BITES, HONEY BROWN SUGAR TU
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 233
+TURKEY PREMIUM SUMMER SAUSAGE, TURKEY
+  Risk: Medium_Risk | Carbs: 1.8g | Cal: 214
+BEEF SAUSAGE SNACK BITES, BEEF
+  Risk: Medium_Risk | Carbs: 3.3g | Cal: 467
+TURKEY HONEY BROWN SUGAR SAUSAGE SNACK BITES, TURKEY HONEY B
+  Risk: Medium_Risk | Carbs: 16.7g | Cal: 267
+
+
+======================================================================
+HOW TO USE THIS DATABASE
+======================================================================
+
+
+1. SEARCH BY NAME
+   food_db = pd.read_csv('food_lookup_database.csv')
+   results = food_db[food_db['food_name'].str.contains('chicken', case=False)]
+
+2. FILTER BY RISK
+   safe_foods = food_db[food_db['diabetes_risk'] == 'Low_Risk']
+   risky_foods = food_db[food_db['diabetes_risk'] == 'High_Risk']
+
+3. RECOMMEND FOR DIABETICS
+   recommended = food_db[food_db['diabetes_risk'].isin(['Low_Risk', 'Medium_Risk'])]
+
+4. SEARCH AND FILTER COMBINED
+   chicken_safe = food_db[
+       (food_db['food_name'].str.contains('chicken', case=False)) &
+       (food_db['diabetes_risk'].isin(['Low_Risk', 'Medium_Risk']))
+   ]
+
+5. GET NUTRITIONAL INFO
+   food = food_db[food_db['fdc_id'] == 123456].iloc[0]
+   print(f"Carbs: {food['carbs_total']}g")
+   print(f"Calories: {food['calories']} kcal")

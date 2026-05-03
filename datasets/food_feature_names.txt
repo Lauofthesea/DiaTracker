@@ -1,0 +1,10 @@
+data_type
+category_code
+food_category
+carbs_total
+calories
+fiber
+protein
+fat_total
+sugars_total
+sodium

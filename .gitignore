@@ -54,16 +54,11 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# ML Models (old location - ignored)
-backend/models/*.pkl
-backend/models/*.joblib
-backend/models/*.h5
-
-# ML Models (new location - keep local)
-backend/ml_models/
-
-# Datasets (keep local - too large for git)
-datasets/
+# backend/models/*.pkl
+# backend/models/*.joblib
+# backend/models/*.h5
+# backend/ml_models/
+# datasets/
 
 # Docker
 .dockerignore
