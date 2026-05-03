@@ -177,20 +177,26 @@ export default function LogMealPage() {
       if (carbNutrient) {
         carbs = carbNutrient.amount;
       }
-      
-      // Calculate serving description
       const quantity = parseFloat(addFoodQuantity) || 1;
+      
+      // For serving type, quantity is in grams; for pieces, it's the number of pieces
       const servingDesc = addFoodServingType === "pieces" 
         ? `${quantity} pc${quantity > 1 ? 's' : ''}`
-        : `${quantity * 100}g`;
+        : `${quantity}g`;
+      
+      // Calculate nutritional values based on serving type
+      // Nutritional data is per 100g, so we need to scale accordingly
+      const multiplier = addFoodServingType === "pieces" 
+        ? quantity  // For pieces, multiply by quantity
+        : quantity / 100;  // For grams, divide by 100 to get the multiplier
       
       const item: MealItem = {
         id: `${selectedFoodToAdd.food_id}-${Date.now()}`,
         food_id: selectedFoodToAdd.food_id,
         name: selectedFoodToAdd.name,
         serving: servingDesc,
-        kcal: (selectedFoodToAdd.calories_per_serving || 0) * quantity,
-        carbs: carbs * quantity,
+        kcal: (selectedFoodToAdd.calories_per_serving || 0) * multiplier,
+        carbs: carbs * multiplier,
         image: "",
         type: addFoodMealType,
       };
@@ -198,18 +204,21 @@ export default function LogMealPage() {
       closeAddFoodModal();
     } catch (err) {
       console.error("Error fetching food details:", err);
-      // Fallback: add without carbs
       const quantity = parseFloat(addFoodQuantity) || 1;
       const servingDesc = addFoodServingType === "pieces" 
         ? `${quantity} pc${quantity > 1 ? 's' : ''}`
-        : `${quantity * 100}g`;
+        : `${quantity}g`;
+      
+      const multiplier = addFoodServingType === "pieces" 
+        ? quantity
+        : quantity / 100;
       
       const item: MealItem = {
         id: `${selectedFoodToAdd.food_id}-${Date.now()}`,
         food_id: selectedFoodToAdd.food_id,
         name: selectedFoodToAdd.name,
         serving: servingDesc,
-        kcal: (selectedFoodToAdd.calories_per_serving || 0) * quantity,
+        kcal: (selectedFoodToAdd.calories_per_serving || 0) * multiplier,
         carbs: 0,
         image: "",
         type: addFoodMealType,
@@ -889,7 +898,6 @@ export default function LogMealPage() {
                 </div>
               </div>
 
-              
               <div className="mb-5">
                 <p
                   className="text-[12px] text-[#637c84] tracking-[0.6px] uppercase mb-3"
@@ -927,12 +935,11 @@ export default function LogMealPage() {
                       fontWeight: 600,
                     }}
                   >
-                    Serving (100g)
+                    Serving
                   </button>
                 </div>
               </div>
 
-              
               <div className="mb-5">
                 <p
                   className="text-[12px] text-[#637c84] tracking-[0.6px] uppercase mb-3"
@@ -941,21 +948,21 @@ export default function LogMealPage() {
                     fontWeight: 700,
                   }}
                 >
-                  Quantity
+                  {addFoodServingType === "pieces" ? "Number of Pieces" : "Serving Size (grams)"}
                 </p>
                 <input
                   type="number"
-                  min="0.1"
-                  step="0.1"
+                  min="1"
+                  step={addFoodServingType === "pieces" ? "1" : "10"}
                   value={addFoodQuantity}
                   onChange={(e) => setAddFoodQuantity(e.target.value)}
-                  placeholder={addFoodServingType === "pieces" ? "Number of pieces" : "Number of servings"}
+                  placeholder={addFoodServingType === "pieces" ? "e.g., 2" : "e.g., 150"}
                   className="w-full h-[48px] rounded-xl bg-[rgba(226,234,235,0.2)] border-[0.8px] border-[rgba(226,234,235,0.4)] px-4 text-[14px] outline-none"
                 />
                 <p className="text-[12px] text-[#637c84] mt-2">
                   {addFoodServingType === "pieces" 
                     ? `${addFoodQuantity} piece${parseFloat(addFoodQuantity) !== 1 ? 's' : ''}`
-                    : `${parseFloat(addFoodQuantity) * 100}g (${addFoodQuantity} serving${parseFloat(addFoodQuantity) !== 1 ? 's' : ''})`
+                    : `${addFoodQuantity}g`
                   }
                 </p>
               </div>

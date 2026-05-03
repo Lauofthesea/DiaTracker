@@ -153,6 +153,21 @@ export default function ProfilePage() {
     });
   };
 
+  const getRiskLevel = (classification: string, confidence: number, probabilities?: Record<string, number>) => {
+    if (classification === 'Has Diabetes') {
+      return { level: 'High Risk', color: 'bg-red-200 text-red-900' };
+    }
+    
+    const diabetesProbability = probabilities?.['Has Diabetes'] || 0;
+    const isHighProbability = diabetesProbability >= 0.3;
+    const isLowConfidence = confidence < 0.75;
+    
+    if (isHighProbability || isLowConfidence) {
+      return { level: 'Medium Risk', color: 'bg-orange-200 text-orange-900' };
+    }
+    
+    return { level: 'Low Risk', color: 'bg-green-200 text-green-900' };
+  };
   const inputClass = "w-full h-[48px] rounded-xl bg-[rgba(226,234,235,0.2)] border-[0.8px] border-[rgba(226,234,235,0.4)] px-4 text-[14px] outline-none text-[#0d2b35] placeholder:text-[rgba(13,43,53,0.5)]";
 
   if (loading) {
@@ -479,13 +494,17 @@ export default function ProfilePage() {
                     </p>
                     {metric.prediction && (
                       <span className={`px-3 py-1 rounded-lg text-[12px] ${
-                        metric.prediction.classification === "No Diabetes"
-                          ? "bg-green-100 text-green-800"
-                          : metric.prediction.classification === "Type 1"
-                          ? "bg-orange-100 text-orange-800"
-                          : "bg-red-100 text-red-800"
+                        getRiskLevel(
+                          metric.prediction.classification,
+                          metric.prediction.confidence,
+                          metric.prediction.probabilities
+                        ).color
                       }`} style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
-                        {metric.prediction.classification}
+                        {getRiskLevel(
+                          metric.prediction.classification,
+                          metric.prediction.confidence,
+                          metric.prediction.probabilities
+                        ).level}
                       </span>
                     )}
                   </div>

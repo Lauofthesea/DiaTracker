@@ -63,15 +63,12 @@ export default function HealthCheckModal({ open, onComplete, profileData }: Heal
     setError('');
 
     try {
-      // Start the health check submission
       const startTime = Date.now();
       const result = await submitHealthCheck(formData);
       
-      // Calculate elapsed time
       const elapsedTime = Date.now() - startTime;
-      const minimumDisplayTime = 3500; // 3.5 seconds minimum to show all steps
+      const minimumDisplayTime = hasMealsInLast24Hours ? 28000 : 24000;
       
-      // If the request completed too quickly, wait for the remaining time
       if (elapsedTime < minimumDisplayTime) {
         await new Promise(resolve => setTimeout(resolve, minimumDisplayTime - elapsedTime));
       }
