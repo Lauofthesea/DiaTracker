@@ -38,7 +38,7 @@ A comprehensive web application that combines machine learning-based diabetes ri
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/Lauofthesea/DiaTracker
+git clone https://github.com/Lauofthesea/DiaTracker.git
 cd DiaTracker
 ```
 
