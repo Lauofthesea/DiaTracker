@@ -12,7 +12,7 @@ A comprehensive web application that combines machine learning-based diabetes ri
 - **User Profiles**: Manage health data and dietary preferences
 - **Responsive Design**: Works on desktop, tablet, and mobile devices
 
-## Technology Stack
+## TechStack
 
 ### Backend
 - **Framework**: Python FastAPI
@@ -32,7 +32,7 @@ A comprehensive web application that combines machine learning-based diabetes ri
 
 - Node.js 18+
 - Python 3.11+
-- PostgreSQL 14+
+- PostgreSQL 18(latest)
 
 ## Getting Started
 
@@ -44,7 +44,7 @@ cd DiaTracker
 
 2. **Set up PostgreSQL Database**
    
-   Install PostgreSQL 14+ and create a database:
+   Install PostgreSQL 18(latest) and create database:
    ```bash
    # Create database
    createdb ml_diabetes_tracker
@@ -153,9 +153,15 @@ npm run build
 **// CREATED BY: BSIT3B - GROUP 1 //**
 
 **Calvi, Fairudz L.**
+
 **Fernandez, Rhimand Niño M.**
+
 **Hadjula, Gandykhan C. - Developer**
+
 **Hipolito, Micheal Laurence T. - Developer**
+
 **Kalayakan, Mohammad Alhussain L.**
+
 **Vega, Ashley Faye M.**
+
 **Zamora, Renan F.**
