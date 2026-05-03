@@ -87,12 +87,13 @@ export default function HomePage() {
 
   const handleHealthCheckComplete = async () => {
     setShowHealthCheckModal(false);
-    // Refresh user data to update first_login_completed status
     await refreshUserData();
-    // Reload data to get updated prediction
     loadData();
   };
 
+  const calorieGoal = 2000;
+  const caloriesConsumed = dailySummary?.total_calories || 0;
+  const caloriesRemaining = Math.max(0, calorieGoal - caloriesConsumed);
   const calorieProgress = Math.min(100, (caloriesConsumed / calorieGoal) * 100);
 
   const carbGoal = 220;
