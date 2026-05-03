@@ -1,18 +1,28 @@
+import { useState } from 'react';
 import { Button } from '@/app/components/ui/button';
 import { Card, CardContent } from '@/app/components/ui/card';
 import { Alert, AlertDescription } from '@/app/components/ui/alert';
 import { Progress } from '@/app/components/ui/progress';
-import { CheckCircle2, AlertTriangle, Info, TrendingUp } from 'lucide-react';
+import { CheckCircle2, AlertTriangle, Info, TrendingUp, ChevronDown, ChevronUp } from 'lucide-react';
 import { HealthCheckSubmitResponse } from '@/lib/healthCheck';
 
 interface PredictionResultCardProps {
   prediction: HealthCheckSubmitResponse;
   onComplete: () => void;
+  healthMetrics?: {
+    weight_kg: number;
+    blood_sugar_mgdl: number;
+    age: number;
+    height_cm: number;
+    bmi: number;
+    symptoms: string[];
+  };
 }
 
-export default function PredictionResultCard({ prediction, onComplete }: PredictionResultCardProps) {
+export default function PredictionResultCard({ prediction, onComplete, healthMetrics }: PredictionResultCardProps) {
   const { classification, confidence } = prediction;
   const confidencePercentage = Math.round(confidence * 100);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const getResultConfig = () => {
     if (classification === 'Has Diabetes') {
@@ -24,11 +34,12 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
         title: 'High Risk - Diabetes Detected',
         message: 'Your health metrics suggest a high risk for diabetes.',
         recommendations: [
-          'Schedule an appointment with your healthcare provider immediately',
-          'Monitor blood sugar levels closely and regularly',
-          'Focus on dietary changes to manage blood sugar',
-          'Increase physical activity and exercise regularly',
-          'Track your carbohydrate intake using our meal logging feature',
+          'Consult with your healthcare provider immediately for proper diagnosis',
+          'Monitor blood sugar levels closely - test before and after meals',
+          'Reduce intake of high-sugar foods and refined carbohydrates',
+          'Increase physical activity - aim for at least 150 minutes per week',
+          'Consider working with a dietitian for a personalized meal plan',
+          'Track your meals and blood sugar using our app to identify patterns',
         ],
       };
     }
@@ -72,9 +83,70 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
     };
   };
 
+  const getDetailedExplanation = () => {
+    if (!healthMetrics) return null;
+
+    const { blood_sugar_mgdl, bmi, age, weight_kg, height_cm, symptoms } = healthMetrics;
+    const explanations: string[] = [];
+
+    // Blood sugar analysis
+    if (blood_sugar_mgdl >= 250) {
+      explanations.push(`Your blood sugar level of ${blood_sugar_mgdl} mg/dL is significantly elevated. Normal fasting blood sugar is below 100 mg/dL, and levels above 200 mg/dL indicate diabetes. This is a major risk factor.`);
+    } else if (blood_sugar_mgdl >= 180) {
+      explanations.push(`Your blood sugar level of ${blood_sugar_mgdl} mg/dL is elevated. Normal fasting blood sugar is below 100 mg/dL. Levels between 100-125 mg/dL indicate prediabetes, and above 126 mg/dL suggests diabetes.`);
+    } else if (blood_sugar_mgdl >= 126) {
+      explanations.push(`Your blood sugar level of ${blood_sugar_mgdl} mg/dL is in the diabetic range. Normal fasting blood sugar is below 100 mg/dL.`);
+    } else if (blood_sugar_mgdl >= 100) {
+      explanations.push(`Your blood sugar level of ${blood_sugar_mgdl} mg/dL is in the prediabetic range. Normal fasting blood sugar is below 100 mg/dL.`);
+    } else {
+      explanations.push(`Your blood sugar level of ${blood_sugar_mgdl} mg/dL is within the normal range (below 100 mg/dL).`);
+    }
+
+    // BMI analysis
+    if (bmi >= 30) {
+      explanations.push(`Your BMI of ${bmi.toFixed(1)} indicates obesity (BMI ≥ 30). Obesity significantly increases diabetes risk as excess body fat can lead to insulin resistance.`);
+    } else if (bmi >= 25) {
+      explanations.push(`Your BMI of ${bmi.toFixed(1)} indicates you are overweight (BMI 25-29.9). Being overweight increases your risk of developing diabetes.`);
+    } else if (bmi >= 18.5) {
+      explanations.push(`Your BMI of ${bmi.toFixed(1)} is in the healthy range (18.5-24.9).`);
+    } else {
+      explanations.push(`Your BMI of ${bmi.toFixed(1)} indicates you are underweight (BMI < 18.5).`);
+    }
+
+    // Age analysis
+    if (age >= 45) {
+      explanations.push(`At age ${age}, your risk for diabetes increases. Age is a significant risk factor, especially after 45.`);
+    } else if (age >= 35) {
+      explanations.push(`At age ${age}, you should begin monitoring for diabetes risk factors.`);
+    }
+
+    // Symptoms analysis
+    if (symptoms && symptoms.length > 0) {
+      const symptomDescriptions: Record<string, string> = {
+        'frequent_urination': 'frequent urination (a classic sign of high blood sugar)',
+        'excessive_thirst': 'excessive thirst (your body trying to flush out excess sugar)',
+        'unexplained_weight_loss': 'unexplained weight loss (cells not getting glucose for energy)',
+        'fatigue': 'fatigue (cells not efficiently using glucose)',
+        'blurred_vision': 'blurred vision (high blood sugar affecting eye lens)',
+        'slow_healing': 'slow healing wounds (high blood sugar affecting circulation)',
+        'tingling': 'tingling in hands/feet (nerve damage from high blood sugar)',
+        'increased_hunger': 'increased hunger (cells not getting enough glucose)',
+      };
+
+      const describedSymptoms = symptoms
+        .map(s => symptomDescriptions[s] || s)
+        .join(', ');
+
+      explanations.push(`You reported experiencing ${describedSymptoms}. These symptoms are commonly associated with diabetes and indicate your body may be struggling to regulate blood sugar levels.`);
+    }
+
+    return explanations;
+  };
+
   const config = getResultConfig();
   const Icon = config.icon;
   const isLowConfidence = confidencePercentage < 70;
+  const detailedExplanations = getDetailedExplanation();
 
   return (
     <div className="space-y-4 py-4">
@@ -134,6 +206,80 @@ export default function PredictionResultCard({ prediction, onComplete }: Predict
           </div>
         </CardContent>
       </Card>
+
+      {healthMetrics && (
+        <Card>
+          <CardContent className="pt-4">
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="w-full flex items-center justify-between text-left"
+            >
+              <h4 className="font-semibold text-gray-900">Detailed Analysis</h4>
+              {isExpanded ? (
+                <ChevronUp className="h-5 w-5 text-gray-500" />
+              ) : (
+                <ChevronDown className="h-5 w-5 text-gray-500" />
+              )}
+            </button>
+
+            {isExpanded && (
+              <div className="mt-4 space-y-4">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 p-4 bg-gray-50 rounded-lg">
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Weight</p>
+                    <p className="text-sm font-semibold text-gray-900">{healthMetrics.weight_kg} kg</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Blood Sugar</p>
+                    <p className="text-sm font-semibold text-gray-900">{healthMetrics.blood_sugar_mgdl} mg/dL</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Age</p>
+                    <p className="text-sm font-semibold text-gray-900">{healthMetrics.age} years</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">Height</p>
+                    <p className="text-sm font-semibold text-gray-900">{healthMetrics.height_cm} cm</p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-500 mb-1">BMI</p>
+                    <p className="text-sm font-semibold text-gray-900">{healthMetrics.bmi.toFixed(1)}</p>
+                  </div>
+                  {healthMetrics.symptoms && healthMetrics.symptoms.length > 0 && (
+                    <div className="col-span-2 sm:col-span-3">
+                      <p className="text-xs text-gray-500 mb-1">Symptoms Reported</p>
+                      <div className="flex flex-wrap gap-1.5 mt-1">
+                        {healthMetrics.symptoms.map((symptom, idx) => (
+                          <span
+                            key={idx}
+                            className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
+                          >
+                            {symptom.replace(/_/g, ' ')}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {detailedExplanations && detailedExplanations.length > 0 && (
+                  <div className="space-y-3">
+                    <h5 className="font-semibold text-gray-900 text-sm">Why did I get this result?</h5>
+                    <div className="space-y-2">
+                      {detailedExplanations.map((explanation, index) => (
+                        <div key={index} className="flex items-start gap-2">
+                          <Info className="h-4 w-4 text-blue-600 mt-0.5 flex-shrink-0" />
+                          <p className="text-sm text-gray-700">{explanation}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       <Alert variant="default" className="bg-blue-50 border-blue-200">
         <Info className="h-4 w-4 text-blue-600" />

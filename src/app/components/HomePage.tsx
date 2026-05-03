@@ -227,9 +227,15 @@ export default function HomePage() {
                         Attention Needed
                       </h3>
                       <p className="font-['Nunito_Sans'] text-sm text-[rgba(146,64,14,0.8)] leading-relaxed">
-                        {dailySummary?.total_carbohydrates_g 
-                          ? `Your predicted glucose peak of ${predictedPeak} mg/dL (from ${Math.round(dailySummary.total_carbohydrates_g)}g carbs) indicates elevated risk. Consider a 15-minute walk.`
-                          : `Your glucose status indicates attention needed. Consider monitoring your levels and staying active.`}
+                        {currentGlucose >= 250 
+                          ? `Your blood sugar of ${currentGlucose} mg/dL is critically high. Avoid high-carb foods, drink water, and consult your doctor immediately.`
+                          : currentGlucose >= 180
+                          ? `Your blood sugar of ${currentGlucose} mg/dL is significantly elevated. Limit carbohydrate intake and consider light physical activity.`
+                          : predictedPeak >= 200
+                          ? `Your predicted glucose peak of ${predictedPeak} mg/dL (from ${Math.round(dailySummary?.total_carbohydrates_g || 0)}g carbs) is very high. Avoid additional carbs and stay active.`
+                          : predictedPeak >= 140
+                          ? `Your predicted glucose peak of ${predictedPeak} mg/dL (from ${Math.round(dailySummary?.total_carbohydrates_g || 0)}g carbs) indicates elevated risk. Consider a 15-minute walk.`
+                          : `Your glucose status indicates attention needed. Monitor your levels and maintain healthy habits.`}
                       </p>
                     </div>
                   </div>

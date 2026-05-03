@@ -231,7 +231,7 @@ export default function HealthCheckPage() {
                 </Card>
               )}
 
-              {currentStep === 'results' && predictionResult && (
+              {currentStep === 'results' && predictionResult && formData && (
                 <Card className="max-w-3xl">
                   <CardHeader>
                     <CardTitle>Your Diabetes Risk Assessment</CardTitle>
@@ -243,6 +243,19 @@ export default function HealthCheckPage() {
                     <PredictionResultCard
                       prediction={predictionResult}
                       onComplete={handleResultsComplete}
+                      healthMetrics={{
+                        weight_kg: formData.weight_unit === 'lbs' ? formData.weight * 0.453592 : formData.weight,
+                        blood_sugar_mgdl: formData.blood_sugar,
+                        age: formData.age,
+                        height_cm: formData.height_unit === 'in' ? formData.height * 2.54 : formData.height,
+                        bmi: (() => {
+                          const weightKg = formData.weight_unit === 'lbs' ? formData.weight * 0.453592 : formData.weight;
+                          const heightCm = formData.height_unit === 'in' ? formData.height * 2.54 : formData.height;
+                          const heightM = heightCm / 100;
+                          return weightKg / (heightM * heightM);
+                        })(),
+                        symptoms: formData.symptoms,
+                      }}
                     />
                   </CardContent>
                 </Card>
