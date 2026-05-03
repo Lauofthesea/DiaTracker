@@ -1,28 +1,30 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { ArrowLeft, User, Edit2, Save, X, Loader2, AlertCircle, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, User, Edit2, Save, X, Loader2, AlertCircle, CheckCircle2, LogOut } from "lucide-react";
 import ResponsiveLayout from "./ResponsiveLayout";
+import { useAuth } from "../contexts/AuthContext";
 import { getProfile, updateProfile, getHealthMetricsHistory } from "../../lib/profileApi";
 import type { ProfileResponse, HealthMetricsHistoryItem } from "../../types/profile";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
+  const { logout } = useAuth();
   
-  // Profile data state
   const [profile, setProfile] = useState<ProfileResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   
-  // Edit mode state
   const [isEditMode, setIsEditMode] = useState(false);
   const [editedName, setEditedName] = useState("");
   const [editedAllergens, setEditedAllergens] = useState<string[]>([]);
   const [editedDietaryRestrictions, setEditedDietaryRestrictions] = useState<string[]>([]);
   const [editedHealthConditions, setEditedHealthConditions] = useState<string[]>([]);
   
-  // Health metrics history state
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
+  
   const [metricsHistory, setMetricsHistory] = useState<HealthMetricsHistoryItem[]>([]);
   const [historyPage, setHistoryPage] = useState(1);
   const [historyTotalPages, setHistoryTotalPages] = useState(1);
@@ -575,7 +577,99 @@ export default function ProfilePage() {
             </button>
           </div>
         )}
+
+        {!isEditMode && (
+          <button
+            onClick={() => setShowLogoutModal(true)}
+            disabled={isLoggingOut}
+            className="w-full h-[56px] bg-transparent border-[0.8px] border-[rgba(239,68,68,0.3)] text-[#ef4444] rounded-2xl cursor-pointer text-[16px] flex items-center justify-center gap-2 hover:bg-[rgba(239,68,68,0.05)] transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+            style={{ fontFamily: "'Geist', sans-serif", fontWeight: 600 }}
+          >
+            {isLoggingOut ? (
+              <>
+                <Loader2 size={20} className="animate-spin" />
+                Logging out...
+              </>
+            ) : (
+              <>
+                <LogOut size={20} />
+                Logout
+              </>
+            )}
+          </button>
+        )}
       </div>
+
+      {showLogoutModal && (
+        <div
+          className="fixed inset-0 bg-black/30 z-50 flex items-center justify-center px-4"
+          onClick={() => setShowLogoutModal(false)}
+        >
+          <div
+            className="bg-white rounded-3xl w-full max-w-[340px] p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="text-center mb-6">
+              <div className="w-12 h-12 bg-[rgba(239,68,68,0.1)] rounded-full flex items-center justify-center mx-auto mb-4">
+                <LogOut size={24} className="text-[#ef4444]" />
+              </div>
+              <p
+                className="text-[18px] text-[#0d2b35] mb-2"
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                Are you sure to logout?
+              </p>
+              <p
+                className="text-[14px] text-[#637c84]"
+                style={{
+                  fontFamily: "'Nunito Sans', sans-serif",
+                }}
+              >
+                You will need to login again to access your account.
+              </p>
+            </div>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowLogoutModal(false)}
+                disabled={isLoggingOut}
+                className="flex-1 h-[48px] bg-[rgba(226,234,235,0.5)] text-[#0d2b35] rounded-2xl border-none cursor-pointer text-[16px] disabled:opacity-50"
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={async () => {
+                  setIsLoggingOut(true);
+                  await new Promise(resolve => setTimeout(resolve, 1500));
+                  logout();
+                  navigate("/login");
+                }}
+                disabled={isLoggingOut}
+                className="flex-1 h-[48px] bg-[#ef4444] text-white rounded-2xl border-none cursor-pointer text-[16px] flex items-center justify-center gap-2 disabled:opacity-50"
+                style={{
+                  fontFamily: "'Geist', sans-serif",
+                  fontWeight: 600,
+                }}
+              >
+                {isLoggingOut ? (
+                  <>
+                    <Loader2 size={18} className="animate-spin" />
+                    Logging out...
+                  </>
+                ) : (
+                  "Logout"
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       </div>
     </ResponsiveLayout>
   );
