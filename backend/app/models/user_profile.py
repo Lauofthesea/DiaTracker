@@ -2,7 +2,7 @@
 User profile model for additional user information.
 """
 
-from sqlalchemy import Column, DateTime, ForeignKey, text, Text
+from sqlalchemy import Column, DateTime, ForeignKey, text, Text, Integer, Numeric, String, Boolean
 from sqlalchemy.sql import func
 from sqlalchemy.orm import relationship
 
@@ -20,6 +20,10 @@ class UserProfile(Base):
         ForeignKey("users.user_id", ondelete="CASCADE"), 
         primary_key=True
     )
+    age = Column(Integer, nullable=True)
+    height_cm = Column(Numeric(5, 2), nullable=True)
+    gender = Column(String(20), nullable=True)  # 'Male', 'Female', 'Other'
+    is_pregnant = Column(Boolean, default=False, nullable=True)
     allergen_preferences = Column(ARRAY(Text), nullable=True)
     dietary_restrictions = Column(ARRAY(Text), nullable=True)
     health_conditions = Column(ARRAY(Text), nullable=True)

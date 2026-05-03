@@ -95,15 +95,24 @@ def train_diabetes_model():
     print("=" * 60)
     print(feature_importance.to_string(index=False))
     
-    # Save model
+    # Save model bundle (not just the model)
     model_path = MODELS_DIR / "diabetes_model.pkl"
     scaler_path = MODELS_DIR / "diabetes_scaler.pkl"
     
-    joblib.dump(model, model_path)
-    joblib.dump(scaler, scaler_path)
+    # Create model bundle with all necessary components
+    model_bundle = {
+        'model': model,
+        'scaler': scaler,
+        'label_encoder': None,  # Binary classification, no label encoder needed
+        'feature_list': list(X_train.columns)
+    }
     
-    print(f"\n✓ Model saved to: {model_path}")
+    joblib.dump(model_bundle, model_path)
+    joblib.dump(scaler, scaler_path)  # Also save separately for backward compatibility
+    
+    print(f"\n✓ Model bundle saved to: {model_path}")
     print(f"✓ Scaler saved to: {scaler_path}")
+    print(f"✓ Features: {list(X_train.columns)}")
     
     return model, scaler
 

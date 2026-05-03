@@ -64,7 +64,18 @@ class NutritionalCalculator:
         
         if not nutrients:
             logger.warning(f"No nutritional data found for food_id: {food_id}")
+            # Try to get food details to see if it exists
+            from app.models import Food
+            food = self.db.query(Food).filter(Food.food_id == food_id).first()
+            if food:
+                logger.warning(f"Food exists: {food.name} (category: {food.category}, type: {food.food_type})")
+            else:
+                logger.warning(f"Food with ID {food_id} does not exist in database")
             return self._empty_nutrition_dict()
+        
+        logger.info(f"Found {len(nutrients)} nutrients for food_id: {food_id}")
+        for nutrient_name, amount, unit, nutrient_type in nutrients:
+            logger.info(f"  - {nutrient_name}: {amount} {unit} (type: {nutrient_type})")
         
         # Calculate proportional values based on quantity
         nutrition = self._empty_nutrition_dict()

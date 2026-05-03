@@ -49,8 +49,39 @@ class DiabetesPredictionService:
             MLModelMetadata.is_active == True
         ).first()
         
+        if active_model:
+            # Check if the model file actually exists
+            if not os.path.exists(active_model.model_path):
+                print(f"Warning: Active model file not found at {active_model.model_path}")
+                print("Falling back to default model path...")
+                # Deactivate this broken model record
+                active_model.is_active = False
+                self.db.commit()
+                active_model = None
+        
         if not active_model:
-            raise ValueError("No active model found in database")
+            # Fallback: Load model directly from default path
+            print("Warning: No active model found in database. Loading from default path...")
+            
+            # Get the absolute path to the ml_models directory
+            # __file__ is in backend/app/services/diabetes_prediction_service.py
+            # We need to go up to backend/ and then into ml_models/
+            service_dir = os.path.dirname(os.path.abspath(__file__))  # backend/app/services
+            app_dir = os.path.dirname(service_dir)  # backend/app
+            backend_dir = os.path.dirname(app_dir)  # backend
+            default_model_path = os.path.join(backend_dir, "ml_models", "diabetes_model.pkl")
+            
+            print(f"Looking for model at: {default_model_path}")
+            
+            if not os.path.exists(default_model_path):
+                raise ValueError(
+                    f"No active model found in database and default model file not found at {default_model_path}. "
+                    "Please run 'python scripts/register_model.py' to register the model."
+                )
+            
+            self.model_version = "1.0.0"
+            self._load_model_from_path(default_model_path)
+            return
         
         self.model_metadata = active_model
         self.model_version = active_model.version
@@ -94,22 +125,19 @@ class DiabetesPredictionService:
             health_metrics.symptoms if health_metrics.symptoms else []
         )
         
-        # Create feature dictionary matching training feature order
+        # Map our health metrics to the model's expected features
+        # The model was trained on the Pima Indians Diabetes dataset with these features:
+        # Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age
+        
         features = {
-            'weight_kg': float(health_metrics.weight_kg),
-            'blood_sugar_mgdl': float(health_metrics.blood_sugar_mgdl),
-            'age': int(health_metrics.age),
-            'bmi': float(health_metrics.bmi),
-            'frequent_urination': symptoms_encoded.frequent_urination,
-            'excessive_thirst': symptoms_encoded.excessive_thirst,
-            'fatigue': symptoms_encoded.fatigue,
-            'blurred_vision': symptoms_encoded.blurred_vision,
-            'slow_healing': symptoms_encoded.slow_healing,
-            'unexplained_weight_loss': symptoms_encoded.unexplained_weight_loss,
-            'increased_hunger': symptoms_encoded.increased_hunger,
-            'tingling_hands_feet': symptoms_encoded.tingling_hands_feet,
-            'dry_skin': symptoms_encoded.dry_skin,
-            'frequent_infections': symptoms_encoded.frequent_infections,
+            'Pregnancies': 0,  # Default to 0 (we don't collect this)
+            'Glucose': float(health_metrics.blood_sugar_mgdl),  # Map blood_sugar to Glucose
+            'BloodPressure': 70,  # Default average (we don't collect this)
+            'SkinThickness': 20,  # Default average (we don't collect this)
+            'Insulin': 80,  # Default average (we don't collect this)
+            'BMI': float(health_metrics.bmi),
+            'DiabetesPedigreeFunction': 0.5,  # Default average (we don't collect this)
+            'Age': int(health_metrics.age),
         }
         
         # Create DataFrame with features in correct order
@@ -141,7 +169,7 @@ class DiabetesPredictionService:
         
         Returns:
             Tuple of (classification, confidence, probabilities)
-            - classification: str ('Type 1', 'Type 2', 'No Diabetes')
+            - classification: str ('No Diabetes', 'Has Diabetes')
             - confidence: float (0-1) - highest probability
             - probabilities: dict {class: probability}
         """
@@ -158,10 +186,16 @@ class DiabetesPredictionService:
         prediction_encoded = self.model.predict(features)[0]
         
         # Decode prediction to class name
-        classification = self.label_encoder.inverse_transform([prediction_encoded])[0]
+        if self.label_encoder:
+            # Multi-class classification with label encoder
+            classification = self.label_encoder.inverse_transform([prediction_encoded])[0]
+            class_names = self.label_encoder.classes_
+        else:
+            # Binary classification (0 = No Diabetes, 1 = Has Diabetes)
+            class_names = ['No Diabetes', 'Has Diabetes']
+            classification = class_names[prediction_encoded]
         
         # Create probability dictionary
-        class_names = self.label_encoder.classes_
         probabilities = {
             class_name: float(prob) 
             for class_name, prob in zip(class_names, probabilities_array)

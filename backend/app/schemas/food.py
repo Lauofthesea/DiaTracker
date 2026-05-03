@@ -39,7 +39,7 @@ class FoodSearchResult(BaseModel):
     category: str
     food_type: Optional[str] = None
     allergens: Optional[List[str]] = None
-    calories_per_serving: Optional[Decimal] = None
+    calories_per_serving: Optional[float] = None
     
     class Config:
         from_attributes = True
@@ -159,5 +159,30 @@ class FoodServingSizes(BaseModel):
                     {"unit": "cup", "amount": "1.0", "description": "1 cup"},
                     {"unit": "tbsp", "amount": "2.0", "description": "2 tablespoons"}
                 ]
+            }
+        }
+
+
+class CustomFoodCreate(BaseModel):
+    """Schema for creating a custom food entry."""
+    
+    name: str = Field(..., min_length=1, max_length=255, description="Food name")
+    serving_size: str = Field(..., description="Serving size description (e.g., '1 cup', '100g')")
+    calories: Decimal = Field(..., ge=0, description="Calories per serving")
+    carbohydrates_g: Optional[Decimal] = Field(None, ge=0, description="Carbohydrates in grams")
+    protein_g: Optional[Decimal] = Field(None, ge=0, description="Protein in grams")
+    fat_g: Optional[Decimal] = Field(None, ge=0, description="Fat in grams")
+    fiber_g: Optional[Decimal] = Field(None, ge=0, description="Fiber in grams")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "name": "Homemade Chicken Salad",
+                "serving_size": "1 bowl",
+                "calories": "350",
+                "carbohydrates_g": "15",
+                "protein_g": "30",
+                "fat_g": "18",
+                "fiber_g": "3"
             }
         }

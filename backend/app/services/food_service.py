@@ -82,9 +82,11 @@ class FoodService:
             # Default ordering by name
             db_query = db_query.order_by(Food.name)
         
-        # Apply category filter
+        # Apply category filter (supports comma-separated categories)
         if category:
-            db_query = db_query.filter(Food.category == category)
+            categories = [c.strip() for c in category.split(',') if c.strip()]
+            if categories:
+                db_query = db_query.filter(Food.category.in_(categories))
         
         # Apply allergen filter (exclude foods with specified allergens)
         if exclude_allergens:
@@ -275,3 +277,141 @@ class FoodService:
             results.append(result)
         
         return results
+
+    def create_custom_food(
+        self,
+        name: str,
+        serving_size: str,
+        calories: float,
+        carbohydrates_g: Optional[float] = None,
+        protein_g: Optional[float] = None,
+        fat_g: Optional[float] = None,
+        fiber_g: Optional[float] = None
+    ) -> FoodDetail:
+        """
+        Create a custom food entry with manual nutritional data.
+        
+        Args:
+            name: Food name
+            serving_size: Serving size description
+            calories: Calories per serving
+            carbohydrates_g: Carbohydrates in grams
+            protein_g: Protein in grams
+            fat_g: Fat in grams
+            fiber_g: Fiber in grams
+            
+        Returns:
+            Created food detail
+        """
+        # Create food entry
+        food = Food(
+            name=name,
+            description=f"Custom entry: {serving_size}",
+            category="Custom Foods",
+            food_type="custom",
+            allergens=None
+        )
+        
+        self.db.add(food)
+        self.db.flush()  # Get the food_id
+        
+        # Create nutrient entries
+        # Note: Store per 100g for consistency with database foods
+        nutrients_to_add = []
+        
+        # Energy (calories) - store per 100g
+        energy_nutrient = self.db.query(Nutrient).filter(
+            Nutrient.name.ilike('%energy%'),
+            Nutrient.unit.ilike('KCAL')
+        ).first()
+        
+        if energy_nutrient:
+            food_nutrient = FoodNutrient(
+                food_id=food.food_id,
+                nutrient_id=energy_nutrient.nutrient_id,
+                amount=calories,  # Store as-is, will be used directly
+                per_unit="100g"  # Standard unit for consistency
+            )
+            nutrients_to_add.append(food_nutrient)
+        
+        # Carbohydrates
+        if carbohydrates_g is not None and carbohydrates_g > 0:
+            carb_nutrient = self.db.query(Nutrient).filter(
+                Nutrient.name.ilike('%carbohydrate%'),
+                Nutrient.unit.ilike('G')
+            ).first()
+            
+            if carb_nutrient:
+                food_nutrient = FoodNutrient(
+                    food_id=food.food_id,
+                    nutrient_id=carb_nutrient.nutrient_id,
+                    amount=carbohydrates_g,
+                    per_unit="100g"
+                )
+                nutrients_to_add.append(food_nutrient)
+        
+        # Protein
+        if protein_g is not None and protein_g > 0:
+            protein_nutrient = self.db.query(Nutrient).filter(
+                Nutrient.name.ilike('%protein%'),
+                Nutrient.unit.ilike('G')
+            ).first()
+            
+            if protein_nutrient:
+                food_nutrient = FoodNutrient(
+                    food_id=food.food_id,
+                    nutrient_id=protein_nutrient.nutrient_id,
+                    amount=protein_g,
+                    per_unit="100g"
+                )
+                nutrients_to_add.append(food_nutrient)
+        
+        # Fat
+        if fat_g is not None and fat_g > 0:
+            fat_nutrient = self.db.query(Nutrient).filter(
+                Nutrient.name.ilike('%total lipid%'),
+                Nutrient.unit.ilike('G')
+            ).first()
+            
+            if not fat_nutrient:
+                fat_nutrient = self.db.query(Nutrient).filter(
+                    Nutrient.name.ilike('%fat%'),
+                    Nutrient.unit.ilike('G')
+                ).first()
+            
+            if fat_nutrient:
+                food_nutrient = FoodNutrient(
+                    food_id=food.food_id,
+                    nutrient_id=fat_nutrient.nutrient_id,
+                    amount=fat_g,
+                    per_unit="100g"
+                )
+                nutrients_to_add.append(food_nutrient)
+        
+        # Fiber
+        if fiber_g is not None and fiber_g > 0:
+            fiber_nutrient = self.db.query(Nutrient).filter(
+                Nutrient.name.ilike('%fiber%'),
+                Nutrient.unit.ilike('G')
+            ).first()
+            
+            if fiber_nutrient:
+                food_nutrient = FoodNutrient(
+                    food_id=food.food_id,
+                    nutrient_id=fiber_nutrient.nutrient_id,
+                    amount=fiber_g,
+                    per_unit="100g"
+                )
+                nutrients_to_add.append(food_nutrient)
+        
+        # Add all nutrients
+        for nutrient in nutrients_to_add:
+            self.db.add(nutrient)
+        
+        self.db.commit()
+        self.db.refresh(food)
+        
+        logger.info(f"Created custom food: {name} ({serving_size}) with {len(nutrients_to_add)} nutrients")
+        
+        # Return food detail
+        return self.get_food_by_id(food.food_id)

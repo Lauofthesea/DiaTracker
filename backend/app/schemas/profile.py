@@ -16,6 +16,26 @@ class ProfileUpdate(BaseModel):
         max_length=255,
         description="User's full name"
     )
+    age: Optional[int] = Field(
+        None,
+        ge=1,
+        le=120,
+        description="User's age in years"
+    )
+    height_cm: Optional[float] = Field(
+        None,
+        ge=50,
+        le=250,
+        description="User's height in centimeters"
+    )
+    gender: Optional[str] = Field(
+        None,
+        description="User's gender (Male, Female, Other)"
+    )
+    is_pregnant: Optional[bool] = Field(
+        None,
+        description="Whether the user is currently pregnant (only applicable for females)"
+    )
     allergen_preferences: Optional[List[str]] = Field(
         None,
         description="List of allergen preferences (e.g., ['Dairy', 'Nuts', 'Shellfish'])"
@@ -28,6 +48,16 @@ class ProfileUpdate(BaseModel):
         None,
         description="List of health conditions (e.g., ['Type 2 Diabetes', 'Hypertension'])"
     )
+    
+    @field_validator('gender')
+    @classmethod
+    def validate_gender(cls, v: Optional[str]) -> Optional[str]:
+        """Validate gender is one of the allowed values."""
+        if v is not None:
+            allowed = ['Male', 'Female', 'Other']
+            if v not in allowed:
+                raise ValueError(f'Gender must be one of: {", ".join(allowed)}')
+        return v
     
     @field_validator('name')
     @classmethod
@@ -70,6 +100,10 @@ class ProfileResponse(BaseModel):
     user_id: str
     name: str
     email: str
+    age: Optional[int] = None
+    height_cm: Optional[float] = None
+    gender: Optional[str] = None
+    is_pregnant: Optional[bool] = None
     allergen_preferences: Optional[List[str]] = None
     dietary_restrictions: Optional[List[str]] = None
     health_conditions: Optional[List[str]] = None

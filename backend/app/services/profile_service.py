@@ -103,6 +103,10 @@ class ProfileService:
             user_id=str(user.user_id),
             name=user.name,
             email=user.email,
+            age=profile.age,
+            height_cm=float(profile.height_cm) if profile.height_cm else None,
+            gender=profile.gender,
+            is_pregnant=profile.is_pregnant,
             allergen_preferences=profile.allergen_preferences,
             dietary_restrictions=profile.dietary_restrictions,
             health_conditions=profile.health_conditions,
@@ -149,6 +153,18 @@ class ProfileService:
                 user.name = profile_data.name
             
             # Update profile fields if provided
+            if profile_data.age is not None:
+                profile.age = profile_data.age
+            
+            if profile_data.height_cm is not None:
+                profile.height_cm = profile_data.height_cm
+            
+            if profile_data.gender is not None:
+                profile.gender = profile_data.gender
+            
+            if profile_data.is_pregnant is not None:
+                profile.is_pregnant = profile_data.is_pregnant
+            
             if profile_data.allergen_preferences is not None:
                 profile.allergen_preferences = profile_data.allergen_preferences
             

@@ -15,6 +15,7 @@ from app.schemas.food import (
     FoodSearchResponse,
     FoodSearchResult,
     FoodDetail,
+    CustomFoodCreate,
 )
 
 logger = logging.getLogger(__name__)
@@ -164,4 +165,49 @@ def get_food_detail(
         raise HTTPException(
             status_code=500,
             detail="Error retrieving food details"
+        )
+
+
+@router.post("/custom", response_model=FoodDetail)
+def create_custom_food(
+    food_data: CustomFoodCreate,
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    """
+    Create a custom food entry with manual nutritional data.
+    
+    This endpoint allows users to create custom foods that aren't in the database.
+    The food will be created with the provided nutritional information.
+    
+    - **name**: Name of the food
+    - **serving_size**: Serving size description (e.g., "1 cup", "100g")
+    - **calories**: Calories per serving
+    - **carbohydrates_g**: Carbohydrates in grams (optional)
+    - **protein_g**: Protein in grams (optional)
+    - **fat_g**: Fat in grams (optional)
+    - **fiber_g**: Fiber in grams (optional)
+    
+    Returns the created food with generated UUID.
+    """
+    try:
+        food_service = FoodService(db)
+        food = food_service.create_custom_food(
+            name=food_data.name,
+            serving_size=food_data.serving_size,
+            calories=food_data.calories,
+            carbohydrates_g=food_data.carbohydrates_g,
+            protein_g=food_data.protein_g,
+            fat_g=food_data.fat_g,
+            fiber_g=food_data.fiber_g
+        )
+        
+        logger.info(f"Created custom food '{food_data.name}' for user {current_user.user_id}")
+        return food
+        
+    except Exception as e:
+        logger.error(f"Error creating custom food: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail="Error creating custom food"
         )

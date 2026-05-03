@@ -48,6 +48,10 @@ async def submit_health_check(
         HTTPException 500: If prediction fails
     """
     try:
+        print(f"\n=== Health Check Submission ===")
+        print(f"User: {current_user.email}")
+        print(f"Data received: {health_data}")
+        
         # Create health metrics record
         health_metrics = HealthMetrics(
             user_id=current_user.user_id,
@@ -62,14 +66,21 @@ async def submit_health_check(
         height_m = float(health_data.height_cm) / 100.0
         health_metrics.bmi = round(float(health_data.weight_kg) / (height_m * height_m), 2)
         
+        print(f"Health metrics created: BMI={health_metrics.bmi}")
+        
         db.add(health_metrics)
         db.commit()
         db.refresh(health_metrics)
         
+        print(f"Health metrics saved to database")
+        
         # Initialize prediction service
         try:
+            print(f"Initializing prediction service...")
             prediction_service = DiabetesPredictionService(db)
+            print(f"Prediction service initialized successfully")
         except ValueError as e:
+            print(f"ValueError initializing service: {e}")
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail={
@@ -79,6 +90,7 @@ async def submit_health_check(
                 }
             )
         except FileNotFoundError as e:
+            print(f"FileNotFoundError: {e}")
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail={
@@ -90,8 +102,13 @@ async def submit_health_check(
         
         # Generate prediction
         try:
+            print(f"Generating prediction...")
             classification, confidence, probabilities = prediction_service.predict(health_metrics)
+            print(f"Prediction: {classification}, Confidence: {confidence}")
         except ValueError as e:
+            print(f"ValueError during prediction: {e}")
+            import traceback
+            traceback.print_exc()
             raise HTTPException(
                 status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
                 detail={
@@ -101,6 +118,9 @@ async def submit_health_check(
                 }
             )
         except Exception as e:
+            print(f"Exception during prediction: {e}")
+            import traceback
+            traceback.print_exc()
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
                 detail={
@@ -156,7 +176,7 @@ async def submit_health_check(
         )
 
 
-@router.get("/history", response_model=List[PredictionResponse])
+@router.get("/history", response_model=List[PredictionWithMetrics])
 async def get_prediction_history(
     limit: int = 10,
     offset: int = 0,
@@ -164,7 +184,7 @@ async def get_prediction_history(
     db: Session = Depends(get_db)
 ):
     """
-    Get user's prediction history.
+    Get user's prediction history with health metrics.
     
     Args:
         limit: Maximum number of predictions to return (default: 10)
@@ -173,7 +193,7 @@ async def get_prediction_history(
         db: Database session
     
     Returns:
-        List of prediction records sorted by date (newest first)
+        List of prediction records with health metrics sorted by date (newest first)
     """
     predictions = db.query(Prediction).filter(
         Prediction.user_id == current_user.user_id
@@ -181,19 +201,38 @@ async def get_prediction_history(
         Prediction.predicted_at.desc()
     ).limit(limit).offset(offset).all()
     
-    return [
-        PredictionResponse(
-            prediction_id=str(pred.prediction_id),
-            user_id=str(pred.user_id),
-            metric_id=str(pred.metric_id),
-            model_version=pred.model_version,
-            classification=pred.classification,
-            confidence=float(pred.confidence),
-            probabilities=pred.probabilities,
-            predicted_at=pred.predicted_at
+    result = []
+    for pred in predictions:
+        # Get associated health metrics
+        metrics = db.query(HealthMetrics).filter(
+            HealthMetrics.metric_id == pred.metric_id
+        ).first()
+        
+        health_metrics_dict = {}
+        if metrics:
+            health_metrics_dict = {
+                "weight_kg": float(metrics.weight_kg),
+                "blood_sugar_mgdl": float(metrics.blood_sugar_mgdl),
+                "age": metrics.age,
+                "height_cm": float(metrics.height_cm),
+                "bmi": float(metrics.bmi) if metrics.bmi else None,
+                "symptoms": metrics.symptoms or []
+            }
+        
+        result.append(
+            PredictionWithMetrics(
+                prediction_id=str(pred.prediction_id),
+                user_id=str(pred.user_id),
+                classification=pred.classification,
+                confidence=float(pred.confidence),
+                probabilities=pred.probabilities,
+                predicted_at=pred.predicted_at,
+                model_version=pred.model_version,
+                health_metrics=health_metrics_dict
+            )
         )
-        for pred in predictions
-    ]
+    
+    return result
 
 
 @router.get("/latest", response_model=PredictionWithMetrics)

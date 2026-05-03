@@ -8,6 +8,8 @@ from datetime import datetime
 from typing import Optional, Dict, Any
 from enum import Enum
 import json
+import os
+from pathlib import Path
 
 
 class AuditAction(str, Enum):
@@ -33,6 +35,10 @@ class AuditResourceType(str, Enum):
     USER_PROFILE = "USER_PROFILE"
     AUTHENTICATION = "AUTHENTICATION"
 
+
+# Ensure logs directory exists
+logs_dir = Path("logs")
+logs_dir.mkdir(exist_ok=True)
 
 # Configure audit logger
 audit_logger = logging.getLogger("audit")
