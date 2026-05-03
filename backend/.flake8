@@ -1,0 +1,36 @@
+[flake8]
+max-line-length = 88
+max-complexity = 10
+select = E,W,F
+ignore = 
+    # E203: whitespace before ':' (conflicts with black)
+    E203,
+    # E501: line too long (handled by black)
+    E501,
+    # W503: line break before binary operator (conflicts with black)
+    W503,
+    # F401: imported but unused (handled by isort and mypy)
+    F401
+exclude = 
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    env,
+    migrations,
+    build,
+    dist,
+    .eggs,
+    *.egg-info,
+    .mypy_cache,
+    .pytest_cache,
+    .coverage
+
+per-file-ignores =
+    # __init__.py files can have unused imports
+    __init__.py:F401
+    # Test files can have unused imports and long lines
+    test_*.py:F401,E501
+    # Settings files can have long lines
+    */settings.py:E501
+    */config.py:E501

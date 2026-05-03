@@ -1,0 +1,111 @@
+# Dependencies
+node_modules/
+backend/venv/
+backend/__pycache__/
+backend/app/__pycache__/
+backend/app/*/__pycache__/
+backend/app/*/*/__pycache__/
+
+# Environment variables
+.env
+backend/.env
+
+# Build outputs
+dist/
+build/
+backend/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+backend/logs/
+
+# Database
+*.db
+*.sqlite
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# ML Models (old location - ignored)
+backend/models/*.pkl
+backend/models/*.joblib
+backend/models/*.h5
+
+# ML Models (new location - keep local)
+backend/ml_models/
+
+# Datasets (keep local - too large for git)
+datasets/
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# Coverage reports
+htmlcov/
+.nyc_output/
+
+# Test artifacts
+.vitest/
+
+# Documentation (local only)
+docs/
+
+# Kiro specs (local only)
+.kiro/
+
+# Draft files
+draft_*.docx
+draft_*.md
+
+# Test files
+backend/tests/
+backend/pytest.ini
+vitest.config.ts
+
+# CI/CD (not needed for now)
+.github/
+
+# Docker (not needed for now)
+docker-compose.yml
+Dockerfile.*
+nginx.conf
+
+# Makefile
+Makefile
+
+# Pre-commit
+.pre-commit-config.yaml
