@@ -1,0 +1,91 @@
+food_name,category,calories,carbs_total,protein,fat_total,fiber,sugars_total,sodium
+Adobo (Chicken),Main Dish,180,5,25,7,1,2,800
+Adobo (Pork),Main Dish,250,6,20,18,1,3,850
+Sinigang (Pork),Soup,150,8,18,6,2,3,900
+Sinigang (Fish),Soup,120,8,15,3,2,3,850
+Tinola (Chicken),Soup,140,6,20,4,2,2,700
+Pancit Canton,Noodles,200,35,8,4,2,1,600
+Pancit Bihon,Noodles,180,32,7,3,2,1,550
+Pancit Palabok,Noodles,220,30,10,6,2,2,700
+Lumpia (Fresh),Appetizer,120,15,5,4,3,2,300
+Lumpia (Fried),Appetizer,180,18,6,9,2,1,400
+Kare-Kare,Main Dish,280,12,22,18,4,3,600
+Lechon Kawali,Main Dish,350,2,25,28,0,0,900
+Crispy Pata,Main Dish,400,3,30,32,0,0,950
+Sisig,Main Dish,320,8,22,22,1,2,850
+Bulalo,Soup,200,5,28,8,1,1,800
+Nilaga,Soup,180,10,20,6,2,2,750
+Caldereta (Beef),Main Dish,280,15,25,15,3,4,800
+Caldereta (Goat),Main Dish,260,15,24,13,3,4,780
+Menudo,Main Dish,240,12,18,14,2,3,700
+Afritada,Main Dish,220,14,20,10,3,4,650
+Mechado,Main Dish,260,10,24,14,2,3,750
+Bistek Tagalog,Main Dish,280,8,26,16,1,3,900
+Pinakbet,Vegetable,100,12,4,4,4,3,600
+Laing,Vegetable,150,8,5,11,3,2,500
+Ginataang Gulay,Vegetable,130,10,3,9,3,2,400
+Tortang Talong,Vegetable,120,8,6,7,3,2,350
+Ginisang Ampalaya,Vegetable,80,6,3,5,2,1,400
+Ginisang Monggo,Soup,140,18,8,3,5,2,500
+Chicken Inasal,Main Dish,200,8,28,6,1,4,700
+Lechon Manok,Main Dish,220,2,30,10,0,0,800
+Pork BBQ,Main Dish,280,12,22,16,1,8,750
+Chicken BBQ,Main Dish,200,10,26,6,1,6,650
+Inihaw na Liempo,Main Dish,320,3,24,24,0,1,800
+Inihaw na Bangus,Seafood,180,2,22,9,0,0,400
+Grilled Tilapia,Seafood,150,1,20,7,0,0,350
+Sinigang na Hipon,Soup,100,8,12,2,2,3,800
+Ginataang Hipon,Seafood,160,6,14,9,1,2,600
+Ukoy,Appetizer,140,16,6,6,2,1,450
+Tokwa't Baboy,Appetizer,180,8,14,10,2,2,700
+Kilawin,Appetizer,120,5,15,4,1,2,500
+Dinuguan,Main Dish,200,8,18,11,1,2,650
+Bopis,Main Dish,180,6,16,10,1,2,700
+Papaitan,Soup,140,5,16,6,1,1,600
+Bicol Express,Main Dish,220,8,15,15,2,3,700
+Laing (Bicol),Vegetable,180,10,6,13,4,2,550
+Pinangat,Main Dish,200,12,12,12,3,3,600
+Chicken Tinola,Soup,140,6,20,4,2,2,700
+Pork Sinigang,Soup,150,8,18,6,2,3,900
+Beef Nilaga,Soup,200,10,22,8,2,2,800
+Pork Nilaga,Soup,180,10,18,7,2,2,750
+Chicken Afritada,Main Dish,200,14,22,8,3,4,650
+Pork Afritada,Main Dish,240,14,20,12,3,4,680
+Ginataang Manok,Main Dish,220,8,24,11,2,3,650
+Ginataang Baboy,Main Dish,260,8,20,17,2,3,700
+Adobong Kangkong,Vegetable,60,6,3,3,2,1,400
+Adobong Sitaw,Vegetable,80,8,4,4,3,1,450
+Ginisang Togue,Vegetable,70,8,5,2,2,1,300
+Chopsuey,Vegetable,110,12,6,4,3,2,500
+Lumpiang Sariwa,Appetizer,120,15,5,4,3,2,300
+Lumpiang Shanghai,Appetizer,200,20,8,10,2,1,500
+Empanada,Snack,250,28,10,12,2,3,600
+Puto,Snack,120,24,3,2,1,8,150
+Kutsinta,Snack,100,22,2,1,1,10,100
+Bibingka,Snack,180,28,5,6,1,12,200
+Sapin-Sapin,Dessert,150,30,3,3,1,15,100
+Biko,Dessert,200,38,3,5,1,18,80
+Suman,Snack,140,28,2,3,2,8,50
+Turon,Dessert,180,35,2,4,2,20,50
+Banana Cue,Snack,200,40,2,4,2,25,30
+Camote Cue,Snack,180,35,2,3,3,18,40
+Halo-Halo,Dessert,250,45,5,6,3,35,100
+Leche Flan,Dessert,280,35,8,12,0,32,120
+Ube Halaya,Dessert,200,38,2,5,2,28,80
+Maja Blanca,Dessert,180,32,3,5,1,22,90
+Ginataang Bilo-Bilo,Dessert,220,40,4,6,2,25,60
+Arroz Caldo,Porridge,160,28,8,2,1,1,600
+Goto,Porridge,180,26,12,3,1,1,650
+Lugaw,Porridge,140,30,4,1,1,0,400
+Champorado,Porridge,200,38,5,4,2,20,100
+Taho,Snack,120,20,6,2,1,15,50
+Balut,Snack,180,2,14,13,0,0,200
+Kwek-Kwek,Snack,160,18,8,6,1,2,400
+Fishball,Snack,100,12,8,3,1,1,500
+Kikiam,Snack,140,14,10,5,1,2,550
+Squidball,Snack,110,13,9,3,1,1,520
+Isaw,Snack,120,2,12,7,0,0,450
+Betamax,Snack,90,1,10,5,0,0,400
+Adidas,Snack,100,1,11,6,0,0,420
+Helmet,Snack,95,1,10,5,0,0,410
+Proven,Snack,85,1,9,5,0,0,400
