@@ -3,7 +3,7 @@ Main API router for v1 endpoints.
 """
 
 from fastapi import APIRouter
-from app.api.v1.endpoints import auth, health_check, foods, food_entries, profile, analytics, model_performance
+from app.api.v1.endpoints import auth, health_check, foods, food_entries, profile, analytics, model_performance, meal_risk, admin
 
 api_router = APIRouter()
 
@@ -15,6 +15,8 @@ api_router.include_router(food_entries.router, prefix="/food-entries", tags=["fo
 api_router.include_router(profile.router, prefix="/profile", tags=["profile"])
 api_router.include_router(analytics.router, prefix="/analytics", tags=["analytics"])
 api_router.include_router(model_performance.router, prefix="/model-performance", tags=["model-performance"])
+api_router.include_router(meal_risk.router, prefix="/meal-risk", tags=["meal-risk"])
+api_router.include_router(admin.router, prefix="/admin", tags=["admin"])
 
 
 @api_router.get("/")

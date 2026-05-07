@@ -58,26 +58,32 @@ class FoodService:
         if query and query.strip():
             search_query = query.strip()
             
-            # Check database dialect for appropriate search method
-            dialect_name = self.db.bind.dialect.name
-            
-            if dialect_name == 'postgresql':
-                # Use PostgreSQL full-text search with relevance ranking
-                db_query = db_query.filter(
-                    func.to_tsvector('english', Food.name).op('@@')(
-                        func.plainto_tsquery('english', search_query)
-                    )
-                ).order_by(
-                    func.ts_rank(
-                        func.to_tsvector('english', Food.name),
-                        func.plainto_tsquery('english', search_query)
-                    ).desc()
-                )
-            else:
-                # Fallback to LIKE search for other databases (e.g., SQLite for testing)
+            # For short queries (< 4 chars), use simple ILIKE for better partial matching
+            if len(search_query) < 4:
                 db_query = db_query.filter(
                     Food.name.ilike(f'%{search_query}%')
                 ).order_by(Food.name)
+            else:
+                # Check database dialect for appropriate search method
+                dialect_name = self.db.bind.dialect.name
+                
+                if dialect_name == 'postgresql':
+                    # Use PostgreSQL full-text search with relevance ranking
+                    db_query = db_query.filter(
+                        func.to_tsvector('english', Food.name).op('@@')(
+                            func.plainto_tsquery('english', search_query)
+                        )
+                    ).order_by(
+                        func.ts_rank(
+                            func.to_tsvector('english', Food.name),
+                            func.plainto_tsquery('english', search_query)
+                        ).desc()
+                    )
+                else:
+                    # Fallback to LIKE search for other databases (e.g., SQLite for testing)
+                    db_query = db_query.filter(
+                        Food.name.ilike(f'%{search_query}%')
+                    ).order_by(Food.name)
         else:
             # Default ordering by name
             db_query = db_query.order_by(Food.name)

@@ -15,6 +15,7 @@ from datetime import datetime, timedelta, timezone
 from uuid import UUID
 from sqlalchemy.orm import Session
 from sqlalchemy import and_, func, extract
+from sqlalchemy.types import Date as sqlalchemy_Date
 from decimal import Decimal
 
 from app.models import FoodEntry, Food, User
@@ -297,19 +298,23 @@ class FoodEntryService:
         
         Args:
             user_id: UUID of the user
-            date: Date to get summary for
+            date: Date to get summary for (interpreted as local date, not UTC)
             
         Returns:
             Daily nutritional summary with meal breakdown
         """
         # Get all entries for the date
-        start_of_day = date.replace(hour=0, minute=0, second=0, microsecond=0)
-        end_of_day = date.replace(hour=23, minute=59, second=59, microsecond=999999)
+        # Important: We compare using the DATE part only to avoid timezone issues
+        # Extract just the date string (YYYY-MM-DD) for comparison
+        if isinstance(date, datetime):
+            target_date_str = date.strftime('%Y-%m-%d')
+        else:
+            target_date_str = str(date)
         
+        # Use PostgreSQL's date() function to extract date part
         entries = self.db.query(FoodEntry).filter(
             FoodEntry.user_id == user_id,
-            FoodEntry.consumed_at >= start_of_day,
-            FoodEntry.consumed_at <= end_of_day
+            func.to_char(FoodEntry.consumed_at, 'YYYY-MM-DD') == target_date_str
         ).all()
         
         # Calculate totals

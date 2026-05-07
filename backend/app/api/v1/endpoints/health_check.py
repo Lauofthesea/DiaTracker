@@ -1,5 +1,5 @@
 """
-Health check API endpoints for diabetes prediction.
+Health check API endpoints for diabetes prediction using RF models.
 """
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -9,11 +9,12 @@ from uuid import UUID
 
 from app.api.dependencies import get_db, get_current_user
 from app.models.user import User
+from app.models.user_profile import UserProfile
 from app.models.health_metrics import HealthMetrics
 from app.models.prediction import Prediction
 from app.schemas.health_metrics import HealthMetricsCreate, HealthMetricsResponse
 from app.schemas.prediction import PredictionResponse, PredictionWithMetrics
-from app.services.diabetes_prediction_service import DiabetesPredictionService
+from app.services.rf_model_manager import RFModelManager
 
 
 router = APIRouter()
@@ -26,31 +27,48 @@ async def submit_health_check(
     db: Session = Depends(get_db)
 ):
     """
-    Submit health metrics and receive diabetes prediction.
+    Submit health metrics and receive diabetes prediction using RF #2 (Risk Classifier).
     
     This endpoint:
     1. Validates and stores health metrics
-    2. Loads the active ML model
-    3. Generates a diabetes prediction
+    2. Gets user profile for gender and family history
+    3. Uses RF #2 model to generate risk prediction
     4. Returns prediction with confidence score
     
     Args:
-        health_data: Health metrics including weight, blood sugar, age, height, symptoms
+        health_data: Health metrics including weight, blood sugar, age, height
         current_user: Authenticated user
         db: Database session
     
     Returns:
-        Prediction response with classification, confidence, and probabilities
+        Prediction response with classification (Low/Mid/High), confidence, and probabilities
     
     Raises:
-        HTTPException 422: If health metrics are insufficient or invalid
-        HTTPException 422: If ML model service is unavailable
+        HTTPException 404: If user profile not found
+        HTTPException 422: If required profile data is missing
         HTTPException 500: If prediction fails
     """
     try:
-        print(f"\n=== Health Check Submission ===")
+        print(f"\n=== Health Check Submission (RF Model) ===")
         print(f"User: {current_user.email}")
         print(f"Data received: {health_data}")
+        
+        # Get user profile for gender and family history
+        profile = db.query(UserProfile).filter(
+            UserProfile.user_id == current_user.user_id
+        ).first()
+        
+        if not profile:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="User profile not found. Please complete your profile first."
+            )
+        
+        if not profile.gender:
+            raise HTTPException(
+                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+                detail="Gender is required in your profile for risk assessment."
+            )
         
         # Create health metrics record
         health_metrics = HealthMetrics(
@@ -62,11 +80,12 @@ async def submit_health_check(
             symptoms=health_data.symptoms
         )
         
-        # Calculate BMI manually since it's not a database default anymore
+        # Calculate BMI
         height_m = float(health_data.height_cm) / 100.0
-        health_metrics.bmi = round(float(health_data.weight_kg) / (height_m * height_m), 2)
+        bmi = round(float(health_data.weight_kg) / (height_m * height_m), 2)
+        health_metrics.bmi = bmi
         
-        print(f"Health metrics created: BMI={health_metrics.bmi}")
+        print(f"Health metrics: BMI={bmi}, Age={health_data.age}, Gender={profile.gender}")
         
         db.add(health_metrics)
         db.commit()
@@ -74,73 +93,65 @@ async def submit_health_check(
         
         print(f"Health metrics saved to database")
         
-        # Initialize prediction service
+        # Initialize RF model manager
         try:
-            print(f"Initializing prediction service...")
-            prediction_service = DiabetesPredictionService(db)
-            print(f"Prediction service initialized successfully")
-        except ValueError as e:
-            print(f"ValueError initializing service: {e}")
-            raise HTTPException(
-                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail={
-                    "code": "MODEL_UNAVAILABLE",
-                    "message": "ML prediction service is currently unavailable",
-                    "details": str(e)
-                }
-            )
-        except FileNotFoundError as e:
-            print(f"FileNotFoundError: {e}")
-            raise HTTPException(
-                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail={
-                    "code": "MODEL_UNAVAILABLE",
-                    "message": "ML model file not found",
-                    "details": str(e)
-                }
-            )
-        
-        # Generate prediction
-        try:
-            print(f"Generating prediction...")
-            classification, confidence, probabilities = prediction_service.predict(health_metrics)
-            print(f"Prediction: {classification}, Confidence: {confidence}")
-        except ValueError as e:
-            print(f"ValueError during prediction: {e}")
-            import traceback
-            traceback.print_exc()
-            raise HTTPException(
-                status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
-                detail={
-                    "code": "PREDICTION_INSUFFICIENT_DATA",
-                    "message": "Insufficient or invalid health metrics for prediction",
-                    "details": str(e)
-                }
-            )
+            print(f"Initializing RF model manager...")
+            model_manager = RFModelManager()
+            print(f"RF model manager initialized successfully")
         except Exception as e:
-            print(f"Exception during prediction: {e}")
+            print(f"Error initializing RF model manager: {e}")
             import traceback
             traceback.print_exc()
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail={
-                    "code": "SERVER_ML_SERVICE_ERROR",
-                    "message": "Prediction generation failed",
-                    "details": str(e)
-                }
+                detail=f"ML model service unavailable: {str(e)}"
+            )
+        
+        # Prepare features for RF #2 (Risk Classifier)
+        # Features: fasting_glucose, BMI, age, gender, family_history
+        gender_encoded = 1 if profile.gender.lower() == 'female' else 0
+        family_history_encoded = 1 if profile.family_history else 0
+        
+        features = {
+            'fasting_glucose': float(health_data.blood_sugar_mgdl),
+            'BMI': float(bmi),
+            'age': int(health_data.age),
+            'gender': gender_encoded,
+            'family_history': family_history_encoded
+        }
+        
+        print(f"Features for RF #2: {features}")
+        
+        # Generate prediction using RF #2
+        try:
+            print(f"Generating prediction with RF #2...")
+            classification, confidence, probabilities = model_manager.predict_risk(features)
+            print(f"Prediction: {classification}, Confidence: {confidence:.4f}")
+            print(f"Probabilities: {probabilities}")
+        except Exception as e:
+            print(f"Error during prediction: {e}")
+            import traceback
+            traceback.print_exc()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Prediction generation failed: {str(e)}"
             )
         
         # Create prediction record
-        prediction = prediction_service.create_prediction_record(
-            user_id=str(current_user.user_id),
-            metric_id=str(health_metrics.metric_id),
+        prediction = Prediction(
+            user_id=current_user.user_id,
+            metric_id=health_metrics.metric_id,
+            model_version="2.0.0-rf",
             classification=classification,
             confidence=confidence,
             probabilities=probabilities
         )
         
-        # Log prediction for monitoring
-        prediction_service.log_prediction(prediction, health_metrics)
+        db.add(prediction)
+        db.commit()
+        db.refresh(prediction)
+        
+        print(f"Prediction saved to database")
         
         # Update first_login_completed flag for first-time users
         if not current_user.first_login_completed:
@@ -166,13 +177,12 @@ async def submit_health_check(
     except Exception as e:
         # Handle unexpected errors
         db.rollback()
+        print(f"Unexpected error: {e}")
+        import traceback
+        traceback.print_exc()
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail={
-                "code": "SERVER_INTERNAL_ERROR",
-                "message": "An unexpected error occurred",
-                "details": str(e)
-            }
+            detail=f"An unexpected error occurred: {str(e)}"
         )
 
 
@@ -302,27 +312,23 @@ async def get_model_info(
     db: Session = Depends(get_db)
 ):
     """
-    Get information about the currently active ML model.
+    Get information about the currently active RF models.
     
     Args:
         current_user: Authenticated user
         db: Database session
     
     Returns:
-        Model metadata including type, version, accuracy metrics
+        Model metadata for both RF #1 and RF #2
     """
     try:
-        prediction_service = DiabetesPredictionService(db)
-        model_info = prediction_service.get_model_info()
+        model_manager = RFModelManager()
+        model_info = model_manager.get_model_info()
         return model_info
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail={
-                "code": "SERVER_ML_SERVICE_ERROR",
-                "message": "Failed to retrieve model information",
-                "details": str(e)
-            }
+            detail=f"Failed to retrieve model information: {str(e)}"
         )
 
 
@@ -332,30 +338,21 @@ async def get_model_performance(
     db: Session = Depends(get_db)
 ):
     """
-    Get model performance metrics and alerts.
-    
-    This endpoint provides:
-    - Rolling accuracy over recent predictions
-    - Model age and version
-    - Performance alerts (low accuracy, model age)
+    Get RF model health status.
     
     Args:
         current_user: Authenticated user
         db: Database session
     
     Returns:
-        Performance metrics and alerts
+        Health status for RF models
     """
     try:
-        prediction_service = DiabetesPredictionService(db)
-        performance = prediction_service.check_model_performance()
-        return performance
+        model_manager = RFModelManager()
+        health_status = model_manager.validate_model_health()
+        return health_status
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail={
-                "code": "SERVER_ML_SERVICE_ERROR",
-                "message": "Failed to retrieve model performance",
-                "details": str(e)
-            }
+            detail=f"Failed to retrieve model performance: {str(e)}"
         )

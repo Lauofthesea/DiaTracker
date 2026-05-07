@@ -211,3 +211,143 @@ def create_custom_food(
             status_code=500,
             detail="Error creating custom food"
         )
+
+
+@router.post("/load-gi-database")
+def load_gi_database(
+    db: Session = Depends(get_db),
+    current_user: User = Depends(get_current_user)
+):
+    """
+    ADMIN: Load foods from the GI database CSV.
+    This will clear existing foods and load the 201 foods from gi_database_research_only.csv
+    """
+    try:
+        from pathlib import Path
+        import csv
+        from decimal import Decimal
+        from sqlalchemy import text
+        from app.models.nutrient import Nutrient
+        from app.models.food_nutrient import FoodNutrient
+        from app.models.food import Food as FoodModel
+        
+        logger.info("Starting GI database load...")
+        
+        # Path to GI database CSV - go up from endpoints to backend, then to datasets
+        csv_path = Path(__file__).parent.parent.parent.parent.parent.parent / "datasets" / "gi_database_research_only.csv"
+        
+        logger.info(f"Looking for CSV at: {csv_path}")
+        
+        if not csv_path.exists():
+            raise HTTPException(
+                status_code=404,
+                detail=f"GI database CSV not found at: {csv_path}"
+            )
+        
+        # Clear existing data
+        logger.info("Clearing existing food data...")
+        db.execute(text("DELETE FROM food_nutrients"))
+        db.execute(text("DELETE FROM food_entries"))
+        db.execute(text("DELETE FROM foods"))
+        db.execute(text("DELETE FROM nutrients"))
+        db.commit()
+        
+        # Read CSV
+        with open(csv_path, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            foods_data = list(reader)
+        
+        logger.info(f"Found {len(foods_data)} foods in CSV")
+        
+        # Create nutrients
+        carbs_nutrient = Nutrient(name="Carbohydrate", unit="g", nutrient_type="macronutrient")
+        energy_nutrient = Nutrient(name="Energy", unit="kcal", nutrient_type="other")
+        fiber_nutrient = Nutrient(name="Fiber", unit="g", nutrient_type="macronutrient")
+        protein_nutrient = Nutrient(name="Protein", unit="g", nutrient_type="macronutrient")
+        fat_nutrient = Nutrient(name="Fat", unit="g", nutrient_type="macronutrient")
+        
+        db.add_all([carbs_nutrient, energy_nutrient, fiber_nutrient, protein_nutrient, fat_nutrient])
+        db.flush()
+        
+        inserted_count = 0
+        skipped_count = 0
+        
+        for row in foods_data:
+            food_name = row['food_name']
+            category = row['food_category']
+            
+            # Skip reference foods
+            if category == "Reference":
+                skipped_count += 1
+                continue
+            
+            # Get nutritional values
+            gi_value = float(row['gi_value'])
+            gl_value = float(row['gl_value'])
+            serving_size = float(row['serving_size_g'])
+            available_carbs = float(row['available_carbs_g'])
+            
+            # Estimate calories and scale to per 100g
+            carbs_per_100g = (available_carbs / serving_size) * 100
+            calories_per_100g = carbs_per_100g * 4
+            
+            # Create food
+            food = FoodModel(
+                name=food_name,
+                description=f"GI: {gi_value}, GL: {gl_value}, Serving: {serving_size}g",
+                category=category,
+                food_type="natural"
+            )
+            db.add(food)
+            db.flush()
+            
+            # Add nutrients
+            db.add(FoodNutrient(
+                food_id=food.food_id,
+                nutrient_id=carbs_nutrient.nutrient_id,
+                amount=Decimal(str(round(carbs_per_100g, 2))),
+                per_unit="100g"
+            ))
+            db.add(FoodNutrient(
+                food_id=food.food_id,
+                nutrient_id=energy_nutrient.nutrient_id,
+                amount=Decimal(str(round(calories_per_100g, 2))),
+                per_unit="100g"
+            ))
+            db.add(FoodNutrient(
+                food_id=food.food_id,
+                nutrient_id=fiber_nutrient.nutrient_id,
+                amount=Decimal("2.0"),
+                per_unit="100g"
+            ))
+            db.add(FoodNutrient(
+                food_id=food.food_id,
+                nutrient_id=protein_nutrient.nutrient_id,
+                amount=Decimal("5.0"),
+                per_unit="100g"
+            ))
+            db.add(FoodNutrient(
+                food_id=food.food_id,
+                nutrient_id=fat_nutrient.nutrient_id,
+                amount=Decimal("3.0"),
+                per_unit="100g"
+            ))
+            
+            inserted_count += 1
+        
+        db.commit()
+        
+        return {
+            "success": True,
+            "message": f"Successfully loaded {inserted_count} foods from GI database",
+            "foods_loaded": inserted_count,
+            "foods_skipped": skipped_count
+        }
+        
+    except Exception as e:
+        logger.error(f"Error loading GI database: {e}", exc_info=True)
+        db.rollback()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error loading GI database: {str(e)}"
+        )

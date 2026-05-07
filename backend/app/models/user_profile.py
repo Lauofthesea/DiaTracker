@@ -21,9 +21,11 @@ class UserProfile(Base):
         primary_key=True
     )
     age = Column(Integer, nullable=True)
+    weight_kg = Column(Numeric(5, 2), nullable=True)
     height_cm = Column(Numeric(5, 2), nullable=True)
-    gender = Column(String(20), nullable=True)  # 'Male', 'Female', 'Other'
+    gender = Column(String(20), nullable=True)  # 'Male', 'Female'
     is_pregnant = Column(Boolean, default=False, nullable=True)
+    family_history = Column(Boolean, default=False, nullable=True)  # Family history of diabetes
     allergen_preferences = Column(ARRAY(Text), nullable=True)
     dietary_restrictions = Column(ARRAY(Text), nullable=True)
     health_conditions = Column(ARRAY(Text), nullable=True)

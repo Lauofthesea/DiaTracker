@@ -104,9 +104,11 @@ class ProfileService:
             name=user.name,
             email=user.email,
             age=profile.age,
+            weight_kg=float(profile.weight_kg) if profile.weight_kg else None,
             height_cm=float(profile.height_cm) if profile.height_cm else None,
             gender=profile.gender,
             is_pregnant=profile.is_pregnant,
+            family_history=profile.family_history,
             allergen_preferences=profile.allergen_preferences,
             dietary_restrictions=profile.dietary_restrictions,
             health_conditions=profile.health_conditions,
@@ -156,6 +158,9 @@ class ProfileService:
             if profile_data.age is not None:
                 profile.age = profile_data.age
             
+            if profile_data.weight_kg is not None:
+                profile.weight_kg = profile_data.weight_kg
+            
             if profile_data.height_cm is not None:
                 profile.height_cm = profile_data.height_cm
             
@@ -164,6 +169,9 @@ class ProfileService:
             
             if profile_data.is_pregnant is not None:
                 profile.is_pregnant = profile_data.is_pregnant
+            
+            if profile_data.family_history is not None:
+                profile.family_history = profile_data.family_history
             
             if profile_data.allergen_preferences is not None:
                 profile.allergen_preferences = profile_data.allergen_preferences
@@ -268,7 +276,8 @@ class ProfileService:
                 prediction_data = {
                     "prediction_id": str(prediction.prediction_id),
                     "classification": prediction.classification,
-                    "confidence": float(prediction.confidence)
+                    "confidence": float(prediction.confidence),
+                    "probabilities": prediction.probabilities
                 }
             
             history_item = HealthMetricsHistoryItem(

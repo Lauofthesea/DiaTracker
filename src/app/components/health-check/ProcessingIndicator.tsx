@@ -8,15 +8,15 @@ interface ProcessingIndicatorProps {
 }
 
 const BASE_PROCESSING_STEPS = [
-  { id: 1, label: 'Validating health metrics', duration: 4000 },
-  { id: 2, label: 'Preprocessing data', duration: 4000 },
-  { id: 3, label: 'Loading ML model', duration: 4000 },
-  { id: 4, label: 'Analyzing patterns', duration: 4000 },
-  { id: 5, label: 'Calculating confidence scores', duration: 4000 },
-  { id: 6, label: 'Generating prediction', duration: 4000 },
+  { id: 1, label: 'Validating health metrics', duration: 1500 },
+  { id: 2, label: 'Preprocessing data', duration: 1500 },
+  { id: 3, label: 'Loading ML model', duration: 1500 },
+  { id: 4, label: 'Analyzing patterns', duration: 1500 },
+  { id: 5, label: 'Calculating confidence scores', duration: 1500 },
+  { id: 6, label: 'Generating prediction', duration: 1500 },
 ];
 
-const MEAL_CHECK_STEP = { id: 7, label: 'Checking logged meals', duration: 4000 };
+const MEAL_CHECK_STEP = { id: 7, label: 'Checking logged meals', duration: 1500 };
 
 export default function ProcessingIndicator({ hasMealsInLast24Hours = false }: ProcessingIndicatorProps) {
   const [currentStep, setCurrentStep] = useState(0);

@@ -18,9 +18,11 @@ export default function ProfilePage() {
   
   const [isEditMode, setIsEditMode] = useState(false);
   const [editedName, setEditedName] = useState("");
-  const [editedAllergens, setEditedAllergens] = useState<string[]>([]);
-  const [editedDietaryRestrictions, setEditedDietaryRestrictions] = useState<string[]>([]);
-  const [editedHealthConditions, setEditedHealthConditions] = useState<string[]>([]);
+  const [editedAge, setEditedAge] = useState<number>(0);
+  const [editedWeight, setEditedWeight] = useState<number>(0);
+  const [editedHeight, setEditedHeight] = useState<number>(0);
+  const [editedGender, setEditedGender] = useState<string>("");
+  const [editedFamilyHistory, setEditedFamilyHistory] = useState<boolean>(false);
   
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const [isLoggingOut, setIsLoggingOut] = useState(false);
@@ -33,14 +35,7 @@ export default function ProfilePage() {
   // Validation errors
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
-  // Common allergens
-  const commonAllergens = ["Dairy", "Nuts", "Shellfish", "Soy", "Eggs", "Wheat", "Fish", "Peanuts"];
-  
-  // Common dietary restrictions
-  const commonDietaryRestrictions = ["Vegetarian", "Vegan", "Gluten-Free", "Dairy-Free", "Pescatarian", "Keto", "Paleo"];
-  
-  // Common health conditions
-  const commonHealthConditions = ["Type 1 Diabetes", "Type 2 Diabetes", "Hypertension", "High Cholesterol", "Heart Disease"];
+
 
   // Load profile data on mount
   useEffect(() => {
@@ -57,9 +52,11 @@ export default function ProfilePage() {
       
       // Initialize edit state with current values
       setEditedName(data.name);
-      setEditedAllergens(data.allergen_preferences || []);
-      setEditedDietaryRestrictions(data.dietary_restrictions || []);
-      setEditedHealthConditions(data.health_conditions || []);
+      setEditedAge(data.age || 0);
+      setEditedWeight(data.weight_kg || (data.current_health_metrics?.weight_kg) || 0);
+      setEditedHeight(data.height_cm || 0);
+      setEditedGender(data.gender || "");
+      setEditedFamilyHistory(data.family_history || false);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load profile");
     } finally {
@@ -88,6 +85,22 @@ export default function ProfilePage() {
       errors.name = "Name is required";
     }
     
+    if (editedAge <= 0 || editedAge > 120) {
+      errors.age = "Age must be between 1 and 120";
+    }
+    
+    if (editedWeight <= 0 || editedWeight > 500) {
+      errors.weight = "Weight must be between 1 and 500 kg";
+    }
+    
+    if (editedHeight <= 0 || editedHeight > 300) {
+      errors.height = "Height must be between 1 and 300 cm";
+    }
+    
+    if (!editedGender || !['Male', 'Female'].includes(editedGender)) {
+      errors.gender = "Please select a valid gender";
+    }
+    
     setValidationErrors(errors);
     return Object.keys(errors).length === 0;
   };
@@ -104,9 +117,11 @@ export default function ProfilePage() {
       
       const updateData = {
         name: editedName.trim(),
-        allergen_preferences: editedAllergens,
-        dietary_restrictions: editedDietaryRestrictions,
-        health_conditions: editedHealthConditions,
+        age: editedAge,
+        weight_kg: editedWeight,
+        height_cm: editedHeight,
+        gender: editedGender,
+        family_history: editedFamilyHistory,
       };
       
       const updatedProfile = await updateProfile(updateData);
@@ -126,21 +141,17 @@ export default function ProfilePage() {
   const handleCancelEdit = () => {
     if (profile) {
       setEditedName(profile.name);
-      setEditedAllergens(profile.allergen_preferences || []);
-      setEditedDietaryRestrictions(profile.dietary_restrictions || []);
-      setEditedHealthConditions(profile.health_conditions || []);
+      setEditedAge(profile.age || 0);
+      setEditedWeight(profile.weight_kg || (profile.current_health_metrics?.weight_kg) || 0);
+      setEditedHeight(profile.height_cm || 0);
+      setEditedGender(profile.gender || "");
+      setEditedFamilyHistory(profile.family_history || false);
     }
     setIsEditMode(false);
     setValidationErrors({});
   };
 
-  const toggleArrayItem = (array: string[], item: string, setter: (arr: string[]) => void) => {
-    if (array.includes(item)) {
-      setter(array.filter(i => i !== item));
-    } else {
-      setter([...array, item]);
-    }
-  };
+
 
   const formatDate = (dateString: string): string => {
     const date = new Date(dateString);
@@ -154,18 +165,16 @@ export default function ProfilePage() {
   };
 
   const getRiskLevel = (classification: string, confidence: number, probabilities?: Record<string, number>) => {
-    if (classification === 'Has Diabetes') {
+    // Use the classification directly from RF #2 model (Low, Mid, High)
+    if (classification === 'High') {
       return { level: 'High Risk', color: 'bg-red-200 text-red-900' };
     }
     
-    const diabetesProbability = probabilities?.['Has Diabetes'] || 0;
-    const isHighProbability = diabetesProbability >= 0.3;
-    const isLowConfidence = confidence < 0.75;
-    
-    if (isHighProbability || isLowConfidence) {
-      return { level: 'Medium Risk', color: 'bg-orange-200 text-orange-900' };
+    if (classification === 'Mid') {
+      return { level: 'Mid Risk', color: 'bg-orange-200 text-orange-900' };
     }
     
+    // Low risk
     return { level: 'Low Risk', color: 'bg-green-200 text-green-900' };
   };
   const inputClass = "w-full h-[48px] rounded-xl bg-[rgba(226,234,235,0.2)] border-[0.8px] border-[rgba(226,234,235,0.4)] px-4 text-[14px] outline-none text-[#0d2b35] placeholder:text-[rgba(13,43,53,0.5)]";
@@ -302,182 +311,193 @@ export default function ProfilePage() {
             <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
               Current Health Metrics
             </p>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
-                <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
-                  Weight
-                </p>
-                <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.current_health_metrics.weight_kg.toFixed(1)} <span className="text-[12px] text-[#637c84]">kg</span>
-                </p>
+            {isEditMode ? (
+              <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-[12px] text-[#637c84] mb-2" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Weight (kg)
+                    </label>
+                    <input
+                      type="number"
+                      step="0.1"
+                      min="1"
+                      max="500"
+                      value={editedWeight || ''}
+                      onChange={(e) => setEditedWeight(parseFloat(e.target.value) || 0)}
+                      className={`${inputClass} ${validationErrors.weight ? 'border-red-500' : ''}`}
+                      placeholder="Enter weight"
+                    />
+                    {validationErrors.weight && (
+                      <p className="text-[12px] text-red-500 mt-1" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+                        {validationErrors.weight}
+                      </p>
+                    )}
+                  </div>
+                  <div>
+                    <label className="block text-[12px] text-[#637c84] mb-2" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Age (years)
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="120"
+                      value={editedAge || ''}
+                      onChange={(e) => setEditedAge(parseInt(e.target.value) || 0)}
+                      className={`${inputClass} ${validationErrors.age ? 'border-red-500' : ''}`}
+                      placeholder="Enter age"
+                    />
+                    {validationErrors.age && (
+                      <p className="text-[12px] text-red-500 mt-1" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+                        {validationErrors.age}
+                      </p>
+                    )}
+                  </div>
+                  <div className="col-span-2">
+                    <label className="block text-[12px] text-[#637c84] mb-2" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Height (cm)
+                    </label>
+                    <input
+                      type="number"
+                      min="1"
+                      max="300"
+                      value={editedHeight || ''}
+                      onChange={(e) => setEditedHeight(parseInt(e.target.value) || 0)}
+                      className={`${inputClass} ${validationErrors.height ? 'border-red-500' : ''}`}
+                      placeholder="Enter height"
+                    />
+                    {validationErrors.height && (
+                      <p className="text-[12px] text-red-500 mt-1" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+                        {validationErrors.height}
+                      </p>
+                    )}
+                  </div>
+                  
+                  {/* Gender Selection */}
+                  <div className="col-span-2">
+                    <label className="block text-[12px] text-[#637c84] mb-2" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Gender
+                    </label>
+                    <div className="grid grid-cols-2 gap-3">
+                      {['Male', 'Female'].map((gender) => (
+                        <button
+                          key={gender}
+                          type="button"
+                          onClick={() => setEditedGender(gender)}
+                          className={`px-4 py-3 rounded-xl border-[0.8px] text-[14px] cursor-pointer transition-all ${
+                            editedGender === gender
+                              ? 'bg-[rgba(30,97,119,0.1)] border-[#1e6177] text-[#1e6177]'
+                              : 'bg-[rgba(226,234,235,0.1)] border-[rgba(226,234,235,0.3)] text-[#637c84]'
+                          }`}
+                          style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
+                        >
+                          {gender}
+                        </button>
+                      ))}
+                    </div>
+                    {validationErrors.gender && (
+                      <p className="text-[12px] text-red-500 mt-1" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+                        {validationErrors.gender}
+                      </p>
+                    )}
+                  </div>
+                  
+                  {/* Family History Toggle */}
+                  <div className="col-span-2">
+                    <div className="bg-[rgba(30,97,119,0.05)] border-[0.8px] border-[rgba(30,97,119,0.2)] rounded-xl p-4">
+                      <label className="flex items-center justify-between cursor-pointer">
+                        <div>
+                          <span className="text-[14px] font-semibold text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            Family History of Diabetes
+                          </span>
+                          <p className="text-[12px] text-[#637c84] mt-1" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+                            Do you have parents or siblings with diabetes?
+                          </p>
+                        </div>
+                        <div className="relative">
+                          <input
+                            type="checkbox"
+                            checked={editedFamilyHistory}
+                            onChange={(e) => setEditedFamilyHistory(e.target.checked)}
+                            className="sr-only peer"
+                          />
+                          <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#1e6177]"></div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
-                <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
-                  Blood Sugar
+            ) : (
+              <>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                    <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Blood Sugar
+                    </p>
+                    <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      {profile.current_health_metrics.blood_sugar_mgdl.toFixed(0)} <span className="text-[12px] text-[#637c84]">mg/dL</span>
+                    </p>
+                  </div>
+                  <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                    <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      BMI
+                    </p>
+                    <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      {profile.current_health_metrics.bmi.toFixed(1)}
+                    </p>
+                  </div>
+                  <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                    <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Height
+                    </p>
+                    <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      {profile.height_cm || profile.current_health_metrics.height_cm.toFixed(0)} <span className="text-[12px] text-[#637c84]">cm</span>
+                    </p>
+                  </div>
+                  <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                    <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Weight
+                    </p>
+                    <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      {(profile.weight_kg || profile.current_health_metrics.weight_kg).toFixed(1)} <span className="text-[12px] text-[#637c84]">kg</span>
+                    </p>
+                  </div>
+                  <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                    <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Age
+                    </p>
+                    <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      {profile.age || profile.current_health_metrics.age} <span className="text-[12px] text-[#637c84]">years</span>
+                    </p>
+                  </div>
+                  <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                    <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                      Gender
+                    </p>
+                    <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      {profile.gender || 'Not specified'}
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Family History - Same style as other cards */}
+                <div className="mt-4 bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
+                  <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                    Family History of Diabetes
+                  </p>
+                  <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                    {profile.family_history ? 'Present' : 'Absent'}
+                  </p>
+                </div>
+                
+                <p className="text-[12px] text-[#637c84] mt-4" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
+                  Last updated: {formatDate(profile.current_health_metrics.recorded_at)}
                 </p>
-                <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.current_health_metrics.blood_sugar_mgdl.toFixed(0)} <span className="text-[12px] text-[#637c84]">mg/dL</span>
-                </p>
-              </div>
-              <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
-                <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
-                  Age
-                </p>
-                <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.age || profile.current_health_metrics.age} <span className="text-[12px] text-[#637c84]">years</span>
-                </p>
-              </div>
-              <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4">
-                <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
-                  Height
-                </p>
-                <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.height_cm || profile.current_health_metrics.height_cm.toFixed(0)} <span className="text-[12px] text-[#637c84]">cm</span>
-                </p>
-              </div>
-              <div className="bg-[rgba(226,234,235,0.2)] rounded-2xl p-4 col-span-2">
-                <p className="text-[12px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
-                  BMI
-                </p>
-                <p className="text-[20px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                  {profile.current_health_metrics.bmi.toFixed(1)}
-                </p>
-              </div>
-            </div>
-            <p className="text-[12px] text-[#637c84] mt-4" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-              Last updated: {formatDate(profile.current_health_metrics.recorded_at)}
-            </p>
+              </>
+            )}
           </div>
         )}
-
-        
-        <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
-          <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-            Allergen Preferences
-          </p>
-          {isEditMode ? (
-            <div className="flex flex-wrap gap-2">
-              {commonAllergens.map((allergen) => (
-                <button
-                  key={allergen}
-                  onClick={() => toggleArrayItem(editedAllergens, allergen, setEditedAllergens)}
-                  className={`px-4 py-2 rounded-xl border-[0.8px] text-[14px] cursor-pointer ${
-                    editedAllergens.includes(allergen)
-                      ? "bg-[rgba(30,97,119,0.1)] border-[#1e6177] text-[#1e6177]"
-                      : "bg-[rgba(226,234,235,0.1)] border-[rgba(226,234,235,0.3)] text-[#637c84]"
-                  }`}
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
-                >
-                  {allergen}
-                </button>
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {profile.allergen_preferences && profile.allergen_preferences.length > 0 ? (
-                profile.allergen_preferences.map((allergen) => (
-                  <span
-                    key={allergen}
-                    className="px-4 py-2 rounded-xl bg-[rgba(30,97,119,0.1)] border-[0.8px] border-[#1e6177] text-[#1e6177] text-[14px]"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
-                  >
-                    {allergen}
-                  </span>
-                ))
-              ) : (
-                <p className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-                  No allergen preferences set
-                </p>
-              )}
-            </div>
-          )}
-        </div>
-
-        
-        <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
-          <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-            Dietary Restrictions
-          </p>
-          {isEditMode ? (
-            <div className="flex flex-wrap gap-2">
-              {commonDietaryRestrictions.map((restriction) => (
-                <button
-                  key={restriction}
-                  onClick={() => toggleArrayItem(editedDietaryRestrictions, restriction, setEditedDietaryRestrictions)}
-                  className={`px-4 py-2 rounded-xl border-[0.8px] text-[14px] cursor-pointer ${
-                    editedDietaryRestrictions.includes(restriction)
-                      ? "bg-[rgba(30,97,119,0.1)] border-[#1e6177] text-[#1e6177]"
-                      : "bg-[rgba(226,234,235,0.1)] border-[rgba(226,234,235,0.3)] text-[#637c84]"
-                  }`}
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
-                >
-                  {restriction}
-                </button>
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {profile.dietary_restrictions && profile.dietary_restrictions.length > 0 ? (
-                profile.dietary_restrictions.map((restriction) => (
-                  <span
-                    key={restriction}
-                    className="px-4 py-2 rounded-xl bg-[rgba(30,97,119,0.1)] border-[0.8px] border-[#1e6177] text-[#1e6177] text-[14px]"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
-                  >
-                    {restriction}
-                  </span>
-                ))
-              ) : (
-                <p className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-                  No dietary restrictions set
-                </p>
-              )}
-            </div>
-          )}
-        </div>
-
-        
-        <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
-          <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-            Health Conditions
-          </p>
-          {isEditMode ? (
-            <div className="flex flex-wrap gap-2">
-              {commonHealthConditions.map((condition) => (
-                <button
-                  key={condition}
-                  onClick={() => toggleArrayItem(editedHealthConditions, condition, setEditedHealthConditions)}
-                  className={`px-4 py-2 rounded-xl border-[0.8px] text-[14px] cursor-pointer ${
-                    editedHealthConditions.includes(condition)
-                      ? "bg-[rgba(30,97,119,0.1)] border-[#1e6177] text-[#1e6177]"
-                      : "bg-[rgba(226,234,235,0.1)] border-[rgba(226,234,235,0.3)] text-[#637c84]"
-                  }`}
-                  style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
-                >
-                  {condition}
-                </button>
-              ))}
-            </div>
-          ) : (
-            <div className="flex flex-wrap gap-2">
-              {profile.health_conditions && profile.health_conditions.length > 0 ? (
-                profile.health_conditions.map((condition) => (
-                  <span
-                    key={condition}
-                    className="px-4 py-2 rounded-xl bg-[rgba(30,97,119,0.1)] border-[0.8px] border-[#1e6177] text-[#1e6177] text-[14px]"
-                    style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}
-                  >
-                    {condition}
-                  </span>
-                ))
-              ) : (
-                <p className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-                  No health conditions set
-                </p>
-              )}
-            </div>
-          )}
-        </div>
 
         
         {!isEditMode && metricsHistory.length > 0 && (
@@ -488,8 +508,8 @@ export default function ProfilePage() {
             <div className="space-y-4">
               {metricsHistory.map((metric) => (
                 <div key={metric.metric_id} className="bg-[rgba(226,234,235,0.1)] rounded-2xl p-4">
-                  <div className="flex justify-between items-start mb-3">
-                    <p className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito Sans', sans-serif", fontWeight: 600 }}>
+                  <div className="flex justify-between items-center mb-3">
+                    <p className="text-[14px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
                       {formatDate(metric.recorded_at)}
                     </p>
                     {metric.prediction && (
@@ -508,7 +528,7 @@ export default function ProfilePage() {
                       </span>
                     )}
                   </div>
-                  <div className="grid grid-cols-3 gap-3 text-center">
+                  <div className="grid grid-cols-3 gap-3 text-left">
                     <div>
                       <p className="text-[10px] text-[#637c84] mb-1" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>Weight</p>
                       <p className="text-[14px] text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 600 }}>

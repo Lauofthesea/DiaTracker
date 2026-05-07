@@ -12,9 +12,11 @@ export interface ProfileResponse {
   name: string;
   email: string;
   age: number | null;
+  weight_kg: number | null;
   height_cm: number | null;
   gender: string | null;
   is_pregnant: boolean | null;
+  family_history: boolean | null;
   allergen_preferences: string[] | null;
   dietary_restrictions: string[] | null;
   health_conditions: string[] | null;
@@ -26,9 +28,11 @@ export interface ProfileResponse {
 export interface ProfileUpdate {
   name?: string;
   age?: number;
+  weight_kg?: number;
   height_cm?: number;
   gender?: string;
   is_pregnant?: boolean;
+  family_history?: boolean;
   allergen_preferences?: string[];
   dietary_restrictions?: string[];
   health_conditions?: string[];
@@ -47,6 +51,7 @@ export interface HealthMetricsHistoryItem {
     prediction_id: string;
     classification: string;
     confidence: number;
+    probabilities?: Record<string, number>;
   } | null;
 }
 

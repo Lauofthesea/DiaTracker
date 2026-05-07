@@ -15,23 +15,27 @@ interface PredictionResultCardProps {
     age: number;
     height_cm: number;
     bmi: number;
-    symptoms: string[];
+  };
+  profileData?: {
+    gender: string | null;
+    family_history: boolean | null;
   };
 }
 
-export default function PredictionResultCard({ prediction, onComplete, healthMetrics }: PredictionResultCardProps) {
+export default function PredictionResultCard({ prediction, onComplete, healthMetrics, profileData }: PredictionResultCardProps) {
   const { classification, confidence } = prediction;
   const confidencePercentage = Math.round(confidence * 100);
   const [isExpanded, setIsExpanded] = useState(false);
 
   const getResultConfig = () => {
-    if (classification === 'Has Diabetes') {
+    // Use the classification directly from RF #2 model (Low, Mid, High)
+    if (classification === 'High') {
       return {
         icon: AlertTriangle,
         iconColor: 'text-red-600',
         bgColor: 'bg-red-50',
         borderColor: 'border-red-200',
-        title: 'High Risk - Diabetes Detected',
+        title: 'High Risk',
         message: 'Your health metrics suggest a high risk for diabetes.',
         recommendations: [
           'Consult with your healthcare provider immediately for proper diagnosis',
@@ -44,17 +48,13 @@ export default function PredictionResultCard({ prediction, onComplete, healthMet
       };
     }
     
-    const diabetesProbability = prediction.probabilities?.['Has Diabetes'] || 0;
-    const isHighProbability = diabetesProbability >= 0.3;
-    const isLowConfidence = confidence < 0.75;
-    
-    if (isHighProbability || isLowConfidence) {
+    if (classification === 'Mid') {
       return {
         icon: AlertTriangle,
         iconColor: 'text-orange-600',
         bgColor: 'bg-orange-50',
         borderColor: 'border-orange-200',
-        title: 'Medium Risk - Monitor Closely',
+        title: 'Mid Risk',
         message: 'Your health metrics show some concerning factors. Regular monitoring is recommended.',
         recommendations: [
           'Schedule a check-up with your healthcare provider',
@@ -67,6 +67,7 @@ export default function PredictionResultCard({ prediction, onComplete, healthMet
       };
     }
     
+    // Low risk
     return {
       icon: CheckCircle2,
       iconColor: 'text-green-600',
@@ -86,7 +87,7 @@ export default function PredictionResultCard({ prediction, onComplete, healthMet
   const getDetailedExplanation = () => {
     if (!healthMetrics) return null;
 
-    const { blood_sugar_mgdl, bmi, age, weight_kg, height_cm, symptoms } = healthMetrics;
+    const { blood_sugar_mgdl, bmi, age } = healthMetrics;
     const explanations: string[] = [];
 
     // Blood sugar analysis
@@ -120,24 +121,9 @@ export default function PredictionResultCard({ prediction, onComplete, healthMet
       explanations.push(`At age ${age}, you should begin monitoring for diabetes risk factors.`);
     }
 
-    // Symptoms analysis
-    if (symptoms && symptoms.length > 0) {
-      const symptomDescriptions: Record<string, string> = {
-        'frequent_urination': 'frequent urination (a classic sign of high blood sugar)',
-        'excessive_thirst': 'excessive thirst (your body trying to flush out excess sugar)',
-        'unexplained_weight_loss': 'unexplained weight loss (cells not getting glucose for energy)',
-        'fatigue': 'fatigue (cells not efficiently using glucose)',
-        'blurred_vision': 'blurred vision (high blood sugar affecting eye lens)',
-        'slow_healing': 'slow healing wounds (high blood sugar affecting circulation)',
-        'tingling': 'tingling in hands/feet (nerve damage from high blood sugar)',
-        'increased_hunger': 'increased hunger (cells not getting enough glucose)',
-      };
-
-      const describedSymptoms = symptoms
-        .map(s => symptomDescriptions[s] || s)
-        .join(', ');
-
-      explanations.push(`You reported experiencing ${describedSymptoms}. These symptoms are commonly associated with diabetes and indicate your body may be struggling to regulate blood sugar levels.`);
+    // Family history analysis
+    if (profileData?.family_history) {
+      explanations.push(`You have a family history of diabetes, which increases your risk. Having a parent or sibling with diabetes significantly raises your likelihood of developing the condition.`);
     }
 
     return explanations;
@@ -245,19 +231,18 @@ export default function PredictionResultCard({ prediction, onComplete, healthMet
                     <p className="text-xs text-gray-500 mb-1">BMI</p>
                     <p className="text-sm font-semibold text-gray-900">{healthMetrics.bmi.toFixed(1)}</p>
                   </div>
-                  {healthMetrics.symptoms && healthMetrics.symptoms.length > 0 && (
-                    <div className="col-span-2 sm:col-span-3">
-                      <p className="text-xs text-gray-500 mb-1">Symptoms Reported</p>
-                      <div className="flex flex-wrap gap-1.5 mt-1">
-                        {healthMetrics.symptoms.map((symptom, idx) => (
-                          <span
-                            key={idx}
-                            className="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full"
-                          >
-                            {symptom.replace(/_/g, ' ')}
-                          </span>
-                        ))}
-                      </div>
+                  {profileData?.gender && (
+                    <div>
+                      <p className="text-xs text-gray-500 mb-1">Gender</p>
+                      <p className="text-sm font-semibold text-gray-900">{profileData.gender}</p>
+                    </div>
+                  )}
+                  {profileData?.family_history !== null && profileData?.family_history !== undefined && (
+                    <div>
+                      <p className="text-xs text-gray-500 mb-1">Family History</p>
+                      <p className="text-sm font-semibold text-gray-900">
+                        {profileData.family_history ? 'Yes' : 'No'}
+                      </p>
                     </div>
                   )}
                 </div>

@@ -40,7 +40,7 @@ class Prediction(Base):
     # Constraints
     __table_args__ = (
         CheckConstraint(
-            "classification IN ('Type 1', 'Type 2', 'No Diabetes', 'Has Diabetes')", 
+            "classification IN ('Type 1', 'Type 2', 'No Diabetes', 'Has Diabetes', 'Low', 'Mid', 'High')", 
             name='classification_values'
         ),
         CheckConstraint('confidence BETWEEN 0 AND 1', name='confidence_range'),

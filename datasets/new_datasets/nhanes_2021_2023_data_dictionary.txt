@@ -1,0 +1,163 @@
+NHANES 2021-2023 Processed Data Dictionary
+================================================================================
+
+Total Participants: 2660
+Total Features: 19
+
+Features:
+--------------------------------------------------------------------------------
+
+SEQN:
+  Type: float64
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+  Min: 130378.0
+  Max: 142309.0
+  Mean: 136404.91
+  Median: 136477.50
+
+age:
+  Type: float64
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+  Min: 18.0
+  Max: 70.0
+  Mean: 47.88
+  Median: 50.00
+
+gender:
+  Type: str
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+
+BMI:
+  Type: float64
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+  Min: 15.0
+  Max: 59.2
+  Mean: 29.51
+  Median: 28.10
+
+weight_kg:
+  Type: float64
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+  Min: 38.2
+  Max: 178.3
+  Mean: 83.11
+  Median: 79.80
+
+height_cm:
+  Type: float64
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+  Min: 133.0
+  Max: 198.1
+  Mean: 167.68
+  Median: 167.00
+
+waist_cm:
+  Type: float64
+  Non-null: 2577 (96.9%)
+  Null: 83 (3.1%)
+  Min: 62.4
+  Max: 171.0
+  Mean: 99.63
+  Median: 98.10
+
+fasting_glucose:
+  Type: float64
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)
+  Min: 59.0
+  Max: 385.0
+  Mean: 107.77
+  Median: 100.00
+
+family_history:
+  Type: str
+  Non-null: 2276 (85.6%)
+  Null: 384 (14.4%)
+
+has_diabetes:
+  Type: str
+  Non-null: 2659 (100.0%)
+  Null: 1 (0.0%)
+
+carbs_g:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 5.397605346934028e-79
+  Max: 1300.9399999999998
+  Mean: 228.88
+  Median: 210.21
+
+fiber_g:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 5.397605346934028e-79
+  Max: 117.3
+  Mean: 16.79
+  Median: 14.40
+
+fat_g:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 5.397605346934028e-79
+  Max: 505.61999999999995
+  Mean: 85.54
+  Median: 78.10
+
+protein_g:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 5.397605346934028e-79
+  Max: 459.1500000000001
+  Mean: 77.11
+  Median: 69.85
+
+sugar_g:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 5.397605346934028e-79
+  Max: 953.9000000000001
+  Mean: 96.42
+  Median: 80.16
+
+energy_kcal:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 5.397605346934028e-79
+  Max: 10446.0
+  Mean: 2032.41
+  Median: 1887.00
+
+available_carbs_g:
+  Type: float64
+  Non-null: 2094 (78.7%)
+  Null: 566 (21.3%)
+  Min: 0.0
+  Max: 1226.9399999999998
+  Mean: 212.08
+  Median: 194.05
+
+glycemic_load:
+  Type: float64
+  Non-null: 0 (0.0%)
+  Null: 2660 (100.0%)
+  Min: nan
+  Max: nan
+  Mean: nan
+  Median: nan
+
+risk_level:
+  Type: str
+  Non-null: 2660 (100.0%)
+  Null: 0 (0.0%)

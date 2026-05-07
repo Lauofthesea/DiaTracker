@@ -79,8 +79,10 @@ export default function MealHistoryPage() {
 
   const loadTodaySummary = async () => {
     try {
-      const today = new Date().toISOString().split('T')[0];
-      const summary = await getDailySummary(today);
+      // Get today's date in local timezone (YYYY-MM-DD format)
+      const today = new Date();
+      const localDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      const summary = await getDailySummary(localDate);
       setTodaySummary(summary);
     } catch (err) {
       console.error("Error loading today's summary:", err);
@@ -136,7 +138,11 @@ export default function MealHistoryPage() {
 
   const totalToday = todaySummary?.total_calories || 0;
   const totalCarbsToday = todaySummary?.total_carbohydrates_g || 0;
-  const mealsToday = entries.filter((e) => formatDate(e.consumed_at) === "Today").length;
+  const mealsToday = todaySummary ? Object.keys(todaySummary.meal_breakdown || {}).reduce((sum, mealType) => {
+    // Count number of entries for each meal type in today's summary
+    const todayEntries = entries.filter((e) => formatDate(e.consumed_at) === "Today" && e.meal_type === mealType);
+    return sum + todayEntries.length;
+  }, 0) : 0;
 
   return (
     <ResponsiveLayout>
@@ -249,7 +255,7 @@ export default function MealHistoryPage() {
                           {formatTime(entry.consumed_at)}
                         </span>
                         <span className="text-[11px] text-[#637c84]" style={{ fontFamily: "'Nunito Sans', sans-serif" }}>
-                          {entry.quantity}{entry.unit}
+                          {entry.quantity % 1 === 0 ? Math.round(entry.quantity) : entry.quantity.toFixed(2).replace(/\.?0+$/, '')}{entry.unit}
                         </span>
                       </div>
                     </div>
@@ -261,22 +267,7 @@ export default function MealHistoryPage() {
                         {Math.round(entry.nutritional_totals.carbohydrates_g)}g carbs
                       </p>
                     </div>
-                    <button
-                      onClick={() => handleDeleteClick(entry.entry_id, entry.consumed_at)}
-                      disabled={!canDelete || deletingId === entry.entry_id}
-                      title={canDelete ? "Delete entry" : "Cannot delete entries older than 7 days"}
-                      className={`w-7 h-7 rounded-full flex items-center justify-center border-none shrink-0 ${
-                        canDelete
-                          ? "bg-[rgba(239,68,68,0.08)] cursor-pointer"
-                          : "bg-[rgba(99,124,132,0.08)] cursor-not-allowed opacity-50"
-                      }`}
-                    >
-                      {deletingId === entry.entry_id ? (
-                        <Loader2 size={14} className="text-[#ef4444] animate-spin" />
-                      ) : (
-                        <Trash2 size={14} className={canDelete ? "text-[#ef4444]" : "text-[#637c84]"} />
-                      )}
-                    </button>
+
                   </div>
                 );
               })}

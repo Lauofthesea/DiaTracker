@@ -37,8 +37,10 @@ export default function HealthCheckPage() {
 
   const checkRecentMeals = async () => {
     try {
-      const today = new Date().toISOString().split('T')[0];
-      const summary = await getDailySummary(today);
+      // Get today's date in local timezone (YYYY-MM-DD format)
+      const today = new Date();
+      const localDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      const summary = await getDailySummary(localDate);
       setHasMealsInLast24Hours(summary.total_calories > 0);
     } catch (err) {
       console.error('Error checking recent meals:', err);
@@ -84,7 +86,7 @@ export default function HealthCheckPage() {
       const result = await submitHealthCheck(formData);
       
       const elapsedTime = Date.now() - startTime;
-      const minimumDisplayTime = hasMealsInLast24Hours ? 28000 : 24000;
+      const minimumDisplayTime = hasMealsInLast24Hours ? 10500 : 9000;
       
       if (elapsedTime < minimumDisplayTime) {
         await new Promise(resolve => setTimeout(resolve, minimumDisplayTime - elapsedTime));
@@ -185,7 +187,10 @@ export default function HealthCheckPage() {
                       error={error}
                       profileData={{
                         age: profile?.age || null,
-                        height_cm: profile?.height_cm || null
+                        height_cm: profile?.height_cm || null,
+                        weight_kg: profile?.weight_kg || null,
+                        gender: profile?.gender || null,
+                        family_history: profile?.family_history || null
                       }}
                       lastHealthCheck={
                         history.length > 0

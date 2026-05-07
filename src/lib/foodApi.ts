@@ -137,8 +137,10 @@ export const getFoodEntries = async (params: {
  */
 export const getDailySummary = async (date: string): Promise<DailyNutritionalSummary> => {
   try {
+    // Convert date string to ISO 8601 datetime format (add time component)
+    const dateTime = date.includes('T') ? date : `${date}T00:00:00`;
     const response = await apiClient.get<DailyNutritionalSummary>(
-      `${API_ENDPOINTS.FOOD_ENTRIES.DAILY_SUMMARY}?date=${date}`
+      `${API_ENDPOINTS.FOOD_ENTRIES.DAILY_SUMMARY}?date=${encodeURIComponent(dateTime)}`
     );
     return response.data;
   } catch (error) {

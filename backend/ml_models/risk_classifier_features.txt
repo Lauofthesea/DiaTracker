@@ -1,0 +1,5 @@
+fasting_glucose
+BMI
+age
+gender
+family_history

@@ -11,12 +11,19 @@ import { getDailySummary } from '@/lib/foodApi';
 interface HealthCheckModalProps {
   open: boolean;
   onComplete: () => void;
-  profileData?: { age: number | null; height_cm: number | null };
+  profileData?: { 
+    age: number | null; 
+    height_cm: number | null;
+    weight_kg: number | null;
+    gender: string | null;
+    family_history: boolean | null;
+  };
+  lastHealthCheck?: { weight_kg: number; blood_sugar_mgdl: number } | null;
 }
 
 type ModalStep = 'welcome' | 'form' | 'consent' | 'processing' | 'results';
 
-export default function HealthCheckModal({ open, onComplete, profileData }: HealthCheckModalProps) {
+export default function HealthCheckModal({ open, onComplete, profileData, lastHealthCheck }: HealthCheckModalProps) {
   const [currentStep, setCurrentStep] = useState<ModalStep>('welcome');
   const [formData, setFormData] = useState<HealthCheckSubmitRequest | null>(null);
   const [predictionResult, setPredictionResult] = useState<HealthCheckSubmitResponse | null>(null);
@@ -32,8 +39,10 @@ export default function HealthCheckModal({ open, onComplete, profileData }: Heal
 
   const checkRecentMeals = async () => {
     try {
-      const today = new Date().toISOString().split('T')[0];
-      const summary = await getDailySummary(today);
+      // Get today's date in local timezone (YYYY-MM-DD format)
+      const today = new Date();
+      const localDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      const summary = await getDailySummary(localDate);
       setHasMealsInLast24Hours(summary.total_calories > 0);
     } catch (err) {
       console.error('Error checking recent meals:', err);
@@ -67,7 +76,7 @@ export default function HealthCheckModal({ open, onComplete, profileData }: Heal
       const result = await submitHealthCheck(formData);
       
       const elapsedTime = Date.now() - startTime;
-      const minimumDisplayTime = hasMealsInLast24Hours ? 28000 : 24000;
+      const minimumDisplayTime = hasMealsInLast24Hours ? 10500 : 9000;
       
       if (elapsedTime < minimumDisplayTime) {
         await new Promise(resolve => setTimeout(resolve, minimumDisplayTime - elapsedTime));
@@ -148,7 +157,7 @@ export default function HealthCheckModal({ open, onComplete, profileData }: Heal
                 Please provide your current health metrics for diabetes risk assessment.
               </DialogDescription>
             </DialogHeader>
-            <HealthCheckForm onSubmit={handleFormSubmit} error={error} profileData={profileData} />
+            <HealthCheckForm onSubmit={handleFormSubmit} error={error} profileData={profileData} lastHealthCheck={lastHealthCheck} />
           </>
         )}
 
@@ -190,6 +199,10 @@ export default function HealthCheckModal({ open, onComplete, profileData }: Heal
             <PredictionResultCard
               prediction={predictionResult}
               onComplete={handleResultsComplete}
+              profileData={{
+                gender: profileData?.gender || null,
+                family_history: profileData?.family_history || null
+              }}
             />
           </>
         )}

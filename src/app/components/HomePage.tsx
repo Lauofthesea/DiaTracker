@@ -4,11 +4,13 @@ import ResponsiveLayout from "./ResponsiveLayout";
 import { HealthCheckModal } from "./health-check";
 import ProfileSetupModal from "./profile/ProfileSetupModal";
 import { useAuth } from "../contexts/AuthContext";
-import { getDailySummary } from "@/lib/foodApi";
-import { getProfile, updateProfile } from "@/lib/profileApi";
+import { getDailySummary, getFoodEntries } from "@/lib/foodApi";
+import { getProfile, updateProfile, getHealthMetricsHistory } from "@/lib/profileApi";
 import { getLatestHealthCheck } from "@/lib/healthCheck";
-import type { DailyNutritionalSummary } from "@/types/food";
-import type { ProfileResponse } from "@/types/profile";
+import { getTodaysMealPredictions, getMealHistory, type MealPrediction } from "@/lib/mealRiskApi";
+import { calculateCurrentGlucose, getTimeSinceMealDescription, isMealPredictionRelevant } from "@/lib/glucoseDynamics";
+import type { DailyNutritionalSummary, FoodEntry } from "@/types/food";
+import type { ProfileResponse, HealthMetricsHistoryItem } from "@/types/profile";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -18,13 +20,14 @@ export default function HomePage() {
   const [profile, setProfile] = useState<ProfileResponse | null>(null);
   const [dailySummary, setDailySummary] = useState<DailyNutritionalSummary | null>(null);
   const [latestHealthCheck, setLatestHealthCheck] = useState<any>(null);
+  const [riskHistory, setRiskHistory] = useState<HealthMetricsHistoryItem[]>([]);
+  const [todaysMealPredictions, setTodaysMealPredictions] = useState<MealPrediction[]>([]);
+  const [weekMealPredictions, setWeekMealPredictions] = useState<MealPrediction[]>([]);
+  const [weekFoodEntries, setWeekFoodEntries] = useState<FoodEntry[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Show appropriate modal on first login
     if (user?.isFirstLogin && profile) {
-      // Check if profile is complete
       if (!profile.age || !profile.height_cm || !profile.gender) {
         setShowProfileSetupModal(true);
       } else {
@@ -40,24 +43,36 @@ export default function HomePage() {
   const loadData = async () => {
     try {
       setLoading(true);
-      setError(null);
 
-      // Get today's date in YYYY-MM-DD format
-      const today = new Date().toISOString().split('T')[0];
+      // Get today's date in local timezone (YYYY-MM-DD format)
+      const today = new Date();
+      const localDate = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
-      // Fetch all data in parallel
-      const [profileData, summaryData, healthCheckData] = await Promise.all([
+      // Get date 7 days ago for meal history
+      const sevenDaysAgo = new Date(today);
+      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+      const startDate = sevenDaysAgo.toISOString();
+      const endDate = today.toISOString();
+
+      const [profileData, summaryData, healthCheckData, historyData, mealPredictions, weekMeals, foodEntries] = await Promise.all([
         getProfile().catch(() => null),
-        getDailySummary(today).catch(() => null),
+        getDailySummary(localDate).catch(() => null),
         getLatestHealthCheck().catch(() => null),
+        getHealthMetricsHistory(1, 7).catch(() => ({ metrics: [] })),
+        getTodaysMealPredictions().catch(() => []),
+        getMealHistory(startDate, endDate, undefined, 1, 100).catch(() => ({ predictions: [], pagination: { page: 1, page_size: 100, total_count: 0, total_pages: 0 } })),
+        getFoodEntries({ start_date: startDate, end_date: endDate, page: 1, page_size: 100 }).catch(() => ({ entries: [], total: 0, page: 1, page_size: 100, total_pages: 0 })),
       ]);
 
       setProfile(profileData);
       setDailySummary(summaryData);
       setLatestHealthCheck(healthCheckData);
+      setRiskHistory(historyData.metrics || []);
+      setTodaysMealPredictions(mealPredictions);
+      setWeekMealPredictions(weekMeals.predictions || []);
+      setWeekFoodEntries(foodEntries.entries || []);
     } catch (err) {
       console.error('Error loading home page data:', err);
-      setError('Failed to load data. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -67,21 +82,18 @@ export default function HomePage() {
     try {
       await updateProfile({
         age: data.age,
+        weight_kg: data.weight_kg,
         height_cm: data.height_cm,
         gender: data.gender,
         is_pregnant: data.is_pregnant,
-        allergen_preferences: data.allergens,
-        health_conditions: data.health_conditions,
+        family_history: data.has_family_history,
       });
       setShowProfileSetupModal(false);
-      // Reload profile data
       const profileData = await getProfile();
       setProfile(profileData);
-      // Now show health check modal
       setShowHealthCheckModal(true);
-    } catch (error) {
-      console.error('Failed to update profile:', error);
-      setError('Failed to save profile. Please try again.');
+    } catch (err) {
+      console.error('Failed to update profile:', err);
     }
   };
 
@@ -91,61 +103,88 @@ export default function HomePage() {
     loadData();
   };
 
-  const calorieGoal = 2000;
-  const caloriesConsumed = dailySummary?.total_calories || 0;
-  const caloriesRemaining = Math.max(0, calorieGoal - caloriesConsumed);
-  const calorieProgress = Math.min(100, (caloriesConsumed / calorieGoal) * 100);
-
-  const carbGoal = 220;
-  const carbsConsumed = dailySummary?.total_carbohydrates_g || 0;
-  const carbProgress = Math.min(100, (carbsConsumed / carbGoal) * 100);
-  const carbsNearingLimit = carbProgress >= 80;
-
-  const currentGlucose = latestHealthCheck?.blood_sugar_mgdl || profile?.current_health_metrics?.blood_sugar_mgdl || 104;
+  // Calculate current glucose and status with clinical adjustments
+  // Baseline glucose from latest health check
+  const baselineGlucose = latestHealthCheck?.blood_sugar_mgdl || 
+                          profile?.current_health_metrics?.blood_sugar_mgdl || 
+                          null;
   
-  const trendColors = [
-    '#10b981', '#10b981', '#84cc16', '#eab308', '#f59e0b', '#ef4444'
-  ];
+  // Get relevant meal predictions (within last 5 hours - clinical evidence shows glucose returns to baseline by then)
+  const currentTime = new Date();
+  const relevantMealPredictions = todaysMealPredictions.filter(pred => 
+    isMealPredictionRelevant(new Date(pred.predicted_at), currentTime)
+  );
   
-  const getCurrentBarIndex = (glucose: number) => {
-    if (glucose < 80) return 0;
-    if (glucose < 100) return 1;
-    if (glucose < 120) return 2;
-    if (glucose < 140) return 3;
-    if (glucose < 160) return 4;
-    return 5;
+  // Find most recent meal prediction
+  const mostRecentPrediction = relevantMealPredictions.length > 0
+    ? relevantMealPredictions.reduce((latest, current) => {
+        const latestTime = new Date(latest.predicted_at).getTime();
+        const currentTime = new Date(current.predicted_at).getTime();
+        return currentTime > latestTime ? current : latest;
+      })
+    : null;
+  
+  // Calculate current glucose with clinical adjustments
+  let currentGlucose: number | null = null;
+  let glucoseExplanation = '';
+  
+  if (mostRecentPrediction && profile && baselineGlucose && profile.height_cm && profile.weight_kg && profile.age) {
+    // Calculate BMI
+    const heightM = profile.height_cm / 100;
+    const bmi = profile.weight_kg / (heightM * heightM);
+    
+    // Apply clinical glucose dynamics
+    const glucoseEstimate = calculateCurrentGlucose({
+      predictedGlucose1hr: mostRecentPrediction.predicted_glucose_1hr,
+      baselineGlucose: baselineGlucose,
+      mealTime: new Date(mostRecentPrediction.predicted_at),
+      currentTime: currentTime,
+      age: profile.age || 30,
+      gender: (profile.gender?.toLowerCase() as 'male' | 'female') || 'male',
+      bmi: bmi,
+      mealType: undefined // We don't have meal type in prediction, will use time-of-day
+    });
+    
+    currentGlucose = glucoseEstimate.currentGlucose;
+    const timeSince = getTimeSinceMealDescription(glucoseEstimate.hoursSinceMeal);
+    glucoseExplanation = `${glucoseEstimate.explanation} (meal ${timeSince})`;
+  } else if (baselineGlucose) {
+    // No recent meals, show baseline
+    currentGlucose = baselineGlucose;
+    glucoseExplanation = 'Based on latest health check';
+  }
+  
+  const getGlucoseStatus = (glucose: number | null) => {
+    if (!glucose) return { status: 'No Data', color: '#637c84', bgColor: 'rgba(99,124,132,0.1)' };
+    if (glucose < 100) return { status: 'In Range', color: '#10b981', bgColor: 'rgba(16,185,129,0.1)' };
+    if (glucose < 140) return { status: 'Elevated', color: '#f59e0b', bgColor: 'rgba(245,158,11,0.1)' };
+    return { status: 'High', color: '#ef4444', bgColor: 'rgba(239,68,68,0.1)' };
   };
-  
-  const currentBarIndex = getCurrentBarIndex(currentGlucose);
-  const currentTrendColor = trendColors[currentBarIndex];
-  
-  const glucoseStatus = currentBarIndex <= 1 ? 'In Range' : 
-                        currentBarIndex <= 3 ? 'Elevated' : 'High';
-  const glucoseStatusColor = currentTrendColor;
 
-  const carbImpact = dailySummary?.total_carbohydrates_g 
-    ? Math.round((dailySummary.total_carbohydrates_g / 10) * 2)
-    : 0;
-  const predictedPeak = currentGlucose + Math.max(carbImpact, 20);
-  const predictedBarIndex = getCurrentBarIndex(predictedPeak);
-  
-  const glucoseTrend = [
-    { value: Math.max(70, currentGlucose - 30), height: 15, index: 0 },
-    { value: Math.max(70, currentGlucose - 20), height: 20, index: 1 },
-    { value: Math.max(70, currentGlucose - 10), height: 29, index: 2 },
-    { value: currentGlucose - 5, height: 39, index: 3 },
-    { value: currentGlucose, height: 41, index: 4 },
-    { value: predictedPeak, height: Math.min(64, 41 + ((predictedPeak - currentGlucose) / 2)), index: 5 },
-  ].map((point, idx) => ({
-    ...point,
-    baseColor: trendColors[idx],
-    isActive: idx === currentBarIndex,
-    isCurrent: idx === currentBarIndex,
-  }));
-  
-  const hasCompletedHealthCheck = !!latestHealthCheck || !!profile?.current_health_metrics;
-  const hasHealthConcern = predictedPeak > 140 || currentBarIndex > 1;
-  const showAttentionNotice = hasCompletedHealthCheck && hasHealthConcern;
+  const glucoseStatus = getGlucoseStatus(currentGlucose);
+
+  // Get current risk level
+  const currentRisk = latestHealthCheck?.classification || 'Unknown';
+  const getRiskColor = (risk: string) => {
+    if (risk === 'Low') return { color: '#10b981', bgColor: 'rgba(16,185,129,0.1)' };
+    if (risk === 'Mid') return { color: '#f59e0b', bgColor: 'rgba(245,158,11,0.1)' };
+    if (risk === 'High') return { color: '#ef4444', bgColor: 'rgba(239,68,68,0.1)' };
+    return { color: '#637c84', bgColor: 'rgba(99,124,132,0.1)' };
+  };
+
+  const riskColor = getRiskColor(currentRisk);
+
+  // Calculate days since last check
+  const getDaysSinceLastCheck = () => {
+    if (!latestHealthCheck?.predicted_at) return null;
+    const lastCheck = new Date(latestHealthCheck.predicted_at);
+    const now = new Date();
+    const diffTime = Math.abs(now.getTime() - lastCheck.getTime());
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+  };
+
+  const daysSinceLastCheck = getDaysSinceLastCheck();
 
   const today = new Date();
   const formattedDate = today.toLocaleDateString('en-US', { 
@@ -175,6 +214,7 @@ export default function HomePage() {
         <div className="relative overflow-auto" style={{ minHeight: "100dvh" }}>
           <div className="relative max-w-[430px] mx-auto md:max-w-full md:px-8 lg:px-12 pb-24">
             
+            {/* Header */}
             <header className="backdrop-blur-[12px] bg-[rgba(244,248,248,0.8)] border-[rgba(226,234,235,0.4)] border-b-[0.8px] border-solid px-6 py-4 sticky top-0 z-10">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -182,320 +222,420 @@ export default function HomePage() {
                     className="w-10 h-10 rounded-full shadow-[0px_1px_2px_-1px_rgba(0,0,0,0.1),0px_1px_3px_0px_rgba(0,0,0,0.1),0px_0px_0px_2px_rgba(30,97,119,0.1)] bg-gradient-to-br from-[#1e6177] to-[#8aab9f]"
                   />
                   <div>
-                    <p className="font-['Nunito_Sans'] text-sm text-[#637c84]">
-                      Date Today: {formattedDate}
-                    </p>
                     <h1 className="font-['Geist'] font-semibold text-lg text-[#0d2b35] tracking-[-0.45px]">
                       Hello, {profile?.name || user?.name || 'User'}!
                     </h1>
+                    <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                      {formattedDate}
+                    </p>
                   </div>
                 </div>
-                <button 
-                  className="w-10 h-10 rounded-full bg-[rgba(214,230,225,0.5)] flex items-center justify-center relative"
-                  onClick={() => navigate('/health-check')}
-                >
-                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
-                    <path 
-                      d="M12 2v20M2 12h20" 
-                      stroke="#204A3A" 
-                      strokeWidth="1.5" 
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                  {showAttentionNotice && (
-                    <div className="absolute top-2.5 right-2.5 w-2 h-2 bg-[#d97706] border-2 border-[#f4f8f8] rounded-full" />
-                  )}
-                </button>
               </div>
             </header>
 
-            <div className="px-6 pt-6 space-y-6">
+            <div className="px-6 pt-4 space-y-4">
               
               {showDashboardData && (
                 <>
-                  {showAttentionNotice && (
-                <div className="bg-[rgba(254,243,199,0.4)] border-[0.8px] border-[rgba(254,243,199,0.2)] rounded-2xl p-4 relative overflow-hidden">
-                  <div className="absolute -top-10 -right-10 w-40 h-40 bg-[rgba(245,158,11,0.1)] rounded-full blur-[32px]" />
-                  <div className="relative flex gap-3">
-                    <div className="w-10 h-10 bg-[#fef3c7] rounded-full shadow-sm flex items-center justify-center flex-shrink-0">
-                      <svg className="w-5 h-5" fill="#92400e" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-['Geist'] font-semibold text-[#92400e] text-base mb-1">
-                        Attention Needed
-                      </h3>
-                      <p className="font-['Nunito_Sans'] text-sm text-[rgba(146,64,14,0.8)] leading-relaxed">
-                        {currentGlucose >= 250 
-                          ? `Your blood sugar of ${currentGlucose} mg/dL is critically high. Avoid high-carb foods, drink water, and consult your doctor immediately.`
-                          : currentGlucose >= 180
-                          ? `Your blood sugar of ${currentGlucose} mg/dL is significantly elevated. Limit carbohydrate intake and consider light physical activity.`
-                          : predictedPeak >= 200
-                          ? `Your predicted glucose peak of ${predictedPeak} mg/dL (from ${Math.round(dailySummary?.total_carbohydrates_g || 0)}g carbs) is very high. Avoid additional carbs and stay active.`
-                          : predictedPeak >= 140
-                          ? `Your predicted glucose peak of ${predictedPeak} mg/dL (from ${Math.round(dailySummary?.total_carbohydrates_g || 0)}g carbs) indicates elevated risk. Consider a 15-minute walk.`
-                          : `Your glucose status indicates attention needed. Monitor your levels and maintain healthy habits.`}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              <div className="relative mb-4">
-                <div className="absolute top-0 left-0 right-0 bg-gradient-to-br from-[#10b981]/10 via-[#3b82f6]/5 to-transparent -mx-6 rounded-3xl pointer-events-none" style={{ height: '240px' }} />
-                
-                <div className="relative flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full shadow-lg overflow-hidden ring-2 ring-white">
-                      <div className="w-full h-full bg-gradient-to-br from-[#10b981] to-[#3b82f6] animate-pulse" />
-                    </div>
-                    <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
-                      Glucose Tracker
-                    </h2>
-                  </div>
-                  <div 
-                    className="px-4 py-1.5 rounded-full text-sm font-['Nunito_Sans'] font-bold shadow-md"
-                    style={{ 
-                      backgroundColor: glucoseStatusColor,
-                      color: 'white'
-                    }}
-                  >
-                    {glucoseStatus}
-                  </div>
-                </div>
-
-                <div className="relative bg-gradient-to-br from-white to-[#f0fdf4] rounded-3xl p-6 mb-4 border-2 border-[#10b981]/20">
-                  <div className="flex items-end justify-between">
-                    <div>
-                      <p className="font-['Nunito_Sans'] text-sm font-semibold mb-2 uppercase tracking-wide"
-                         style={{ color: glucoseStatusColor }}
-                      >
-                        Current Estimate
-                      </p>
-                      <div className="flex items-baseline gap-2">
-                        <span 
-                          className="font-['Geist'] font-black text-6xl tracking-[-2.4px]"
-                          style={{ color: glucoseStatusColor }}
-                        >
-                          {currentGlucose}
-                        </span>
-                        <span className="font-['Nunito_Sans'] text-lg font-bold mb-3"
-                              style={{ color: glucoseStatusColor }}
-                        >
-                          mg/dL
-                        </span>
+                  {/* Glucose Tracker */}
+                  <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full shadow-lg overflow-hidden ring-2 ring-white">
+                        <div className="w-full h-full bg-gradient-to-br from-[#10b981] to-[#3b82f6] animate-pulse" />
                       </div>
-                      <p className="font-['Nunito_Sans'] text-xs text-[#6b7280] mt-1">
-                        Based on {dailySummary?.total_calories ? 'recent meals' : 'latest health check'}
-                      </p>
+                      <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                        Glucose Tracker
+                      </h2>
                     </div>
                     
-                    <div className="flex items-end gap-2 h-16">
-                      {glucoseTrend.map((point, idx) => (
-                        <div key={idx} className="relative flex flex-col justify-end" style={{ height: '64px' }}>
-                          <div 
-                            className="w-7 rounded-t-xl transition-all"
-                            style={{ 
-                              height: `${point.height * 1.2}px`,
-                              backgroundColor: point.isActive ? point.baseColor : `${point.baseColor}40`, // 40 = 25% opacity for greyed out
-                              opacity: point.isActive ? 1 : 0.4,
-                            }}
-                          >
-                            {point.isCurrent && (
-                              <div 
-                                className="absolute -top-2 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full animate-pulse"
-                                style={{ 
-                                  backgroundColor: point.baseColor,
-                                  boxShadow: `0px 0px 12px 0px ${point.baseColor}99`
-                                }}
-                              />
-                            )}
-                          </div>
+                    {currentGlucose ? (
+                      <div className="bg-gradient-to-br from-white to-[#f0fdf4] rounded-2xl p-6 border-2" style={{ borderColor: `${glucoseStatus.color}40` }}>
+                        <p className="font-['Nunito_Sans'] text-sm font-semibold mb-2 uppercase tracking-wide" style={{ color: glucoseStatus.color }}>
+                          Current Estimate
+                        </p>
+                        <div className="flex items-baseline gap-2 mb-2">
+                          <span className="font-['Geist'] font-black text-6xl tracking-[-2.4px]" style={{ color: glucoseStatus.color }}>
+                            {Math.round(currentGlucose)}
+                          </span>
+                          <span className="font-['Nunito_Sans'] text-lg font-bold mb-3" style={{ color: glucoseStatus.color }}>
+                            mg/dL
+                          </span>
                         </div>
-                      ))}
-                    </div>
+                        
+                        {/* Baseline Glucose */}
+                        {baselineGlucose && currentGlucose !== baselineGlucose && (
+                          <div className="mb-3 pb-3 border-b border-[rgba(226,234,235,0.3)]">
+                            <p className="text-[11px] text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Nunito_Sans', sans-serif", fontWeight: 600 }}>
+                              Baseline: {baselineGlucose.toFixed(0)} mg/dL
+                              <span className="ml-2 text-[#8aab9f]">
+                                ({currentGlucose > baselineGlucose ? '+' : ''}{(currentGlucose - baselineGlucose).toFixed(0)} mg/dL)
+                              </span>
+                            </p>
+                          </div>
+                        )}
+                        
+                        <p className="font-['Nunito_Sans'] text-xs text-[#6b7280]">
+                          {glucoseExplanation || (dailySummary && dailySummary.total_calories > 0
+                            ? `Based on ${Object.keys(dailySummary.meal_breakdown || {}).length} meal${Object.keys(dailySummary.meal_breakdown || {}).length > 1 ? 's' : ''} today`
+                            : 'Based on latest health check'
+                          )}
+                        </p>
+                      </div>
+                    ) : (
+                      <div className="bg-[rgba(226,234,235,0.1)] rounded-2xl p-6 text-center">
+                        <p className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>
+                          No glucose data available. Take a health check to get started.
+                        </p>
+                      </div>
+                    )}
                   </div>
-                </div>
 
-                <div className="bg-gradient-to-br from-[#fef3c7] to-[#fde68a] rounded-2xl p-5 border-2 border-[#fbbf24]/30">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center">
-                        <svg className="w-5 h-5" fill="none" viewBox="0 0 20 20">
-                          <path 
-                            d="M10 3V17M10 3L6 7M10 3L14 7" 
-                            stroke="#f59e0b" 
-                            strokeWidth="2" 
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
+                  {/* Latest Risk Status */}
+                  <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 rounded-full shadow-lg overflow-hidden ring-2 ring-white" style={{ backgroundColor: riskColor.color }}>
                       </div>
-                      <div>
-                        <p className="font-['Nunito_Sans'] font-bold text-sm text-[#92400e]">
-                          Predicted Peak
-                        </p>
-                        <p className="font-['Nunito_Sans'] text-xs text-[#b45309]">
-                          {dailySummary?.total_carbohydrates_g 
-                            ? `From ${Math.round(dailySummary.total_carbohydrates_g)}g carbs today`
-                            : 'Based on typical response'}
-                        </p>
-                      </div>
+                      <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                        Latest Risk Status
+                      </h2>
                     </div>
-                    <div className="text-right">
-                      <p className="font-['Geist'] font-black text-2xl text-[#92400e]">
-                        {predictedPeak}
+                    
+                    <div className="bg-gradient-to-br from-white to-[#f0fdf4] rounded-2xl p-6 border-2" style={{ borderColor: `${riskColor.color}40` }}>
+                      <p className="font-['Nunito_Sans'] text-sm font-semibold mb-2 uppercase tracking-wide" style={{ color: riskColor.color }}>
+                        Risk Classification
                       </p>
-                      <div className="flex items-center gap-1 justify-end">
-                        <svg className="w-4 h-4" fill="none" viewBox="0 0 16 16">
-                          <path 
-                            d="M8 12V4M8 4L4 8M8 4L12 8" 
-                            stroke="#f59e0b" 
-                            strokeWidth="1.5" 
-                            strokeLinecap="round" 
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <span className="font-['Nunito_Sans'] font-bold text-sm text-[#f59e0b]">
-                          +{predictedPeak - currentGlucose}
+                      <div className="flex items-center gap-3 mb-4">
+                        <span className="px-4 py-2 rounded-xl text-[18px] font-bold" style={{ 
+                          backgroundColor: riskColor.bgColor,
+                          color: riskColor.color,
+                          fontFamily: "'Geist', sans-serif"
+                        }}>
+                          {currentRisk} Risk
                         </span>
                       </div>
+                      
+                      {/* Glucose Level from Assessment */}
+                      {baselineGlucose && (
+                        <div className="mb-3 pb-3 border-b border-[rgba(226,234,235,0.3)]">
+                          <p className="text-[11px] text-[#637c84] uppercase tracking-[0.5px] mb-1" style={{ fontFamily: "'Nunito_Sans', sans-serif", fontWeight: 600 }}>
+                            Fasting Glucose
+                          </p>
+                          <p className="text-[20px] font-bold text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            {baselineGlucose.toFixed(0)} <span className="text-[12px] text-[#637c84] font-normal">mg/dL</span>
+                          </p>
+                        </div>
+                      )}
+                      
+                      {/* Assessment Details */}
+                      <div className="space-y-2">
+                        {profile?.age && (
+                          <div className="flex justify-between items-center">
+                            <span className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Age</span>
+                            <span className="text-[12px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>{profile.age} years</span>
+                          </div>
+                        )}
+                        {profile?.weight_kg && profile?.height_cm && (
+                          <div className="flex justify-between items-center">
+                            <span className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>BMI</span>
+                            <span className="text-[12px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                              {((profile.weight_kg / ((profile.height_cm / 100) ** 2))).toFixed(1)}
+                            </span>
+                          </div>
+                        )}
+                        {profile?.family_history !== null && profile?.family_history !== undefined && (
+                          <div className="flex justify-between items-center">
+                            <span className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Family History</span>
+                            <span className="text-[12px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                              {profile.family_history ? 'Yes' : 'No'}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                      
+                      <p className="font-['Nunito_Sans'] text-xs text-[#6b7280] mt-3">
+                        {daysSinceLastCheck !== null && (
+                          daysSinceLastCheck === 0 ? 'Assessed today' : `Last assessed ${daysSinceLastCheck} day${daysSinceLastCheck > 1 ? 's' : ''} ago`
+                        )}
+                      </p>
                     </div>
                   </div>
-                </div>
-              </div>
 
-              <div className="grid grid-cols-2 gap-4">
-                
-                <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-2xl shadow-[0px_4px_24px_0px_rgba(13,43,53,0.06)] p-5">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 bg-[#FEF3C7] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4" fill="#F59E0B" viewBox="0 0 20 20">
-                        <path d="M10 2C10 2 8 4 8 6C8 7.1 8.9 8 10 8C11.1 8 12 7.1 12 6C12 4 10 2 10 2ZM10 9C8.34 9 7 10.34 7 12C7 13.66 8.34 15 10 15C11.66 15 13 13.66 13 12C13 10.34 11.66 9 10 9ZM10 16C7.79 16 6 17.79 6 20H14C14 17.79 12.21 16 10 16Z" />
-                      </svg>
+                  {/* Meal History (Last 7 Days) */}
+                  {weekMealPredictions.length > 0 && (
+                    <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                      <h3 className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-4" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                        Meal History (Last 7 Days)
+                      </h3>
+                      
+                      {/* Column Headers */}
+                      <div className="flex items-center gap-3 pb-2 mb-3 border-b-2 border-[rgba(226,234,235,0.5)]">
+                        <div className="w-14 flex-shrink-0">
+                          <span className="text-[10px] font-bold text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            Date
+                          </span>
+                        </div>
+                        <div className="w-20 flex-shrink-0">
+                          <span className="text-[10px] font-bold text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            Meal
+                          </span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="text-[10px] font-bold text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            Foods
+                          </span>
+                        </div>
+                        <div className="w-16 flex-shrink-0 text-right">
+                          <span className="text-[10px] font-bold text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            Glucose
+                          </span>
+                        </div>
+                        <div className="w-14 flex-shrink-0 text-center">
+                          <span className="text-[10px] font-bold text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            Risk
+                          </span>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        {(() => {
+                          // Group meals by day
+                          const mealsByDay: { [key: string]: MealPrediction[] } = {};
+                          
+                          weekMealPredictions.forEach((meal) => {
+                            const mealDate = new Date(meal.predicted_at);
+                            const dateKey = `${mealDate.getFullYear()}-${String(mealDate.getMonth() + 1).padStart(2, '0')}-${String(mealDate.getDate()).padStart(2, '0')}`;
+                            
+                            if (!mealsByDay[dateKey]) {
+                              mealsByDay[dateKey] = [];
+                            }
+                            mealsByDay[dateKey].push(meal);
+                          });
+                          
+                          // Sort days in descending order (most recent first)
+                          const sortedDays = Object.keys(mealsByDay).sort((a, b) => b.localeCompare(a));
+                          
+                          // Take only last 7 days
+                          const last7Days = sortedDays.slice(0, 7);
+                          
+                          return last7Days.map((dateKey) => {
+                            const meals = mealsByDay[dateKey];
+                            const date = new Date(dateKey);
+                            const formattedDate = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                            
+                            // Categorize meals by time of day
+                            const breakfast = meals.filter(m => {
+                              const hour = new Date(m.predicted_at).getHours();
+                              return hour >= 5 && hour < 11;
+                            });
+                            const lunch = meals.filter(m => {
+                              const hour = new Date(m.predicted_at).getHours();
+                              return hour >= 11 && hour < 16;
+                            });
+                            const dinner = meals.filter(m => {
+                              const hour = new Date(m.predicted_at).getHours();
+                              return hour >= 16 && hour < 24;
+                            });
+                            
+                            // Get food entries for this day
+                            const dayFoodEntries = weekFoodEntries.filter(entry => {
+                              const entryDate = new Date(entry.consumed_at);
+                              const entryDateKey = `${entryDate.getFullYear()}-${String(entryDate.getMonth() + 1).padStart(2, '0')}-${String(entryDate.getDate()).padStart(2, '0')}`;
+                              return entryDateKey === dateKey;
+                            });
+                            
+                            // Group food entries by meal type
+                            const breakfastEntries = dayFoodEntries.filter(e => e.meal_type === 'breakfast');
+                            const lunchEntries = dayFoodEntries.filter(e => e.meal_type === 'lunch');
+                            const dinnerEntries = dayFoodEntries.filter(e => e.meal_type === 'dinner');
+                            
+                            // Create meal rows
+                            const mealRows: Array<{
+                              mealType: string;
+                              foodNames: string;
+                              glucose: number;
+                              risk: string;
+                            }> = [];
+                            
+                            if (breakfast.length > 0) {
+                              const foodNames = breakfastEntries.map(e => e.food_name).join(', ') || 'Meal logged';
+                              const avgGlucose = breakfast.reduce((sum, m) => sum + m.predicted_glucose_1hr, 0) / breakfast.length;
+                              const highRisk = breakfast.some(m => m.risk_level === 'High');
+                              const midRisk = breakfast.some(m => m.risk_level === 'Mid');
+                              mealRows.push({
+                                mealType: 'Breakfast',
+                                foodNames,
+                                glucose: avgGlucose,
+                                risk: highRisk ? 'High' : midRisk ? 'Mid' : 'Low'
+                              });
+                            }
+                            
+                            if (lunch.length > 0) {
+                              const foodNames = lunchEntries.map(e => e.food_name).join(', ') || 'Meal logged';
+                              const avgGlucose = lunch.reduce((sum, m) => sum + m.predicted_glucose_1hr, 0) / lunch.length;
+                              const highRisk = lunch.some(m => m.risk_level === 'High');
+                              const midRisk = lunch.some(m => m.risk_level === 'Mid');
+                              mealRows.push({
+                                mealType: 'Lunch',
+                                foodNames,
+                                glucose: avgGlucose,
+                                risk: highRisk ? 'High' : midRisk ? 'Mid' : 'Low'
+                              });
+                            }
+                            
+                            if (dinner.length > 0) {
+                              const foodNames = dinnerEntries.map(e => e.food_name).join(', ') || 'Meal logged';
+                              const avgGlucose = dinner.reduce((sum, m) => sum + m.predicted_glucose_1hr, 0) / dinner.length;
+                              const highRisk = dinner.some(m => m.risk_level === 'High');
+                              const midRisk = dinner.some(m => m.risk_level === 'Mid');
+                              mealRows.push({
+                                mealType: 'Dinner',
+                                foodNames,
+                                glucose: avgGlucose,
+                                risk: highRisk ? 'High' : midRisk ? 'Mid' : 'Low'
+                              });
+                            }
+                            
+                            return (
+                              <div key={dateKey} className="border-b border-[rgba(226,234,235,0.3)] pb-3 last:border-b-0 last:pb-0">
+                                {mealRows.map((row, idx) => (
+                                  <div key={idx} className="flex items-center gap-3 py-1.5">
+                                    {/* Date - only show on first row */}
+                                    <div className="w-14 flex-shrink-0">
+                                      {idx === 0 && (
+                                        <span className="text-[12px] font-semibold text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                                          {formattedDate}
+                                        </span>
+                                      )}
+                                    </div>
+                                    
+                                    {/* Meal Type */}
+                                    <div className="w-20 flex-shrink-0">
+                                      <span className="text-[11px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>
+                                        {row.mealType}
+                                      </span>
+                                    </div>
+                                    
+                                    {/* Food Names */}
+                                    <div className="flex-1 min-w-0">
+                                      <span className="text-[11px] text-[#0d2b35] truncate block" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>
+                                        {row.foodNames}
+                                      </span>
+                                    </div>
+                                    
+                                    {/* Glucose */}
+                                    <div className="w-16 flex-shrink-0 text-right">
+                                      <span className="text-[13px] font-bold text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif" }}>
+                                        {Math.round(row.glucose)}
+                                      </span>
+                                      <span className="text-[9px] text-[#637c84] ml-0.5" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>
+                                        mg/dL
+                                      </span>
+                                    </div>
+                                    
+                                    {/* Risk Badge */}
+                                    <div className="w-14 flex-shrink-0">
+                                      {(() => {
+                                        const riskColor = getRiskColor(row.risk);
+                                        return (
+                                          <span 
+                                            className="px-2 py-0.5 rounded-md text-[10px] font-bold block text-center" 
+                                            style={{ 
+                                              backgroundColor: riskColor.bgColor,
+                                              color: riskColor.color,
+                                              fontFamily: "'Geist', sans-serif"
+                                            }}
+                                          >
+                                            {row.risk}
+                                          </span>
+                                        );
+                                      })()}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            );
+                          });
+                        })()}
+                      </div>
                     </div>
-                    <span className="font-['Geist'] font-medium text-sm text-[#637c84]">
-                      Calories
-                    </span>
-                  </div>
-                  
-                  {}
-                  <div className="relative w-24 h-24 mx-auto mb-4">
-                    <svg className="w-full h-full -rotate-90">
-                      <circle 
-                        cx="48" 
-                        cy="48" 
-                        r="42.67" 
-                        fill="none" 
-                        stroke="#E2EAEB" 
-                        strokeWidth="10.67"
-                      />
-                      <circle 
-                        cx="48" 
-                        cy="48" 
-                        r="42.67" 
-                        fill="none" 
-                        stroke="#3ADE3F" 
-                        strokeWidth="10.67"
-                        strokeDasharray={`${calorieProgress * 2.68} 268`}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <span className="font-['Geist'] font-bold text-lg text-[#0d2b35] tracking-[-0.45px]">
-                        {Math.round(caloriesConsumed)}
-                      </span>
-                      <span className="font-['Nunito_Sans'] font-semibold text-[10px] text-[#637c84] uppercase tracking-wider">
-                        / {calorieGoal}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <p className="font-['Nunito_Sans'] font-medium text-sm text-[#1e6177] text-center">
-                    {caloriesRemaining} remaining
-                  </p>
-                </div>
+                  )}
 
-                <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-2xl shadow-[0px_4px_24px_0px_rgba(13,43,53,0.06)] p-5">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="w-8 h-8 bg-[#FEF9C3] rounded-full flex items-center justify-center">
-                      <svg className="w-4 h-4" fill="#EAB308" viewBox="0 0 20 20">
-                        <path d="M3 4C3 2.89543 3.89543 2 5 2H15C16.1046 2 17 2.89543 17 4V16C17 17.1046 16.1046 18 15 18H5C3.89543 18 3 17.1046 3 16V4ZM5 4H15V16H5V4ZM7 7H13V9H7V7ZM7 11H13V13H7V11Z" />
-                      </svg>
-                    </div>
-                    <span className="font-['Geist'] font-medium text-sm text-[#637c84]">
-                      Carbs
-                    </span>
+                  {/* Today's Meals */}
+                  <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                    <h3 className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-4" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
+                      Today's Meals
+                    </h3>
+                    {dailySummary && dailySummary.total_calories > 0 ? (
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center">
+                          <span className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Total Calories</span>
+                          <span className="text-[16px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            {dailySummary.total_calories.toFixed(0)} kcal
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Carbohydrates</span>
+                          <span className="text-[16px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            {dailySummary.total_carbohydrates_g.toFixed(1)} g
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Protein</span>
+                          <span className="text-[16px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            {dailySummary.total_protein_g.toFixed(1)} g
+                          </span>
+                        </div>
+                        <div className="flex justify-between items-center">
+                          <span className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Fat</span>
+                          <span className="text-[16px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            {dailySummary.total_fat_g.toFixed(1)} g
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="bg-[rgba(226,234,235,0.1)] rounded-2xl p-4 text-center">
+                        <p className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>
+                          No meals logged today
+                        </p>
+                      </div>
+                    )}
                   </div>
-                  
-                  {}
-                  <div className="relative w-24 h-24 mx-auto mb-4">
-                    <svg className="w-full h-full -rotate-90">
-                      <circle 
-                        cx="48" 
-                        cy="48" 
-                        r="42.67" 
-                        fill="none" 
-                        stroke="#E2EAEB" 
-                        strokeWidth="10.67"
-                      />
-                      <circle 
-                        cx="48" 
-                        cy="48" 
-                        r="42.67" 
-                        fill="none" 
-                        stroke="#FFEE57" 
-                        strokeWidth="10.67"
-                        strokeDasharray={`${carbProgress * 2.68} 268`}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      <span className="font-['Geist'] font-bold text-lg text-[#0d2b35] tracking-[-0.45px]">
-                        {Math.round(carbsConsumed)}g
-                      </span>
-                      <span className="font-['Nunito_Sans'] font-semibold text-[10px] text-[#637c84] uppercase tracking-wider">
-                        / {carbGoal}g
-                      </span>
-                    </div>
+
+                  {/* Quick Actions */}
+                  <div className="grid grid-cols-2 gap-3 mt-2">
+                    <button
+                      onClick={() => navigate('/log-meal')}
+                      className="bg-[#1e6177] text-white rounded-xl p-4 border-none cursor-pointer shadow-sm hover:bg-[#1a5565] transition-colors"
+                    >
+                      <div className="flex flex-col items-center gap-1.5">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                        </svg>
+                        <span className="text-[13px] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                          Log Meal
+                        </span>
+                      </div>
+                    </button>
+                    <button
+                      onClick={() => navigate('/health-check')}
+                      className="bg-white border-[0.8px] border-[#1e6177] text-[#1e6177] rounded-xl p-4 cursor-pointer shadow-sm hover:bg-[rgba(30,97,119,0.05)] transition-colors"
+                    >
+                      <div className="flex flex-col items-center gap-1.5">
+                        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                        </svg>
+                        <span className="text-[13px] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                          Health Check
+                        </span>
+                      </div>
+                    </button>
                   </div>
-                  
-                  <p className={`font-['Nunito_Sans'] font-medium text-sm text-center ${
-                    carbsNearingLimit ? 'text-[#f59e0b]' : 'text-[#1e6177]'
-                  }`}>
-                    {carbsNearingLimit ? 'Nearing limit' : `${carbGoal - Math.round(carbsConsumed)}g remaining`}
-                  </p>
-                </div>
-              </div>
-
-              <button
-                onClick={() => navigate("/log-meal")}
-                className="w-full bg-[#1e6177] text-white rounded-full py-4 shadow-[0px_4px_6px_0px_rgba(30,97,119,0.25),0px_10px_15px_0px_rgba(30,97,119,0.25)] font-['Geist'] font-medium text-lg flex items-center justify-center gap-2 hover:bg-[#1a5566] transition-colors"
-              >
-                <svg className="w-6 h-6" fill="white" viewBox="0 0 24 24">
-                  <path fillRule="evenodd" d="M12 5a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H6a1 1 0 110-2h5V6a1 1 0 011-1z" clipRule="evenodd" />
-                </svg>
-                Log New Meal
-              </button>
-              </>
-            )}
-
-              {error && (
-                <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-center">
-                  <p className="text-red-600 text-sm">{error}</p>
-                  <button 
-                    onClick={loadData}
-                    className="mt-2 text-red-700 underline text-sm"
-                  >
-                    Try Again
-                  </button>
-                </div>
+                </>
               )}
             </div>
           </div>
         </div>
-        
+
         {showProfileSetupModal && (
           <ProfileSetupModal onComplete={handleProfileSetupComplete} />
         )}
@@ -505,8 +645,15 @@ export default function HomePage() {
           onComplete={handleHealthCheckComplete}
           profileData={{
             age: profile?.age || null,
-            height_cm: profile?.height_cm || null
+            height_cm: profile?.height_cm || null,
+            weight_kg: profile?.weight_kg || null,
+            gender: profile?.gender || null,
+            family_history: profile?.family_history || null
           }}
+          lastHealthCheck={latestHealthCheck ? {
+            weight_kg: latestHealthCheck.health_metrics?.weight_kg || profile?.weight_kg || 0,
+            blood_sugar_mgdl: latestHealthCheck.health_metrics?.blood_sugar_mgdl || 0
+          } : null}
         />
       </div>
     </ResponsiveLayout>
