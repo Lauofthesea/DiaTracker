@@ -154,14 +154,63 @@ export default function HomePage() {
     glucoseExplanation = 'Based on latest health check';
   }
   
-  const getGlucoseStatus = (glucose: number | null) => {
-    if (!glucose) return { status: 'No Data', color: '#637c84', bgColor: 'rgba(99,124,132,0.1)' };
-    if (glucose < 100) return { status: 'In Range', color: '#10b981', bgColor: 'rgba(16,185,129,0.1)' };
-    if (glucose < 140) return { status: 'Elevated', color: '#f59e0b', bgColor: 'rgba(245,158,11,0.1)' };
-    return { status: 'High', color: '#ef4444', bgColor: 'rgba(239,68,68,0.1)' };
+  // Helper functions for status
+  const getFastingStatus = (g: number) => {
+    if (g < 100) return { 
+      label: 'Low Risk', 
+      status: 'In Range', 
+      color: '#10b981', 
+      bgColor: 'rgba(16,185,129,0.08)', 
+      borderColor: 'rgba(16,185,129,0.25)', 
+      advice: 'Fasting glucose is within the healthy range.' 
+    };
+    if (g < 126) return { 
+      label: 'Mid Risk', 
+      status: 'Elevated', 
+      color: '#f59e0b', 
+      bgColor: 'rgba(245,158,11,0.08)', 
+      borderColor: 'rgba(245,158,11,0.25)', 
+      advice: 'Fasting glucose is above normal. Consider scheduling a check-up.' 
+    };
+    return { 
+      label: 'High Risk', 
+      status: 'High', 
+      color: '#ef4444', 
+      bgColor: 'rgba(239,68,68,0.08)', 
+      borderColor: 'rgba(239,68,68,0.25)', 
+      advice: 'Fasting glucose is critically high. Please consult a doctor soon.' 
+    };
   };
 
-  const glucoseStatus = getGlucoseStatus(currentGlucose);
+  const getPostMealStatus = (g: number) => {
+    if (g < 140) return { 
+      label: 'Low Risk', 
+      status: 'In Range', 
+      color: '#10b981', 
+      bgColor: 'rgba(16,185,129,0.08)', 
+      borderColor: 'rgba(16,185,129,0.25)', 
+      advice: 'Your body handled this meal well.' 
+    };
+    if (g < 200) return { 
+      label: 'Mid Risk', 
+      status: 'Elevated', 
+      color: '#f59e0b', 
+      bgColor: 'rgba(245,158,11,0.08)', 
+      borderColor: 'rgba(245,158,11,0.25)', 
+      advice: 'Mild post-meal rise. Try smaller portions or lower-GI foods next time.' 
+    };
+    return { 
+      label: 'High Risk', 
+      status: 'High', 
+      color: '#ef4444', 
+      bgColor: 'rgba(239,68,68,0.08)', 
+      borderColor: 'rgba(239,68,68,0.25)', 
+      advice: 'Significant post-meal spike. Consider reducing carbs in this meal type.' 
+    };
+  };
+
+  // Determine if current glucose is post-meal or fasting
+  const isPostMeal = mostRecentPrediction !== null;
 
   // Get current risk level
   const currentRisk = latestHealthCheck?.classification || 'Unknown';
@@ -237,135 +286,189 @@ export default function HomePage() {
               
               {showDashboardData && (
                 <>
-                  {/* Glucose Tracker */}
-                  <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full shadow-lg overflow-hidden ring-2 ring-white">
-                        <div className="w-full h-full bg-gradient-to-br from-[#10b981] to-[#3b82f6] animate-pulse" />
-                      </div>
-                      <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
-                        Glucose Tracker
-                      </h2>
-                    </div>
-                    
-                    {currentGlucose ? (
-                      <div className="bg-gradient-to-br from-white to-[#f0fdf4] rounded-2xl p-6 border-2" style={{ borderColor: `${glucoseStatus.color}40` }}>
-                        <p className="font-['Nunito_Sans'] text-sm font-semibold mb-2 uppercase tracking-wide" style={{ color: glucoseStatus.color }}>
-                          Current Estimate
-                        </p>
-                        <div className="flex items-baseline gap-2 mb-2">
-                          <span className="font-['Geist'] font-black text-6xl tracking-[-2.4px]" style={{ color: glucoseStatus.color }}>
-                            {Math.round(currentGlucose)}
-                          </span>
-                          <span className="font-['Nunito_Sans'] text-lg font-bold mb-3" style={{ color: glucoseStatus.color }}>
-                            mg/dL
+                  {/* Card 1: Fasting Baseline - Always Visible */}
+                  {baselineGlucose && (() => {
+                    const st = getFastingStatus(baselineGlucose);
+                    return (
+                      <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                        <div className="flex items-center justify-between mb-4">
+                          <div>
+                            <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                              Fasting Baseline
+                            </h2>
+                            <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                              From latest health check
+                            </p>
+                          </div>
+                          <span className="px-3 py-1.5 rounded-xl text-[12px] font-bold" style={{ backgroundColor: st.bgColor, color: st.color, border: `1px solid ${st.borderColor}` }}>
+                            {st.label}
                           </span>
                         </div>
                         
-                        {/* Baseline Glucose */}
-                        {baselineGlucose && currentGlucose !== baselineGlucose && (
-                          <div className="mb-3 pb-3 border-b border-[rgba(226,234,235,0.3)]">
-                            <p className="text-[11px] text-[#637c84] uppercase tracking-[0.5px]" style={{ fontFamily: "'Nunito_Sans', sans-serif", fontWeight: 600 }}>
-                              Baseline: {baselineGlucose.toFixed(0)} mg/dL
-                              <span className="ml-2 text-[#8aab9f]">
-                                ({currentGlucose > baselineGlucose ? '+' : ''}{(currentGlucose - baselineGlucose).toFixed(0)} mg/dL)
+                        <div className="rounded-2xl p-5" style={{ backgroundColor: st.bgColor, border: `1.5px solid ${st.borderColor}` }}>
+                          <div className="flex items-baseline gap-1.5 mb-2">
+                            <span className="font-['Geist'] font-black text-[52px] tracking-[-2px]" style={{ color: st.color }}>
+                              {Math.round(baselineGlucose)}
+                            </span>
+                            <span className="font-['Nunito_Sans'] text-[15px] font-semibold mb-2" style={{ color: st.color }}>
+                              mg/dL
+                            </span>
+                          </div>
+                          <p className="font-['Nunito_Sans'] text-[13px] text-[#4b6068] mb-3 leading-relaxed">
+                            {st.advice}
+                          </p>
+                          <div className="pt-2 flex items-center gap-1.5" style={{ borderTop: `1px solid ${st.borderColor}` }}>
+                            <p className="font-['Nunito_Sans'] text-[11px]" style={{ color: st.color, opacity: 0.8 }}>
+                              ADA: Normal &lt;100 · Pre-diabetic 100–125 · Diabetic ≥126
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })()}
+
+                  {/* Card 2: Post-meal Estimate - Only Visible When Recent Meal Exists */}
+                  {isPostMeal && currentGlucose && (() => {
+                    const st = getPostMealStatus(currentGlucose);
+                    const delta = baselineGlucose ? currentGlucose - baselineGlucose : null;
+                    const deltaColor = !delta ? '#637c84' : delta < 30 ? '#10b981' : delta < 60 ? '#f59e0b' : '#ef4444';
+                    const deltaLabel = !delta ? '' : delta < 30 ? 'Minimal rise' : delta < 60 ? 'Moderate rise' : 'Large rise';
+                    const showConflict = st.status === 'In Range' && baselineGlucose && getFastingStatus(baselineGlucose).status !== 'In Range';
+                    
+                    return (
+                      <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                        <div className="flex items-center justify-between mb-4">
+                          <div>
+                            <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                              Post-meal Estimate
+                            </h2>
+                            <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                              {glucoseExplanation}
+                            </p>
+                          </div>
+                          <span className="px-3 py-1.5 rounded-xl text-[12px] font-bold" style={{ backgroundColor: st.bgColor, color: st.color, border: `1px solid ${st.borderColor}` }}>
+                            {st.label}
+                          </span>
+                        </div>
+                        
+                        <div className="rounded-2xl p-5 mb-3" style={{ backgroundColor: st.bgColor, border: `1.5px solid ${st.borderColor}` }}>
+                          <div className="flex items-baseline justify-between mb-2">
+                            <div className="flex items-baseline gap-1.5">
+                              <span className="font-['Geist'] font-black text-[52px] tracking-[-2px]" style={{ color: st.color }}>
+                                {Math.round(currentGlucose)}
                               </span>
+                              <span className="font-['Nunito_Sans'] text-[15px] font-semibold mb-2" style={{ color: st.color }}>
+                                mg/dL
+                              </span>
+                            </div>
+                            {delta !== null && (
+                              <div className="text-right">
+                                <p className="font-['Geist'] font-black text-[22px] tracking-[-1px]" style={{ color: deltaColor }}>
+                                  +{Math.round(delta)}
+                                </p>
+                                <p className="font-['Nunito_Sans'] text-[11px] font-semibold" style={{ color: deltaColor }}>
+                                  {deltaLabel}
+                                </p>
+                              </div>
+                            )}
+                          </div>
+                          <p className="font-['Nunito_Sans'] text-[13px] text-[#4b6068] mb-3 leading-relaxed">
+                            {st.advice}
+                          </p>
+                          <div className="pt-2 flex items-center gap-1.5" style={{ borderTop: `1px solid ${st.borderColor}` }}>
+                            <p className="font-['Nunito_Sans'] text-[11px]" style={{ color: st.color, opacity: 0.8 }}>
+                              ADA: Good &lt;140 · Moderate 140–199 · High ≥200
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {showConflict && (
+                          <div className="rounded-xl px-4 py-3 flex items-start gap-2.5" style={{ backgroundColor: 'rgba(245,158,11,0.06)', border: '1px solid rgba(245,158,11,0.2)' }}>
+                            <span className="text-[#f59e0b] mt-0.5 flex-shrink-0">⚠️</span>
+                            <p className="font-['Nunito_Sans'] text-[12px] text-[#92650a] leading-relaxed">
+                              <strong>Good meal choice!</strong> Your post-meal response was healthy, but your fasting baseline is still {getFastingStatus(baselineGlucose!).label.toLowerCase()}. Keep eating well and consult your doctor about your baseline.
                             </p>
                           </div>
                         )}
-                        
-                        <p className="font-['Nunito_Sans'] text-xs text-[#6b7280]">
-                          {glucoseExplanation || (dailySummary && dailySummary.total_calories > 0
-                            ? `Based on ${Object.keys(dailySummary.meal_breakdown || {}).length} meal${Object.keys(dailySummary.meal_breakdown || {}).length > 1 ? 's' : ''} today`
-                            : 'Based on latest health check'
+                      </div>
+                    );
+                  })()}
+
+                  {/* Latest Health Assessment */}
+                  <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <div>
+                        <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                          Latest Health Assessment
+                        </h2>
+                        <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                          {daysSinceLastCheck !== null && (
+                            daysSinceLastCheck === 0 ? 'Assessed today' : `${daysSinceLastCheck} day${daysSinceLastCheck > 1 ? 's' : ''} ago`
                           )}
                         </p>
                       </div>
-                    ) : (
-                      <div className="bg-[rgba(226,234,235,0.1)] rounded-2xl p-6 text-center">
-                        <p className="text-[14px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>
-                          No glucose data available. Take a health check to get started.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Latest Risk Status */}
-                  <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full shadow-lg overflow-hidden ring-2 ring-white" style={{ backgroundColor: riskColor.color }}>
-                      </div>
-                      <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
-                        Latest Risk Status
-                      </h2>
+                      <span className="px-3 py-1.5 rounded-xl text-[12px] font-bold" style={{ backgroundColor: riskColor.bgColor, color: riskColor.color, border: `1px solid ${riskColor.color}40` }}>
+                        {currentRisk} Risk
+                      </span>
                     </div>
                     
-                    <div className="bg-gradient-to-br from-white to-[#f0fdf4] rounded-2xl p-6 border-2" style={{ borderColor: `${riskColor.color}40` }}>
-                      <p className="font-['Nunito_Sans'] text-sm font-semibold mb-2 uppercase tracking-wide" style={{ color: riskColor.color }}>
-                        Risk Classification
-                      </p>
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="px-4 py-2 rounded-xl text-[18px] font-bold" style={{ 
-                          backgroundColor: riskColor.bgColor,
-                          color: riskColor.color,
-                          fontFamily: "'Geist', sans-serif"
-                        }}>
-                          {currentRisk} Risk
-                        </span>
-                      </div>
-                      
+                    <div className="rounded-2xl p-5" style={{ backgroundColor: riskColor.bgColor, border: `1.5px solid ${riskColor.color}40` }}>
                       {/* Glucose Level from Assessment */}
                       {baselineGlucose && (
-                        <div className="mb-3 pb-3 border-b border-[rgba(226,234,235,0.3)]">
-                          <p className="text-[11px] text-[#637c84] uppercase tracking-[0.5px] mb-1" style={{ fontFamily: "'Nunito_Sans', sans-serif", fontWeight: 600 }}>
+                        <div className="mb-4">
+                          <p className="font-['Nunito_Sans'] text-[11px] text-[#637c84] uppercase tracking-[0.5px] mb-1 font-semibold">
                             Fasting Glucose
                           </p>
-                          <p className="text-[20px] font-bold text-[#0d2b35]" style={{ fontFamily: "'Geist', sans-serif" }}>
-                            {baselineGlucose.toFixed(0)} <span className="text-[12px] text-[#637c84] font-normal">mg/dL</span>
-                          </p>
+                          <div className="flex items-baseline gap-1.5">
+                            <span className="font-['Geist'] font-black text-[42px] tracking-[-2px]" style={{ color: riskColor.color }}>
+                              {baselineGlucose.toFixed(0)}
+                            </span>
+                            <span className="font-['Nunito_Sans'] text-[14px] font-semibold mb-2" style={{ color: riskColor.color }}>
+                              mg/dL
+                            </span>
+                          </div>
                         </div>
                       )}
                       
                       {/* Assessment Details */}
-                      <div className="space-y-2">
+                      <div className="space-y-2 pt-3" style={{ borderTop: `1px solid ${riskColor.color}40` }}>
                         {profile?.age && (
                           <div className="flex justify-between items-center">
-                            <span className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Age</span>
-                            <span className="text-[12px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>{profile.age} years</span>
+                            <span className="font-['Nunito_Sans'] text-[12px] text-[#637c84]">Age</span>
+                            <span className="font-['Geist'] text-[12px] text-[#0d2b35] font-semibold">{profile.age} years</span>
                           </div>
                         )}
                         {profile?.weight_kg && profile?.height_cm && (
                           <div className="flex justify-between items-center">
-                            <span className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>BMI</span>
-                            <span className="text-[12px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            <span className="font-['Nunito_Sans'] text-[12px] text-[#637c84]">BMI</span>
+                            <span className="font-['Geist'] text-[12px] text-[#0d2b35] font-semibold">
                               {((profile.weight_kg / ((profile.height_cm / 100) ** 2))).toFixed(1)}
                             </span>
                           </div>
                         )}
                         {profile?.family_history !== null && profile?.family_history !== undefined && (
                           <div className="flex justify-between items-center">
-                            <span className="text-[12px] text-[#637c84]" style={{ fontFamily: "'Nunito_Sans', sans-serif" }}>Family History</span>
-                            <span className="text-[12px] text-[#0d2b35] font-semibold" style={{ fontFamily: "'Geist', sans-serif" }}>
+                            <span className="font-['Nunito_Sans'] text-[12px] text-[#637c84]">Family History</span>
+                            <span className="font-['Geist'] text-[12px] text-[#0d2b35] font-semibold">
                               {profile.family_history ? 'Yes' : 'No'}
                             </span>
                           </div>
                         )}
                       </div>
-                      
-                      <p className="font-['Nunito_Sans'] text-xs text-[#6b7280] mt-3">
-                        {daysSinceLastCheck !== null && (
-                          daysSinceLastCheck === 0 ? 'Assessed today' : `Last assessed ${daysSinceLastCheck} day${daysSinceLastCheck > 1 ? 's' : ''} ago`
-                        )}
-                      </p>
                     </div>
                   </div>
 
                   {/* Meal History (Last 7 Days) */}
                   {weekMealPredictions.length > 0 && (
                     <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
-                      <h3 className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-4" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                        Meal History (Last 7 Days)
-                      </h3>
+                      <div className="mb-4">
+                        <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                          Meal History
+                        </h2>
+                        <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                          Last 7 days
+                        </p>
+                      </div>
                       
                       {/* Column Headers */}
                       <div className="flex items-center gap-3 pb-2 mb-3 border-b-2 border-[rgba(226,234,235,0.5)]">
@@ -562,9 +665,14 @@ export default function HomePage() {
 
                   {/* Today's Meals */}
                   <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6">
-                    <h3 className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-4" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-                      Today's Meals
-                    </h3>
+                    <div className="mb-4">
+                      <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                        Today's Nutrition
+                      </h2>
+                      <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                        Daily summary
+                      </p>
+                    </div>
                     {dailySummary && dailySummary.total_calories > 0 ? (
                       <div className="space-y-3">
                         <div className="flex justify-between items-center">

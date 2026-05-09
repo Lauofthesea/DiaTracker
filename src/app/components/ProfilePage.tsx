@@ -308,9 +308,14 @@ export default function ProfilePage() {
         
         {profile.current_health_metrics && (
           <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-4">
-            <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-              Current Health Metrics
-            </p>
+            <div className="mb-5">
+              <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                Current Health Metrics
+              </h2>
+              <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                Your most recent health metrics
+              </p>
+            </div>
             {isEditMode ? (
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
@@ -502,9 +507,14 @@ export default function ProfilePage() {
         
         {!isEditMode && metricsHistory.length > 0 && (
           <div className="bg-white border-[0.8px] border-[rgba(226,234,235,0.3)] rounded-3xl shadow-sm p-6 mb-6">
-            <p className="text-[14px] text-[#637c84] uppercase tracking-[0.7px] mb-5" style={{ fontFamily: "'Geist', sans-serif", fontWeight: 700 }}>
-              Health Metrics History
-            </p>
+            <div className="mb-5">
+              <h2 className="font-['Geist'] font-bold text-xl text-[#0d2b35] tracking-[-0.5px]">
+                Health Check History
+              </h2>
+              <p className="font-['Nunito_Sans'] text-xs text-[#637c84]">
+                Past health assessments
+              </p>
+            </div>
             <div className="space-y-4">
               {metricsHistory.map((metric) => (
                 <div key={metric.metric_id} className="bg-[rgba(226,234,235,0.1)] rounded-2xl p-4">
@@ -621,7 +631,7 @@ export default function ProfilePage() {
           <button
             onClick={() => setShowLogoutModal(true)}
             disabled={isLoggingOut}
-            className="w-full h-[56px] bg-transparent border-[0.8px] border-[rgba(239,68,68,0.3)] text-[#ef4444] rounded-2xl cursor-pointer text-[16px] flex items-center justify-center gap-2 hover:bg-[rgba(239,68,68,0.05)] transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full h-[56px] bg-[#ef4444] text-white rounded-2xl cursor-pointer text-[16px] flex items-center justify-center gap-2 hover:bg-[#dc2626] transition-colors mt-6 disabled:opacity-50 disabled:cursor-not-allowed border-none"
             style={{ fontFamily: "'Geist', sans-serif", fontWeight: 600 }}
           >
             {isLoggingOut ? (

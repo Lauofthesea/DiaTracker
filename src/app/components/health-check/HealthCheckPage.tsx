@@ -138,7 +138,7 @@ export default function HealthCheckPage() {
   };
 
   const getBreadcrumbItems = () => {
-    const items = [{ label: 'Health Check' }];
+    const items = [{ label: 'Latest Health Assessment' }];
     if (currentStep === 'consent') {
       items.push({ label: 'Privacy & Consent' });
     } else if (currentStep === 'processing') {
@@ -156,7 +156,7 @@ export default function HealthCheckPage() {
           {currentStep !== 'form' && <Breadcrumb items={getBreadcrumbItems()} />}
           
           <div className="mb-6">
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Health Check</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Latest Health Assessment</h1>
             <p className="text-gray-600 mt-1 text-sm sm:text-base">Assess your diabetes risk with our ML-powered prediction</p>
           </div>
 
@@ -176,7 +176,7 @@ export default function HealthCheckPage() {
               {currentStep === 'form' && (
                 <Card className="max-w-3xl">
                   <CardHeader>
-                    <CardTitle>Health Metrics</CardTitle>
+                    <CardTitle>Latest Health Assessment</CardTitle>
                     <CardDescription>
                       Enter your current health information for diabetes risk assessment
                     </CardDescription>

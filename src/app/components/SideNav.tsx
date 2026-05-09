@@ -111,24 +111,24 @@ export default function SideNav({ collapsed = false, onToggleCollapse }: SideNav
         <button
           onClick={handleLogoutClick}
           disabled={isLoggingOut}
-          className="w-full flex items-center gap-4 px-4 py-3 rounded-xl cursor-pointer bg-transparent border-[0.8px] border-[rgba(239,68,68,0.2)] hover:bg-[rgba(239,68,68,0.05)] transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full flex items-center gap-4 px-4 py-3 rounded-xl cursor-pointer bg-[#ef4444] hover:bg-[#dc2626] transition-all disabled:opacity-50 disabled:cursor-not-allowed border-none"
           title={collapsed ? "Logout" : undefined}
         >
           {isLoggingOut ? (
             <Loader2
               size={24}
-              className="text-[#ef4444] animate-spin"
+              className="text-white animate-spin"
             />
           ) : (
             <LogOut
               size={24}
-              className="text-[#ef4444]"
+              className="text-white"
               strokeWidth={1.5}
             />
           )}
           {!collapsed && (
             <span
-              className="text-[15px] text-[#ef4444] font-medium"
+              className="text-[15px] text-white font-medium"
               style={{ fontFamily: "'Geist', sans-serif" }}
             >
               {isLoggingOut ? "Logging out..." : "Logout"}
