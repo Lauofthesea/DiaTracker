@@ -78,6 +78,7 @@ htmlcov/
 
 # Documentation (local only)
 docs/
+documentation/
 
 # Kiro specs (local only)
 .kiro/

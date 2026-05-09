@@ -1,0 +1,8 @@
+fasting_glucose
+available_carbs_g
+fat_g
+protein_g
+fiber_g
+BMI
+age
+gender

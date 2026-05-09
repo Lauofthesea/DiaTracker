@@ -1,0 +1,22 @@
+DiaTracker Random Forest Models
+================================================================================
+
+Date: May 6, 2026
+Algorithm: Random Forest
+
+RF #1 (Glucose Predictor):
+  Type: Random Forest Regressor
+  Features: 8
+  Feature list: fasting_glucose, available_carbs_g, fat_g, protein_g, fiber_g, BMI, age, gender
+  Output: glucose_1hr (mg/dL)
+
+RF #2 (Risk Classifier):
+  Type: Random Forest Classifier
+  Features: 5
+  Feature list: fasting_glucose, BMI, age, gender, family_history
+  Output: Low/Mid/High risk
+
+Citations:
+  - Breiman L. 2001. Random Forests. Machine Learning 45(1):5-32.
+  - ADA. 2024. Standards of Care in Diabetes—2024. Diabetes Care 47(Suppl 1):S20-S42.
+  - CDC. 2023. NHANES 2021-2023.
